@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8731CA9CBC100A52731 /* AppDelegate.swift */; };
+		44AEA8761CA9CBC100A52731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8751CA9CBC100A52731 /* ViewController.swift */; };
+		44AEA8791CA9CBC100A52731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA8771CA9CBC100A52731 /* Main.storyboard */; };
+		44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87A1CA9CBC100A52731 /* Assets.xcassets */; };
+		44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */; };
+		44AEA8891CA9CBC100A52731 /* hackathon_for_hungerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8881CA9CBC100A52731 /* hackathon_for_hungerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44AEA8851CA9CBC100A52731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44AEA8681CA9CBC100A52731 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44AEA86F1CA9CBC100A52731;
+			remoteInfo = "hackathon-for-hunger";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		44AEA8701CA9CBC100A52731 /* hackathon-for-hunger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hackathon-for-hunger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AEA8731CA9CBC100A52731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44AEA8751CA9CBC100A52731 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44AEA8781CA9CBC100A52731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44AEA87A1CA9CBC100A52731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44AEA87D1CA9CBC100A52731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44AEA87F1CA9CBC100A52731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AEA8841CA9CBC100A52731 /* hackathon-for-hungerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hackathon-for-hungerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AEA8881CA9CBC100A52731 /* hackathon_for_hungerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackathon_for_hungerTests.swift; sourceTree = "<group>"; };
+		44AEA88A1CA9CBC100A52731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44AEA86D1CA9CBC100A52731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AEA8811CA9CBC100A52731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44AEA8671CA9CBC100A52731 = {
+			isa = PBXGroup;
+			children = (
+				44AEA8721CA9CBC100A52731 /* hackathon-for-hunger */,
+				44AEA8871CA9CBC100A52731 /* hackathon-for-hungerTests */,
+				44AEA8711CA9CBC100A52731 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44AEA8711CA9CBC100A52731 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44AEA8701CA9CBC100A52731 /* hackathon-for-hunger.app */,
+				44AEA8841CA9CBC100A52731 /* hackathon-for-hungerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44AEA8721CA9CBC100A52731 /* hackathon-for-hunger */ = {
+			isa = PBXGroup;
+			children = (
+				44AEA8731CA9CBC100A52731 /* AppDelegate.swift */,
+				44AEA8751CA9CBC100A52731 /* ViewController.swift */,
+				44AEA8771CA9CBC100A52731 /* Main.storyboard */,
+				44AEA87A1CA9CBC100A52731 /* Assets.xcassets */,
+				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
+				44AEA87F1CA9CBC100A52731 /* Info.plist */,
+			);
+			path = "hackathon-for-hunger";
+			sourceTree = "<group>";
+		};
+		44AEA8871CA9CBC100A52731 /* hackathon-for-hungerTests */ = {
+			isa = PBXGroup;
+			children = (
+				44AEA8881CA9CBC100A52731 /* hackathon_for_hungerTests.swift */,
+				44AEA88A1CA9CBC100A52731 /* Info.plist */,
+			);
+			path = "hackathon-for-hungerTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44AEA86F1CA9CBC100A52731 /* hackathon-for-hunger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AEA88D1CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hunger" */;
+			buildPhases = (
+				44AEA86C1CA9CBC100A52731 /* Sources */,
+				44AEA86D1CA9CBC100A52731 /* Frameworks */,
+				44AEA86E1CA9CBC100A52731 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hackathon-for-hunger";
+			productName = "hackathon-for-hunger";
+			productReference = 44AEA8701CA9CBC100A52731 /* hackathon-for-hunger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44AEA8831CA9CBC100A52731 /* hackathon-for-hungerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AEA8901CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hungerTests" */;
+			buildPhases = (
+				44AEA8801CA9CBC100A52731 /* Sources */,
+				44AEA8811CA9CBC100A52731 /* Frameworks */,
+				44AEA8821CA9CBC100A52731 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44AEA8861CA9CBC100A52731 /* PBXTargetDependency */,
+			);
+			name = "hackathon-for-hungerTests";
+			productName = "hackathon-for-hungerTests";
+			productReference = 44AEA8841CA9CBC100A52731 /* hackathon-for-hungerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44AEA8681CA9CBC100A52731 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Hacksmiths;
+				TargetAttributes = {
+					44AEA86F1CA9CBC100A52731 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					44AEA8831CA9CBC100A52731 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 44AEA86F1CA9CBC100A52731;
+					};
+				};
+			};
+			buildConfigurationList = 44AEA86B1CA9CBC100A52731 /* Build configuration list for PBXProject "hackathon-for-hunger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44AEA8671CA9CBC100A52731;
+			productRefGroup = 44AEA8711CA9CBC100A52731 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44AEA86F1CA9CBC100A52731 /* hackathon-for-hunger */,
+				44AEA8831CA9CBC100A52731 /* hackathon-for-hungerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44AEA86E1CA9CBC100A52731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */,
+				44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */,
+				44AEA8791CA9CBC100A52731 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AEA8821CA9CBC100A52731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44AEA86C1CA9CBC100A52731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AEA8761CA9CBC100A52731 /* ViewController.swift in Sources */,
+				44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AEA8801CA9CBC100A52731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AEA8891CA9CBC100A52731 /* hackathon_for_hungerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44AEA8861CA9CBC100A52731 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44AEA86F1CA9CBC100A52731 /* hackathon-for-hunger */;
+			targetProxy = 44AEA8851CA9CBC100A52731 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		44AEA8771CA9CBC100A52731 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44AEA8781CA9CBC100A52731 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44AEA87D1CA9CBC100A52731 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44AEA88B1CA9CBC100A52731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44AEA88C1CA9CBC100A52731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44AEA88E1CA9CBC100A52731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "hackathon-for-hunger/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hacksmiths.hackathon-for-hunger";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		44AEA88F1CA9CBC100A52731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "hackathon-for-hunger/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hacksmiths.hackathon-for-hunger";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		44AEA8911CA9CBC100A52731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "hackathon-for-hungerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hacksmiths.hackathon-for-hungerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hackathon-for-hunger.app/hackathon-for-hunger";
+			};
+			name = Debug;
+		};
+		44AEA8921CA9CBC100A52731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "hackathon-for-hungerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hacksmiths.hackathon-for-hungerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hackathon-for-hunger.app/hackathon-for-hunger";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44AEA86B1CA9CBC100A52731 /* Build configuration list for PBXProject "hackathon-for-hunger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AEA88B1CA9CBC100A52731 /* Debug */,
+				44AEA88C1CA9CBC100A52731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44AEA88D1CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hunger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AEA88E1CA9CBC100A52731 /* Debug */,
+				44AEA88F1CA9CBC100A52731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		44AEA8901CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hungerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AEA8911CA9CBC100A52731 /* Debug */,
+				44AEA8921CA9CBC100A52731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44AEA8681CA9CBC100A52731 /* Project object */;
+}
