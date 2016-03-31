@@ -1,0 +1,89 @@
+//
+//  LoginProvider.swift
+//  FoodDrivr
+//
+//  Created by Anas Belkhadir on 28/03/2016.
+//  Copyright © 2016 Anas Belkhadir. All rights reserved.
+//
+
+import Foundation
+
+
+protocol LoginProviderDelegate {
+    
+    func loginProvider(loginProvider: LoginProvider, didSucced user: [String: AnyObject])
+    func loginProvider(loginProvider: LoginProvider, didFaild error: NSError)
+    
+}
+
+
+
+
+
+enum LoginProvider {
+    
+    
+    
+    case Facebook
+    
+    case Twitter
+    
+    case Custom(String, String)
+    
+    case None
+    
+    
+    func login(delegate: LoginProviderDelegate) {
+        
+        switch self {
+            
+            case .Facebook :
+                
+                loginUsingFacebook(delegate)
+            
+            case .Twitter :
+            
+                loginUsingTwitter(delegate)
+            
+            case .Custom(let email, let password) :
+                
+                loginUsingCustom(delegate,email: email,password: password)
+            
+            case .None:
+                //DO Nothing
+                break
+        }
+        
+        
+    }
+    
+    
+    private func loginUsingFacebook(delegate: LoginProviderDelegate) {
+    
+        //
+        
+    }
+    
+    
+    private func loginUsingTwitter(delegate: LoginProviderDelegate) {
+        
+        
+    }
+    
+    private func loginUsingCustom(delegate: LoginProviderDelegate,email: String,password: String) {
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
