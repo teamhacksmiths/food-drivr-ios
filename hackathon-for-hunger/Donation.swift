@@ -10,7 +10,5 @@ import Foundation
 import RealmSwift
 
 class Donation: Object {
-    
     dynamic var id: String!
-    
 }
