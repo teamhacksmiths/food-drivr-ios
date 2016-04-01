@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DashboardCollectionViewCell: UICollectionViewCell {
+class DashboardTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var locationLabel: UILabel!
@@ -16,13 +16,8 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var amountOfFoodLabel: UILabel!
     
     
-    func configure(information:(String,String,String) ) {
+    var information : (String, String, String) = {
         
-//        locationLabel.text = information.0
-//        dateLabel.text = information.1
-//        amountOfFoodLabel.text = information.2
-//        
     }
-    
     
 }

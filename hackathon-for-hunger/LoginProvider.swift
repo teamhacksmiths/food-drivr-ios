@@ -1,9 +1,9 @@
 //
 //  LoginProvider.swift
-//  FoodDrivr
+//  hackathon-for-hunger
 //
 //  Created by Anas Belkhadir on 28/03/2016.
-//  Copyright © 2016 Anas Belkhadir. All rights reserved.
+//  Copyright © 2016 Hacksmiths. All rights reserved.
 //
 
 import Foundation
