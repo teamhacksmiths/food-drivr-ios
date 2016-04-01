@@ -11,6 +11,7 @@
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
 		3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */; };
 		3CFDE81B1CAD56F100D6172B /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE81A1CAD56F100D6172B /* DashboardCollectionViewCell.swift */; };
+		3CFDE81F1CAED8CF00D6172B /* DashboardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE81E1CAED8CF00D6172B /* DashboardLayout.swift */; };
 		44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8731CA9CBC100A52731 /* AppDelegate.swift */; };
 		44AEA8761CA9CBC100A52731 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8751CA9CBC100A52731 /* LoginViewController.swift */; };
 		44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87A1CA9CBC100A52731 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		3CFDE81A1CAD56F100D6172B /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		3CFDE81E1CAED8CF00D6172B /* DashboardLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardLayout.swift; sourceTree = "<group>"; };
 		44AEA8701CA9CBC100A52731 /* hackathon-for-hunger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hackathon-for-hunger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AEA8731CA9CBC100A52731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44AEA8751CA9CBC100A52731 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */,
 				3CFDE8151CAD4D8A00D6172B /* Main.storyboard */,
 				3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */,
+				3CFDE81E1CAED8CF00D6172B /* DashboardLayout.swift */,
 				44AEA8751CA9CBC100A52731 /* LoginViewController.swift */,
 				44AEA87A1CA9CBC100A52731 /* Assets.xcassets */,
 				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CFDE81F1CAED8CF00D6172B /* DashboardLayout.swift in Sources */,
 				44AEA8761CA9CBC100A52731 /* LoginViewController.swift in Sources */,
 				3CFDE8161CAD4D8A00D6172B /* LoginProvider.swift in Sources */,
 				44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */,
