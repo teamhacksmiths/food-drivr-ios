@@ -9,7 +9,7 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UICollectionViewController,  DashboardLayoutDelegate  {
     
     
     let data : [(String, String, String)] = [("kenitra", "10", "4 egges"),
@@ -25,15 +25,14 @@ class DashboardViewController: UIViewController {
     
     
     
-    //Mark - CollectionView
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    //the width of collectionViewCell
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let size = CGRectGetWidth(collectionView!.bounds) / 2
+        let layout =  collectionViewLayout as! DashboardLayout
+        layout.delegate = self
+        layout.numberOfColumns = 1
     }
     
     
@@ -41,33 +40,8 @@ class DashboardViewController: UIViewController {
 }
 
 
-//extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDataSource{
-//    
-//
-//    
-//    
-//    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return data.count
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-//        
-//        let reuseIdentifier = "informationCell"
-//        
-//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! DashboardCollectionViewCell
-//        
-//        let information = data[indexPath.row]
-//        cell.configure(information)
-//        return cell
-//        
-//    }
-//    
-//    
-//    
-//    
-//}
 
-extension DashboardViewController: DashboardLayoutDelegate {
+extension DashboardViewController{
     
     func collectionView(collectionView: UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath) -> CGFloat{
         return 100
