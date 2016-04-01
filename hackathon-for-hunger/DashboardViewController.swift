@@ -9,7 +9,7 @@
 
 import UIKit
 
-class DashboardViewController: UICollectionViewController,  DashboardLayoutDelegate  {
+class DashboardViewController: UIViewController {
     
     
     let data : [(String, String, String)] = [("kenitra", "10", "4 egges"),
@@ -24,41 +24,29 @@ class DashboardViewController: UICollectionViewController,  DashboardLayoutDeleg
     @IBOutlet weak var itemsLabel: UILabel!
     
     
-    
    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    
+    
+}
+
+extension DashboardViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let size = CGRectGetWidth(collectionView!.bounds) / 2
-        let layout =  collectionViewLayout as! DashboardLayout
-        layout.delegate = self
-        layout.numberOfColumns = 1
-    }
-    
-    
-    
-}
-
-
-
-extension DashboardViewController{
-    
-    func collectionView(collectionView: UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath) -> CGFloat{
-        return 100
+        let information = "informationCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(information, forIndexPath: indexPath) as! DashboardViewCell
+        cell.information = data[indexPath.row]
+        
+        return cell
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
