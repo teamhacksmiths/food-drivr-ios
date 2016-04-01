@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */; };
 		44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250A1CAC444100D676C3 /* BaseRouter.swift */; };
 		44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */; };
 		44A725101CAC559500D676C3 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250F1CAC559500D676C3 /* Donation.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeysDist.plist; sourceTree = "<group>"; };
 		44A7250A1CAC444100D676C3 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouter.swift; sourceTree = "<group>"; };
 		44A7250F1CAC559500D676C3 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				44AEA87A1CA9CBC100A52731 /* Assets.xcassets */,
 				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
 				44AEA87F1CA9CBC100A52731 /* Info.plist */,
+				44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */,
 			);
 			path = "hackathon-for-hunger";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */,
+				44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */,
 				44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */,
 				44AEA8791CA9CBC100A52731 /* Main.storyboard in Resources */,
 			);
