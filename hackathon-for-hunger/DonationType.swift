@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
+
+class DonationType: Object {
+    
+    dynamic var id: NSNumber!
+    let value: String? = ""
+}

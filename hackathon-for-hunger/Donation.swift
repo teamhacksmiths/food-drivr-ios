@@ -27,6 +27,7 @@ class Donation: Object {
     dynamic var pickupTime: NSDate = NSDate()
     dynamic var dropoffTime: NSDate = NSDate()
     dynamic var expiryTime: NSDate = NSDate()
+    let donationItems = List<DonationType>()
     private dynamic var rawStatus: Int = 0
     
     var status: DonationStatus {
