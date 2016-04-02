@@ -29,7 +29,7 @@ class AuthProvider : NSObject {
         return nil
     }
     
-    func attemptLogin(username: String, password: String) throws -> User {
-        throw HTTPStatusCode
+    func attemptLogin(username: String, password: String) throws -> User? {
+        return nil;
     }
 }

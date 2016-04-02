@@ -11,6 +11,7 @@
 		44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE01CAFD8C0002D7233 /* AuthProvider.swift */; };
 		44484DE31CAFDA45002D7233 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE21CAFDA45002D7233 /* Token.swift */; };
 		44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */; };
+		44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE61CAFFECA002D7233 /* UserRouter.swift */; };
 		44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */; };
 		44573E5D1CAE765200A5F1C3 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44573E5C1CAE765200A5F1C3 /* ApiKeys.plist */; };
 		44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E5E1CAEF20D00A5F1C3 /* Location.swift */; };
@@ -45,6 +46,7 @@
 		44484DE01CAFD8C0002D7233 /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		44484DE21CAFDA45002D7233 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
+		44484DE61CAFFECA002D7233 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeysDist.plist; sourceTree = "<group>"; };
 		44573E5C1CAE765200A5F1C3 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		44573E5E1CAEF20D00A5F1C3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				44A7250A1CAC444100D676C3 /* BaseRouter.swift */,
 				44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */,
+				44484DE61CAFFECA002D7233 /* UserRouter.swift */,
 			);
 			name = Routing;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
 				44AEA8761CA9CBC100A52731 /* ViewController.swift in Sources */,
 				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
+				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
 				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
 				44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */,
 				44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */,

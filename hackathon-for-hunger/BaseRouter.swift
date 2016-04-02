@@ -43,7 +43,14 @@ class BaseRouter : URLRequestConvertible, APIConfiguration {
 
     
     var baseUrl: String {
-        let baseUrl = "INSERT_BASE_URL_HERE"
+        var config: NSDictionary?
+        if let path = NSBundle.mainBundle().pathForResource("ApiKeys", ofType: "plist") {
+            config = NSDictionary(contentsOfFile: path)
+        }
+        var baseUrl = "";
+        if let config = config {
+            baseUrl = config["DRIVR_API_BASE_URL"] as! String
+        }
         return baseUrl
     }
     
