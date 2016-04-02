@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        DrivrAPI.sharedInstance.authenticate("test@drivr.com", password: "password", completionHandler: {
+            response, error in
+            print(response)
+            print(error)
+        })
     }
 
     override func didReceiveMemoryWarning() {
