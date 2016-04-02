@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CFDE8161CAD4D8A00D6172B /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */; };
+		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
+		3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */; };
+		3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */; };
 		44484DDE1CAFD857002D7233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DDD1CAFD857002D7233 /* User.swift */; };
 		44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE01CAFD8C0002D7233 /* AuthProvider.swift */; };
 		44484DE31CAFDA45002D7233 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE21CAFDA45002D7233 /* Token.swift */; };
 		44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */; };
 		44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE61CAFFECA002D7233 /* UserRouter.swift */; };
 		44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */; };
-		44573E5D1CAE765200A5F1C3 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44573E5C1CAE765200A5F1C3 /* ApiKeys.plist */; };
 		44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E5E1CAEF20D00A5F1C3 /* Location.swift */; };
 		44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E601CAEF35F00A5F1C3 /* DonationType.swift */; };
 		44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E621CAEF37400A5F1C3 /* MetaData.swift */; };
@@ -21,16 +24,13 @@
 		44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250A1CAC444100D676C3 /* BaseRouter.swift */; };
 		44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */; };
 		44A725101CAC559500D676C3 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250F1CAC559500D676C3 /* Donation.swift */; };
-		3CFDE8161CAD4D8A00D6172B /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */; };
-		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
-		3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */; };
-		3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */; };
 		44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8731CA9CBC100A52731 /* AppDelegate.swift */; };
 		44AEA8761CA9CBC100A52731 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8751CA9CBC100A52731 /* LoginViewController.swift */; };
 		44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87A1CA9CBC100A52731 /* Assets.xcassets */; };
 		44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */; };
 		44B7EFF91CAD95A600E7C609 /* DrivrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFF81CAD95A600E7C609 /* DrivrAPI.swift */; };
 		44B7F0001CADAD5B00E7C609 /* DonationRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */; };
+		6398AAC91CB0745E00B9C87D /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6398AAC81CB0745E00B9C87D /* ApiKeys.plist */; };
 		69BBC19CAFAE9CEC7A5EECCE /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +55,6 @@
 		44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
 		44484DE61CAFFECA002D7233 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeysDist.plist; sourceTree = "<group>"; };
-		44573E5C1CAE765200A5F1C3 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		44573E5E1CAEF20D00A5F1C3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		44573E601CAEF35F00A5F1C3 /* DonationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationType.swift; sourceTree = "<group>"; };
 		44573E621CAEF37400A5F1C3 /* MetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
@@ -70,11 +69,11 @@
 		44AEA87D1CA9CBC100A52731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44AEA87F1CA9CBC100A52731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44AEA8841CA9CBC100A52731 /* hackathon-for-hungerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hackathon-for-hungerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		44AEA8881CA9CBC100A52731 /* hackathon_for_hungerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackathon_for_hungerTests.swift; sourceTree = "<group>"; };
 		44AEA88A1CA9CBC100A52731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44B7EFF81CAD95A600E7C609 /* DrivrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrivrAPI.swift; sourceTree = "<group>"; };
 		44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouterTest.swift; sourceTree = "<group>"; };
 		4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6398AAC81CB0745E00B9C87D /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		7D65AE8EA6D2673A5FC471F2 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C423D9E60134D94E263D2 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,7 +183,7 @@
 				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
 				44AEA87F1CA9CBC100A52731 /* Info.plist */,
 				44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */,
-				44573E5C1CAE765200A5F1C3 /* ApiKeys.plist */,
+				6398AAC81CB0745E00B9C87D /* ApiKeys.plist */,
 			);
 			path = "hackathon-for-hunger";
 			sourceTree = "<group>";
@@ -319,7 +318,7 @@
 				44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */,
 				44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */,
 				3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */,
-				44573E5D1CAE765200A5F1C3 /* ApiKeys.plist in Resources */,
+				6398AAC91CB0745E00B9C87D /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,14 +424,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		44AEA8771CA9CBC100A52731 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				44AEA8781CA9CBC100A52731 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
