@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -77,6 +77,9 @@
                                                                         <state key="normal" title="Enter">
                                                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="logInUsingEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wyb-fS-jdi"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trr-ja-dt1">
                                                                         <rect key="frame" x="0.0" y="40" width="500" height="1"/>
@@ -132,6 +135,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa3-sb-EjS">
                                                 <rect key="frame" x="0.0" y="52" width="600" height="32"/>
                                                 <state key="normal" image="facebook"/>
+                                                <connections>
+                                                    <action selector="logInUsingFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aWx-u2-Dwc"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tQF-Ta-1mH">
                                                 <rect key="frame" x="0.0" y="98" width="600" height="1"/>
@@ -143,6 +149,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTu-2L-f6J">
                                                 <rect key="frame" x="0.0" y="113" width="600" height="32"/>
                                                 <state key="normal" image="twitter"/>
+                                                <connections>
+                                                    <action selector="logInUsingTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZI-0h-7Sg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -157,6 +166,10 @@
                             <constraint firstItem="sGv-Dd-dwB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sH0-44-hgQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="A20-em-dCc" id="x2Y-q3-DIt"/>
+                        <outlet property="passwordTextField" destination="3l1-m3-0cL" id="IOa-wn-4B8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
