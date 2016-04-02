@@ -4,7 +4,7 @@
 use_frameworks!
 
 target 'hackathon-for-hunger' do
-pod 'Alamofire', '~> 3.0'
+pod 'Alamofire'
 pod 'RealmSwift'
 end
 
