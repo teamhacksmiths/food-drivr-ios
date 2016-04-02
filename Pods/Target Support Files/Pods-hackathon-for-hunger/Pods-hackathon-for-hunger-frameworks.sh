@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-hackathon-for-hunger/Alamofire.framework"
   install_framework "Pods-hackathon-for-hunger/Realm.framework"
   install_framework "Pods-hackathon-for-hunger/RealmSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-hackathon-for-hunger/Alamofire.framework"
   install_framework "Pods-hackathon-for-hunger/Realm.framework"
   install_framework "Pods-hackathon-for-hunger/RealmSwift.framework"
 fi
