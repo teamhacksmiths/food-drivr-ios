@@ -71,19 +71,22 @@ enum LoginProvider {
     }
     
     private func loginUsingCustom(delegate: LoginProviderDelegate,email: String,password: String) {
-        
+
+        DrivrAPI.sharedInstance.authenticate(email, password: password, completionHandler: {
+            (response, error) in
+            
+            guard error == nil else {
+                delegate.loginProvider(self, didFaild: error)
+                return
+            }
+            delegate.loginProvider(self, didSucced: response)
+        })
         
     }
     
     
     
-    
-    
-    
-    
 }
-
-
 
 
 
