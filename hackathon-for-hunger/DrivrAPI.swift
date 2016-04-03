@@ -8,16 +8,18 @@
 
 import Foundation
 import Alamofire
+import RealmSwift
 
 class DrivrAPI {
     
     static let sharedInstance = DrivrAPI()
     let manager = Manager()
+    typealias JsonDict = [String: AnyObject]
     
     init() {
     }
     
-    func authenticate(username: String, password: String, completionHandler: ([String: AnyObject]?, NSError?)-> ()) {
+    func authenticate(username: String, password: String, completionHandler: (JsonDict?, NSError?)-> ()) {
         
         let router = UserRouter(endpoint: .Login(username: username, password: password) )
 
@@ -29,7 +31,7 @@ class DrivrAPI {
                 case .Success(let JSON):
                     print("Success with JSON: \(JSON)")
                     
-                    let response = JSON as! NSDictionary
+                    let response = JSON as! JsonDict
                     print(response)
                 case .Failure(let error):
                     print("Request failed with error: \(error)")
@@ -37,4 +39,29 @@ class DrivrAPI {
         }
     }
     
+    func getDonations(completed: Bool? = false, dateRange: String?, completionHandler: (Results<Donation>?, NSError?)-> ()) {
+        
+        let router = DonationRouter(endpoint: .GetDonations(completed: completed!, dateRange: dateRange) )
+        
+        manager.request(router)
+            .validate()
+            .responseJSON {
+                response in
+                switch response.result {
+                case .Success(let JSON):
+                    
+                    let donations = JSON as! [JsonDict]
+                    let realm = try! Realm()
+                    for donation:JsonDict in donations {
+                        try! realm.write {
+                            realm.add(Donation(dict: donation), update: true)
+                        }
+                    }
+                    completionHandler(realm.objects(Donation), nil)
+                    
+                case .Failure(let error):
+                    completionHandler(nil, error)
+                }
+        }
+    }
 }

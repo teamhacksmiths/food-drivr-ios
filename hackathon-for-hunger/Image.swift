@@ -1,14 +1,16 @@
 //
-//  DonationType.swift
+//  Image.swift
 //  hackathon-for-hunger
 //
-//  Created by Ian Gristock on 4/1/16.
+//  Created by Ian Gristock on 4/3/16.
 //  Copyright © 2016 Hacksmiths. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-class DonationType: Object {
-    dynamic var name: String? = ""
+class Image: Object {
+    
+    dynamic var url: String? = nil
+    
 }

@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class User: Object {
-    let id: Int! = nil
+    dynamic var id: Int = 0
     dynamic var name: String? = ""
     dynamic var email: String? = ""
 }

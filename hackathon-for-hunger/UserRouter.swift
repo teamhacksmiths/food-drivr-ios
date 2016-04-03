@@ -40,14 +40,12 @@ class UserRouter : BaseRouter {
             response["username"] = username
             response["password"] = password
             return response
-        default: return nil
         }
     }
     
     override var encoding: Alamofire.ParameterEncoding? {
         switch endpoint {
         case .Login: return .URL
-        default: return .JSON
         }
     }
     

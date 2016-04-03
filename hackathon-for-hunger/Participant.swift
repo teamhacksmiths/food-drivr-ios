@@ -10,5 +10,16 @@ import Foundation
 import RealmSwift
 
 class Participant: Object {
-    dynamic var id: String!
+    dynamic var id: Int = 0
+    dynamic var updated_at: NSDate? = nil
+    dynamic var created_at: NSDate? = nil
+    dynamic var name: String? = ""
+    dynamic var email: String? = ""
+    dynamic var avatar: String? = ""
+    dynamic var phone: String? = ""
+    dynamic var role = 0
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
