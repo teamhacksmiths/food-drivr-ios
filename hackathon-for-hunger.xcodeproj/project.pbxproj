@@ -21,6 +21,8 @@
 		44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E601CAEF35F00A5F1C3 /* DonationType.swift */; };
 		44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E621CAEF37400A5F1C3 /* MetaData.swift */; };
 		44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E641CAEF68500A5F1C3 /* Participant.swift */; };
+		4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464177E1CB182AC00F37F17 /* Recipient.swift */; };
+		446417811CB1872500F37F17 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446417801CB1872500F37F17 /* Image.swift */; };
 		44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250A1CAC444100D676C3 /* BaseRouter.swift */; };
 		44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */; };
 		44A725101CAC559500D676C3 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250F1CAC559500D676C3 /* Donation.swift */; };
@@ -60,6 +62,8 @@
 		44573E601CAEF35F00A5F1C3 /* DonationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationType.swift; sourceTree = "<group>"; };
 		44573E621CAEF37400A5F1C3 /* MetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
 		44573E641CAEF68500A5F1C3 /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		4464177E1CB182AC00F37F17 /* Recipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
+		446417801CB1872500F37F17 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		44A7250A1CAC444100D676C3 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouter.swift; sourceTree = "<group>"; };
 		44A7250F1CAC559500D676C3 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				44573E641CAEF68500A5F1C3 /* Participant.swift */,
 				44484DDD1CAFD857002D7233 /* User.swift */,
 				44484DE21CAFDA45002D7233 /* Token.swift */,
+				4464177E1CB182AC00F37F17 /* Recipient.swift */,
+				446417801CB1872500F37F17 /* Image.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -390,12 +396,14 @@
 				6395C0851CB0C2610059B5E1 /* DonationMapViewController.swift in Sources */,
 				44AEA8761CA9CBC100A52731 /* LoginViewController.swift in Sources */,
 				3CFDE8161CAD4D8A00D6172B /* LoginProvider.swift in Sources */,
+				4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */,
 				3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */,
 				44B7EFF91CAD95A600E7C609 /* DrivrAPI.swift in Sources */,
 				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
 				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
 				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
 				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
+				446417811CB1872500F37F17 /* Image.swift in Sources */,
 				44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */,
 				44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */,
 				44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */,
