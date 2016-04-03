@@ -18,7 +18,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        DrivrAPI.sharedInstance.authenticate("test@drivr.com", password: "password", completionHandler: {
+        print("")
+        DrivrAPI.sharedInstance.getDonations(dateRange: "test", completionHandler: {
             response, error in
             print(response)
             print(error)

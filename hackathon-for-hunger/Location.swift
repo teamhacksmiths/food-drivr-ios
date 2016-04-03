@@ -11,14 +11,30 @@ import RealmSwift
 import MapKit
 
 class Location: Object {
+    typealias JsonDict = [String: AnyObject]
+    var latitude = RealmOptional<Double>()
+    var longitude = RealmOptional<Double>()
+    dynamic var estimated: NSDate? = nil
+    dynamic var actual: NSDate? = nil
     
-    let latitude: Double? = 0.0
-    let longitude: Double? = 0.0
     
     var coordinates: CLLocationCoordinate2D? {
-        if let latitude = latitude, longitude = longitude {
+        if let latitude = latitude.value, longitude = longitude.value {
             return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         }
         return nil
+    }
+    
+    convenience init(dict: JsonDict) {
+        
+        self.init()
+        if let lat = dict["latitude"] as? String {
+            self.latitude.value = Double(lat)
+        }
+        if let lon = dict["longitude"] as? String {
+            self.longitude.value = Double(lon)
+        }
+        self.estimated = dict["estimated"] as? NSDate
+        self.actual = dict["actual"] as? NSDate
     }
 }
