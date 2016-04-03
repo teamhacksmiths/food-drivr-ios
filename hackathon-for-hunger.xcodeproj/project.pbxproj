@@ -33,7 +33,7 @@
 		44B7EFF91CAD95A600E7C609 /* DrivrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFF81CAD95A600E7C609 /* DrivrAPI.swift */; };
 		44B7F0001CADAD5B00E7C609 /* DonationRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */; };
 		6395C0851CB0C2610059B5E1 /* DonationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C0841CB0C2610059B5E1 /* DonationMapViewController.swift */; };
-		6398AAC91CB0745E00B9C87D /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6398AAC81CB0745E00B9C87D /* ApiKeys.plist */; };
+		6395C0871CB1D34A0059B5E1 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
 		69BBC19CAFAE9CEC7A5EECCE /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,7 @@
 		44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouterTest.swift; sourceTree = "<group>"; };
 		4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6395C0841CB0C2610059B5E1 /* DonationMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationMapViewController.swift; sourceTree = "<group>"; };
-		6398AAC81CB0745E00B9C87D /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		7D65AE8EA6D2673A5FC471F2 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C423D9E60134D94E263D2 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,8 +191,8 @@
 				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
 				44AEA87F1CA9CBC100A52731 /* Info.plist */,
 				44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */,
-				6398AAC81CB0745E00B9C87D /* ApiKeys.plist */,
 				6395C0841CB0C2610059B5E1 /* DonationMapViewController.swift */,
+				6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */,
 			);
 			path = "hackathon-for-hunger";
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 				44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */,
 				44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */,
 				3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */,
-				6398AAC91CB0745E00B9C87D /* ApiKeys.plist in Resources */,
+				6395C0871CB1D34A0059B5E1 /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
