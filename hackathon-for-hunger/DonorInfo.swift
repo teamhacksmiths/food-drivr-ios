@@ -9,11 +9,8 @@
 import Foundation
 
 struct DonorInfo {
-    var timestamp: NSDate? // may convert to NSDate // do we even need this one? for sorting?
+    var timestamp: NSDate?
     var name: String?
-//    var firstName: String?
-//    var lastName: String?
-//    var uniqueKey: String?
     var location: String?
     var lon: Double?
     var lat: Double?
@@ -34,8 +31,6 @@ struct DonorInfo {
         }
         */
         
-//        firstName = (data.valueForKey("firstName") as! String)
-//        lastName = (data.valueForKey("lastName") as! String)
         name = (data.valueForKey("name") as! String)
         
         if let mapString = data.valueForKey("mapString") as? String {

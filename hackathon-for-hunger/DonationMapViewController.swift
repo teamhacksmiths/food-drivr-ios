@@ -46,11 +46,19 @@ class DonationMapViewController: UIViewController, UITextFieldDelegate {
         locationTextField.delegate = self
         if donorInfo != nil {
             donorLabel.text = donorInfo!.name
+            locationTextField.text = donorInfo?.location
         }
     }
     
     override func viewWillAppear(animated: Bool) {
         subscribeToKeyboardNotifications()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if locationTextField.text != nil {
+            findOnMap()
+        }
     }
     
     //MARK:- Geocoding

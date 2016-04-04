@@ -44,41 +44,6 @@ class MapsDummyData {
         self.donorInfoArray?.append(einstein)
         self.donorInfoArray?.append(starbucks)
         
-//        geocodeAddress(voodoo) {success, coords in
-//            if success {
-//                voodoo.lat = Double(coords.latitude)
-//                voodoo.lon = Double(coords.longitude)
-//                self.donorInfoArray?.append(voodoo)
-//            }
-//        }
-//        
-//        geocodeAddress(einstein) {success, coords in
-//            if success {
-//                einstein.lat = Double(coords.latitude)
-//                einstein.lon = Double(coords.longitude)
-//                self.donorInfoArray?.append(einstein)
-//            }
-//        }
-//        
-//        geocodeAddress(starbucks) {success, coords in
-//            if success {
-//                starbucks.lat = Double(coords.latitude)
-//                starbucks.lon = Double(coords.longitude)
-//                self.donorInfoArray?.append(starbucks)
-//            }
-//        }
-        
-        
-       
-        
-        
-//        for info in donorInfoArray! {
-////            let coordinates = geocodeAddress(info)
-////            info.lat = coordinates.latitude
-////            info.lon = coordinates.longitude
-//            print("donor: \(info)")
-//        }
-        
     }
     
     func geocodeAddress(donorInfo: DonorInfo, completionHandler: (success: Bool, coords: CLLocationCoordinate2D) ->  Void) {
@@ -90,14 +55,13 @@ class MapsDummyData {
                 let lat = placemark.location?.coordinate.latitude
                 let lon = placemark.location?.coordinate.longitude
                 let region = placemark.region as! CLCircularRegion
-                let mkregion = MKCoordinateRegionMakeWithDistance(
+                _ = MKCoordinateRegionMakeWithDistance(
                     region.center,
                     region.radius,
                     region.radius);
                 coord.latitude = Double(lat!)
                 coord.longitude = Double(lon!)
                 
-                print(coord)
                 completionHandler(success: true, coords: coord)
             }
         }

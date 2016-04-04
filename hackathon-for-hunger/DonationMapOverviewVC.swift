@@ -51,40 +51,20 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
 //        }
 
         for donorInfo in donorInfoArray! {
-            print(donorInfo)
             //TODO: - replace force unwrapping
-
-//            let name = donorInfo.name!
-//            let lat = CLLocationDegrees(donorInfo.lat!)
-//            let lon = CLLocationDegrees(donorInfo.lon!)
             
-            // The lat and long are used to create a CLLocationCoordinates2D instance.
-            //let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-            //let coordinate = CLLocationCoordinate2D(latitude: 40.0, longitude: -120.0)
-            
-            // create the annotation and set its coordiate, title, and subtitle properties
-            let annotation = DonationPin()//MKPointAnnotation()
+            // create the annotation and set its properties
+            let annotation = DonationPin()  // subclass of MKAnnotation()
             annotation.donorInfo = donorInfo
-            //annotation.coordinate = coordinate
-            //annotation.title =  name
-//            if let linkString = studentInfo.link {
-//                let mediaURL = "\(linkString)"
-//                annotation.subtitle = mediaURL
-//            }
+
             // place the annotation in an array of annotations.
             annotations.append(annotation)
         }
         // When the array is complete, add the annotations to the map.
         mapView.addAnnotations(annotations)
+        mapView.showAnnotations(annotations, animated: true)
     }
     
-//    // Use this "select" function to tap the pin
-//    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-//        // Unless the annotation is deselected, it is not selectable when returning from the collection view
-//        mapView.deselectAnnotation(view.annotation, animated: false)
-//        
-//        self.performSegueWithIdentifier("DonationDetail", sender: view.annotation)
-//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "DonationDetail") {
@@ -99,9 +79,6 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     // MARK: - MKMapViewDelegate
     
-    // Here we create a view with a "right callout accessory view". You might choose to look into other
-    // decoration alternatives. Notice the similarity between this method and the cellForRowAtIndexPath
-    // method in TableViewDataSource.
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
 
         let reuseId = "pin"
@@ -120,15 +97,19 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         return pinView
     }
     
-    // This delegate method is implemented to respond to taps. It opens the system browser
-    // to the URL specified in the annotationViews subtitle property.
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == annotationView.rightCalloutAccessoryView {
             performSegueWithIdentifier("DonationDetail", sender: annotationView.annotation)
-            //            let app = UIApplication.sharedApplication()
-            //            app.openURL(NSURL(string: (annotationView.annotation!.subtitle)!!)!)
             
         }
     }
+    
+    //    // Use this "select" function to tap the pin (currently we are tapping the annotation view instead)
+    //    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+    //        // Unless the annotation is deselected, it is not selectable when returning from the collection view
+    //        mapView.deselectAnnotation(view.annotation, animated: false)
+    //
+    //        self.performSegueWithIdentifier("DonationDetail", sender: view.annotation)
+    //    }
 }
 
