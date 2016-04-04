@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SiY-CT-JRa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="51h-zf-Rpo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -649,7 +649,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85v-5S-3Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-633" y="851"/>
+            <point key="canvasLocation" x="-1451" y="841"/>
+        </scene>
+        <!--Donation Map OverviewVC-->
+        <scene sceneID="WdT-v9-7JV">
+            <objects>
+                <viewController id="51h-zf-Rpo" customClass="DonationMapOverviewVC" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WMP-HF-EaD"/>
+                        <viewControllerLayoutGuide type="bottom" id="zUu-Jq-qzf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XUC-bg-5ww">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-JY-1AV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="51h-zf-Rpo" id="SuB-8D-xvs"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rbn-JY-1AV" firstAttribute="top" secondItem="XUC-bg-5ww" secondAttribute="top" id="6jZ-Hf-CFd"/>
+                            <constraint firstItem="rbn-JY-1AV" firstAttribute="leading" secondItem="XUC-bg-5ww" secondAttribute="leading" id="LVg-dc-G8M"/>
+                            <constraint firstAttribute="trailing" secondItem="rbn-JY-1AV" secondAttribute="trailing" id="TNN-Dh-rXy"/>
+                            <constraint firstItem="zUu-Jq-qzf" firstAttribute="top" secondItem="rbn-JY-1AV" secondAttribute="bottom" id="ctI-uC-MLH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="rbn-JY-1AV" id="qcA-CI-H4k"/>
+                        <segue destination="7VA-Ox-rwG" kind="presentation" identifier="DonorDetail" modalTransitionStyle="flipHorizontal" id="qK0-dZ-ncO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0h-QS-XCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-766" y="846"/>
         </scene>
         <!--Donation Map View Controller-->
         <scene sceneID="TJm-YR-Of5">
@@ -703,6 +739,7 @@
                                     <constraint firstAttribute="height" constant="44" id="Ms5-RW-OuI"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem width="60" style="plain" systemItem="fixedSpace" id="i4W-To-Anp"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="NnP-oQ-c7N"/>
                                     <barButtonItem title="ACCEPT" id="6DM-hW-7gW">
                                         <color key="tintColor" red="1" green="0.99994051456451416" blue="0.99998050928115845" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -711,6 +748,12 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jh5-nD-BbH"/>
+                                    <barButtonItem title="Cancel" id="rTd-oT-U4l">
+                                        <color key="tintColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="7VA-Ox-rwG" id="nve-PH-8K8"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="1" green="0.160998218" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
@@ -763,7 +806,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NeY-aX-6q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="841"/>
+            <point key="canvasLocation" x="-54" y="841"/>
         </scene>
     </scenes>
     <resources>

@@ -34,6 +34,10 @@ class DonationMapViewController: UIViewController, UITextFieldDelegate {
         findOnMap()
     }
     
+    @IBAction func cancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     //MARK:- View lifecycle
     
     override func viewDidLoad() {
