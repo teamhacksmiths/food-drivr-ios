@@ -37,6 +37,7 @@
 		6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C0881CB1D69D0059B5E1 /* DonationMapOverviewVC.swift */; };
 		6395C08C1CB1F2B50059B5E1 /* DonorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C08B1CB1F2B50059B5E1 /* DonorInfo.swift */; };
 		6395C08E1CB247460059B5E1 /* DonationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C08D1CB247460059B5E1 /* DonationPin.swift */; };
+		6395C0901CB25D400059B5E1 /* MapsDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C08F1CB25D400059B5E1 /* MapsDummyData.swift */; };
 		69BBC19CAFAE9CEC7A5EECCE /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		6395C0881CB1D69D0059B5E1 /* DonationMapOverviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationMapOverviewVC.swift; sourceTree = "<group>"; };
 		6395C08B1CB1F2B50059B5E1 /* DonorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorInfo.swift; sourceTree = "<group>"; };
 		6395C08D1CB247460059B5E1 /* DonationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationPin.swift; sourceTree = "<group>"; };
+		6395C08F1CB25D400059B5E1 /* MapsDummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsDummyData.swift; sourceTree = "<group>"; };
 		7D65AE8EA6D2673A5FC471F2 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C423D9E60134D94E263D2 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -243,6 +245,7 @@
 				6395C0881CB1D69D0059B5E1 /* DonationMapOverviewVC.swift */,
 				6395C08B1CB1F2B50059B5E1 /* DonorInfo.swift */,
 				6395C08D1CB247460059B5E1 /* DonationPin.swift */,
+				6395C08F1CB25D400059B5E1 /* MapsDummyData.swift */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
 				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
 				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
+				6395C0901CB25D400059B5E1 /* MapsDummyData.swift in Sources */,
 				446417811CB1872500F37F17 /* Image.swift in Sources */,
 				44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */,
 				6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */,

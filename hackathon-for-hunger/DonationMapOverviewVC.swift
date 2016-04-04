@@ -12,41 +12,46 @@ import MapKit
 
 class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
+    let dummyData = MapsDummyData.sharedInstance
     var donorInfoArray: [DonorInfo]?
     
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
+        donorInfoArray = dummyData.donorInfoArray
 //        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DonationMapOverviewVC.readAndDisplayAnnotations), name: refreshNotificationKey, object: nil)
 //        navigationController?.title = "Pending Donations"
-        donorInfoArray = [DonorInfo]()
-        let dictionary: [String:AnyObject] = [
-            "name": "Einstein's Bagels",
-            "mapString": "101 Cooper St. Santa Cruz, CA",
-            "longitude": -122.0,
-            "latitude": 36.5
-        ]
-        let sampleDonor = DonorInfo(data: dictionary)
-        donorInfoArray?.append(sampleDonor)
+//        donorInfoArray = [DonorInfo]()
+//        let dictionary: [String:AnyObject] = [
+//            "name": "Einstein's Bagels",
+//            "mapString": "101 Cooper St. Santa Cruz, CA",
+//            "longitude": -122.0,
+//            "latitude": 36.5
+//        ]
+//        let sampleDonor = DonorInfo(data: dictionary)
+//        donorInfoArray?.append(sampleDonor)
         
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
         readAndDisplayAnnotations()
     }
     
     func readAndDisplayAnnotations() {
-
 //        if let _studentInfoArray = OnTheMapData.sharedInstance.studentInfoArray {
         
             // We will create an MKPointAnnotation for each dictionary in "locations". The
         // point annotations will be stored in this array, and then provided to the map view.
         var annotations = [DonationPin]()
-        guard let donorInfoArray = donorInfoArray else {
-            print("donorInfo nil?")
-            return
-        }
-        for donorInfo in donorInfoArray {
+//        guard let donorInfoArray = donorInfoArray else {
+//            print("donorInfo nil?")
+//            return
+//        }
+
+        for donorInfo in donorInfoArray! {
+            print(donorInfo)
             //TODO: - replace force unwrapping
 
 //            let name = donorInfo.name!

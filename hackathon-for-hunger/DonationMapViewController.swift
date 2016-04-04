@@ -44,7 +44,6 @@ class DonationMapViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         locationTextField.delegate = self
-        print(donorInfo)
         if donorInfo != nil {
             donorLabel.text = donorInfo!.name
         }
