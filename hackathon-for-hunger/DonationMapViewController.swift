@@ -19,15 +19,17 @@ class DonationMapViewController: UIViewController, UITextFieldDelegate {
         case Submit
     }
     
-    var annotation:MKAnnotation!
-    var pointAnnotation:MKPointAnnotation?
-    var pinAnnotationView:MKPinAnnotationView!
+    var donorInfo: DonorInfo?
+    var annotation: MKAnnotation!
+    var pointAnnotation: MKPointAnnotation?
+    var pinAnnotationView: MKPinAnnotationView!
     
     var keyboardHeight: CGFloat?
     
     //MARK:- Outlets & Actions
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var donorLabel: UILabel!
     @IBOutlet weak var locationTextField: UITextField!
     
     @IBAction func acceptDonation(sender: AnyObject) {
@@ -42,6 +44,10 @@ class DonationMapViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         locationTextField.delegate = self
+        print(donorInfo)
+        if donorInfo != nil {
+            donorLabel.text = donorInfo!.name
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

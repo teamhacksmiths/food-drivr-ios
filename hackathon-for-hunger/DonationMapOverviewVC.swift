@@ -41,26 +41,27 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
             // We will create an MKPointAnnotation for each dictionary in "locations". The
         // point annotations will be stored in this array, and then provided to the map view.
-        var annotations = [MKPointAnnotation]()
+        var annotations = [DonationPin]()
         guard let donorInfoArray = donorInfoArray else {
             print("donorInfo nil?")
             return
         }
         for donorInfo in donorInfoArray {
             //TODO: - replace force unwrapping
-            print(donorInfo)
-            let name = donorInfo.name!
-            let lat = CLLocationDegrees(donorInfo.lat!)
-            let lon = CLLocationDegrees(donorInfo.lon!)
+
+//            let name = donorInfo.name!
+//            let lat = CLLocationDegrees(donorInfo.lat!)
+//            let lon = CLLocationDegrees(donorInfo.lon!)
             
             // The lat and long are used to create a CLLocationCoordinates2D instance.
-            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            //let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
             //let coordinate = CLLocationCoordinate2D(latitude: 40.0, longitude: -120.0)
             
             // create the annotation and set its coordiate, title, and subtitle properties
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = coordinate
-            annotation.title =  name
+            let annotation = DonationPin()//MKPointAnnotation()
+            annotation.donorInfo = donorInfo
+            //annotation.coordinate = coordinate
+            //annotation.title =  name
 //            if let linkString = studentInfo.link {
 //                let mediaURL = "\(linkString)"
 //                annotation.subtitle = mediaURL
@@ -72,12 +73,22 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         mapView.addAnnotations(annotations)
     }
     
+//    // Use this "select" function to tap the pin
+//    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+//        // Unless the annotation is deselected, it is not selectable when returning from the collection view
+//        mapView.deselectAnnotation(view.annotation, animated: false)
+//        
+//        self.performSegueWithIdentifier("DonationDetail", sender: view.annotation)
+//    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "DonationDetail")
-        {
-            let mapInfoViewController = segue.destinationViewController as! MapKitViewControler
+        if (segue.identifier == "DonationDetail") {
             
-            mapInfoViewController.varToReceive = self.varToPass
+            if let pin = sender as? DonationPin {
+                let donationVC = segue.destinationViewController as! DonationMapViewController
+                
+                donationVC.donorInfo = pin.donorInfo
+            }
         }
     }
     
@@ -87,7 +98,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     // decoration alternatives. Notice the similarity between this method and the cellForRowAtIndexPath
     // method in TableViewDataSource.
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        print("in vfA")
+
         let reuseId = "pin"
         
         var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
@@ -108,7 +119,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     // to the URL specified in the annotationViews subtitle property.
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == annotationView.rightCalloutAccessoryView {
-            performSegueWithIdentifier("DonorDetail", sender: self)
+            performSegueWithIdentifier("DonationDetail", sender: annotationView.annotation)
             //            let app = UIApplication.sharedApplication()
             //            app.openURL(NSURL(string: (annotationView.annotation!.subtitle)!!)!)
             
