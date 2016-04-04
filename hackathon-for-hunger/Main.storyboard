@@ -651,7 +651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85v-5S-3Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-633" y="851"/>
+            <point key="canvasLocation" x="-1451" y="841"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="x4Y-ro-LIc">
@@ -851,18 +851,18 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qMd-CU-Lpm">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qMd-CU-Lpm">
                                 <rect key="frame" x="30" y="140" width="540" height="300"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xsy-70-Tsy">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xsy-70-Tsy">
                                         <rect key="frame" x="0.0" y="0.0" width="540" height="60"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jow-XC-Sa8">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jow-XC-Sa8">
                                                 <rect key="frame" x="0.0" y="0.0" width="540" height="54"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5YS-jX-led">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YS-jX-led">
                                                 <rect key="frame" x="0.0" y="59" width="540" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -871,15 +871,15 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NLu-ra-ySX">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NLu-ra-ySX">
                                         <rect key="frame" x="0.0" y="60" width="540" height="60"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Company" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBX-Ef-JmE">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Company" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBX-Ef-JmE">
                                                 <rect key="frame" x="0.0" y="0.0" width="540" height="54"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWU-0n-Tag">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWU-0n-Tag">
                                                 <rect key="frame" x="0.0" y="59" width="540" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -888,15 +888,15 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uKh-HR-Trh">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uKh-HR-Trh">
                                         <rect key="frame" x="0.0" y="120" width="540" height="60"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zb7-bX-bAd">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zb7-bX-bAd">
                                                 <rect key="frame" x="0.0" y="0.0" width="540" height="54"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aq7-26-Lbp">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aq7-26-Lbp">
                                                 <rect key="frame" x="0.0" y="59" width="540" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -905,15 +905,15 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-qv-58j">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-qv-58j">
                                         <rect key="frame" x="0.0" y="180" width="540" height="60"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFw-aw-IjE">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFw-aw-IjE">
                                                 <rect key="frame" x="0.0" y="0.0" width="540" height="54"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IOT-ZY-rXc">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOT-ZY-rXc">
                                                 <rect key="frame" x="0.0" y="59" width="540" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -922,10 +922,10 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="XGt-JY-dWN">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="XGt-JY-dWN">
                                         <rect key="frame" x="0.0" y="240" width="540" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI8-fh-32R">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI8-fh-32R">
                                                 <rect key="frame" x="508" y="0.0" width="32" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Next">
@@ -1202,6 +1202,7 @@
                                     <constraint firstAttribute="height" constant="44" id="Ms5-RW-OuI"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem width="60" style="plain" systemItem="fixedSpace" id="i4W-To-Anp"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="NnP-oQ-c7N"/>
                                     <barButtonItem title="ACCEPT" id="6DM-hW-7gW">
                                         <color key="tintColor" red="1" green="0.99994051456451416" blue="0.99998050928115845" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -1210,6 +1211,12 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jh5-nD-BbH"/>
+                                    <barButtonItem title="Cancel" id="rTd-oT-U4l">
+                                        <color key="tintColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="7VA-Ox-rwG" id="nve-PH-8K8"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="1" green="0.160998218" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
@@ -1256,13 +1263,77 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="donorLabel" destination="Ak2-pi-htk" id="1jR-Lu-Vfs"/>
                         <outlet property="locationTextField" destination="5FH-bu-QHw" id="cT4-4e-254"/>
                         <outlet property="mapView" destination="PSM-lk-053" id="T5i-nl-Jne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NeY-aX-6q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="841"/>
+            <point key="canvasLocation" x="1106" y="573"/>
+        </scene>
+        <!--Donation Overview Map-->
+        <scene sceneID="WdT-v9-7JV">
+            <objects>
+                <viewController restorationIdentifier="DonationOverviewMap" storyboardIdentifier="DonationOverviewMap" title="Donation Overview Map" id="51h-zf-Rpo" customClass="DonationMapOverviewVC" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WMP-HF-EaD"/>
+                        <viewControllerLayoutGuide type="bottom" id="zUu-Jq-qzf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XUC-bg-5ww">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-JY-1AV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="51h-zf-Rpo" id="SuB-8D-xvs"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaS-2l-2SP">
+                                <rect key="frame" x="10" y="20" width="580" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQV-ft-qun">
+                                        <rect key="frame" x="214" y="6" width="152" height="25"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Pending Donations">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="22" name="GillSans-LightItalic"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3989009261" green="0.77493035789999998" blue="0.83127403259999999" alpha="0.84462098817567566" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="E1o-lP-zXA"/>
+                                    <constraint firstItem="yQV-ft-qun" firstAttribute="centerY" secondItem="vaS-2l-2SP" secondAttribute="centerY" constant="-1.5" id="JZf-ZQ-qA5"/>
+                                    <constraint firstItem="yQV-ft-qun" firstAttribute="centerX" secondItem="vaS-2l-2SP" secondAttribute="centerX" id="fAy-t7-r7M"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rbn-JY-1AV" firstAttribute="top" secondItem="XUC-bg-5ww" secondAttribute="top" id="6jZ-Hf-CFd"/>
+                            <constraint firstItem="rbn-JY-1AV" firstAttribute="leading" secondItem="XUC-bg-5ww" secondAttribute="leading" id="LVg-dc-G8M"/>
+                            <constraint firstAttribute="trailing" secondItem="rbn-JY-1AV" secondAttribute="trailing" id="TNN-Dh-rXy"/>
+                            <constraint firstItem="vaS-2l-2SP" firstAttribute="top" secondItem="WMP-HF-EaD" secondAttribute="bottom" id="bdu-k8-AII"/>
+                            <constraint firstItem="zUu-Jq-qzf" firstAttribute="top" secondItem="rbn-JY-1AV" secondAttribute="bottom" id="ctI-uC-MLH"/>
+                            <constraint firstItem="vaS-2l-2SP" firstAttribute="leading" secondItem="XUC-bg-5ww" secondAttribute="leading" constant="10" id="fvk-fn-7bI"/>
+                            <constraint firstAttribute="trailing" secondItem="vaS-2l-2SP" secondAttribute="trailing" constant="10" id="pxh-QI-UX6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="rbn-JY-1AV" id="qcA-CI-H4k"/>
+                        <segue destination="7VA-Ox-rwG" kind="presentation" identifier="DonationDetail" modalTransitionStyle="flipHorizontal" id="qK0-dZ-ncO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0h-QS-XCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="-288"/>
         </scene>
     </scenes>
     <resources>

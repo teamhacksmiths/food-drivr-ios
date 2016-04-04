@@ -19,29 +19,46 @@ class DonationMapViewController: UIViewController, UITextFieldDelegate {
         case Submit
     }
     
-    var annotation:MKAnnotation!
-    var pointAnnotation:MKPointAnnotation?
-    var pinAnnotationView:MKPinAnnotationView!
+    var donorInfo: DonorInfo?
+    var annotation: MKAnnotation!
+    var pointAnnotation: MKPointAnnotation?
+    var pinAnnotationView: MKPinAnnotationView!
     
     var keyboardHeight: CGFloat?
     
     //MARK:- Outlets & Actions
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var donorLabel: UILabel!
     @IBOutlet weak var locationTextField: UITextField!
     
     @IBAction func acceptDonation(sender: AnyObject) {
         findOnMap()
     }
     
+    @IBAction func cancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     //MARK:- View lifecycle
     
     override func viewDidLoad() {
         locationTextField.delegate = self
+        if donorInfo != nil {
+            donorLabel.text = donorInfo!.name
+            locationTextField.text = donorInfo?.location
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
         subscribeToKeyboardNotifications()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if locationTextField.text != nil {
+            findOnMap()
+        }
     }
     
     //MARK:- Geocoding
