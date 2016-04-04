@@ -712,7 +712,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0h-QS-XCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="124"/>
+            <point key="canvasLocation" x="776" y="-288"/>
         </scene>
         <!--Donation Map View Controller-->
         <scene sceneID="TJm-YR-Of5">
@@ -834,7 +834,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NeY-aX-6q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="841"/>
+            <point key="canvasLocation" x="1106" y="573"/>
         </scene>
     </scenes>
     <resources>
