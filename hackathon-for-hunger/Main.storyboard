@@ -651,10 +651,10 @@
             </objects>
             <point key="canvasLocation" x="-1451" y="841"/>
         </scene>
-        <!--Donation Map OverviewVC-->
+        <!--Donation Overview Map-->
         <scene sceneID="WdT-v9-7JV">
             <objects>
-                <viewController id="51h-zf-Rpo" customClass="DonationMapOverviewVC" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DonationOverviewMap" title="Donation Overview Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="51h-zf-Rpo" customClass="DonationMapOverviewVC" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WMP-HF-EaD"/>
                         <viewControllerLayoutGuide type="bottom" id="zUu-Jq-qzf"/>
@@ -712,7 +712,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0h-QS-XCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-766" y="846"/>
+            <point key="canvasLocation" x="868" y="124"/>
         </scene>
         <!--Donation Map View Controller-->
         <scene sceneID="TJm-YR-Of5">
