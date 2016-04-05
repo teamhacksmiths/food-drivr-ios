@@ -16,6 +16,9 @@ class LoginViewController: UIViewController {
     
     var loginProvider = LoginProvider.None
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,8 +35,21 @@ class LoginViewController: UIViewController {
         if emailInput.text ==  validLogin {
             self.performSegueWithIdentifier("DriverLoginSuccess", sender: self)
         }
+
+        //Suggestion for implementing the singIn
+        //loginProvider = .Costum(emailInput.text!, passwordInput.text!)
+        //loginProvider.login(self)
     }
 
+//    @IBAction func singUpUsingTwitter(sender: UIButton) {
+//        
+//        loginProvider = .Twitter
+//        loginProvider.login(self)
+//        
+//    }
+//    
+    
+    
 }
 
 
