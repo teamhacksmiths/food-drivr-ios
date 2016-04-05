@@ -23,14 +23,28 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var deliveriesLabel: UILabel!
     @IBOutlet weak var itemsLabel: UILabel!
     
+    @IBAction func toggleMenu(sender: AnyObject) {
+        self.slideMenuController()?.openLeft()
+    }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        configureNavigationBar()
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     
+    
+    func configureNavigationBar(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
+
+    }
     
 }
 

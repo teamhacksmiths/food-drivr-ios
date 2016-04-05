@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class LoginViewController: UIViewController {
 
@@ -30,16 +31,28 @@ class LoginViewController: UIViewController {
 
     @IBAction func signInButtonClicked(sender: AnyObject) {
         
+        // https://github.com/teamhacksmiths/hackathon-for-hunger-ios/pull/6 
+        // was not sure what to do with this, so commented it out and explained in the PR so I could merge
+        //
+        // This is from HEAD from feature_ba_
         // temporary hard login ( email driver@drivr.com )
-        let validLogin = "driver@drivr.com"
-        if emailInput.text ==  validLogin {
-            self.performSegueWithIdentifier("DriverLoginSuccess", sender: self)
-        }
-
-        //Suggestion for implementing the singIn
+        //let validLogin = "driver@drivr.com"
+        //if emailInput.text ==  validLogin {
+        //    self.performSegueWithIdentifier("DriverLoginSuccess", sender: self)
+        //}
+        
+        //Suggestion for implementing the signIn
         //loginProvider = .Costum(emailInput.text!, passwordInput.text!)
         //loginProvider.login(self)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! DashboardViewController
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        self.presentViewController(slideMenuController, animated: false, completion: nil)
     }
+    
 
 //    @IBAction func singUpUsingTwitter(sender: UIButton) {
 //        
