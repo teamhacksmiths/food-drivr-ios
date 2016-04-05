@@ -6,6 +6,9 @@ use_frameworks!
 target 'hackathon-for-hunger' do
 pod 'Alamofire'
 pod 'RealmSwift'
+pod ‘FBSDKCoreKit’
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
 end
 
 target 'hackathon-for-hungerTests' do
