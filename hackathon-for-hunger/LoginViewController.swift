@@ -13,10 +13,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
+    
+    var loginProvider = LoginProvider.None
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    @IBAction func singInUsingFacebook(sender: UIButton) {
+        loginProvider = .Facebook
+        loginProvider.login(self)
+    }
 
     @IBAction func signInButtonClicked(sender: AnyObject) {
         
@@ -29,3 +36,18 @@ class LoginViewController: UIViewController {
 
 }
 
+
+extension LoginViewController: LoginProviderDelegate {
+    
+     // MARK: LoginProviderDelegate Method
+    
+    func loginProvider(loginProvider: LoginProvider, didSucced user: [String: AnyObject]){
+        
+        print(user)
+    }
+    
+    func loginProvider(loginProvider: LoginProvider, didFaild error: NSError){
+        print(error)
+    }
+    
+}

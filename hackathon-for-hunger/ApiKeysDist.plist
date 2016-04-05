@@ -1,12 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>DRIVR_API_CLIENT_ID</key>
-	<string>&lt;INSERT VALUE HERE&gt;</string>
-	<key>DRIVR_API_CLIENT_SECRET</key>
-	<string>&lt;INSERT VALUE HERE&gt;</string>
-	<key>DRIVR_API_BASE_URL</key>
-	<string>&lt;INSERT VALUE HERE&gt;</string>
-</dict>
+    <dict>
+        <key>CFBundleURLTypes</key>
+        <array>
+            <dict>
+                <key>CFBundleURLSchemes</key>
+                <array>
+                    <string>fb256802277988898</string>
+                </array>
+            </dict>
+        </array>
+        <key>LSApplicationQueriesSchemes</key>
+        <array>
+            <string>fbapi</string>
+            <string>fb-messenger-api</string>
+            <string>fbauth2</string>
+            <string>fbshareextension</string>
+        </array>
+        <key>FacebookAppID</key>
+        <string>256802277988898</string>
+        <key>FacebookDisplayName</key>
+        <string>hacksmith</string>
+        <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSExceptionDomains</key>
+            <dict>
+                <key>facebook.com</key>
+                <dict>
+                    <key>NSIncludesSubdomains</key>
+                    <true/>
+                    <key>NSExceptionRequiresForwardSecrecy</key>
+                    <false/>
+                </dict>
+                <key>fbcdn.net</key>
+                <dict>
+                    <key>NSIncludesSubdomains</key>
+                    <true/>
+                    <key>NSExceptionRequiresForwardSecrecy</key>
+                    <false/>
+                </dict>
+                <key>akamaihd.net</key>
+                <dict>
+                    <key>NSIncludesSubdomains</key>
+                    <true/>
+                    <key>NSExceptionRequiresForwardSecrecy</key>
+                    <false/>
+                </dict>
+            </dict>
+        </dict>
+        <key>DRIVR_API_CLIENT_ID</key>
+        <string>&lt;INSERT VALUE HERE&gt;</string>
+        <key>DRIVR_API_CLIENT_SECRET</key>
+        <string>&lt;INSERT VALUE HERE&gt;</string>
+        <key>DRIVR_API_BASE_URL</key>
+        <string>&lt;INSERT VALUE HERE&gt;</string>
+    </dict>
 </plist>
