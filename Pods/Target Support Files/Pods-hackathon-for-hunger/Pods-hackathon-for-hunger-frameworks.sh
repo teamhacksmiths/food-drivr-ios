@@ -85,12 +85,20 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-hackathon-for-hunger/Alamofire.framework"
+  install_framework "Pods-hackathon-for-hunger/Bolts.framework"
+  install_framework "Pods-hackathon-for-hunger/FBSDKCoreKit.framework"
+  install_framework "Pods-hackathon-for-hunger/FBSDKLoginKit.framework"
+  install_framework "Pods-hackathon-for-hunger/FBSDKShareKit.framework"
   install_framework "Pods-hackathon-for-hunger/Realm.framework"
   install_framework "Pods-hackathon-for-hunger/RealmSwift.framework"
   install_framework "Pods-hackathon-for-hunger/SlideMenuControllerSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-hackathon-for-hunger/Alamofire.framework"
+  install_framework "Pods-hackathon-for-hunger/Bolts.framework"
+  install_framework "Pods-hackathon-for-hunger/FBSDKCoreKit.framework"
+  install_framework "Pods-hackathon-for-hunger/FBSDKLoginKit.framework"
+  install_framework "Pods-hackathon-for-hunger/FBSDKShareKit.framework"
   install_framework "Pods-hackathon-for-hunger/Realm.framework"
   install_framework "Pods-hackathon-for-hunger/RealmSwift.framework"
   install_framework "Pods-hackathon-for-hunger/SlideMenuControllerSwift.framework"
