@@ -39,6 +39,11 @@
 		6395C08E1CB247460059B5E1 /* DonationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C08D1CB247460059B5E1 /* DonationPin.swift */; };
 		6395C0901CB25D400059B5E1 /* MapsDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C08F1CB25D400059B5E1 /* MapsDummyData.swift */; };
 		69BBC19CAFAE9CEC7A5EECCE /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */; };
+		EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */; };
+		EAAD23BC1CB37FF8005FD787 /* VSUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BB1CB37FF8005FD787 /* VSUserInfoViewController.swift */; };
+		EAAD23BE1CB38014005FD787 /* VSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BD1CB38014005FD787 /* VSAccountInfoViewController.swift */; };
+		EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */; };
+		EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,11 @@
 		6395C08F1CB25D400059B5E1 /* MapsDummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsDummyData.swift; sourceTree = "<group>"; };
 		7D65AE8EA6D2673A5FC471F2 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C423D9E60134D94E263D2 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
+		EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EAAD23BB1CB37FF8005FD787 /* VSUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSUserInfoViewController.swift; sourceTree = "<group>"; };
+		EAAD23BD1CB38014005FD787 /* VSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSAccountInfoViewController.swift; sourceTree = "<group>"; };
+		EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSUserInfoViewController.swift; sourceTree = "<group>"; };
+		EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAccountInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +281,11 @@
 		EAAD23B81CB37B78005FD787 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */,
+				EAAD23BB1CB37FF8005FD787 /* VSUserInfoViewController.swift */,
+				EAAD23BD1CB38014005FD787 /* VSAccountInfoViewController.swift */,
+				EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */,
+				EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */,
 			);
 			name = SignUp;
 			sourceTree = "<group>";
@@ -437,6 +452,7 @@
 				44B7EFF91CAD95A600E7C609 /* DrivrAPI.swift in Sources */,
 				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
 				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
+				EAAD23BC1CB37FF8005FD787 /* VSUserInfoViewController.swift in Sources */,
 				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
 				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
 				6395C0901CB25D400059B5E1 /* MapsDummyData.swift in Sources */,
@@ -445,15 +461,19 @@
 				6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */,
 				44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */,
 				44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */,
+				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,
+				EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */,
 				44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */,
 				3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */,
 				44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */,
 				44484DE31CAFDA45002D7233 /* Token.swift in Sources */,
 				6395C08C1CB1F2B50059B5E1 /* DonorInfo.swift in Sources */,
 				44484DDE1CAFD857002D7233 /* User.swift in Sources */,
+				EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */,
 				6395C08E1CB247460059B5E1 /* DonationPin.swift in Sources */,
+				EAAD23BE1CB38014005FD787 /* VSAccountInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
