@@ -1354,10 +1354,10 @@
             </objects>
             <point key="canvasLocation" x="776" y="-288"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Sign Up Navigation View Controller-->
         <scene sceneID="P65-Fk-X00">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bcu-Jv-QmP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bcu-Jv-QmP" customClass="SignUpNavigationViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="app-g8-FCm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
