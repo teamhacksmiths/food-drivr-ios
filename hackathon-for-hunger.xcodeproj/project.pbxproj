@@ -188,6 +188,7 @@
 			children = (
 				44484DDF1CAFD8B2002D7233 /* Auth */,
 				44A7250E1CAC4F2600D676C3 /* Models */,
+				EAAD23B71CB37B5A005FD787 /* Controller */,
 				44A725081CAC441F00D676C3 /* Network */,
 				44AEA8731CA9CBC100A52731 /* AppDelegate.swift */,
 				3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */,
@@ -199,7 +200,6 @@
 				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
 				44AEA87F1CA9CBC100A52731 /* Info.plist */,
 				44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */,
-				6395C08A1CB1D6A70059B5E1 /* Maps */,
 				6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */,
 			);
 			path = "hackathon-for-hunger";
@@ -257,6 +257,22 @@
 				B85C423D9E60134D94E263D2 /* Pods-hackathon-for-hunger.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EAAD23B71CB37B5A005FD787 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAAD23B81CB37B78005FD787 /* SignUp */,
+				6395C08A1CB1D6A70059B5E1 /* Maps */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EAAD23B81CB37B78005FD787 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
