@@ -26,6 +26,7 @@
 		44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250A1CAC444100D676C3 /* BaseRouter.swift */; };
 		44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */; };
 		44A725101CAC559500D676C3 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250F1CAC559500D676C3 /* Donation.swift */; };
+		44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */; };
 		44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8731CA9CBC100A52731 /* AppDelegate.swift */; };
 		44AEA8761CA9CBC100A52731 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8751CA9CBC100A52731 /* LoginViewController.swift */; };
 		44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87A1CA9CBC100A52731 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		44A7250A1CAC444100D676C3 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouter.swift; sourceTree = "<group>"; };
 		44A7250F1CAC559500D676C3 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
+		44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		44AEA8701CA9CBC100A52731 /* hackathon-for-hunger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hackathon-for-hunger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AEA8731CA9CBC100A52731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44AEA8751CA9CBC100A52731 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 				446417801CB1872500F37F17 /* Image.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		44AA631D1CB3F090005E02CC /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		44AEA8671CA9CBC100A52731 = {
@@ -274,6 +284,7 @@
 		EAAD23B71CB37B5A005FD787 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				44AA631D1CB3F090005E02CC /* Menu */,
 				EAAD23B81CB37B78005FD787 /* SignUp */,
 				6395C08A1CB1D6A70059B5E1 /* Maps */,
 			);
@@ -467,6 +478,7 @@
 				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
+				44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */,
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,
 				EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */,
 				44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */,

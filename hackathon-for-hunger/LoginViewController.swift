@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class LoginViewController: UIViewController {
 
@@ -20,11 +21,13 @@ class LoginViewController: UIViewController {
 
     @IBAction func signInButtonClicked(sender: AnyObject) {
         
-        // temporary hard login ( email driver@drivr.com )
-        let validLogin = "driver@drivr.com"
-        if emailInput.text ==  validLogin {
-            self.performSegueWithIdentifier("DriverLoginSuccess", sender: self)
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! DashboardViewController
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        self.presentViewController(slideMenuController, animated: false, completion: nil)
     }
 
 }

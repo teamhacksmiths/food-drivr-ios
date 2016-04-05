@@ -178,17 +178,44 @@
                     <connections>
                         <outlet property="emailInput" destination="A20-em-dCc" id="qX8-Jv-ahJ"/>
                         <outlet property="passwordInput" destination="3l1-m3-0cL" id="zp4-e1-0AU"/>
-                        <segue destination="oBz-4S-DHB" kind="show" identifier="DriverLoginSuccess" id="Pxs-nS-ckC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2593" y="3212"/>
         </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="ixx-sY-HTy">
+            <objects>
+                <tableViewController storyboardIdentifier="Left" id="crZ-a0-5ub" customClass="MenuTableViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fZb-u7-2i0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="3TR-SX-GBc">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3TR-SX-GBc" id="rDU-gP-QP0">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="crZ-a0-5ub" id="iob-Fw-zT0"/>
+                            <outlet property="delegate" destination="crZ-a0-5ub" id="z7E-BE-GS3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUn-JO-Bhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2593" y="3909"/>
+        </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="8GI-JK-3Kh">
             <objects>
-                <viewController id="oBz-4S-DHB" customClass="DashboardViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="oBz-4S-DHB" customClass="DashboardViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rw8-Bq-cs3"/>
                         <viewControllerLayoutGuide type="bottom" id="jxx-c2-rMc"/>
@@ -352,6 +379,13 @@
                             <constraint firstItem="Q8o-Ac-4Q3" firstAttribute="bottom" secondItem="jxx-c2-rMc" secondAttribute="top" id="sVd-9q-qpc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7BM-nT-xKb">
+                        <barButtonItem key="leftBarButtonItem" image="burger" id="8JE-5d-pHx">
+                            <connections>
+                                <action selector="toggleMenu:" destination="oBz-4S-DHB" id="Swx-N8-fdf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="deliveriesLabel" destination="rNx-ff-Ral" id="lOd-Pf-bP2"/>
                         <outlet property="fullNameLabel" destination="oaI-hE-Zw5" id="UBl-qU-Gll"/>
@@ -361,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rj-rS-GQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1693" y="3915"/>
+            <point key="canvasLocation" x="-881" y="3915"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fcq-c4-cG8">
@@ -504,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85v-5S-3Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-635" y="3915"/>
+            <point key="canvasLocation" x="177" y="3915"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="x4Y-ro-LIc">
@@ -1150,7 +1184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NeY-aX-6q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="3887"/>
+            <point key="canvasLocation" x="2015" y="3887"/>
         </scene>
         <!--Donation Overview Map-->
         <scene sceneID="WdT-v9-7JV">
@@ -1213,7 +1247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0h-QS-XCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="3895"/>
+            <point key="canvasLocation" x="1050" y="3895"/>
         </scene>
         <!--Sign Up Navigation View Controller-->
         <scene sceneID="P65-Fk-X00">
@@ -1235,6 +1269,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="burger" width="24" height="24"/>
         <image name="facebook" width="32" height="32"/>
         <image name="twitter" width="40" height="32"/>
     </resources>

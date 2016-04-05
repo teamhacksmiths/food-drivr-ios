@@ -6,6 +6,7 @@ use_frameworks!
 target 'hackathon-for-hunger' do
 pod 'Alamofire'
 pod 'RealmSwift'
+pod 'SlideMenuControllerSwift'
 end
 
 target 'hackathon-for-hungerTests' do
