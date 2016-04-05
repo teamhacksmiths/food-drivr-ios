@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-hackathon-for-hunger/Alamofire.framework"
   install_framework "Pods-hackathon-for-hunger/Realm.framework"
   install_framework "Pods-hackathon-for-hunger/RealmSwift.framework"
+  install_framework "Pods-hackathon-for-hunger/SlideMenuControllerSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-hackathon-for-hunger/Alamofire.framework"
   install_framework "Pods-hackathon-for-hunger/Realm.framework"
   install_framework "Pods-hackathon-for-hunger/RealmSwift.framework"
+  install_framework "Pods-hackathon-for-hunger/SlideMenuControllerSwift.framework"
 fi

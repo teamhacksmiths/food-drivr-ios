@@ -5,14 +5,17 @@ PODS:
   - Realm/Headers (0.98.6)
   - RealmSwift (0.98.6):
     - Realm (= 0.98.6)
+  - SlideMenuControllerSwift (2.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - RealmSwift
+  - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
   Realm: 44803f35418c5d89b27825a564247fcd190de37e
   RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
+  SlideMenuControllerSwift: 0ed532750dc8574eefda189d0f25805bc967ab7a
 
 COCOAPODS: 0.39.0
