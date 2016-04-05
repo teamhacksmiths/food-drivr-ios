@@ -10,23 +10,22 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    
-    
-    
-    
+    @IBOutlet weak var emailInput: UITextField!
+    @IBOutlet weak var passwordInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("")
-        DrivrAPI.sharedInstance.getDonations(dateRange: "test", completionHandler: {
-            response, error in
-            print(response)
-            print(error)
-        })
     }
 
 
+    @IBAction func signInButtonClicked(sender: AnyObject) {
+        
+        // temporary hard login ( email driver@drivr.com )
+        let validLogin = "driver@drivr.com"
+        if emailInput.text ==  validLogin {
+            self.performSegueWithIdentifier("DriverLoginSuccess", sender: self)
+        }
+    }
 
 }
 

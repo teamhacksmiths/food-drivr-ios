@@ -22,6 +22,9 @@ class SignUpViewController: UIViewController {
     }
     
 
+    @IBAction func cancelButtonClicked(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
