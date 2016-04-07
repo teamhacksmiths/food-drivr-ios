@@ -357,6 +357,7 @@
 				TargetAttributes = {
 					44AEA86F1CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = G8GJLLZVYS;
 					};
 					44AEA8831CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
@@ -613,6 +614,7 @@
 			baseConfigurationReference = 7D65AE8EA6D2673A5FC471F2 /* Pods-hackathon-for-hunger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "hackathon-for-hunger/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -626,6 +628,7 @@
 			baseConfigurationReference = B85C423D9E60134D94E263D2 /* Pods-hackathon-for-hunger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "hackathon-for-hunger/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

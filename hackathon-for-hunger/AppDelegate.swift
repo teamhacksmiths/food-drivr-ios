@@ -18,9 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        guard let filePath = NSBundle.mainBundle().pathForResource("ApiKeys", ofType: "plist") else {
+            return false
+        }
         
+        guard let dictionary = NSDictionary(contentsOfFile:filePath) else {
+            return true
+        }
+        
+        guard let appId = dictionary["FACEBOOK_API_APP_ID"] as? String ,
+            let displayName = dictionary["FACEBOOK_API_DIPLAY_NAME"] as? String else {
+            return true
+        }
+        
+        FBSDKSettings.setAppID(appId)
+        FBSDKSettings.setDisplayName(displayName)
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-
+        
     }
 
     
