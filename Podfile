@@ -6,7 +6,7 @@ use_frameworks!
 target 'hackathon-for-hunger' do
   pod 'Alamofire'
   pod 'RealmSwift'
-  pod ‘FBSDKCoreKit’
+  pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
   pod 'SlideMenuControllerSwift'
