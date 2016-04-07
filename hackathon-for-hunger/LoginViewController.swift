@@ -54,13 +54,13 @@ class LoginViewController: UIViewController {
     }
     
 
-//    @IBAction func singUpUsingTwitter(sender: UIButton) {
-//        
-//        loginProvider = .Twitter
-//        loginProvider.login(self)
-//        
-//    }
-//    
+    @IBAction func singUpUsingTwitter(sender: UIButton) {
+        
+        loginProvider = .Twitter
+        loginProvider.login(self)
+        
+    }
+    
     
     
 }

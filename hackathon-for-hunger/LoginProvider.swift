@@ -8,7 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
-
+import TwitterKit
 
 protocol LoginProviderDelegate {
     
@@ -17,8 +17,8 @@ protocol LoginProviderDelegate {
     
 }
 
-
-
+//the purse is to not get conflic with the element of LoginProvider Twitter
+typealias T = Twitter
 
 
 enum LoginProvider {
@@ -138,8 +138,30 @@ enum LoginProvider {
     
     
     private func loginUsingTwitter(delegate: LoginProviderDelegate) {
-        
-        
+        T.sharedInstance().logInWithMethods([.WebBased], completion: {
+            (session , error ) -> Void in
+            
+            
+            guard error != nil else {
+                delegate.loginProvider(self, didFaild: error!)
+                return
+            }
+            
+            guard let session = session ,
+            let userID = session.userID as? String else {
+                let error = NSError(domain: "error with the session", code: 3, userInfo: nil)
+                delegate.loginProvider(self, didFaild: error)
+                return
+            }
+            
+            delegate.loginProvider(self, didSucced: ["userID": userID])
+            
+            
+            
+            
+            
+        })
+
     }
     
     private func loginUsingCustom(delegate: LoginProviderDelegate,email: String,password: String) {
