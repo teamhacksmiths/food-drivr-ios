@@ -11,6 +11,10 @@
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
 		3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */; };
 		3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */; };
+		443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */; };
+		443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */; };
+		443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */; };
+		443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAD1CB6D57500E2E7B9 /* Deming EP.ttf */; };
 		44484DDE1CAFD857002D7233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DDD1CAFD857002D7233 /* User.swift */; };
 		44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE01CAFD8C0002D7233 /* AuthProvider.swift */; };
 		44484DE31CAFDA45002D7233 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE21CAFDA45002D7233 /* Token.swift */; };
@@ -63,6 +67,10 @@
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewCell.swift; sourceTree = "<group>"; };
+		443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.ttf"; sourceTree = "<group>"; };
+		443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
+		443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ColabThi.otf; sourceTree = "<group>"; };
+		443D1DAD1CB6D57500E2E7B9 /* Deming EP.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Deming EP.ttf"; sourceTree = "<group>"; };
 		44484DDD1CAFD857002D7233 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		44484DE01CAFD8C0002D7233 /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		44484DE21CAFDA45002D7233 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -131,6 +139,25 @@
 				4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		443D1DA81CB6D56100E2E7B9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				443D1DA91CB6D57400E2E7B9 /* Fonts */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		443D1DA91CB6D57400E2E7B9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */,
+				443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */,
+				443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */,
+				443D1DAD1CB6D57500E2E7B9 /* Deming EP.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		44484DDF1CAFD8B2002D7233 /* Auth */ = {
@@ -208,6 +235,7 @@
 		44AEA8721CA9CBC100A52731 /* hackathon-for-hunger */ = {
 			isa = PBXGroup;
 			children = (
+				443D1DA81CB6D56100E2E7B9 /* Assets */,
 				44484DDF1CAFD8B2002D7233 /* Auth */,
 				44A7250E1CAC4F2600D676C3 /* Models */,
 				EAAD23B71CB37B5A005FD787 /* Controller */,
@@ -390,9 +418,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */,
+				443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */,
+				443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */,
 				44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */,
 				44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */,
 				3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */,
+				443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */,
+				443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */,
 				6395C0871CB1D34A0059B5E1 /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
