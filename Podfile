@@ -10,8 +10,8 @@ target 'hackathon-for-hunger' do
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
   pod 'SlideMenuControllerSwift'
-  pod 'Fabric'
   pod 'TwitterKit'
+  pod 'TwitterCore'
 end
 
 target 'hackathon-for-hungerTests' do

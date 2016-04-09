@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import TwitterKit
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -48,7 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return true
         }
         Twitter.sharedInstance().startWithConsumerKey(twitterAppKey, consumerSecret: twitterConsumerSecret)
-        
+        Fabric.with([Twitter.self])
+
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         

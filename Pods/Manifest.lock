@@ -26,12 +26,12 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - Fabric
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
   - RealmSwift
   - SlideMenuControllerSwift
+  - TwitterCore
   - TwitterKit
 
 SPEC CHECKSUMS:
