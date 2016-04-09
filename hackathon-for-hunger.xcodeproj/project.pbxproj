@@ -317,7 +317,6 @@
 				44AEA86E1CA9CBC100A52731 /* Resources */,
 				27EBF263E77011EE62326C4F /* Embed Pods Frameworks */,
 				32FEFB19E10B36F0593F25C0 /* Copy Pods Resources */,
-				3C7B43B61CB885AA00B309C9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -437,19 +436,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		3C7B43B61CB885AA00B309C9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" brMQomtbcT7wsx91wHSS64tKR aZJmBxaUUBcWA7FxHHbG3TV9tq3y6Txz0pTJHmcl6TpDsClrJe\n";
 		};
 		9F9E1CDD37C5CAFAF97F23C7 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
