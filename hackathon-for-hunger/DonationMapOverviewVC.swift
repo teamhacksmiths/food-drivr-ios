@@ -116,7 +116,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == annotationView.rightCalloutAccessoryView {
-            performSegueWithIdentifier("DonationDetail", sender: annotationView.annotation)
+            performSegueWithIdentifier("toDriverMapDetailPending", sender: annotationView.annotation)
             
         }
     }
