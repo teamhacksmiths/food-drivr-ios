@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class DriverMapDetailPendingVC: UIViewController, UITextFieldDelegate {
+class DriverMapDetailPendingVC: UIViewController, UITextFieldDelegate, MKMapViewDelegate {
     
     enum UIState: Int {
         case Unspecified
@@ -51,6 +51,12 @@ class DriverMapDetailPendingVC: UIViewController, UITextFieldDelegate {
             donorLabel.text = donorInfo!.name
             locationTextField.text = donorInfo?.location
         }
+        
+        mapView.showsUserLocation = true
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -61,6 +67,15 @@ class DriverMapDetailPendingVC: UIViewController, UITextFieldDelegate {
         super.viewDidAppear(animated)
         if locationTextField.text != nil {
             findOnMap()
+        }
+    }
+    
+    //MARK:- mapView
+    
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        if let center = mapView.userLocation.location?.coordinate {
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025))
+            mapView.setRegion(region, animated: true)
         }
     }
     
