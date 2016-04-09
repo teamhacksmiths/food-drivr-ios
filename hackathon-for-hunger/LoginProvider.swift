@@ -174,41 +174,41 @@ enum LoginProvider {
             
             
             //Create user from Twitter
-            LoginProvider.client.loadUserWithID(userID) { (user, error) -> Void in
-                
-                guard error == nil else{
-                    delegate.loginProvider(self, didFaild: error!)
-                    return
-                }
-                
-                guard let user = user else {
-                    let error = NSError(domain: "No data to display for the user", code: 4, userInfo: nil)
-                    delegate.loginProvider(self, didFaild: error)
-                    return
-                }
-                
-                
-                
-                //The information of user was picked correctly from twitter.
-                //We need create the a new dictionary , where to save information of the user.
-                //dictionary help us to pick the information easly
-                
-                
-                let dictionary: [String: AnyObject] = [
-                      TwitterKeys.userID: user.userID,
-                      TwitterKeys.name: user.name,
-                      TwitterKeys.screenName: user.screenName,
-                      TwitterKeys.isVerified: user.isVerified,
-                      TwitterKeys.isProtected: user.isProtected,
-                      TwitterKeys.profileImageURL: user.profileImageURL,
-                      TwitterKeys.profileImageMiniURL: user.profileImageMiniURL,
-                      TwitterKeys.profileImageLargeURL: user.profileImageLargeURL,
-                      TwitterKeys.formattedScreenName: user.formattedScreenName
-                ]
-                
-                delegate.loginProvider(self, didSucced: dictionary)
-                
-            }
+//            LoginProvider.client.loadUserWithID(userID) { (user, error) -> Void in
+//                
+//                guard error == nil else{
+//                    delegate.loginProvider(self, didFaild: error!)
+//                    return
+//                }
+//                
+//                guard let user = user else {
+//                    let error = NSError(domain: "No data to display for the user", code: 4, userInfo: nil)
+//                    delegate.loginProvider(self, didFaild: error)
+//                    return
+//                }
+//                
+//                
+//                
+//                //The information of user was picked correctly from twitter.
+//                //We need create the a new dictionary , where to save information of the user.
+//                //dictionary help us to pick the information easly
+//                
+//                
+//                let dictionary: [String: AnyObject] = [
+//                      TwitterKeys.userID: user.userID,
+//                      TwitterKeys.name: user.name,
+//                      TwitterKeys.screenName: user.screenName,
+//                      TwitterKeys.isVerified: user.isVerified,
+//                      TwitterKeys.isProtected: user.isProtected,
+//                      TwitterKeys.profileImageURL: user.profileImageURL,
+//                      TwitterKeys.profileImageMiniURL: user.profileImageMiniURL,
+//                      TwitterKeys.profileImageLargeURL: user.profileImageLargeURL,
+//                      TwitterKeys.formattedScreenName: user.formattedScreenName
+//                ]
+//                
+//                delegate.loginProvider(self, didSucced: dictionary)
+//                
+//            }
             
             
         })
