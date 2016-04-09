@@ -1110,6 +1110,42 @@
             </objects>
             <point key="canvasLocation" x="926" y="2237"/>
         </scene>
+        <!--Temp LocationVC-->
+        <scene sceneID="wzn-ac-0Vp">
+            <objects>
+                <viewController id="hJh-Wb-rob" customClass="TempLocationVC" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wlg-xy-UgQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bii-QJ-Ah8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NU5-DU-JOl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTc-Iw-9ys">
+                                <rect key="frame" x="20" y="20" width="206" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="FLc-Th-AJg"/>
+                                    <constraint firstAttribute="width" constant="206" id="TZe-Kf-YbN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Go to Maps"/>
+                                <connections>
+                                    <segue destination="51h-zf-Rpo" kind="show" id="xOk-f8-RhV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VTc-Iw-9ys" firstAttribute="top" secondItem="Wlg-xy-UgQ" secondAttribute="bottom" id="Trh-7F-agr"/>
+                            <constraint firstItem="VTc-Iw-9ys" firstAttribute="leading" secondItem="NU5-DU-JOl" secondAttribute="leadingMargin" id="UXK-YD-HIf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqb-qJ-FjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="3118"/>
+        </scene>
         <!--Donation Map View Controller-->
         <scene sceneID="TJm-YR-Of5">
             <objects>
@@ -1244,7 +1280,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-JY-1AV">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-JY-1AV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <outlet property="delegate" destination="51h-zf-Rpo" id="SuB-8D-xvs"/>
