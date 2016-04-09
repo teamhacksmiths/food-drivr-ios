@@ -50,6 +50,7 @@
 		EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */; };
 		EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */; };
 		EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */; };
+		EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSUserInfoViewController.swift; sourceTree = "<group>"; };
 		EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAccountInfoViewController.swift; sourceTree = "<group>"; };
 		EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNavigationViewController.swift; sourceTree = "<group>"; };
+		EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalDriverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +330,7 @@
 				EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */,
 				EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */,
 				EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */,
+				EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */,
 			);
 			name = SignUp;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */,
 				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
+				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
 				44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */,
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,
