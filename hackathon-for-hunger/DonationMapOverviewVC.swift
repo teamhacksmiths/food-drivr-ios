@@ -8,30 +8,37 @@
 
 import UIKit
 import MapKit
-
+import CoreLocation
 
 class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     let dummyData = MapsDummyData.sharedInstance
     var donorInfoArray: [DonorInfo]?
     
+    
+    var locationManager = LocationManager.sharedInstance.locationManager
+    
     @IBOutlet weak var mapView: MKMapView!
+    
     
     override func viewDidLoad() {
         donorInfoArray = dummyData.donorInfoArray
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DonationMapOverviewVC.readAndDisplayAnnotations), name: refreshNotificationKey, object: nil)
-//        navigationController?.title = "Pending Donations"
-//        donorInfoArray = [DonorInfo]()
-//        let dictionary: [String:AnyObject] = [
-//            "name": "Einstein's Bagels",
-//            "mapString": "101 Cooper St. Santa Cruz, CA",
-//            "longitude": -122.0,
-//            "latitude": 36.5
-//        ]
-//        let sampleDonor = DonorInfo(data: dictionary)
-//        donorInfoArray?.append(sampleDonor)
-        
+        mapView.showsUserLocation = true
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+
     }
+    
+    
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        if let center = mapView.userLocation.location?.coordinate {
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025))
+              mapView.setRegion(region, animated: true)
+        }
+    }
+    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -40,18 +47,11 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     }
     
     func readAndDisplayAnnotations() {
-//        if let _studentInfoArray = OnTheMapData.sharedInstance.studentInfoArray {
         
-            // We will create an MKPointAnnotation for each dictionary in "locations". The
-        // point annotations will be stored in this array, and then provided to the map view.
         var annotations = [DonationPin]()
-//        guard let donorInfoArray = donorInfoArray else {
-//            print("donorInfo nil?")
-//            return
-//        }
 
-        for donorInfo in donorInfoArray! {
-            //TODO: - replace force unwrapping
+
+        for donorInfo in donorInfoArray! { //TODO: - replace force unwrapping
             
             // create the annotation and set its properties
             let annotation = DonationPin()  // subclass of MKAnnotation()
@@ -63,6 +63,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         // When the array is complete, add the annotations to the map.
         mapView.addAnnotations(annotations)
         mapView.showAnnotations(annotations, animated: true)
+       
     }
     
     
@@ -81,6 +82,22 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
 
+        // This is false if it's the user location pin
+        if annotation.isKindOfClass(DonationPin) == false {
+
+            let userPin = "userLocation"
+            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(userPin) {
+                return dequeuedView
+            } else {
+                _ = MKAnnotationView(annotation: annotation, reuseIdentifier: userPin)
+                
+                // returning nil allows the user location blue dot to be used
+                return nil
+            }
+            
+        }
+
+        
         let reuseId = "pin"
         
         var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
@@ -104,12 +121,5 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
     }
     
-    //    // Use this "select" function to tap the pin (currently we are tapping the annotation view instead)
-    //    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-    //        // Unless the annotation is deselected, it is not selectable when returning from the collection view
-    //        mapView.deselectAnnotation(view.annotation, animated: false)
-    //
-    //        self.performSegueWithIdentifier("DonationDetail", sender: view.annotation)
-    //    }
 }
 

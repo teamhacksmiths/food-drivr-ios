@@ -10,4 +10,23 @@ import UIKit
 
 class VSAccountInfoViewController: UIViewController {
     
+    // MARK: Actions
+    
+    @IBAction func didPressSignUp(sender: AnyObject) {
+        let donorIsApproved = false
+        if donorIsApproved{
+            
+        } else {
+            showAwaitingApprovalView()
+        }
+    }
+    
+    // MARK: Navigation
+    
+    func showAwaitingApprovalView(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let awaitingApprovalViewController = storyboard.instantiateViewControllerWithIdentifier("AwaitingApprovalDriverView") as! AwaitingApprovalDriverViewController
+        navigationController?.pushViewController(awaitingApprovalViewController, animated: true)
+    }
+    
 }
