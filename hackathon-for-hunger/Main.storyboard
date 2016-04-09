@@ -213,6 +213,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTu-2L-f6J">
                                                 <rect key="frame" x="0.0" y="110" width="600" height="32"/>
                                                 <state key="normal" image="twitter_white"/>
+                                                <connections>
+                                                    <action selector="singUpUsingTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cyh-1a-UA6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

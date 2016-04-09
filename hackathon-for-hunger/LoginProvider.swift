@@ -8,7 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
-
+import TwitterKit
 
 protocol LoginProviderDelegate {
     
@@ -17,8 +17,8 @@ protocol LoginProviderDelegate {
     
 }
 
-
-
+//the purse is to not get conflic with the element of LoginProvider Twitter
+typealias T = Twitter
 
 
 enum LoginProvider {
@@ -136,10 +136,84 @@ enum LoginProvider {
         })
     }
     
+    static let  client = TWTRAPIClient()
+    
+    struct TwitterKeys {
+        static let userID = "userID"
+        static let name = "name"
+        static let screenName = "screenName"
+        static let isVerified = "isVerified"
+        static let isProtected = "isProtected"
+        static let profileImageURL = "profileImageURL"
+        static let profileImageMiniURL = "profileImageMiniURL"
+        static let profileImageLargeURL = "profileImageLargeURL"
+        static let formattedScreenName = "formattedScreenName"
+
+    }
+    
     
     private func loginUsingTwitter(delegate: LoginProviderDelegate) {
         
+        let method = TWTRLoginMethod.All
         
+        T.sharedInstance().logInWithMethods(method, completion: {
+            (session , error ) -> Void in
+            
+            
+            guard error == nil else {
+                delegate.loginProvider(self, didFaild: error!)
+                return
+            }
+            
+            guard let session = session,
+                let userID: String = session.userID  else {
+                let error = NSError(domain: "error with the session", code: 3, userInfo: nil)
+                delegate.loginProvider(self, didFaild: error)
+                return
+            }
+            
+            
+            //Create user from Twitter
+//            LoginProvider.client.loadUserWithID(userID) { (user, error) -> Void in
+//                
+//                guard error == nil else{
+//                    delegate.loginProvider(self, didFaild: error!)
+//                    return
+//                }
+//                
+//                guard let user = user else {
+//                    let error = NSError(domain: "No data to display for the user", code: 4, userInfo: nil)
+//                    delegate.loginProvider(self, didFaild: error)
+//                    return
+//                }
+//                
+//                
+//                
+//                //The information of user was picked correctly from twitter.
+//                //We need create the a new dictionary , where to save information of the user.
+//                //dictionary help us to pick the information easly
+//                
+//                
+//                let dictionary: [String: AnyObject] = [
+//                      TwitterKeys.userID: user.userID,
+//                      TwitterKeys.name: user.name,
+//                      TwitterKeys.screenName: user.screenName,
+//                      TwitterKeys.isVerified: user.isVerified,
+//                      TwitterKeys.isProtected: user.isProtected,
+//                      TwitterKeys.profileImageURL: user.profileImageURL,
+//                      TwitterKeys.profileImageMiniURL: user.profileImageMiniURL,
+//                      TwitterKeys.profileImageLargeURL: user.profileImageLargeURL,
+//                      TwitterKeys.formattedScreenName: user.formattedScreenName
+//                ]
+//                
+//                delegate.loginProvider(self, didSucced: dictionary)
+//                
+//            }
+            
+            
+        })
+     
+    
     }
     
     private func loginUsingCustom(delegate: LoginProviderDelegate,email: String,password: String) {
