@@ -50,6 +50,8 @@ class MapsDummyData {
         
         //MARK:- Realm objects
         
+        let donation01 = Donation()
+        
         let location01 = Location()
         location01.latitude = RealmOptional(voodoo.lat)
         location01.longitude = RealmOptional(voodoo.lon)
@@ -57,16 +59,32 @@ class MapsDummyData {
         let participant01 = Participant()
         participant01.name = voodoo.name
         
-        let recipient01 = Participant()
+        let recipient01 = Recipient()
         recipient01.name = "Oregon Food Bank"
-        let ofb_address = "7900 NE 33rd Dr, Portland, OR 97211"
-        geocodeLocation(ofb_address) { success, coords in
-            if success {
-                print("Coords: \(coords)")
+        recipient01.street_address = "7900 NE 33rd Dr"//, Portland, OR 97211"
+        recipient01.city = "Portland"
+        recipient01.state = "OR"
+        recipient01.zip_code = "97211"
+        if let street_address = recipient01.street_address, city = recipient01.city, state = recipient01.state, zip_code = recipient01.zip_code {
+
+            let place = street_address + " " + city + " " + state + " " + zip_code
+
+            geocodeLocation(place) { success, coords in
+                if success {
+ 
+                    donation01.recipient = recipient01
+                    
+                } else {
+                    print("Geocode not successful")
+                }
             }
+        } else {
+            print("Couldn't get recipient address")
         }
         
-        let donation01 = Donation()
+        
+        
+
         donation01.pickup = location01
         donation01.donor = participant01
         

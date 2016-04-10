@@ -114,6 +114,7 @@ class DriverMapDetailPendingVC: UIViewController, UITextFieldDelegate, MKMapView
                 self.mapView.setRegion(mkregion, animated: true)
                 self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
                 self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
+                self.mapView.selectAnnotation(self.pointAnnotation!, animated: true)
                 self.configureUIForState(UIState.Submit)
             }
         }
