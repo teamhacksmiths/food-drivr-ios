@@ -25,7 +25,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     //MARK:- Outlets & Actions
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var donorLabel: UILabel!
+//    @IBOutlet weak var donorLabel: UILabel!
 
     
     @IBAction func acceptDonation(sender: AnyObject) {
@@ -41,7 +41,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
 
         if donorInfo != nil {
-            donorLabel.text = donorInfo!.name
+            //donorLabel.text = donorInfo!.name
 
         }
         

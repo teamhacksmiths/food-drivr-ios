@@ -90,8 +90,8 @@ class MapsDummyData {
         
         donations?.append(donation01)
         
-        //TODO: Needed data: need mapString or equivalent for location, contactInfo (distinct from name) for donor, address for geocoding (in Location?)
-
+        // any geocoding in app? or all on server?
+        //TODO: Needed data: need mapString or equivalent for geocoding for Participant or Location, contactInfo (distinct from name) for donor (what is avatar?)
         
     }
     

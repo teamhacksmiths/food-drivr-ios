@@ -1414,18 +1414,14 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YKm-DA-pDF">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9h-nb-T9p">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r9h-nb-T9p">
                                 <rect key="frame" x="10" y="334" width="580" height="212"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mk0-3e-jK9">
-                                        <rect key="frame" x="8" y="134" width="564" height="70"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Zdr-PV-hqF">
+                                        <rect key="frame" x="8" y="149" width="564" height="55"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbO-21-gK8">
-                                                <rect key="frame" x="8" y="0.0" width="119" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="OEI-XA-Y6g"/>
-                                                    <constraint firstAttribute="width" constant="119" id="YJA-sI-o9N"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbO-21-gK8">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="22"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="ST. JUDE'S">
                                                         <attributes>
@@ -1437,126 +1433,85 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IC-Nf-lIY">
-                                                <rect key="frame" x="8" y="25" width="135" height="38"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="38" id="Aiw-wU-P30"/>
-                                                    <constraint firstAttribute="width" constant="135" id="v6W-IG-Krl"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="123 Some St. Portland, OR">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vfk-gj-y1I">
-                                                <rect key="frame" x="485" y="30" width="79" height="28"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="746" misplaced="YES" alignment="firstBaseline" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ftr-sC-YRX">
+                                                <rect key="frame" x="0.0" y="22" width="560" height="33"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAr-YU-jmT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="14"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Contact name">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="12" name="Helvetica"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADp-Yw-bzn">
-                                                        <rect key="frame" x="0.0" y="14" width="79" height="14"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Contact phone">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="12" name="Helvetica"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-xk-fri">
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="33"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IC-Nf-lIY">
+                                                                <rect key="frame" x="0.0" y="0.0" width="118" height="17"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="123 Someother St.">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ME-MM-aJ7">
+                                                                <rect key="frame" x="0.0" y="17" width="118" height="17"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Portland, OR">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" misplaced="YES" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vfk-gj-y1I">
+                                                        <rect key="frame" x="120" y="3" width="441" height="29"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAr-YU-jmT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="441" height="14"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Contact name">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADp-Yw-bzn">
+                                                                <rect key="frame" x="0.0" y="15" width="441" height="14"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Contact phone">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="lbO-21-gK8" firstAttribute="leading" secondItem="mk0-3e-jK9" secondAttribute="leading" constant="8" id="KpN-hw-WCp"/>
-                                            <constraint firstAttribute="bottom" secondItem="7IC-Nf-lIY" secondAttribute="bottom" constant="7" id="S25-q4-LjZ"/>
-                                            <constraint firstItem="7IC-Nf-lIY" firstAttribute="leading" secondItem="mk0-3e-jK9" secondAttribute="leading" constant="8" id="kNx-LJ-9NW"/>
-                                            <constraint firstItem="7IC-Nf-lIY" firstAttribute="top" secondItem="lbO-21-gK8" secondAttribute="bottom" id="q42-4L-BG3"/>
-                                            <constraint firstAttribute="height" constant="70" id="yAv-cX-0Ix"/>
+                                            <constraint firstAttribute="trailing" secondItem="ftr-sC-YRX" secondAttribute="trailing" constant="4" id="JuB-xJ-G3W"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhP-PY-zIr">
-                                        <rect key="frame" x="8" y="36" width="564" height="90"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX5-Tv-32M">
-                                                <rect key="frame" x="8" y="45" width="167" height="38"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="135" id="IA1-9Q-qS2"/>
-                                                    <constraint firstAttribute="height" constant="38" id="aqu-9P-aWv"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="321 Someother St. Portland, OR">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goG-iX-hRb">
-                                                <rect key="frame" x="8" y="8" width="167" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="qnE-56-Egl"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="EINSTEIN BAGELS">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.0" green="0.81176470588235294" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="iX5-Tv-32M" firstAttribute="leading" secondItem="yhP-PY-zIr" secondAttribute="leading" constant="8" id="NaB-YR-6wR"/>
-                                            <constraint firstAttribute="bottom" secondItem="iX5-Tv-32M" secondAttribute="bottom" constant="7" id="P6d-73-1zW"/>
-                                            <constraint firstAttribute="height" constant="70" id="eZl-ff-9yn"/>
-                                            <constraint firstAttribute="bottom" secondItem="iX5-Tv-32M" secondAttribute="bottom" constant="7" id="fQA-2e-qGR"/>
-                                            <constraint firstAttribute="top" secondItem="goG-iX-hRb" secondAttribute="top" constant="-8" id="gAc-d7-H3T"/>
-                                            <constraint firstItem="iX5-Tv-32M" firstAttribute="leading" secondItem="yhP-PY-zIr" secondAttribute="leading" constant="8" id="mkX-0C-e85"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="eZl-ff-9yn"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="mk0-3e-jK9" secondAttribute="bottom" constant="8" id="17X-m9-w5W"/>
-                                    <constraint firstItem="mk0-3e-jK9" firstAttribute="top" secondItem="yhP-PY-zIr" secondAttribute="bottom" constant="8" id="WeR-Ka-qTd"/>
-                                    <constraint firstAttribute="trailing" secondItem="yhP-PY-zIr" secondAttribute="trailing" constant="8" id="bhC-az-Cdu"/>
-                                    <constraint firstItem="yhP-PY-zIr" firstAttribute="leading" secondItem="r9h-nb-T9p" secondAttribute="leading" constant="8" id="fBY-tH-Q3K"/>
-                                    <constraint firstItem="mk0-3e-jK9" firstAttribute="leading" secondItem="r9h-nb-T9p" secondAttribute="leading" constant="8" id="kra-xe-1pc"/>
-                                    <constraint firstAttribute="trailing" secondItem="mk0-3e-jK9" secondAttribute="trailing" constant="8" id="vtt-VA-Qry"/>
-                                    <constraint firstAttribute="height" constant="212" id="wCZ-aP-aoF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zdr-PV-hqF" secondAttribute="bottom" constant="8" id="G8v-Qz-fc2"/>
+                                    <constraint firstItem="Zdr-PV-hqF" firstAttribute="top" secondItem="r9h-nb-T9p" secondAttribute="top" constant="149" id="MJ7-Qk-4bZ"/>
+                                    <constraint firstItem="Zdr-PV-hqF" firstAttribute="trailing" secondItem="r9h-nb-T9p" secondAttribute="trailing" constant="-8" id="biR-tA-PpC"/>
+                                    <constraint firstItem="Zdr-PV-hqF" firstAttribute="leading" secondItem="r9h-nb-T9p" secondAttribute="leading" constant="8" id="wjN-DM-Bar"/>
                                 </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBh-Ud-TgU">
@@ -1626,7 +1581,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="donorLabel" destination="goG-iX-hRb" id="htr-36-ZhC"/>
                         <outlet property="mapView" destination="YKm-DA-pDF" id="lJv-ql-3Ff"/>
                     </connections>
                 </viewController>
