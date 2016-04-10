@@ -14,6 +14,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     let dummyData = MapsDummyData.sharedInstance
     var donorInfoArray: [DonorInfo]?
+    var donations: [Donation]?
     
     
     var locationManager = LocationManager.sharedInstance.locationManager
@@ -23,6 +24,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         donorInfoArray = dummyData.donorInfoArray
+        donations = dummyData.donations
         mapView.showsUserLocation = true
 
         if CLLocationManager.locationServicesEnabled() {

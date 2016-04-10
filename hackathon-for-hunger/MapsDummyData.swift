@@ -8,10 +8,13 @@
 
 import Foundation
 import MapKit
+import RealmSwift
 
 class MapsDummyData {
     static let sharedInstance = MapsDummyData()
-    var donorInfoArray: [DonorInfo]?
+    var donorInfoArray: [DonorInfo]? // temp. container to pass info
+    var donations: [Donation]?
+
     
     private init() {
         
@@ -40,11 +43,63 @@ class MapsDummyData {
         let einstein = DonorInfo(data: einsteinDict)
         let starbucks = DonorInfo(data: starbucksDict)
         
-        self.donorInfoArray?.append(voodoo)
-        self.donorInfoArray?.append(einstein)
-        self.donorInfoArray?.append(starbucks)
+        // temp., to be replaced by Realm objects
+        donorInfoArray?.append(voodoo)
+        donorInfoArray?.append(einstein)
+        donorInfoArray?.append(starbucks)
+        
+        //MARK:- Realm objects
+        
+        let location01 = Location()
+        location01.latitude = RealmOptional(voodoo.lat)
+        location01.longitude = RealmOptional(voodoo.lon)
+        
+        let participant01 = Participant()
+        participant01.name = voodoo.name
+        
+        let recipient01 = Participant()
+        recipient01.name = "Oregon Food Bank"
+        let ofb_address = "7900 NE 33rd Dr, Portland, OR 97211"
+        geocodeLocation(ofb_address) { success, coords in
+            if success {
+                print("Coords: \(coords)")
+            }
+        }
+        
+        let donation01 = Donation()
+        donation01.pickup = location01
+        donation01.donor = participant01
+        
+        donations?.append(donation01)
+        
+        //TODO: Needed data: need mapString or equivalent for location, contactInfo (distinct from name) for donor, address for geocoding (in Location?)
+
         
     }
+    
+    func geocodeLocation(location: String, completionHandler: (success: Bool, coords: CLLocationCoordinate2D) ->  Void) {
+        let geocoder = CLGeocoder()
+        var coord = CLLocationCoordinate2D()
+        geocoder.geocodeAddressString(location) { (placemarks, error) -> Void in
+            
+            if let placemark = placemarks?[0] {
+                let lat = placemark.location?.coordinate.latitude
+                let lon = placemark.location?.coordinate.longitude
+                let region = placemark.region as! CLCircularRegion
+                _ = MKCoordinateRegionMakeWithDistance(
+                    region.center,
+                    region.radius,
+                    region.radius);
+                coord.latitude = Double(lat!)
+                coord.longitude = Double(lon!)
+                
+                completionHandler(success: true, coords: coord)
+            }
+        }
+        
+        
+    }
+
     
     func geocodeAddress(donorInfo: DonorInfo, completionHandler: (success: Bool, coords: CLLocationCoordinate2D) ->  Void) {
         let geocoder = CLGeocoder()
