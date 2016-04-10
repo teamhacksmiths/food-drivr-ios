@@ -38,7 +38,6 @@
 		44B7EFF91CAD95A600E7C609 /* DrivrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFF81CAD95A600E7C609 /* DrivrAPI.swift */; };
 		44B7F0001CADAD5B00E7C609 /* DonationRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */; };
 		6395C0851CB0C2610059B5E1 /* DonationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C0841CB0C2610059B5E1 /* DonationMapViewController.swift */; };
-		6395C0871CB1D34A0059B5E1 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
 		6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C0881CB1D69D0059B5E1 /* DonationMapOverviewVC.swift */; };
 		6395C08C1CB1F2B50059B5E1 /* DonorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C08B1CB1F2B50059B5E1 /* DonorInfo.swift */; };
 		6395C08E1CB247460059B5E1 /* DonationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C08D1CB247460059B5E1 /* DonationPin.swift */; };
@@ -54,6 +53,8 @@
 		EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */; };
 		EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */; };
 		EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */; };
+		F7AFF7E51CBAD430008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
+		F7AFF7E61CBAF252008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +104,7 @@
 		44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouterTest.swift; sourceTree = "<group>"; };
 		4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6395C0841CB0C2610059B5E1 /* DonationMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationMapViewController.swift; sourceTree = "<group>"; };
-		6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = ApiKeys.plist; sourceTree = "<group>"; };
 		6395C0881CB1D69D0059B5E1 /* DonationMapOverviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationMapOverviewVC.swift; sourceTree = "<group>"; };
 		6395C08B1CB1F2B50059B5E1 /* DonorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorInfo.swift; sourceTree = "<group>"; };
 		6395C08D1CB247460059B5E1 /* DonationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationPin.swift; sourceTree = "<group>"; };
@@ -431,6 +432,7 @@
 			files = (
 				44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */,
 				443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */,
+				F7AFF7E61CBAF252008C6004 /* ApiKeys.plist in Resources */,
 				443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */,
 				6395C0921CB83DE60059B5E1 /* Portland-BridgePortBrewPub.gpx in Resources */,
 				44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */,
@@ -438,7 +440,6 @@
 				3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */,
 				443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */,
 				443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */,
-				6395C0871CB1D34A0059B5E1 /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AFF7E51CBAD430008C6004 /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

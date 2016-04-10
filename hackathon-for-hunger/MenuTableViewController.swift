@@ -18,7 +18,12 @@ protocol LeftMenuProtocol : class {
 }
 
 class MenuTableViewController: UITableViewController {
-
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var logoImageView: UIImageView!
+    
+    
+    let user = User()
+    
     let data = ["Dashboard", "Donations", "Menu Item 3", "Menu Item 4", "Menu Item 5", "Menu Item 6"]
     
     var dashboardController: UIViewController!
@@ -34,7 +39,20 @@ class MenuTableViewController: UITableViewController {
         self.donationMapOverview = UINavigationController(rootViewController: donationMapOverview)
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
+        /* courtesy of stack overflow post: http://stackoverflow.com/questions/2339620/uitableview-add-content-offset-at-top*/
+        self.tableView.contentInset = UIEdgeInsetsMake(25, 0, 0, 0)
+        
+        // check to see if user is a driver or donor and set color appropriateley
+        switch user.id{
+        case 0: self.view.backgroundColor = UIColor.orangeColor()
+        case 1: self.view.backgroundColor = UIColor.blueColor()
+        default: self.view.backgroundColor = UIColor.whiteColor()
+        
     }
+        
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,7 +75,15 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
             cell.textLabel!.text = data[indexPath.row]
-        // Configure the cell...
+        switch user.id{
+        case 0: cell.backgroundColor = UIColor.orangeColor()
+        case 1: cell.backgroundColor = UIColor.blueColor()
+        default: cell.backgroundColor = UIColor.whiteColor()
+        
+            
+    }
+        
+                // Configure the cell...
         return cell
     }
     
