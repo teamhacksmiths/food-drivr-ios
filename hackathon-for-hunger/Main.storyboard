@@ -8,8 +8,10 @@
     <customFonts key="customFonts">
         <mutableArray key="BEBAS___.ttf">
             <string>Bebas</string>
+            <string>Bebas</string>
         </mutableArray>
         <mutableArray key="BebasNeue.otf">
+            <string>BebasNeue</string>
             <string>BebasNeue</string>
             <string>BebasNeue</string>
         </mutableArray>
@@ -607,69 +609,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dDa-gf-BXZ">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="dDa-gf-BXZ">
                                 <rect key="frame" x="20" y="124" width="560" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBb-vW-Fmn">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="113"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Volunteer">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="941-pb-Pic" kind="show" id="7ey-iO-v0P"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8hI-Ad-NLs">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="84"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="driver" translatesAutoresizingMaskIntoConstraints="NO" id="0ov-NX-Uk1">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="48"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBb-vW-Fmn">
+                                                <rect key="frame" x="0.0" y="48" width="560" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Volunteer">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="941-pb-Pic" kind="show" id="7ey-iO-v0P"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrw-PW-49x">
-                                        <rect key="frame" x="0.0" y="113" width="560" height="75"/>
+                                        <rect key="frame" x="0.0" y="137" width="560" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ziz-Io-rax">
-                                        <rect key="frame" x="0.0" y="188" width="560" height="112"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Donor">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="0pv-UC-fXe" kind="show" id="hAw-MR-GmQ"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-UB-3BH">
+                                        <rect key="frame" x="0.0" y="214" width="560" height="86"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donor" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-Jn-Rdj">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ziz-Io-rax">
+                                                <rect key="frame" x="0.0" y="50" width="560" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Donor">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="0pv-UC-fXe" kind="show" id="hAw-MR-GmQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="iWF-Fo-doQ">
                                 <rect key="frame" x="20" y="64" width="560" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-rm-d9b">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="27"/>
+                                        <fontDescription key="fontDescription" name="Bebas" family="Bebas" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfZ-RJ-6px">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HnQ-C7-R8C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BebasNeue" family="Bebas Neue" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="0.1176470588" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" destination="NqA-5g-Esg" eventType="touchUpInside" id="ttH-1h-6z9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.0" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="LfZ-RJ-6px" firstAttribute="trailing" secondItem="rcR-kR-Bhd" secondAttribute="trailingMargin" constant="20" id="Aum-Gd-JaE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dDa-gf-BXZ" secondAttribute="trailing" id="D2k-Sh-qIN"/>
                             <constraint firstItem="iWF-Fo-doQ" firstAttribute="top" secondItem="OVu-fu-gd4" secondAttribute="bottom" id="Kwu-S9-vFs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iWF-Fo-doQ" secondAttribute="trailing" id="WdG-za-Z9M"/>
+                            <constraint firstItem="K3y-Ey-ygP" firstAttribute="top" secondItem="LfZ-RJ-6px" secondAttribute="bottom" id="YuQ-aw-WGP"/>
                             <constraint firstItem="iWF-Fo-doQ" firstAttribute="height" secondItem="rcR-kR-Bhd" secondAttribute="height" multiplier="0.1" id="a6x-gj-9Yx"/>
                             <constraint firstItem="iWF-Fo-doQ" firstAttribute="leading" secondItem="rcR-kR-Bhd" secondAttribute="leadingMargin" id="c6Z-Cq-dSd"/>
+                            <constraint firstItem="LfZ-RJ-6px" firstAttribute="leading" secondItem="rcR-kR-Bhd" secondAttribute="leadingMargin" constant="-20" id="ds8-6P-86x"/>
                             <constraint firstItem="dDa-gf-BXZ" firstAttribute="leading" secondItem="rcR-kR-Bhd" secondAttribute="leadingMargin" id="xR2-MP-hQY"/>
                             <constraint firstItem="dDa-gf-BXZ" firstAttribute="height" secondItem="rcR-kR-Bhd" secondAttribute="height" multiplier="0.5" id="y79-IM-uis"/>
                             <constraint firstItem="dDa-gf-BXZ" firstAttribute="top" secondItem="iWF-Fo-doQ" secondAttribute="bottom" id="z5E-wb-Tfw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="G2e-jD-4uN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="h9q-zl-usz">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="cancelButtonClicked:" destination="NqA-5g-Esg" id="gdJ-Ug-0xE"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="G2e-jD-4uN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RK-AX-mxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1404,6 +1432,8 @@
     </scenes>
     <resources>
         <image name="burger" width="24" height="24"/>
+        <image name="donor" width="48" height="50"/>
+        <image name="driver" width="56" height="48"/>
         <image name="facebook_white" width="32" height="32"/>
         <image name="twitter_white" width="40" height="32"/>
     </resources>
