@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ghc-Wl-csa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -452,7 +452,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rj-rS-GQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-881" y="3915"/>
+            <point key="canvasLocation" x="-1761" y="3927"/>
+        </scene>
+        <!--Pending Donations Dashboard-->
+        <scene sceneID="dAL-VY-wha">
+            <objects>
+                <tableViewController id="Ghc-Wl-csa" customClass="PendingDonationsDashboard" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" sectionHeaderHeight="28" sectionFooterHeight="28" id="WAU-j6-4XT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pendingDonation" rowHeight="107" id="x1c-Up-3qH" customClass="PendingDonationsDashboardTableViewCell" customModule="hackathon_for_hunger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="107"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x1c-Up-3qH" id="Cdz-bV-wz4">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="106"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="H5b-pO-YVV">
+                                            <rect key="frame" x="20" y="20" width="560" height="66"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="V6U-Am-CDk">
+                                                    <rect key="frame" x="0.0" y="2" width="280" height="63"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJ6-qU-MpH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dki-tk-dLa">
+                                                            <rect key="frame" x="0.0" y="21" width="280" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teb-za-fVI">
+                                                            <rect key="frame" x="0.0" y="42" width="280" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MRd-bx-ugn">
+                                                    <rect key="frame" x="280" y="18" width="280" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCA-TU-5Ie" customClass="AcceptButton" customModule="hackathon_for_hunger" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="accept:" destination="x1c-Up-3qH" eventType="touchUpInside" id="JaS-jW-67b"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="H5b-pO-YVV" secondAttribute="bottom" constant="20" symbolic="YES" id="1it-gn-DeF"/>
+                                        <constraint firstAttribute="trailing" secondItem="H5b-pO-YVV" secondAttribute="trailing" constant="20" symbolic="YES" id="YXN-vq-xXj"/>
+                                        <constraint firstItem="H5b-pO-YVV" firstAttribute="top" secondItem="Cdz-bV-wz4" secondAttribute="top" constant="20" symbolic="YES" id="eyz-LP-gYE"/>
+                                        <constraint firstItem="H5b-pO-YVV" firstAttribute="leading" secondItem="Cdz-bV-wz4" secondAttribute="leading" constant="20" symbolic="YES" id="t9m-HV-eaZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amountLabel" destination="dki-tk-dLa" id="5M9-N3-Ogg"/>
+                                    <outlet property="fullNameLabel" destination="OJ6-qU-MpH" id="qia-we-HQI"/>
+                                    <outlet property="locationLabel" destination="teb-za-fVI" id="azM-MR-HEs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ghc-Wl-csa" id="qcc-sR-rOe"/>
+                            <outlet property="delegate" destination="Ghc-Wl-csa" id="grq-g3-Rzs"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sfg-tp-YNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-893" y="3924"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fcq-c4-cG8">
