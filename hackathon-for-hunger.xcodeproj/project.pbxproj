@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CC24B711CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */; };
+		3CC24B731CBC111F00ACC504 /* PendingDonationsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */; };
 		3CFDE8161CAD4D8A00D6172B /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */; };
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
 		3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */; };
@@ -67,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboard.swift; sourceTree = "<group>"; };
 		3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 				3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */,
 				3CFDE8151CAD4D8A00D6172B /* Main.storyboard */,
 				3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */,
+				3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */,
+				3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */,
 				3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */,
 				44AEA8751CA9CBC100A52731 /* LoginViewController.swift */,
 				44AEA87A1CA9CBC100A52731 /* Assets.xcassets */,
@@ -510,6 +516,7 @@
 				4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */,
 				3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */,
 				44B7EFF91CAD95A600E7C609 /* DrivrAPI.swift in Sources */,
+				3CC24B711CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift in Sources */,
 				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
 				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
 				EAAD23BC1CB37FF8005FD787 /* VSUserInfoViewController.swift in Sources */,
@@ -527,6 +534,7 @@
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
 				44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */,
+				3CC24B731CBC111F00ACC504 /* PendingDonationsDashboard.swift in Sources */,
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,
 				639F7E231CB875A7009EC623 /* TempLocationVC.swift in Sources */,
 				EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */,
