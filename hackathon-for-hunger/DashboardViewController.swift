@@ -12,7 +12,7 @@ import UIKit
 class DashboardViewController: UIViewController {
     
     
-    let data : [(String, String, String)] = [("kenitra", "10", "4 egges"),
+    let data : [(String, String, String)] = [("kenitra", "10", "4 eggs"),
                 ("Rabat", "1994", "5" ),
     ]
     
