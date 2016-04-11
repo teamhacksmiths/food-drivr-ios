@@ -19,7 +19,7 @@ class DrivrAPI {
     init() {
     }
     
-    func authenticate(username: String, password: String, completionHandler: (JsonDict?, NSError?)-> ()) {
+    func authenticate(username: String, password: String, success: (JsonDict)-> (), failure: (NSError?) ->()) {
         
         let router = UserRouter(endpoint: .Login(username: username, password: password) )
 
@@ -28,13 +28,11 @@ class DrivrAPI {
             .responseJSON {
                response in
                 switch response.result {
-                case .Success(let JSON):
-                    print("Success with JSON: \(JSON)")
-                    
+                case .Success(let JSON):                    
                     let response = JSON as! JsonDict
-                    print(response)
+                    success(response)
                 case .Failure(let error):
-                    print("Request failed with error: \(error)")
+                    failure(error)
                 }
         }
     }

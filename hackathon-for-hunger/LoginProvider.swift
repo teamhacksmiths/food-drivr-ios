@@ -12,8 +12,8 @@ import TwitterKit
 
 protocol LoginProviderDelegate {
     
-    func loginProvider(loginProvider: LoginProvider, didSucced user: [String: AnyObject])
-    func loginProvider(loginProvider: LoginProvider, didFaild error: NSError)
+    func loginProvider(loginProvider: LoginProvider, didSucceed user: [String: AnyObject])
+    func loginProvider(loginProvider: LoginProvider, didFail error: NSError)
     
 }
 
@@ -81,14 +81,14 @@ enum LoginProvider {
             if error != nil {
                 // if there's any error occur
                 LoginProvider.facebookLoginManager.logOut()
-                delegate.loginProvider(self, didFaild: error)
+                delegate.loginProvider(self, didFail: error)
                 return
             } else if result.isCancelled {
                 
                 //when the user cancel
                 LoginProvider.facebookLoginManager.logOut()
-                let error = NSError(domain: "logIn is Cancelled by the user", code: 0, userInfo: nil)
-                delegate.loginProvider(self, didFaild: error)
+                let error = NSError(domain: "login is cancelled by the user", code: 0, userInfo: nil)
+                delegate.loginProvider(self, didFail: error)
                 return
             } else {
                 
@@ -103,14 +103,14 @@ enum LoginProvider {
                 
                         if error != nil {
                             LoginProvider.facebookLoginManager.logOut()
-                            delegate.loginProvider(self, didFaild: error)
+                            delegate.loginProvider(self, didFail: error)
                             return
                         }
                         
                         guard let result = result as? NSDictionary else {
                             
                             let error = NSError(domain: "no information from facebook", code: 1, userInfo: nil)
-                            delegate.loginProvider(self, didFaild: error)
+                            delegate.loginProvider(self, didFail: error)
                             return
                         }
                         
@@ -128,7 +128,7 @@ enum LoginProvider {
                         
                         ]
                         
-                        delegate.loginProvider(self, didSucced: dictionary)
+                        delegate.loginProvider(self, didSucceed: dictionary)
                         
                     })
                 }
@@ -161,14 +161,14 @@ enum LoginProvider {
             
             
             guard error == nil else {
-                delegate.loginProvider(self, didFaild: error!)
+                delegate.loginProvider(self, didFail: error!)
                 return
             }
             
             guard let session = session,
                 let userID: String = session.userID  else {
                 let error = NSError(domain: "error with the session", code: 3, userInfo: nil)
-                delegate.loginProvider(self, didFaild: error)
+                delegate.loginProvider(self, didFail: error)
                 return
             }
             
@@ -218,7 +218,18 @@ enum LoginProvider {
     
     private func loginUsingCustom(delegate: LoginProviderDelegate,email: String,password: String) {
         
+        DrivrAPI.sharedInstance.authenticate(email, password: password,
+            success: {
+                (JsonDict) in
+            let user = AuthProvider.sharedInstance.storeCurrentUser(JsonDict)
+                delegate.loginProvider(self, didSucceed: JsonDict)
+            },
+            failure: {
+                error in
+                delegate.loginProvider(self, didFail: : error)
+            }
         
+        )
     }
     
     

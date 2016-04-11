@@ -7,14 +7,17 @@
 //
 
 import Foundation
-
+import RealmSwift
 
 class AuthProvider : NSObject {
     
+    typealias JsonDict = [String: AnyObject]
+
     static let sharedInstance = AuthProvider()
+    let realm = try! Realm()
     
-    func getCredentials() -> Token? {
-        return nil
+    func getCredentials() -> User? {
+        realm.objects(User).first
     }
     
     func getCurrentUser() -> User? {
@@ -22,14 +25,18 @@ class AuthProvider : NSObject {
     }
     
     func destroyUser() ->Void {
-        
+        var users = realm.objects(User)
+        try! realm.write {
+            realm.delete(users)
+        }
     }
     
-    func storeCurrentUser() -> User? {
-        return nil
-    }
-    
-    func attemptLogin(username: String, password: String) throws -> User? {
-        return nil;
+    func storeCurrentUser(user: JsonNDict) -> User? {
+        self.destroyUser()
+        var user = User(dict: user)
+            try! realm.write {
+                realm.add(user)
+            }
+        return user
     }
 }
