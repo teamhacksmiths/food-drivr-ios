@@ -53,15 +53,26 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         var annotations = [DonationPin]()
 
 
-        for donorInfo in donorInfoArray! { //TODO: - replace force unwrapping
-            
+//        for donorInfo in donorInfoArray! { //TODO: - replace force unwrapping
+//            
+//            // create the annotation and set its properties
+//            let annotation = DonationPin()  // subclass of MKAnnotation()
+//            annotation.donorInfo = donorInfo
+//
+//            // place the annotation in an array of annotations.
+//            annotations.append(annotation)
+//        }
+        
+        for donation in donations! { //TODO: - replace force unwrapping
+            print("count:  \(donations?.count)")
             // create the annotation and set its properties
             let annotation = DonationPin()  // subclass of MKAnnotation()
-            annotation.donorInfo = donorInfo
-
+            annotation.donation = donation
+            print(annotation.donation?.pickup?.latitude)
             // place the annotation in an array of annotations.
             annotations.append(annotation)
         }
+        
         // When the array is complete, add the annotations to the map.
         mapView.addAnnotations(annotations)
         mapView.showAnnotations(annotations, animated: true)
@@ -70,12 +81,12 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "DonationDetail") {
+        if (segue.identifier == "toDriverMapDetailPending") {
             
             if let pin = sender as? DonationPin {
-                let donationVC = segue.destinationViewController as! DonationMapViewController
+                let donationVC = segue.destinationViewController as! DriverMapDetailPendingVC
                 
-                donationVC.donorInfo = pin.donorInfo
+                donationVC.donation = pin.donation
             }
         }
     }

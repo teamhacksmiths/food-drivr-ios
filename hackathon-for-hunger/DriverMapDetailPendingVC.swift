@@ -12,24 +12,27 @@ import CoreLocation
 
 class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
+    var startingRegion = MapsDummyData.sharedInstance.startingRegion // used to retrieve precalculated starting region
+    
+    var annotationsHaveBeenShown: Bool = false //to allow auto zooming to pins, but just once
     
     var locationManager = LocationManager.sharedInstance.locationManager
     
-    var donorInfo: DonorInfo?
-    var annotation: MKAnnotation!
-    var pointAnnotation: MKPointAnnotation?
-    var pinAnnotationView: MKPinAnnotationView!
+    var donation: Donation?
     
-    var keyboardHeight: CGFloat?
+    var pickupAnnotation: MKPointAnnotation?
+    var dropoffAnnotation: MKPointAnnotation?
+    //var pinAnnotationView: MKPinAnnotationView!
+    
     
     //MARK:- Outlets & Actions
     
     @IBOutlet weak var mapView: MKMapView!
-//    @IBOutlet weak var donorLabel: UILabel!
-
+    @IBOutlet weak var recipientNameLabel: UILabel!
+    @IBOutlet weak var donorNameLabel: UILabel!
     
     @IBAction func acceptDonation(sender: AnyObject) {
-        findOnMap()
+        //findOnMap()
     }
     
     @IBAction func cancel(sender: AnyObject) {
@@ -40,9 +43,11 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
 
-        if donorInfo != nil {
-            //donorLabel.text = donorInfo!.name
-
+        mapView.delegate = self
+        mapView.setRegion(startingRegion, animated: true)
+        if donation != nil {
+            donorNameLabel.text = donation?.donor?.name
+            recipientNameLabel.text = donation?.recipient?.name
         }
         
         mapView.showsUserLocation = true
@@ -55,58 +60,72 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        //if locationTextField.text != nil {
-            findOnMap()
-        //}
+        
+        addPins()
+        
+        if donation != nil {
+            donorNameLabel.text = donation?.donor?.name
+        }
     }
     
     //MARK:- mapView
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        if let center = mapView.userLocation.location?.coordinate {
-            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025))
-            mapView.setRegion(region, animated: true)
+        print(annotationsHaveBeenShown)
+        if annotationsHaveBeenShown != true {
+            annotationsHaveBeenShown = true
+            //mapView.showAnnotations([pickupAnnotation!, mapView.userLocation], animated: true)
+            mapView.showAnnotations(mapView.annotations, animated: true)
         }
+        
+//        if let center = mapView.userLocation.location?.coordinate {
+//            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025))
+//            mapView.setRegion(region, animated: true)
+//        }
     }
     
-    //MARK:- Geocoding
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+//        if let annotation = pickupAnnotation {
+//            mapView.deselectAnnotation(annotation, animated: true)
+//            mapView.selectAnnotation(annotation, animated: true)
+//        }
+    }
     
-    func findOnMap() {
-        
+    
+    //MARK:- Annotations
+    
+    func addPins() { //TODO:- unwrap safely
         
         // In case there are any exisiting annotations, remove them
         if mapView.annotations.count != 0 {
-            annotation = self.mapView.annotations[0]
-            mapView.removeAnnotation(annotation)
+//            annotation = self.mapView.annotations[0]
+//            mapView.removeAnnotation(annotation)
+            mapView.removeAnnotations(mapView.annotations)
         }
         
-//        let geocoder = CLGeocoder()
-//        geocoder.geocodeAddressString(self.locationTextField.text!) { (placemarks, error) -> Void in
-//            if (error != nil) {
-//                self.configureUIForState(UIState.GeocodingError)
-//                self.alert("Could not find that place")
-//                return
-//            }
-//            if let placemark = placemarks?[0] {
-//                let lat = placemark.location?.coordinate.latitude
-//                let lon = placemark.location?.coordinate.longitude
-//                let region = placemark.region as! CLCircularRegion
-//                let mkregion = MKCoordinateRegionMakeWithDistance(
-//                    region.center,
-//                    region.radius,
-//                    region.radius);
-//                
-//                self.pointAnnotation = MKPointAnnotation()
-//                self.pointAnnotation!.title = self.locationTextField.text
-//                self.pointAnnotation!.coordinate = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
-//                self.mapView.centerCoordinate = self.pointAnnotation!.coordinate
-//                self.mapView.setRegion(mkregion, animated: true)
-//                self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
-//                self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
-//                self.mapView.selectAnnotation(self.pointAnnotation!, animated: true)
-//                
-//            }
-//        }
+        // Set pin for pickup location
+        pickupAnnotation = MKPointAnnotation()
+        pickupAnnotation!.title = donation?.donor?.name
+        
+        pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
+
+        let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
+        pickupAnnotationView.pinTintColor = UIColor.greenColor()
+        mapView.addAnnotation(pickupAnnotationView.annotation!)
+        
+        // Set pin for the optional dropoff location if it exists at this point
+        if let dropoff = donation?.dropoff {
+            dropoffAnnotation = MKPointAnnotation()
+            dropoffAnnotation!.title = donation?.recipient?.name
+            
+            dropoffAnnotation!.coordinate = (dropoff.coordinates)!
+            
+            let dropoffAnnotationView = MKPinAnnotationView(annotation: dropoffAnnotation, reuseIdentifier: nil)
+            pickupAnnotationView.pinTintColor = UIColor.brownColor()
+            mapView.addAnnotation(dropoffAnnotationView.annotation!)
+        } else {
+            print("no dropoff location yet")
+        }
     }
     
     

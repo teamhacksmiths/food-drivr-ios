@@ -9,16 +9,19 @@
 import Foundation
 import MapKit
 import RealmSwift
+import CoreLocation
 
 class MapsDummyData {
     static let sharedInstance = MapsDummyData()
     var donorInfoArray: [DonorInfo]? // temp. container to pass info
     var donations: [Donation]?
-
+    var startingRegion = MKCoordinateRegion()
     
     private init() {
-        
+        donations = [Donation]()
         donorInfoArray = [DonorInfo]()
+        
+        geocodeInitialRegion("Portland, OR")
         
         let voodooDict: [String:AnyObject] = [
             "name": "Voodoo Doughnut",
@@ -48,7 +51,34 @@ class MapsDummyData {
         donorInfoArray?.append(einstein)
         donorInfoArray?.append(starbucks)
         
+        for info: DonorInfo in donorInfoArray! {
+            
+            let donor = Participant()
+            donor.name = info.name
+            let pickup = Location()//(dict: ["latitude": 45.509282399999996, "longitude": -122.6832958])
+            
+            // where will id come from?
+            
+            let donation = Donation()//    dict: ["id": 1, "status": 1, "donor": donor, "pickup": pickup])
+            donation.donor = donor
+            pickup.latitude = RealmOptional(info.lat)
+            pickup.longitude = RealmOptional(info.lon)
+            donation.pickup = pickup
+            print(donation)
+            donations?.append(donation)
+        }
+        
+        
         //MARK:- Realm objects
+        
+        /* properties
+        dynamic var id: Int = 0
+        dynamic var donor: Participant?
+        dynamic var driver: Participant?
+        dynamic var recipient: Recipient?
+        dynamic var pickup: Location?
+        dynamic var dropoff: Location?
+        */
         
         let donation01 = Donation()
         
@@ -71,9 +101,17 @@ class MapsDummyData {
 
             geocodeLocation(place) { success, coords in
                 if success {
- 
+                    print("Coords: \(coords)")
                     donation01.recipient = recipient01
+                    self.donations![0].recipient = recipient01
+                    let dropoff = Location()
+                    dropoff.latitude = RealmOptional(coords.latitude)
+                    print("DLon: \(dropoff.latitude.value)")
+                    dropoff.longitude = RealmOptional(coords.longitude)
+                    donation01.dropoff = dropoff
+                    print("D01d:  \(dropoff.longitude)")
                     
+
                 } else {
                     print("Geocode not successful")
                 }
@@ -82,13 +120,11 @@ class MapsDummyData {
             print("Couldn't get recipient address")
         }
         
-        
-        
 
         donation01.pickup = location01
         donation01.donor = participant01
-        
-        donations?.append(donation01)
+
+        //donations?.append(donation01)
         
         // any geocoding in app? or all on server?
         //TODO: Needed data: need mapString or equivalent for geocoding for Participant or Location, contactInfo (distinct from name) for donor (what is avatar?)
@@ -141,5 +177,21 @@ class MapsDummyData {
         
         
     }
+    
+    func geocodeInitialRegion(place: String) {
+        let geocoder = CLGeocoder()
+        
+        geocoder.geocodeAddressString(place) { (placemarks, error) -> Void in
 
+            if let placemark = placemarks?[0] {
+                let region = placemark.region as! CLCircularRegion
+                let mkregion = MKCoordinateRegionMakeWithDistance(
+                    region.center,
+                    region.radius,
+                    region.radius);
+                self.startingRegion = mkregion
+
+            }
+        }
+    }
 }
