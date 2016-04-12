@@ -23,6 +23,10 @@ class PendingDonationsDashboardTableViewCell: UITableViewCell {
     
     weak var delegate: PendingDonationsDashboardTableViewCellDelegate?
     
+    
+    //R:132, G:226, B:242 fullNameLabel
+    //R:51, G:195, B:0 button
+    
     var information: (String, String, String)? = nil {
         didSet {
             fullNameLabel.text = information?.0

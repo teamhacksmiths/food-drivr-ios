@@ -17,15 +17,18 @@ class PendingDonationsDashboard: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.separatorColor = UIColor.blueColor()
     }
+    
+
+    
+    
     
     //Mark - Create the HeaderView to our tableView
     lazy var containerView: UIView = {
         
         let placeHolderImage = UIImageView()
         let fullName = UILabel()
-        fullName.text = "anas belkhadir"
+        fullName.text = "PENDING DONATION"
         
         
         let containerStackView = UIStackView(arrangedSubviews: [placeHolderImage, fullName])
