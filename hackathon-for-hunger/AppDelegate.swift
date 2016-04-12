@@ -8,6 +8,8 @@
 
 import UIKit
 import FBSDKCoreKit
+import TwitterKit
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,21 +20,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        guard let filePath = NSBundle.mainBundle().pathForResource("ApiKeys", ofType: "plist") else {
-            return false
-        }
         
+        
+        // Mark - loading the ApiKeys.plist file
+        guard let filePath = NSBundle.mainBundle().pathForResource("ApiKeys", ofType: "plist") else {
+            return true
+        }
+        // Mark - insert to in dictionary
         guard let dictionary = NSDictionary(contentsOfFile:filePath) else {
             return true
         }
         
-        guard let appId = dictionary["FACEBOOK_API_APP_ID"] as? String ,
-            let displayName = dictionary["FACEBOOK_API_DIPLAY_NAME"] as? String else {
+        
+        // Mark - configure Facebook
+        guard let facebookAppId = dictionary["FACEBOOK_API_APP_ID"] as? String ,
+            let facebookDisplayName = dictionary["FACEBOOK_API_DIPLAY_NAME"] as? String ,
+            let appURLSchemeSuffix = dictionary["FACEBOOK_API_URL_SCHEME_SUFFIX"] as? String    else {
             return true
         }
         
-        FBSDKSettings.setAppID(appId)
-        FBSDKSettings.setDisplayName(displayName)
+        FBSDKSettings.setAppID(facebookAppId)
+        FBSDKSettings.setDisplayName(facebookDisplayName)
+        FBSDKSettings.setAppURLSchemeSuffix(appURLSchemeSuffix)
+        
+        //Mark - configure Twitter
+        guard let twitterAppKey = dictionary["TWITTER_API_APP_KEY"] as? String ,
+            let twitterConsumerSecret = dictionary["TWITTER_API_CONSUMER_SECRET"] as? String else {
+                return true
+        }
+        Twitter.sharedInstance().startWithConsumerKey(twitterAppKey, consumerSecret: twitterConsumerSecret)
+//        Fabric.with([Twitter.self])
+
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
     }

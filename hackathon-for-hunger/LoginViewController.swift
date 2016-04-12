@@ -14,11 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
-    
     var loginProvider = LoginProvider.None
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,13 +50,13 @@ class LoginViewController: UIViewController {
     }
     
 
-//    @IBAction func singUpUsingTwitter(sender: UIButton) {
-//        
-//        loginProvider = .Twitter
-//        loginProvider.login(self)
-//        
-//    }
-//    
+    @IBAction func singUpUsingTwitter(sender: UIButton) {
+        
+        loginProvider = .Twitter
+        loginProvider.login(self)
+        
+    }
+    
     
     
 }
@@ -70,12 +66,12 @@ extension LoginViewController: LoginProviderDelegate {
     
      // MARK: LoginProviderDelegate Method
     
-    func loginProvider(loginProvider: LoginProvider, didSucced user: [String: AnyObject]){
+    func loginProvider(loginProvider: LoginProvider, didSucceed user: [String: AnyObject]){
         
         print(user)
     }
     
-    func loginProvider(loginProvider: LoginProvider, didFaild error: NSError){
+    func loginProvider(loginProvider: LoginProvider, didFail error: NSError){
         print(error)
     }
     
