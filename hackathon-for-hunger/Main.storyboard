@@ -1455,7 +1455,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.078431372549019607" green="0.81176470588235294" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.062194522947089971" green="0.69094635070325716" blue="0.77770164884135473" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="62A-4T-wmy" firstAttribute="centerX" secondItem="3W6-uJ-vaP" secondAttribute="centerX" id="JXk-7r-O2N"/>
                                     <constraint firstAttribute="height" constant="40" id="iad-u6-7V8"/>
@@ -1577,8 +1577,8 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="ST. JUDE'S">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.81176470588235294" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
+                                                                    <color key="NSColor" red="0.0" green="0.81176470590000005" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1694,9 +1694,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="donorCityLabel" destination="dek-ig-kU7" id="riG-06-gWF"/>
                         <outlet property="donorNameLabel" destination="qYV-BL-XgD" id="RbV-Xe-EfI"/>
+                        <outlet property="donorStreetLabel" destination="CiW-ox-elq" id="7Ua-Ib-V96"/>
                         <outlet property="mapView" destination="YKm-DA-pDF" id="lJv-ql-3Ff"/>
+                        <outlet property="recipientCityLabel" destination="2ME-MM-aJ7" id="VZG-Mj-QPh"/>
                         <outlet property="recipientNameLabel" destination="lbO-21-gK8" id="5U4-E2-zJN"/>
+                        <outlet property="recipientStreetLabel" destination="7IC-Nf-lIY" id="Nd4-R3-6h4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsP-Em-K0i" userLabel="First Responder" sceneMemberID="firstResponder"/>

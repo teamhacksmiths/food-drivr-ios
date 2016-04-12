@@ -22,17 +22,21 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     var pickupAnnotation: MKPointAnnotation?
     var dropoffAnnotation: MKPointAnnotation?
-    //var pinAnnotationView: MKPinAnnotationView!
+
     
     
     //MARK:- Outlets & Actions
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var recipientNameLabel: UILabel!
+    @IBOutlet weak var recipientStreetLabel: UILabel!
+    @IBOutlet weak var recipientCityLabel: UILabel!
     @IBOutlet weak var donorNameLabel: UILabel!
+    @IBOutlet weak var donorStreetLabel: UILabel!
+    @IBOutlet weak var donorCityLabel: UILabel!
     
     @IBAction func acceptDonation(sender: AnyObject) {
-        //findOnMap()
+        // segue to view controller with route
     }
     
     @IBAction func cancel(sender: AnyObject) {
@@ -47,7 +51,22 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         mapView.setRegion(startingRegion, animated: true)
         if donation != nil {
             donorNameLabel.text = donation?.donor?.name
-            recipientNameLabel.text = donation?.recipient?.name
+            // TODO: need a street address for Donor Participant, to be passed to UI
+            if donation?.recipient != nil {
+                recipientNameLabel.text = donation?.recipient?.name
+                recipientStreetLabel.text = donation?.recipient?.street_address
+                if let cityString = donation?.recipient?.city {
+                    if let stateString = donation?.recipient?.state {
+                        let cityStateString = cityString + ", " + stateString
+                        if let zipString = donation?.recipient?.zip_code {
+                            recipientCityLabel.text = cityStateString + " " + zipString
+                        }
+                    }
+                }
+                
+                
+
+            }
         }
         
         mapView.showsUserLocation = true
@@ -71,24 +90,43 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     //MARK:- mapView
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        print(annotationsHaveBeenShown)
+        
         if annotationsHaveBeenShown != true {
             annotationsHaveBeenShown = true
-            //mapView.showAnnotations([pickupAnnotation!, mapView.userLocation], animated: true)
+
             mapView.showAnnotations(mapView.annotations, animated: true)
         }
         
-//        if let center = mapView.userLocation.location?.coordinate {
-//            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025))
-//            mapView.setRegion(region, animated: true)
-//        }
     }
     
-    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-//        if let annotation = pickupAnnotation {
+//    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+//
+//        for annotation in mapView.annotations {
 //            mapView.deselectAnnotation(annotation, animated: true)
 //            mapView.selectAnnotation(annotation, animated: true)
 //        }
+//
+//    }
+    
+
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let reuseId = "pin"
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            
+            pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColor
+        }
+        else {
+            pinView?.annotation = annotation
+        }
+        
+        return pinView
     }
     
     
@@ -98,8 +136,6 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         
         // In case there are any exisiting annotations, remove them
         if mapView.annotations.count != 0 {
-//            annotation = self.mapView.annotations[0]
-//            mapView.removeAnnotation(annotation)
             mapView.removeAnnotations(mapView.annotations)
         }
         
@@ -108,23 +144,27 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         pickupAnnotation!.title = donation?.donor?.name
         
         pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
-
-        let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
-        pickupAnnotationView.pinTintColor = UIColor.greenColor()
-        mapView.addAnnotation(pickupAnnotationView.annotation!)
         
+        
+        let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
+        pickupAnnotationView.canShowCallout = true
+        pickupAnnotationView.selected = true
+        mapView.addAnnotation(pickupAnnotationView.annotation!)
+
         // Set pin for the optional dropoff location if it exists at this point
-        if let dropoff = donation?.dropoff {
+        if let dropoff = donation?.dropoff { 
             dropoffAnnotation = MKPointAnnotation()
             dropoffAnnotation!.title = donation?.recipient?.name
             
             dropoffAnnotation!.coordinate = (dropoff.coordinates)!
             
             let dropoffAnnotationView = MKPinAnnotationView(annotation: dropoffAnnotation, reuseIdentifier: nil)
-            pickupAnnotationView.pinTintColor = UIColor.brownColor()
+            
             mapView.addAnnotation(dropoffAnnotationView.annotation!)
+            dropoffAnnotationView.selected = true
         } else {
-            print("no dropoff location yet")
+            recipientNameLabel.text = "no dropoff location yet"
+            
         }
     }
     

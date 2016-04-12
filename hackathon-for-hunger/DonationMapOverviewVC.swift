@@ -64,11 +64,11 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
 //        }
         
         for donation in donations! { //TODO: - replace force unwrapping
-            print("count:  \(donations?.count)")
+
             // create the annotation and set its properties
             let annotation = DonationPin()  // subclass of MKAnnotation()
             annotation.donation = donation
-            print(annotation.donation?.pickup?.latitude)
+
             // place the annotation in an array of annotations.
             annotations.append(annotation)
         }
@@ -118,7 +118,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
-            pinView!.pinTintColor = UIColor.redColor()
+            pinView!.pinTintColor = dummyData.pinColor
             pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
         }
         else {

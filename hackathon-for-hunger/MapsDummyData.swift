@@ -17,9 +17,13 @@ class MapsDummyData {
     var donations: [Donation]?
     var startingRegion = MKCoordinateRegion()
     
+    let pinColor: UIColor
+    
     private init() {
         donations = [Donation]()
         donorInfoArray = [DonorInfo]()
+        
+        pinColor = UIColor(red: 16/255, green: 176/255, blue: 198/255, alpha: 1)
         
         geocodeInitialRegion("Portland, OR")
         
@@ -64,21 +68,12 @@ class MapsDummyData {
             pickup.latitude = RealmOptional(info.lat)
             pickup.longitude = RealmOptional(info.lon)
             donation.pickup = pickup
-            print(donation)
+            
             donations?.append(donation)
         }
         
         
-        //MARK:- Realm objects
-        
-        /* properties
-        dynamic var id: Int = 0
-        dynamic var donor: Participant?
-        dynamic var driver: Participant?
-        dynamic var recipient: Recipient?
-        dynamic var pickup: Location?
-        dynamic var dropoff: Location?
-        */
+
         
         let donation01 = Donation()
         
@@ -101,15 +96,16 @@ class MapsDummyData {
 
             geocodeLocation(place) { success, coords in
                 if success {
-                    print("Coords: \(coords)")
+
                     donation01.recipient = recipient01
                     self.donations![0].recipient = recipient01
                     let dropoff = Location()
                     dropoff.latitude = RealmOptional(coords.latitude)
-                    print("DLon: \(dropoff.latitude.value)")
                     dropoff.longitude = RealmOptional(coords.longitude)
+                    
                     donation01.dropoff = dropoff
-                    print("D01d:  \(dropoff.longitude)")
+                    self.donations![0].dropoff = dropoff
+                    self.donations![1].dropoff = dropoff
                     
 
                 } else {
@@ -124,9 +120,8 @@ class MapsDummyData {
         donation01.pickup = location01
         donation01.donor = participant01
 
-        //donations?.append(donation01)
+
         
-        // any geocoding in app? or all on server?
         //TODO: Needed data: need mapString or equivalent for geocoding for Participant or Location, contactInfo (distinct from name) for donor (what is avatar?)
         
     }
