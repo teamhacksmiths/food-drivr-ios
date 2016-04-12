@@ -11,6 +11,7 @@
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
 		3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */; };
 		3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */; };
+		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
 		443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */; };
 		443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */; };
 		443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */; };
@@ -37,6 +38,8 @@
 		44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */; };
 		44B7EFF91CAD95A600E7C609 /* DrivrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFF81CAD95A600E7C609 /* DrivrAPI.swift */; };
 		44B7F0001CADAD5B00E7C609 /* DonationRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */; };
+		44C0CF521CBD670600EA3390 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C0CF511CBD670600EA3390 /* Setting.swift */; };
+		44C0CF561CBD6B9100EA3390 /* UserDonorMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */; };
 		6395C0851CB0C2610059B5E1 /* DonationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C0841CB0C2610059B5E1 /* DonationMapViewController.swift */; };
 		6395C0871CB1D34A0059B5E1 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
 		6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C0881CB1D69D0059B5E1 /* DonationMapOverviewVC.swift */; };
@@ -71,6 +74,7 @@
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewCell.swift; sourceTree = "<group>"; };
+		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
 		443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.ttf"; sourceTree = "<group>"; };
 		443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ColabThi.otf; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		44AEA88A1CA9CBC100A52731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44B7EFF81CAD95A600E7C609 /* DrivrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrivrAPI.swift; sourceTree = "<group>"; };
 		44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouterTest.swift; sourceTree = "<group>"; };
+		44C0CF511CBD670600EA3390 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDonorMock.json; sourceTree = "<group>"; };
 		4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6395C0841CB0C2610059B5E1 /* DonationMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationMapViewController.swift; sourceTree = "<group>"; };
 		6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
@@ -149,6 +155,15 @@
 				4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4404F6BE1CBD1B11001B9293 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */,
+				44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */,
+			);
+			name = MockData;
 			sourceTree = "<group>";
 		};
 		443D1DA81CB6D56100E2E7B9 /* Assets */ = {
@@ -201,6 +216,7 @@
 		44A7250E1CAC4F2600D676C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4404F6BE1CBD1B11001B9293 /* MockData */,
 				44A7250F1CAC559500D676C3 /* Donation.swift */,
 				44573E5E1CAEF20D00A5F1C3 /* Location.swift */,
 				44573E621CAEF37400A5F1C3 /* MetaData.swift */,
@@ -209,6 +225,7 @@
 				44484DE21CAFDA45002D7233 /* Token.swift */,
 				4464177E1CB182AC00F37F17 /* Recipient.swift */,
 				446417801CB1872500F37F17 /* Image.swift */,
+				44C0CF511CBD670600EA3390 /* Setting.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -437,8 +454,10 @@
 				44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */,
 				3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */,
 				443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */,
+				44C0CF561CBD6B9100EA3390 /* UserDonorMock.json in Resources */,
 				443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */,
 				6395C0871CB1D34A0059B5E1 /* ApiKeys.plist in Resources */,
+				4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +549,7 @@
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,
 				639F7E231CB875A7009EC623 /* TempLocationVC.swift in Sources */,
 				EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */,
+				44C0CF521CBD670600EA3390 /* Setting.swift in Sources */,
 				44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */,
 				3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */,
 				44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */,

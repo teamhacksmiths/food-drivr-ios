@@ -166,7 +166,7 @@ enum LoginProvider {
             }
             
             guard let session = session,
-                let userID: String = session.userID  else {
+                let _: String = session.userID  else {
                 let error = NSError(domain: "error with the session", code: 3, userInfo: nil)
                 delegate.loginProvider(self, didFail: error)
                 return
@@ -218,15 +218,21 @@ enum LoginProvider {
     
     private func loginUsingCustom(delegate: LoginProviderDelegate,email: String,password: String) {
         
+        
         DrivrAPI.sharedInstance.authenticate(email, password: password,
             success: {
                 (JsonDict) in
-            let user = AuthProvider.sharedInstance.storeCurrentUser(JsonDict)
+                guard let user = JsonDict["user"] as? [String: AnyObject] else {
+                    delegate.loginProvider(self, didFail: NSError(domain: "error retrieving user", code:422, userInfo: nil))
+                    return
+                }
+            AuthProvider.sharedInstance.storeCurrentUser(user)
+                dump(AuthProvider.sharedInstance.getCurrentUser())
                 delegate.loginProvider(self, didSucceed: JsonDict)
             },
             failure: {
                 error in
-                delegate.loginProvider(self, didFail: : error)
+                delegate.loginProvider(self, didFail: error!)
             }
         
         )

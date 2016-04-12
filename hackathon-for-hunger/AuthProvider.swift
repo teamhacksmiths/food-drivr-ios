@@ -16,24 +16,21 @@ class AuthProvider : NSObject {
     static let sharedInstance = AuthProvider()
     let realm = try! Realm()
     
-    func getCredentials() -> User? {
-        realm.objects(User).first
-    }
     
     func getCurrentUser() -> User? {
-        return nil
+        return realm.objects(User).first
     }
     
     func destroyUser() ->Void {
-        var users = realm.objects(User)
+        let users = realm.objects(User)
         try! realm.write {
             realm.delete(users)
         }
     }
     
-    func storeCurrentUser(user: JsonNDict) -> User? {
+    func storeCurrentUser(user: JsonDict) -> User? {
         self.destroyUser()
-        var user = User(dict: user)
+        let user = User(dict: user)
             try! realm.write {
                 realm.add(user)
             }
