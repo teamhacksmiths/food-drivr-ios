@@ -17,12 +17,11 @@ protocol LoginProviderDelegate {
     
 }
 
-//the purse is to not get conflic with the element of LoginProvider Twitter
+//The purpose is to not conflict with the element of LoginProvider Twitter
 typealias T = Twitter
 
 
 enum LoginProvider {
-    
     
     
     case Facebook
@@ -48,7 +47,7 @@ enum LoginProvider {
             
             case .Custom(let email, let password) :
                 
-                loginUsingCustom(delegate,email: email,password: password)
+                loginUsingCustom(delegate, email: email, password: password)
             
             case .None:
                 //DO Nothing
@@ -177,13 +176,13 @@ enum LoginProvider {
 //            LoginProvider.client.loadUserWithID(userID) { (user, error) -> Void in
 //                
 //                guard error == nil else{
-//                    delegate.loginProvider(self, didFaild: error!)
+//                    delegate.loginProvider(self, didFail: error!)
 //                    return
 //                }
 //                
 //                guard let user = user else {
 //                    let error = NSError(domain: "No data to display for the user", code: 4, userInfo: nil)
-//                    delegate.loginProvider(self, didFaild: error)
+//                    delegate.loginProvider(self, didFail: error)
 //                    return
 //                }
 //                
@@ -206,7 +205,7 @@ enum LoginProvider {
 //                      TwitterKeys.formattedScreenName: user.formattedScreenName
 //                ]
 //                
-//                delegate.loginProvider(self, didSucced: dictionary)
+//                delegate.loginProvider(self, didSucceed: dictionary)
 //                
 //            }
             
@@ -216,7 +215,7 @@ enum LoginProvider {
     
     }
     
-    private func loginUsingCustom(delegate: LoginProviderDelegate,email: String,password: String) {
+    private func loginUsingCustom(delegate: LoginProviderDelegate, email: String, password: String) {
         
         
         DrivrAPI.sharedInstance.authenticate(email, password: password,

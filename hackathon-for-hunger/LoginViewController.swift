@@ -14,11 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
-    
     var loginProvider = LoginProvider.None
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
