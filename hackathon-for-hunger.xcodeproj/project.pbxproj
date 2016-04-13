@@ -467,7 +467,6 @@
 				443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */,
 				44C0CF561CBD6B9100EA3390 /* UserDonorMock.json in Resources */,
 				443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */,
-				6395C0871CB1D34A0059B5E1 /* ApiKeys.plist in Resources */,
 				4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
