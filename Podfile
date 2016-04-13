@@ -13,6 +13,7 @@ target 'hackathon-for-hunger' do
   pod 'Fabric'
   pod 'TwitterKit'
   pod 'TwitterCore'
+  pod 'SwiftyJSON'
 end
 
 target 'hackathon-for-hungerTests' do
