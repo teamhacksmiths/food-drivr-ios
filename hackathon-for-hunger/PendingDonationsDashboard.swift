@@ -27,17 +27,21 @@ class PendingDonationsDashboard: UITableViewController {
     lazy var containerView: UIView = {
         
         let placeHolderImage = UIImageView()
+        placeHolderImage.translatesAutoresizingMaskIntoConstraints = true
+        placeHolderImage.image = UIImage(imageLiteral: "personHolder")
+        
+        NSLayoutConstraint(item: placeHolderImage, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100.0).active = true
+        NSLayoutConstraint(item: placeHolderImage, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100.0).active = true
+        
         let fullName = UILabel()
         fullName.text = "PENDING DONATION"
-        
+        fullName.textColor = UIColor.grayColor()
         
         let containerStackView = UIStackView(arrangedSubviews: [placeHolderImage, fullName])
         containerStackView.axis = .Vertical
         containerStackView.spacing = 10.0
         containerStackView.alignment = .Center
         containerStackView.distribution = .EqualCentering
-        
-        
         
         return containerStackView
     }()
@@ -78,7 +82,6 @@ extension PendingDonationsDashboard: PendingDonationsDashboardTableViewCellDeleg
     }
 
 }
-
 
 
 
