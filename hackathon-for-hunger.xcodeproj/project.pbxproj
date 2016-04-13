@@ -51,6 +51,7 @@
 		6395C0921CB83DE60059B5E1 /* Portland-BridgePortBrewPub.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0911CB83DE60059B5E1 /* Portland-BridgePortBrewPub.gpx */; };
 		639F7E211CB87213009EC623 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F7E201CB87213009EC623 /* LocationManager.swift */; };
 		639F7E231CB875A7009EC623 /* TempLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F7E221CB875A7009EC623 /* TempLocationVC.swift */; };
+		639F7E251CB9730B009EC623 /* DriverMapDetailPendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F7E241CB9730B009EC623 /* DriverMapDetailPendingVC.swift */; };
 		69BBC19CAFAE9CEC7A5EECCE /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */; };
 		EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */; };
 		EAAD23BC1CB37FF8005FD787 /* VSUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BB1CB37FF8005FD787 /* VSUserInfoViewController.swift */; };
@@ -125,6 +126,7 @@
 		639C2E601CB8463900275C3E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		639F7E201CB87213009EC623 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		639F7E221CB875A7009EC623 /* TempLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempLocationVC.swift; sourceTree = "<group>"; };
+		639F7E241CB9730B009EC623 /* DriverMapDetailPendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapDetailPendingVC.swift; sourceTree = "<group>"; };
 		7D65AE8EA6D2673A5FC471F2 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C423D9E60134D94E263D2 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
 		EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				6395C08F1CB25D400059B5E1 /* MapsDummyData.swift */,
 				639F7E201CB87213009EC623 /* LocationManager.swift */,
 				639F7E221CB875A7009EC623 /* TempLocationVC.swift */,
+				639F7E241CB9730B009EC623 /* DriverMapDetailPendingVC.swift */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				44C0CF521CBD670600EA3390 /* Setting.swift in Sources */,
 				44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */,
 				3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */,
+				639F7E251CB9730B009EC623 /* DriverMapDetailPendingVC.swift in Sources */,
 				44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */,
 				44484DE31CAFDA45002D7233 /* Token.swift in Sources */,
 				6395C08C1CB1F2B50059B5E1 /* DonorInfo.swift in Sources */,

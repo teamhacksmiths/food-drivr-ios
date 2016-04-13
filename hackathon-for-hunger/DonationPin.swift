@@ -17,6 +17,13 @@ class DonationPin: NSObject, MKAnnotation {
             title = donorInfo?.name
         }
     }
+    var donation: Donation? {
+        didSet {
+            lat = donation?.pickup?.latitude.value
+            lon = donation?.pickup?.longitude.value
+            title = donation?.donor?.name
+        }
+    }
     var lat: Double?
     var lon: Double?
     var title: String?
@@ -27,7 +34,11 @@ class DonationPin: NSObject, MKAnnotation {
             lon = newValue.longitude
         }
         get {
-            return CLLocationCoordinate2D(latitude: Double(lat!), longitude: Double(lon!))
+            if lat != nil && lon != nil {
+                return CLLocationCoordinate2D(latitude: Double(lat!), longitude: Double(lon!))
+            } else { // default values
+                return CLLocationCoordinate2DMake(0.0, 0.0)
+            }
         }
     }
 }
