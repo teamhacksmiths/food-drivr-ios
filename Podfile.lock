@@ -32,6 +32,7 @@ DEPENDENCIES:
   - FBSDKShareKit
   - RealmSwift
   - SlideMenuControllerSwift
+  - SwiftyJSON
   - TwitterCore
   - TwitterKit
 

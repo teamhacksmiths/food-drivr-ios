@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import RealmSwift
+import SwiftyJSON
 
 class DrivrAPI {
     
@@ -19,8 +20,27 @@ class DrivrAPI {
     init() {
     }
     
-    func authenticate(username: String, password: String, completionHandler: (JsonDict?, NSError?)-> ()) {
+    func authenticate(username: String, password: String, success: (JsonDict)-> (), failure: (NSError?) ->()) {
         
+        switch username {
+            case "test@driver.com":
+            let path = NSBundle.mainBundle().pathForResource("UserDriverMock", ofType: "json")
+            let jsonData = NSData(contentsOfFile:path!)
+            let json = JSON(data: jsonData!).dictionaryObject
+            success(json!)
+            break
+
+        case "test@donor.com":
+            let path = NSBundle.mainBundle().pathForResource("UserDonorMock", ofType: "json")
+            let jsonData = NSData(contentsOfFile:path!)
+            let json = JSON(data: jsonData!).dictionaryObject
+            success(json!)
+            break
+        default:
+            failure(NSError(domain: "error retrieving user", code:422, userInfo: nil))
+            break
+        }
+                /*
         let router = UserRouter(endpoint: .Login(username: username, password: password) )
 
         manager.request(router)
@@ -28,15 +48,13 @@ class DrivrAPI {
             .responseJSON {
                response in
                 switch response.result {
-                case .Success(let JSON):
-                    print("Success with JSON: \(JSON)")
-                    
+                case .Success(let JSON):                    
                     let response = JSON as! JsonDict
-                    print(response)
+                    success(response)
                 case .Failure(let error):
-                    print("Request failed with error: \(error)")
+                    failure(error)
                 }
-        }
+        }*/
     }
     
     func getDonations(completed: Bool? = false, dateRange: String?, completionHandler: (Results<Donation>?, NSError?)-> ()) {
