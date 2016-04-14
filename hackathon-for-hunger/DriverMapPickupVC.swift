@@ -44,29 +44,64 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         
         mapView.delegate = self
         mapView.setRegion(startingRegion, animated: true)
+        
         if donation != nil {
             donorNameLabel.text = donation?.donor?.name
             // TODO: need a street address for Donor Participant, to be passed to UI
             
+            // create Map Items
+            let userLocationMapItem = MKMapItem.mapItemForCurrentLocation()
+            let pickupPlacemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
+            let pickupMapItem = MKMapItem(placemark: pickupPlacemark)
+            
+            let request = MKDirectionsRequest()
+            request.source = userLocationMapItem
+            request.destination = pickupMapItem
+            request.requestsAlternateRoutes = false
+            request.transportType = .Automobile
+            
+            let directions = MKDirections(request: request)
+            
+            directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
+                guard let unwrappedResponse = response else { return }
+                
+                for route in unwrappedResponse.routes {
+                    self.mapView.addOverlay(route.polyline)
+                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                }
             }
-    
+        }
+        
     
         mapView.showsUserLocation = true
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+        
+
     }
     
+    
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        if (overlay is MKPolyline) {
+            if mapView.overlays.count == 1 {
+                renderer.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.75)
+                renderer.lineWidth = 4
+            } else {
+                renderer.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.4)
+                renderer.lineWidth = 3
+            }
+        }
+        return renderer
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         addPins()
-        
-        if donation != nil {
-            donorNameLabel.text = donation?.donor?.name
-        }
+
     }
     
     //MARK:- mapView
@@ -109,17 +144,19 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         }
         
         // Set pin for pickup location
-        pickupAnnotation = MKPointAnnotation()
-        pickupAnnotation!.title = donation?.donor?.name
-        
-        pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
-        
-        
-        let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
-        pickupAnnotationView.canShowCallout = true
-        pickupAnnotationView.selected = true
-        mapView.addAnnotation(pickupAnnotationView.annotation!)
-        
+        if donation != nil {
+            
+            pickupAnnotation = MKPointAnnotation()
+            
+            pickupAnnotation!.title = donation?.donor?.name
+            pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
+            
+            
+            let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
+            pickupAnnotationView.canShowCallout = true
+            pickupAnnotationView.selected = true
+            mapView.addAnnotation(pickupAnnotationView.annotation!)
+        }
     }
     
     
