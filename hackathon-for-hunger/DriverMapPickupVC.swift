@@ -34,7 +34,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
 
     @IBAction func donationPickedUp(sender: AnyObject) {
 
-        pickupDropoffButton = UIBarButtonItem(title: "DROPPED OFF", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(DriverMapPickupVC.donationDroppedOff))
+        pickupDropoffButton = UIBarButtonItem(title: "DROPPED OFF", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(donationDroppedOff))
         
         addDropoffPin()
         updateRoute()
