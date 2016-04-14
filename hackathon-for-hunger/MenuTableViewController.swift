@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 enum LeftMenu: Int {
     case Dashboard = 0
@@ -92,6 +93,14 @@ class MenuTableViewController: UITableViewController {
         case .Dashboard:
             self.slideMenuController()?.changeMainViewController(self.dashboardController, close: true)
         case .DonationsOverview:
+            
+            // prepare for Core Location (allowing user location on maps)
+            var locationManager = LocationManager.sharedInstance.locationManager
+            locationManager.delegate = LocationManager.sharedInstance
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+            
             self.slideMenuController()?.changeMainViewController(self.donationMapOverview, close: true)
         }
     }
