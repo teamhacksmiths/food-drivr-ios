@@ -23,16 +23,17 @@ class PendingDonationsDashboardTableViewCell: UITableViewCell {
     
     weak var delegate: PendingDonationsDashboardTableViewCellDelegate?
     
+
+    
     var information: (String, String, String)? = nil {
         didSet {
-            fullNameLabel.text = information?.0
-            amountLabel.text = information?.1
-            locationLabel.text = information?.2
+            fullNameLabel.text = information?.0.capitalizedString
+            amountLabel.text = information?.1.capitalizedString
+            locationLabel.text = information?.2.capitalizedString
         }
     }
     
     var indexPath: NSIndexPath?
-    
     
     @IBAction func accept(sender: UIButton) {
         delegate?.cell(self, didPress: indexPath!)

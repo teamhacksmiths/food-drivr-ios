@@ -21,9 +21,7 @@ class AcceptButton: UIButton {
     }
     func setLayerFrame() {
         self.setTitle("ACCEPT", forState: .Normal)
-        self.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         layer.masksToBounds = true
-        layer.cornerRadius = 10.0
-        backgroundColor = UIColor.greenColor()
+        layer.cornerRadius = 15.0
     }
 }
