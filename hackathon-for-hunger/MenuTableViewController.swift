@@ -26,7 +26,7 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let dashboardController = storyboard.instantiateViewControllerWithIdentifier("Main") as! DashboardViewController
+        let dashboardController = storyboard.instantiateViewControllerWithIdentifier("Main") as! PendingDonationsDashboard
         self.dashboardController = UINavigationController(rootViewController: dashboardController)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

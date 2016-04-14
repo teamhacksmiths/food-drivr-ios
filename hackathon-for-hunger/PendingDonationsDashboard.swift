@@ -70,6 +70,11 @@ class PendingDonationsDashboard: UITableViewController {
         
         return cell
     }
+    
+    
+    @IBAction func toggleMenu(sender: AnyObject) {
+        self.slideMenuController()?.openLeft()
+    }
 }
 
 
