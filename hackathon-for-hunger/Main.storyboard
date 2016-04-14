@@ -14,8 +14,10 @@
             <string>BebasNeue</string>
             <string>BebasNeue</string>
             <string>BebasNeue</string>
+            <string>BebasNeue</string>
         </mutableArray>
         <mutableArray key="ColabThi.otf">
+            <string>Colaborate-Thin</string>
             <string>Colaborate-Thin</string>
             <string>Colaborate-Thin</string>
         </mutableArray>
@@ -45,7 +47,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xeG-h0-Rgs">
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xeG-h0-Rgs">
                                         <rect key="frame" x="0.0" y="79" width="600" height="262"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TN-f4-0Rd">
@@ -182,37 +184,37 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-dY-PN6">
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-dY-PN6">
                                         <rect key="frame" x="0.0" y="398" width="600" height="142"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Or Login with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ3-oe-KBP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Or Login with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ3-oe-KBP">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
                                                 <fontDescription key="fontDescription" name="Colaborate-Thin" family="Colaborate-Thin" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Lnw-0y-TPi">
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lnw-0y-TPi">
                                                 <rect key="frame" x="0.0" y="34" width="600" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Ket-cg-Km1"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa3-sb-EjS">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa3-sb-EjS">
                                                 <rect key="frame" x="0.0" y="49" width="600" height="32"/>
                                                 <state key="normal" image="facebook_white"/>
                                                 <connections>
                                                     <action selector="singInUsingFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PjN-7b-ll9"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tQF-Ta-1mH">
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQF-Ta-1mH">
                                                 <rect key="frame" x="0.0" y="95" width="600" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Akt-9L-neB"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTu-2L-f6J">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTu-2L-f6J">
                                                 <rect key="frame" x="0.0" y="110" width="600" height="32"/>
                                                 <state key="normal" image="twitter_white"/>
                                                 <connections>
@@ -245,25 +247,47 @@
         <scene sceneID="ixx-sY-HTy">
             <objects>
                 <tableViewController storyboardIdentifier="Left" id="crZ-a0-5ub" customClass="MenuTableViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fZb-u7-2i0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="fZb-u7-2i0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter_white" id="F6T-up-fGC">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gA0-Y6-UQN">
+                            <rect key="frame" x="0.0" y="178" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="BebasNeue" family="Bebas Neue" pointSize="20"/>
+                            <state key="normal" title="LOGOUT">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="3TR-SX-GBc">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="7" reuseIdentifier="cell" textLabel="XCY-eS-sIk" rowHeight="100" style="IBUITableViewCellStyleDefault" id="3TR-SX-GBc">
+                                <rect key="frame" x="0.0" y="78" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3TR-SX-GBc" id="rDU-gP-QP0">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XCY-eS-sIk">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Colaborate-Thin" family="Colaborate-Thin" pointSize="16"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="crZ-a0-5ub" id="iob-Fw-zT0"/>
-                            <outlet property="delegate" destination="crZ-a0-5ub" id="z7E-BE-GS3"/>
-                        </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="logoImageView" destination="F6T-up-fGC" id="12P-WP-yCZ"/>
+                        <outlet property="logoutButton" destination="gA0-Y6-UQN" id="Oka-tN-dSE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUn-JO-Bhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -567,7 +591,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="iWF-Fo-doQ">
                                 <rect key="frame" x="20" y="64" width="560" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-rm-d9b">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-rm-d9b">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="27"/>
                                         <fontDescription key="fontDescription" name="Bebas" family="Bebas" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1313,6 +1337,7 @@
                     <connections>
                         <outlet property="mapView" destination="rbn-JY-1AV" id="qcA-CI-H4k"/>
                         <segue destination="7VA-Ox-rwG" kind="presentation" identifier="DonationDetail" modalTransitionStyle="flipHorizontal" id="qK0-dZ-ncO"/>
+                        <segue destination="B4v-Zv-mgG" kind="show" identifier="toDriverMapDetailPending" id="vAS-rJ-zI1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0h-QS-XCu" userLabel="First Responder" sceneMemberID="firstResponder"/>

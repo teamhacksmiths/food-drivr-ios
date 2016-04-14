@@ -14,6 +14,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     let dummyData = MapsDummyData.sharedInstance
     var donorInfoArray: [DonorInfo]?
+    var donations: [Donation]?
     
     
     var locationManager = LocationManager.sharedInstance.locationManager
@@ -23,6 +24,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         donorInfoArray = dummyData.donorInfoArray
+        donations = dummyData.donations
         mapView.showsUserLocation = true
 
         if CLLocationManager.locationServicesEnabled() {
@@ -51,15 +53,26 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         var annotations = [DonationPin]()
 
 
-        for donorInfo in donorInfoArray! { //TODO: - replace force unwrapping
-            
+//        for donorInfo in donorInfoArray! { //TODO: - replace force unwrapping
+//            
+//            // create the annotation and set its properties
+//            let annotation = DonationPin()  // subclass of MKAnnotation()
+//            annotation.donorInfo = donorInfo
+//
+//            // place the annotation in an array of annotations.
+//            annotations.append(annotation)
+//        }
+        
+        for donation in donations! { //TODO: - replace force unwrapping
+
             // create the annotation and set its properties
             let annotation = DonationPin()  // subclass of MKAnnotation()
-            annotation.donorInfo = donorInfo
+            annotation.donation = donation
 
             // place the annotation in an array of annotations.
             annotations.append(annotation)
         }
+        
         // When the array is complete, add the annotations to the map.
         mapView.addAnnotations(annotations)
         mapView.showAnnotations(annotations, animated: true)
@@ -68,12 +81,12 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "DonationDetail") {
+        if (segue.identifier == "toDriverMapDetailPending") {
             
             if let pin = sender as? DonationPin {
-                let donationVC = segue.destinationViewController as! DonationMapViewController
+                let donationVC = segue.destinationViewController as! DriverMapDetailPendingVC
                 
-                donationVC.donorInfo = pin.donorInfo
+                donationVC.donation = pin.donation
             }
         }
     }
@@ -105,7 +118,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
-            pinView!.pinTintColor = UIColor.redColor()
+            pinView!.pinTintColor = dummyData.pinColor
             pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
         }
         else {
@@ -116,7 +129,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == annotationView.rightCalloutAccessoryView {
-            performSegueWithIdentifier("DonationDetail", sender: annotationView.annotation)
+            performSegueWithIdentifier("toDriverMapDetailPending", sender: annotationView.annotation)
             
         }
     }

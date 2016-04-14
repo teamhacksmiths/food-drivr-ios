@@ -1,6 +1,0 @@
-framework module Pods_hackathon_for_hunger {
-  umbrella header "Pods-hackathon-for-hunger-umbrella.h"
-
-  export *
-  module * { export * }
-}
