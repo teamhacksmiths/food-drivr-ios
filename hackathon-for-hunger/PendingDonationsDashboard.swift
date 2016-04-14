@@ -17,24 +17,31 @@ class PendingDonationsDashboard: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.separatorColor = UIColor.blueColor()
     }
+    
+
+    
+    
     
     //Mark - Create the HeaderView to our tableView
     lazy var containerView: UIView = {
         
         let placeHolderImage = UIImageView()
-        let fullName = UILabel()
-        fullName.text = "anas belkhadir"
+        placeHolderImage.translatesAutoresizingMaskIntoConstraints = true
+        placeHolderImage.image = UIImage(imageLiteral: "personHolder")
         
+        NSLayoutConstraint(item: placeHolderImage, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100.0).active = true
+        NSLayoutConstraint(item: placeHolderImage, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100.0).active = true
+        
+        let fullName = UILabel()
+        fullName.text = "PENDING DONATION"
+        fullName.textColor = UIColor.grayColor()
         
         let containerStackView = UIStackView(arrangedSubviews: [placeHolderImage, fullName])
         containerStackView.axis = .Vertical
         containerStackView.spacing = 10.0
         containerStackView.alignment = .Center
         containerStackView.distribution = .EqualCentering
-        
-        
         
         return containerStackView
     }()
@@ -63,6 +70,11 @@ class PendingDonationsDashboard: UITableViewController {
         
         return cell
     }
+    
+    
+    @IBAction func toggleMenu(sender: AnyObject) {
+        self.slideMenuController()?.openLeft()
+    }
 }
 
 
@@ -75,7 +87,6 @@ extension PendingDonationsDashboard: PendingDonationsDashboardTableViewCellDeleg
     }
 
 }
-
 
 
 

@@ -27,8 +27,15 @@ class LoginViewController: UIViewController {
 
     @IBAction func signInButtonClicked(sender: AnyObject) {
         //Suggestion for implementing the signIn
-        loginProvider = .Custom(emailInput.text!, passwordInput.text!)
-        loginProvider.login(self)
+        //loginProvider = .Costum(emailInput.text!, passwordInput.text!)
+        //loginProvider.login(self)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! PendingDonationsDashboard
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        self.presentViewController(slideMenuController, animated: false, completion: nil)
     }
     
 
