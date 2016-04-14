@@ -1513,6 +1513,7 @@
                         <outlet property="donorPhoneLabel" destination="9YH-14-XaP" id="B6t-dy-xWA"/>
                         <outlet property="donorStreetLabel" destination="u23-RM-OlY" id="EO3-xA-K8a"/>
                         <outlet property="mapView" destination="jjA-mm-nmi" id="w3I-R2-Dm2"/>
+                        <outlet property="pickupDropoffButton" destination="UwM-ED-YLz" id="LVt-ZR-CaT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWr-E2-OBC" userLabel="First Responder" sceneMemberID="firstResponder"/>

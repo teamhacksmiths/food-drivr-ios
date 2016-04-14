@@ -30,12 +30,58 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var donorContactLabel: UILabel!
     @IBOutlet weak var donorPhoneLabel: UILabel!
     
+    @IBOutlet weak var pickupDropoffButton: UIBarButtonItem!
 
     @IBAction func donationPickedUp(sender: AnyObject) {
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "startAlarm:")
+        pickupDropoffButton = UIBarButtonItem(title: "DROPPED OFF", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(DriverMapPickupVC.donationDroppedOff))
+        
+        updateRoute()
+
+    }
+    
+    func donationDroppedOff() {
+        print("Send message: dropoff complete")
     }
     
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //MARK:- set the route (//TODO:- refactor this func to use with either pickup or dropoff)
+    func updateRoute() {
+        if donation != nil {
+            
+            // remove the pickup route in prep to be replace with dropoff route
+            mapView.removeOverlays(mapView.overlays)
+            
+            donorNameLabel.text = donation?.donor?.name
+            
+            // create Map Items
+            let pickupPlacemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
+            let pickupMapItem = MKMapItem(placemark: pickupPlacemark)
+            let dropoffPlacemark = MKPlacemark(coordinate: (donation!.dropoff?.coordinates)!, addressDictionary: nil)
+            let dropoffMapItem = MKMapItem(placemark: dropoffPlacemark)
+            
+            
+            let request = MKDirectionsRequest()
+            request.source = pickupMapItem
+            request.destination = dropoffMapItem
+            request.requestsAlternateRoutes = true
+            request.transportType = .Automobile
+            
+            let directions = MKDirections(request: request)
+            
+            directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
+                guard let unwrappedResponse = response else { return }
+                
+                for route in unwrappedResponse.routes {
+                    self.mapView.addOverlay(route.polyline)
+                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                }
+            }
+        }
+
     }
     
     //MARK:- View lifecycle
@@ -70,6 +116,8 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                     self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
                 }
             }
+            
+            addPins()
         }
         
     
