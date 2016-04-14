@@ -33,10 +33,12 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var pickupDropoffButton: UIBarButtonItem!
 
     @IBAction func donationPickedUp(sender: AnyObject) {
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "startAlarm:")
+
         pickupDropoffButton = UIBarButtonItem(title: "DROPPED OFF", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(DriverMapPickupVC.donationDroppedOff))
         
+        addDropoffPin()
         updateRoute()
+        
 
     }
     
@@ -67,7 +69,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             let request = MKDirectionsRequest()
             request.source = pickupMapItem
             request.destination = dropoffMapItem
-            request.requestsAlternateRoutes = true
+            request.requestsAlternateRoutes = false
             request.transportType = .Automobile
             
             let directions = MKDirections(request: request)
@@ -148,7 +150,6 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        addPins()
 
     }
     
@@ -207,16 +208,24 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         }
     }
     
-    
+    //TODO: consolidate with addPin func
+    func addDropoffPin() {
+        if donation != nil {
+            
+            let dropoffAnnotation = MKPointAnnotation()
+            
+           
+            dropoffAnnotation.title = donation?.recipient?.name
+            dropoffAnnotation.coordinate = (donation?.dropoff?.coordinates)!
+            
+            
+            let dropoffAnnotationView = MKPinAnnotationView(annotation: dropoffAnnotation, reuseIdentifier: nil)
+            dropoffAnnotationView.canShowCallout = true
+            dropoffAnnotationView.selected = true
+            mapView.addAnnotation(dropoffAnnotationView.annotation!)
+        }
+
+    }
 }
 
-
-    /*
-    // MARK: - Navigation
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
