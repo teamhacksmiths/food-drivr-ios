@@ -17,7 +17,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
     var donation: Donation?
     
-    var pickupAnnotation: MKPointAnnotation?
+    var pickupAnnotation: DonationPin?
     
     
     
@@ -173,7 +173,16 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             
-            pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColor
+            if annotation.isKindOfClass(DonationPin) == true {
+                if let pickupDonationPin = annotation as? DonationPin {
+                    if pickupDonationPin.kind == .Pickup {
+                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                    } else if pickupDonationPin.kind == .Dropoff {
+                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                    }
+                }
+            }
+
             pinView?.canShowCallout = true
             pinView?.selected = true
         }
@@ -198,15 +207,12 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         // Set pin for pickup location
         if donation != nil {
             
-            pickupAnnotation = MKPointAnnotation()
+            pickupAnnotation = DonationPin()
             
             pickupAnnotation!.title = donation?.donor?.name
             pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
+            pickupAnnotation!.kind = .Pickup
             
-            
-//            let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
-//            pickupAnnotationView.canShowCallout = true
-//            pickupAnnotationView.selected = true
             mapView.addAnnotation(pickupAnnotation!)
         }
     }
@@ -215,16 +221,13 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     func addDropoffPin() {
         if donation != nil {
             
-            let dropoffAnnotation = MKPointAnnotation()
+            let dropoffAnnotation = DonationPin()
             
            
             dropoffAnnotation.title = donation?.recipient?.name
             dropoffAnnotation.coordinate = (donation?.dropoff?.coordinates)!
+            dropoffAnnotation.kind = .Dropoff
             
-            
-            //let dropoffAnnotationView = MKPinAnnotationView(annotation: dropoffAnnotation, reuseIdentifier: nil)
-            //dropoffAnnotationView.canShowCallout = true
-            //dropoffAnnotationView.selected = true
             mapView.addAnnotation(dropoffAnnotation)
         }
 

@@ -20,8 +20,8 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     var donation: Donation?
     
-    var pickupAnnotation: MKPointAnnotation?
-    var dropoffAnnotation: MKPointAnnotation?
+    var pickupAnnotation: DonationPin?
+    var dropoffAnnotation: DonationPin?
 
     
     
@@ -120,7 +120,16 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
             pinView?.selected = true
-            pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColor
+            if annotation.isKindOfClass(DonationPin) == true {
+                if let pickupDonationPin = annotation as? DonationPin {
+                    if pickupDonationPin.kind == .Pickup {
+                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                    } else if pickupDonationPin.kind == .Dropoff {
+                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                    }
+                }
+            }
+            
         }
         else {
             pinView?.annotation = annotation
@@ -184,32 +193,21 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         }
         
         // Set pin for pickup location
-        pickupAnnotation = MKPointAnnotation()
+        pickupAnnotation = DonationPin()
         pickupAnnotation!.title = donation?.donor?.name
-        
         pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
-        
-        
-//        let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
-//        pickupAnnotationView.canShowCallout = true
-//        pickupAnnotationView.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
-//        //pickupAnnotationView.selected = true
+        pickupAnnotation!.kind = .Pickup
         mapView.addAnnotation(pickupAnnotation!)
 
         // Set pin for the optional dropoff location if it exists at this point
         if let dropoff = donation?.dropoff {
             
-            dropoffAnnotation = MKPointAnnotation()
+            dropoffAnnotation = DonationPin()
             dropoffAnnotation!.title = donation?.recipient?.name
-            
             dropoffAnnotation!.coordinate = (dropoff.coordinates)!
-            
-            //let dropoffAnnotationView = MKPinAnnotationView(annotation: dropoffAnnotation, reuseIdentifier: nil)
+            dropoffAnnotation!.kind = .Dropoff
             
             mapView.addAnnotation(dropoffAnnotation!)
-//            dropoffAnnotationView.canShowCallout = true
-//            dropoffAnnotationView.detailCalloutAccessoryView = UIImageView(image:UIImage(named:"twitter"))
-//            dropoffAnnotationView.selected = true
             
             
         } else {

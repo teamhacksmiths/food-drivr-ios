@@ -17,13 +17,17 @@ class MapsDummyData {
     var donations: [Donation]?
     var startingRegion = MKCoordinateRegion()
     
-    let pinColor: UIColor
+    let pinColor: UIColor // this default color may not be needed
+    let pinColorPickup: UIColor
+    let pinColorDropoff: UIColor
     
     private init() {
         donations = [Donation]()
         donorInfoArray = [DonorInfo]()
         
-        pinColor = UIColor(red: 16/255, green: 176/255, blue: 198/255, alpha: 1)
+        pinColor = UIColor(red: 16/255, green: 176/255, blue: 198/255, alpha: 1) // turquoise
+        pinColorPickup = UIColor(red: 51/255, green: 195/255, blue: 0, alpha: 1) // bright green
+        pinColorDropoff = UIColor(red: 255/255, green: 128/255, blue: 0, alpha: 1) // bright orange
         
         geocodeInitialRegion("Portland, OR")
         

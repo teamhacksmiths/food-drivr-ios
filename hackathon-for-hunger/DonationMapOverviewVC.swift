@@ -58,6 +58,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
             // create the annotation and set its properties
             let annotation = DonationPin()  // subclass of MKAnnotation()
             annotation.donation = donation
+            annotation.kind = .Pickup
 
             // place the annotation in an array of annotations.
             annotations.append(annotation)
@@ -118,7 +119,14 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
-            pinView!.pinTintColor = dummyData.pinColor
+            //TODO: might not need these checks here because all these pins are pickup pins
+            if annotation.isKindOfClass(DonationPin) == true {
+                if let pickupDonationPin = annotation as? DonationPin {
+                    if pickupDonationPin.kind == .Pickup {
+                        pinView!.pinTintColor = dummyData.pinColor
+                    }
+                }
+            }
             pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
         }
         else {
