@@ -57,6 +57,25 @@ class DrivrAPI {
         }*/
     }
     
+    func registerUser(userData: RegistrationDTO, success: (JsonDict)-> (), failure: (NSError?) ->()) {
+        let router = UserRouter(endpoint: .Register(userData: userData))
+        
+        manager.request(router)
+            .validate()
+            .responseJSON {
+                response in
+                switch response.result {
+                case .Success(let JSON):
+                    let user = JSON as! JsonDict
+                    success(user)
+                    
+                case .Failure(let error):
+                    failure(error)
+                }
+        }
+
+    }
+    
     func getDonations(completed: Bool? = false, dateRange: String?, completionHandler: (Results<Donation>?, NSError?)-> ()) {
         
         let router = DonationRouter(endpoint: .GetDonations(completed: completed!, dateRange: dateRange) )
