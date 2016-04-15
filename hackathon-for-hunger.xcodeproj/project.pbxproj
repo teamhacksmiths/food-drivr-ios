@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3CC1ABCA1CC15E8800E01EE0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */; };
+		3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */; };
 		3CC24B711CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */; };
 		3CC24B731CBC111F00ACC504 /* PendingDonationsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */; };
 		3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B741CBC244C00ACC504 /* AcceptButton.swift */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboard.swift; sourceTree = "<group>"; };
 		3CC24B741CBC244C00ACC504 /* AcceptButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptButton.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */,
+				3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */,
 				44AEA8761CA9CBC100A52731 /* LoginViewController.swift in Sources */,
 				3CFDE8161CAD4D8A00D6172B /* LoginProvider.swift in Sources */,
 				4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */,
