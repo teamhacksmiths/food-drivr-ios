@@ -52,16 +52,6 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
         var annotations = [DonationPin]()
 
-
-//        for donorInfo in donorInfoArray! { //TODO: - replace force unwrapping
-//            
-//            // create the annotation and set its properties
-//            let annotation = DonationPin()  // subclass of MKAnnotation()
-//            annotation.donorInfo = donorInfo
-//
-//            // place the annotation in an array of annotations.
-//            annotations.append(annotation)
-//        }
         
         for donation in donations! { //TODO: - replace force unwrapping
 
@@ -75,7 +65,10 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
         // When the array is complete, add the annotations to the map.
         mapView.addAnnotations(annotations)
+        //TODO:- fix the disconcerting animation that happens from the view after showAnnotations, changing to centering on user location
         mapView.showAnnotations(annotations, animated: true)
+        
+        // TODO: customize the callouts, and make sure they appear when pin is tapped
        
     }
     
@@ -94,21 +87,28 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     // MARK: - MKMapViewDelegate
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-
-        // This is false if it's the user location pin
-        if annotation.isKindOfClass(DonationPin) == false {
-
-            let userPin = "userLocation"
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(userPin) {
-                return dequeuedView
-            } else {
-                _ = MKAnnotationView(annotation: annotation, reuseIdentifier: userPin)
-                
-                // returning nil allows the user location blue dot to be used
-                return nil
-            }
-            
+        
+        // use the default animating blue dot if the view is the user location
+        if annotation is MKUserLocation {
+            return nil
         }
+        
+//        // This is false if it's the user location pin
+//        
+//        // TODO: refactor using MKUserLocation class
+//        if annotation.isKindOfClass(DonationPin) == false {
+//
+//            let userPin = "userLocation"
+//            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(userPin) {
+//                return dequeuedView
+//            } else {
+//                _ = MKAnnotationView(annotation: annotation, reuseIdentifier: userPin)
+//                
+//                // returning nil allows the user location blue dot to be used
+//                return nil
+//            }
+//            
+//        }
 
         
         let reuseId = "pin"

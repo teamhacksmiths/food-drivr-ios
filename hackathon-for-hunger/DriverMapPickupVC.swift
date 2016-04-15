@@ -174,9 +174,12 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             
             pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColor
+            pinView?.canShowCallout = true
+            pinView?.selected = true
         }
         else {
             pinView?.annotation = annotation
+            pinView?.selected = true
         }
         
         return pinView
@@ -201,10 +204,10 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
             
             
-            let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
-            pickupAnnotationView.canShowCallout = true
-            pickupAnnotationView.selected = true
-            mapView.addAnnotation(pickupAnnotationView.annotation!)
+//            let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
+//            pickupAnnotationView.canShowCallout = true
+//            pickupAnnotationView.selected = true
+            mapView.addAnnotation(pickupAnnotation!)
         }
     }
     
@@ -219,10 +222,10 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             dropoffAnnotation.coordinate = (donation?.dropoff?.coordinates)!
             
             
-            let dropoffAnnotationView = MKPinAnnotationView(annotation: dropoffAnnotation, reuseIdentifier: nil)
-            dropoffAnnotationView.canShowCallout = true
-            dropoffAnnotationView.selected = true
-            mapView.addAnnotation(dropoffAnnotationView.annotation!)
+            //let dropoffAnnotationView = MKPinAnnotationView(annotation: dropoffAnnotation, reuseIdentifier: nil)
+            //dropoffAnnotationView.canShowCallout = true
+            //dropoffAnnotationView.selected = true
+            mapView.addAnnotation(dropoffAnnotation)
         }
 
     }
