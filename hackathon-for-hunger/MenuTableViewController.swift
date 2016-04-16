@@ -7,16 +7,7 @@
 //
 
 import UIKit
-import CoreLocation
 
-enum LeftMenu: Int {
-    case Dashboard = 0
-    case DonationsOverview
-}
-
-protocol LeftMenuProtocol : class {
-    func changeViewController(menu: LeftMenu)
-}
 
 class MenuTableViewController: UITableViewController {
     @IBOutlet weak var logoutButton: UIButton!
@@ -25,19 +16,15 @@ class MenuTableViewController: UITableViewController {
     
     let user = User()
     
-    let data = ["Dashboard", "Donations", "Menu Item 3", "Menu Item 4", "Menu Item 5", "Menu Item 6"]
+    let data = ["Dashboard", "Donations", "My Profile", "Menu Item 4", "Menu Item 5", "Menu Item 6"]
     
-    var dashboardController: UIViewController!
-    var donationMapOverview: UIViewController!
+    var menu = MenuManager.None
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let dashboardController = storyboard.instantiateViewControllerWithIdentifier("Main") as! PendingDonationsDashboard
-        self.dashboardController = UINavigationController(rootViewController: dashboardController)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        let donationMapOverview = storyboard.instantiateViewControllerWithIdentifier("DonationOverviewMap") as! DonationMapOverviewVC
-        self.donationMapOverview = UINavigationController(rootViewController: donationMapOverview)
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
@@ -47,13 +34,12 @@ class MenuTableViewController: UITableViewController {
         
         // check to see if user is a driver or donor and set color appropriateley
         switch user.id{
-        case 0: self.view.backgroundColor = UIColor.orangeColor()
-        case 1: self.view.backgroundColor = UIColor.blueColor()
-        default: self.view.backgroundColor = UIColor.whiteColor()
+            case 0: view.backgroundColor = UIColor.orangeColor()
+            case 1: view.backgroundColor = UIColor.blueColor()
+            default: view.backgroundColor = UIColor.whiteColor()
+        }
         
     }
-        
-}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -88,27 +74,12 @@ class MenuTableViewController: UITableViewController {
         return cell
     }
     
-    func changeViewController(menu: LeftMenu) {
-        switch menu {
-        case .Dashboard:
-            self.slideMenuController()?.changeMainViewController(self.dashboardController, close: true)
-        case .DonationsOverview:
-            
-            // prepare for Core Location (allowing user location on maps)
-            var locationManager = LocationManager.sharedInstance.locationManager
-            locationManager.delegate = LocationManager.sharedInstance
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestAlwaysAuthorization()
-            locationManager.requestWhenInUseAuthorization()
-            
-            self.slideMenuController()?.changeMainViewController(self.donationMapOverview, close: true)
-        }
-    }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let menu = LeftMenu(rawValue: indexPath.item) {
-            self.changeViewController(menu)
+        if let menu = MenuManager(rawValue: indexPath.item) {
+            menu.navigation(self)
         }
+
     }
     /*
     // Override to support conditional editing of the table view.
@@ -156,3 +127,21 @@ class MenuTableViewController: UITableViewController {
     */
 
 }
+
+extension MenuTableViewController: MenuManagerDelegate {
+
+    //Mark - delegate
+    func menuManage(menuManager: MenuManager,changeMainViewController navigationController: UINavigationController){
+        slideMenuController()?.changeMainViewController(navigationController, close: true)
+    }
+}
+
+
+
+
+
+
+
+
+
+
