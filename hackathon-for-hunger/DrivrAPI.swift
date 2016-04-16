@@ -57,7 +57,7 @@ class DrivrAPI {
         }*/
     }
     
-    func registerUser(userData: RegistrationDTO, success: (JsonDict)-> (), failure: (NSError?) ->()) {
+    func registerUser(userData: UserRegistration, success: (JsonDict)-> (), failure: (NSError?) ->()) {
         let router = UserRouter(endpoint: .Register(userData: userData))
         
         manager.request(router)

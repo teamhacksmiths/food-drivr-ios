@@ -14,6 +14,7 @@ target 'hackathon-for-hunger' do
   pod 'TwitterKit'
   pod 'TwitterCore'
   pod 'SwiftyJSON'
+  pod 'JSONCodable', '~> 2.1'
 end
 
 target 'hackathon-for-hungerTests' do
