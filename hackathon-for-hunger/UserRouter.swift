@@ -11,7 +11,7 @@ import Alamofire
 
 enum UserEndpoint {
     case Login(username: String , password: String)
-
+    case Register(userData: UserRegistration)
 }
 
 class UserRouter : BaseRouter {
@@ -24,12 +24,14 @@ class UserRouter : BaseRouter {
     override var method: Alamofire.Method {
         switch endpoint {
         case .Login: return .POST
+        case .Register: return .POST
         }
     }
     
     override var path: String {
         switch endpoint {
         case .Login: return "user/login"
+        case .Register: return "users"
         }
     }
     
@@ -40,12 +42,20 @@ class UserRouter : BaseRouter {
             response["username"] = username
             response["password"] = password
             return response
+        case .Register(let userData):
+            do {
+                let user = try userData.toJSON()
+                return ["user": user]
+            } catch {
+                return [:]
+            }
         }
     }
     
     override var encoding: Alamofire.ParameterEncoding? {
         switch endpoint {
         case .Login: return .URL
+        case .Register: return .URL
         }
     }
     

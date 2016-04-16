@@ -14,6 +14,23 @@ class AwaitingApprovalDriverViewController: UIViewController {
         super.viewDidLoad()
         addRightBarButtons()
         hideBackButton()
+        
+//         var user = UserRegistration()
+//         user.name = "test user one"
+//         user.address = "address here"
+//         user.phone = "015265926584"
+//         user.email = "iangristock@gmail.com"
+//         user.password = "r0089890"
+//         user.password_confirmation = "r0089890"
+//         user.role = .Donor
+//        
+//        DrivrAPI.sharedInstance.registerUser(user, success: {
+//            (JsonDict) in
+//            print (JsonDict)
+//            }, failure: {
+//                (error) in
+//                print(error)
+//        })
     }
 
     // MARK: UI 
