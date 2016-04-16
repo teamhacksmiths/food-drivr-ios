@@ -116,6 +116,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
         var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
         
+        
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
@@ -123,15 +124,33 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
             if annotation.isKindOfClass(DonationPin) == true {
                 if let pickupDonationPin = annotation as? DonationPin {
                     if pickupDonationPin.kind == .Pickup {
-                        pinView!.pinTintColor = dummyData.pinColor
+                        pinView!.pinTintColor = dummyData.pinColorPickup
                     }
                 }
             }
-            pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+
+            
         }
         else {
             pinView!.annotation = annotation
         }
+        
+        pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+//        let x = UIView(frame: CGRectMake(0, 0, 50, 80))
+//        x.backgroundColor = UIColor.greenColor()
+//        x.intrinsicContentSize()
+//        pinView!.leftCalloutAccessoryView? = UIButton(type: .)
+        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
+        let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
+        pinView!.leftCalloutAccessoryView?.frame = frame
+        
+//
+//        let widthConstraint = NSLayoutConstraint(item: myView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 40)
+//        myView.addConstraint(widthConstraint)
+//        
+//        let heightConstraint = NSLayoutConstraint(item: myView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20)
+//        myView.addConstraint(heightConstraint)
+        
         return pinView
     }
     

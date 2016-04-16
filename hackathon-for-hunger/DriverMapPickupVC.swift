@@ -176,13 +176,16 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             if annotation.isKindOfClass(DonationPin) == true {
                 if let pickupDonationPin = annotation as? DonationPin {
                     if pickupDonationPin.kind == .Pickup {
+                        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
                         pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
                     } else if pickupDonationPin.kind == .Dropoff {
+                        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
                         pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
                     }
+                    let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
+                    pinView!.leftCalloutAccessoryView?.frame = frame
                 }
             }
-
             pinView?.canShowCallout = true
             pinView?.selected = true
         }
