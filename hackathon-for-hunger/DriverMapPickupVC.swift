@@ -11,6 +11,11 @@ import MapKit
 
 class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
+    enum PinType {
+        case Dropoff
+        case Pickup
+    }
+    
     var startingRegion = MapsDummyData.sharedInstance.startingRegion // used to retrieve precalculated starting region
     
     var locationManager = LocationManager.sharedInstance.locationManager
@@ -19,6 +24,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
     var pickupAnnotation: DonationPin?
     
+    var kind: PinType = .Pickup
     
     
     //MARK:- Outlets & Actions
@@ -36,6 +42,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
 
         pickupDropoffButton = UIBarButtonItem(title: "DROPPED OFF", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(donationDroppedOff))
         
+        kind = .Dropoff
         addDropoffPin()
         updateRoute()
         
@@ -55,7 +62,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         if donation != nil {
             
             // remove the pickup route in prep to be replace with dropoff route
-            mapView.removeOverlays(mapView.overlays)
+            //mapView.removeOverlays(mapView.overlays)
             
             donorNameLabel.text = donation?.donor?.name
             
@@ -79,7 +86,11 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 
                 for route in unwrappedResponse.routes {
                     self.mapView.addOverlay(route.polyline)
-                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                    //self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                }
+                if let first = self.mapView.overlays.first {
+                    let rect = self.mapView.overlays.reduce(first.boundingMapRect, combine: {MKMapRectUnion($0, $1.boundingMapRect)})
+                    self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0), animated: true)
                 }
             }
         }
@@ -116,7 +127,11 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 for route in unwrappedResponse.routes {
                     self.mapView.addOverlay(route.polyline)
                     self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+
+
                 }
+                
+
             }
             
             addPins()
@@ -129,21 +144,29 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             locationManager.startUpdatingLocation()
         }
         
-
+        
     }
     
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        
         let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        
+        renderer.lineWidth = 4
+        
         if (overlay is MKPolyline) {
             if mapView.overlays.count == 1 {
-                renderer.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.75)
-                renderer.lineWidth = 4
-            } else {
-                renderer.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.4)
-                renderer.lineWidth = 3
-            }
+                switch kind {
+                case .Pickup:
+                    renderer.strokeColor = MapsDummyData.sharedInstance.pinColorPickup
+                case .Dropoff:
+                    renderer.strokeColor = MapsDummyData.sharedInstance.pinColorDropoff
+                }
+                
+            } else if mapView.overlays.count > 1 {
+                renderer.strokeColor = MapsDummyData.sharedInstance.pinColorDropoff                }
         }
+        
         return renderer
     }
     
