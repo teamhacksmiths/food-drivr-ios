@@ -10,13 +10,11 @@ import UIKit
 
 
 class MenuTableViewController: UITableViewController {
-    @IBOutlet weak var logoutButton: UIButton!
-    @IBOutlet weak var logoImageView: UIImageView!
-    
+
     
     let user = User()
     
-    let data = ["Dashboard", "Donations", "My Profile", "Menu Item 4", "Menu Item 5", "Menu Item 6"]
+    let data = ["Dashboard", "Donations", "My Profile"]
     
     var menu = MenuManager.None
 
@@ -41,6 +39,7 @@ class MenuTableViewController: UITableViewController {
         
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -79,7 +78,6 @@ class MenuTableViewController: UITableViewController {
         if let menu = MenuManager(rawValue: indexPath.item) {
             menu.navigation(self)
         }
-
     }
     /*
     // Override to support conditional editing of the table view.
@@ -135,6 +133,59 @@ extension MenuTableViewController: MenuManagerDelegate {
         slideMenuController()?.changeMainViewController(navigationController, close: true)
     }
 }
+
+
+
+extension MenuTableViewController {
+    
+    
+    //Mark - setting the height for the header and the footer
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 150.0
+    }
+    
+    //Mark - creat the view for the header and the footer
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let logoImageView = UIImageView()
+        logoImageView.image = UIImage(contentsOfFile: "")
+        
+        let stackView = UIStackView(arrangedSubviews: [logoImageView])
+        stackView.alignment = .Center
+        stackView.axis = .Vertical
+        stackView.distribution = .Fill
+        
+        return stackView
+        
+    }
+    
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let logOutButton = UIButton()
+        logOutButton.setTitle("LogOut", forState: .Normal)
+        
+        let stackView = UIStackView(arrangedSubviews: [logOutButton])
+        stackView.alignment = .Center
+        stackView.axis = .Vertical
+        stackView.distribution = .Fill
+        
+        return stackView
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
