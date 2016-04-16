@@ -13,11 +13,11 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.11.0):
     - FBSDKCoreKit
-  - Realm (0.98.7):
-    - Realm/Headers (= 0.98.7)
-  - Realm/Headers (0.98.7)
-  - RealmSwift (0.98.7):
-    - Realm (= 0.98.7)
+  - Realm (0.98.8):
+    - Realm/Headers (= 0.98.8)
+  - Realm/Headers (0.98.8)
+  - RealmSwift (0.98.8):
+    - Realm (= 0.98.8)
   - SlideMenuControllerSwift (2.1.1)
   - SwiftyJSON (2.3.2)
   - TwitterCore (2.0.2):
@@ -44,8 +44,8 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 686ac982723a14ec9ddb85e2f81235d7706c891b
   FBSDKLoginKit: bade9fc78277764149ccc5bfaadbf13c83175c6a
   FBSDKShareKit: 2d1746144cfc8a9dbbd24997c34ee0471be51b6a
-  Realm: 46df2178359b6b57812e6cf957956febaba513a5
-  RealmSwift: 3056e6d7ad30ed50dd866185a615fccea73db5f5
+  Realm: 0e293bb62999730599efc3048896bbd4f2e43bcd
+  RealmSwift: 064262d38113f23ff3508fb20a0a922e696bec01
   SlideMenuControllerSwift: 82ada9b04e03538c84d034cf1c09e5849c0113f7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TwitterCore: 0f44d8980a6879d5205dcb4e010d15e643e56fa0
