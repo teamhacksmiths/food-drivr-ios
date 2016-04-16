@@ -27,15 +27,9 @@ class LoginViewController: UIViewController {
 
     @IBAction func signInButtonClicked(sender: AnyObject) {
         //Suggestion for implementing the signIn
-        //loginProvider = .Costum(emailInput.text!, passwordInput.text!)
-        //loginProvider.login(self)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! PendingDonationsDashboard
-        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        loginProvider = .Custom(emailInput.text!, passwordInput.text!)
+        loginProvider.login(self)
         
-        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
-        self.presentViewController(slideMenuController, animated: false, completion: nil)
     }
     
 
@@ -46,6 +40,13 @@ class LoginViewController: UIViewController {
         
     }
     
+    private func segueToMenuController() {
+        let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Main") as! PendingDonationsDashboard
+        let leftViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        self.presentViewController(slideMenuController, animated: false, completion: nil)
+    }
     
     
 }
@@ -56,15 +57,7 @@ extension LoginViewController: LoginProviderDelegate {
      // MARK: LoginProviderDelegate Method
     
     func loginProvider(loginProvider: LoginProvider, didSucceed user: [String: AnyObject]){
-        
-        print(user)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! DashboardViewController
-        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-        
-        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
-        self.presentViewController(slideMenuController, animated: false, completion: nil)
+        self.segueToMenuController()
     }
     
     func loginProvider(loginProvider: LoginProvider, didFail error: NSError){

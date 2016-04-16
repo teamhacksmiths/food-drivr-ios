@@ -37,7 +37,7 @@ extension UserRegistration: JSONEncodable {
             try encoder.encode(email, key: "email")
             try encoder.encode(password, key: "password")
             try encoder.encode(password_confirmation, key: "password_confirmation")
-            try encoder.encode(role, key: "role")
+            try encoder.encode(role, key: "role_id")
 
         })
     }
