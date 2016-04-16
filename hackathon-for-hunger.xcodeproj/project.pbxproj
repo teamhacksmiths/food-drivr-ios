@@ -18,6 +18,7 @@
 		3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */; };
 		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
 		442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9751CC15CAD0002187D /* UserRegistration.swift */; };
+		442FE9781CC284230002187D /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9771CC284230002187D /* UserLogin.swift */; };
 		443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */; };
 		443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */; };
 		443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */; };
@@ -89,6 +90,7 @@
 		3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewCell.swift; sourceTree = "<group>"; };
 		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
 		442FE9751CC15CAD0002187D /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
+		442FE9771CC284230002187D /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.ttf"; sourceTree = "<group>"; };
 		443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ColabThi.otf; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				442FE9751CC15CAD0002187D /* UserRegistration.swift */,
+				442FE9771CC284230002187D /* UserLogin.swift */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
+				442FE9781CC284230002187D /* UserLogin.swift in Sources */,
 				44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */,
 				3CC24B731CBC111F00ACC504 /* PendingDonationsDashboard.swift in Sources */,
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,

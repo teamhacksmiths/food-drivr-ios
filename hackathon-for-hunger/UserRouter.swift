@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum UserEndpoint {
-    case Login(username: String , password: String)
+    case Login(credentials: UserLogin)
     case Register(userData: UserRegistration)
 }
 
@@ -30,21 +30,25 @@ class UserRouter : BaseRouter {
     
     override var path: String {
         switch endpoint {
-        case .Login: return "user/login"
+        case .Login: return "sessions"
         case .Register: return "users"
         }
     }
     
     override var parameters: APIParams {
         switch endpoint {
-        case .Login(let username, let password):
-            var response = [String: AnyObject]()
-            response["username"] = username
-            response["password"] = password
-            return response
+        case .Login(let credentials):
+            do {
+                let credentials = try credentials.toJSON()
+                return ["session": credentials]
+            } catch {
+                return [:]
+            }
+
         case .Register(let userData):
             do {
                 let user = try userData.toJSON()
+                print(user)
                 return ["user": user]
             } catch {
                 return [:]

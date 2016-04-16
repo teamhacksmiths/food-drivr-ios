@@ -14,6 +14,7 @@ class User: Object {
 
     
     dynamic var id: Int = 0
+    dynamic var auth_token: String?
     dynamic var name: String?
     dynamic var email: String?
     dynamic var avatar: String?
@@ -26,13 +27,17 @@ class User: Object {
     convenience init(dict: JsonDict) {
             self.init()
         self.id = dict["id"] as! Int
+        self.auth_token = dict["auth_token"] as? String
         self.avatar = dict["avatar"] as? String
         self.email = dict["email"] as? String
         self.name = dict["name"] as? String
-        self.organisation = dict["organization"]?["name"] as? String
+        if let org = dict["organization"]?["name"] as? String {
+            self.organisation = org
+        }
         self.phone = dict["phone"] as? String
-        self.role = dict["role"] as! Int
-        self.settings = Setting(value: dict["settings"] as! JsonDict)
-
+        self.role = dict["role_id"] as! Int
+        if let settingDict = dict["setting"] as? JsonDict {
+            self.settings = Setting(value: settingDict)
+        }
     }
 }
