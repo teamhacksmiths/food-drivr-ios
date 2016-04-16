@@ -31,6 +31,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - JSONCodable (~> 2.1)
   - RealmSwift
   - SlideMenuControllerSwift
   - SwiftyJSON

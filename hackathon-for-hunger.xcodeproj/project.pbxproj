@@ -17,6 +17,7 @@
 		3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */; };
 		3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */; };
 		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
+		442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9751CC15CAD0002187D /* UserRegistration.swift */; };
 		443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */; };
 		443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */; };
 		443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */; };
@@ -87,6 +88,7 @@
 		3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewCell.swift; sourceTree = "<group>"; };
 		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
+		442FE9751CC15CAD0002187D /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
 		443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.ttf"; sourceTree = "<group>"; };
 		443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ColabThi.otf; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 			name = MockData;
 			sourceTree = "<group>";
 		};
+		442FE9721CC15C3B0002187D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				442FE9751CC15CAD0002187D /* UserRegistration.swift */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
 		443D1DA81CB6D56100E2E7B9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +239,7 @@
 		44A7250E1CAC4F2600D676C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				442FE9721CC15C3B0002187D /* DTO */,
 				4404F6BE1CBD1B11001B9293 /* MockData */,
 				44A7250F1CAC559500D676C3 /* Donation.swift */,
 				44573E5E1CAEF20D00A5F1C3 /* Location.swift */,
@@ -561,6 +572,7 @@
 				3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */,
 				639F7E211CB87213009EC623 /* LocationManager.swift in Sources */,
 				63FB1DA41CBE312C00EDB80F /* DriverMapPickupVC.swift in Sources */,
+				442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */,
 				6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */,
 				44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */,
 				44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */,
