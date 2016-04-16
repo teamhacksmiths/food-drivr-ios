@@ -55,6 +55,8 @@
 		639F7E211CB87213009EC623 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F7E201CB87213009EC623 /* LocationManager.swift */; };
 		639F7E231CB875A7009EC623 /* TempLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F7E221CB875A7009EC623 /* TempLocationVC.swift */; };
 		639F7E251CB9730B009EC623 /* DriverMapDetailPendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F7E241CB9730B009EC623 /* DriverMapDetailPendingVC.swift */; };
+		63CAF7F41CC29BC4000D89A1 /* dropoff_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63CAF7F21CC29BC4000D89A1 /* dropoff_icon.pdf */; };
+		63CAF7F51CC29BC4000D89A1 /* pickup_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */; };
 		63FB1DA41CBE312C00EDB80F /* DriverMapPickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FB1DA31CBE312C00EDB80F /* DriverMapPickupVC.swift */; };
 		69BBC19CAFAE9CEC7A5EECCE /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */; };
 		EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */; };
@@ -134,6 +136,8 @@
 		639F7E201CB87213009EC623 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		639F7E221CB875A7009EC623 /* TempLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempLocationVC.swift; sourceTree = "<group>"; };
 		639F7E241CB9730B009EC623 /* DriverMapDetailPendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapDetailPendingVC.swift; sourceTree = "<group>"; };
+		63CAF7F21CC29BC4000D89A1 /* dropoff_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dropoff_icon.pdf; sourceTree = "<group>"; };
+		63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pickup_icon.pdf; sourceTree = "<group>"; };
 		63FB1DA31CBE312C00EDB80F /* DriverMapPickupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapPickupVC.swift; sourceTree = "<group>"; };
 		7D65AE8EA6D2673A5FC471F2 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C423D9E60134D94E263D2 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 		443D1DA81CB6D56100E2E7B9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				63CAF7F61CC29BD4000D89A1 /* images */,
 				443D1DA91CB6D57400E2E7B9 /* Fonts */,
 			);
 			name = Assets;
@@ -363,6 +368,15 @@
 			name = Maps;
 			sourceTree = "<group>";
 		};
+		63CAF7F61CC29BD4000D89A1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				63CAF7F21CC29BC4000D89A1 /* dropoff_icon.pdf */,
+				63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		9A1D0309B43AB0ACBBC48A9F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,12 +499,14 @@
 				443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */,
 				6395C0921CB83DE60059B5E1 /* Portland-BridgePortBrewPub.gpx in Resources */,
 				44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */,
+				63CAF7F41CC29BC4000D89A1 /* dropoff_icon.pdf in Resources */,
 				44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */,
 				3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */,
 				443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */,
 				44C0CF561CBD6B9100EA3390 /* UserDonorMock.json in Resources */,
 				443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */,
 				4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */,
+				63CAF7F51CC29BC4000D89A1 /* pickup_icon.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

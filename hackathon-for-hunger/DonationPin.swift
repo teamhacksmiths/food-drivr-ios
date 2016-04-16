@@ -10,6 +10,11 @@ import MapKit
 
 class DonationPin: NSObject, MKAnnotation {
     
+    enum PinType {
+        case Dropoff
+        case Pickup
+    }
+    
     var donorInfo: DonorInfo? {
         didSet {
             lat = donorInfo?.lat
@@ -27,6 +32,7 @@ class DonationPin: NSObject, MKAnnotation {
     var lat: Double?
     var lon: Double?
     var title: String?
+    var kind: PinType = .Pickup  //will be used to set the color of the pin
     
     var coordinate: CLLocationCoordinate2D {
         set (newValue) {

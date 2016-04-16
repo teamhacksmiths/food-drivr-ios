@@ -52,22 +52,13 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
         var annotations = [DonationPin]()
 
-
-//        for donorInfo in donorInfoArray! { //TODO: - replace force unwrapping
-//            
-//            // create the annotation and set its properties
-//            let annotation = DonationPin()  // subclass of MKAnnotation()
-//            annotation.donorInfo = donorInfo
-//
-//            // place the annotation in an array of annotations.
-//            annotations.append(annotation)
-//        }
         
         for donation in donations! { //TODO: - replace force unwrapping
 
             // create the annotation and set its properties
             let annotation = DonationPin()  // subclass of MKAnnotation()
             annotation.donation = donation
+            annotation.kind = .Pickup
 
             // place the annotation in an array of annotations.
             annotations.append(annotation)
@@ -75,7 +66,10 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
         // When the array is complete, add the annotations to the map.
         mapView.addAnnotations(annotations)
+        //TODO:- fix the disconcerting animation that happens from the view after showAnnotations, changing to centering on user location
         mapView.showAnnotations(annotations, animated: true)
+        
+        // TODO: customize the callouts, and make sure they appear when pin is tapped
        
     }
     
@@ -94,36 +88,69 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     // MARK: - MKMapViewDelegate
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-
-        // This is false if it's the user location pin
-        if annotation.isKindOfClass(DonationPin) == false {
-
-            let userPin = "userLocation"
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(userPin) {
-                return dequeuedView
-            } else {
-                _ = MKAnnotationView(annotation: annotation, reuseIdentifier: userPin)
-                
-                // returning nil allows the user location blue dot to be used
-                return nil
-            }
-            
+        
+        // use the default animating blue dot if the view is the user location
+        if annotation is MKUserLocation {
+            return nil
         }
+        
+//        // This is false if it's the user location pin
+//        
+//        // TODO: refactor using MKUserLocation class
+//        if annotation.isKindOfClass(DonationPin) == false {
+//
+//            let userPin = "userLocation"
+//            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(userPin) {
+//                return dequeuedView
+//            } else {
+//                _ = MKAnnotationView(annotation: annotation, reuseIdentifier: userPin)
+//                
+//                // returning nil allows the user location blue dot to be used
+//                return nil
+//            }
+//            
+//        }
 
         
         let reuseId = "pin"
         
         var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
         
+        
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
-            pinView!.pinTintColor = dummyData.pinColor
-            pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+            //TODO: might not need these checks here because all these pins are pickup pins
+            if annotation.isKindOfClass(DonationPin) == true {
+                if let pickupDonationPin = annotation as? DonationPin {
+                    if pickupDonationPin.kind == .Pickup {
+                        pinView!.pinTintColor = dummyData.pinColorPickup
+                    }
+                }
+            }
+
+            
         }
         else {
             pinView!.annotation = annotation
         }
+        
+        pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+//        let x = UIView(frame: CGRectMake(0, 0, 50, 80))
+//        x.backgroundColor = UIColor.greenColor()
+//        x.intrinsicContentSize()
+//        pinView!.leftCalloutAccessoryView? = UIButton(type: .)
+        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
+        let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
+        pinView!.leftCalloutAccessoryView?.frame = frame
+        
+//
+//        let widthConstraint = NSLayoutConstraint(item: myView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 40)
+//        myView.addConstraint(widthConstraint)
+//        
+//        let heightConstraint = NSLayoutConstraint(item: myView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20)
+//        myView.addConstraint(heightConstraint)
+        
         return pinView
     }
     

@@ -11,14 +11,20 @@ import MapKit
 
 class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
+    enum PinType {
+        case Dropoff
+        case Pickup
+    }
+    
     var startingRegion = MapsDummyData.sharedInstance.startingRegion // used to retrieve precalculated starting region
     
     var locationManager = LocationManager.sharedInstance.locationManager
     
     var donation: Donation?
     
-    var pickupAnnotation: MKPointAnnotation?
+    var pickupAnnotation: DonationPin?
     
+    var kind: PinType = .Pickup
     
     
     //MARK:- Outlets & Actions
@@ -34,8 +40,9 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
 
     @IBAction func donationPickedUp(sender: AnyObject) {
 
-        pickupDropoffButton = UIBarButtonItem(title: "DROPPED OFF", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(DriverMapPickupVC.donationDroppedOff))
+        pickupDropoffButton = UIBarButtonItem(title: "DROPPED OFF", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(donationDroppedOff))
         
+        kind = .Dropoff
         addDropoffPin()
         updateRoute()
         
@@ -55,7 +62,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         if donation != nil {
             
             // remove the pickup route in prep to be replace with dropoff route
-            mapView.removeOverlays(mapView.overlays)
+            //mapView.removeOverlays(mapView.overlays)
             
             donorNameLabel.text = donation?.donor?.name
             
@@ -79,7 +86,11 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 
                 for route in unwrappedResponse.routes {
                     self.mapView.addOverlay(route.polyline)
-                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                    //self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                }
+                if let first = self.mapView.overlays.first {
+                    let rect = self.mapView.overlays.reduce(first.boundingMapRect, combine: {MKMapRectUnion($0, $1.boundingMapRect)})
+                    self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0), animated: true)
                 }
             }
         }
@@ -116,7 +127,11 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 for route in unwrappedResponse.routes {
                     self.mapView.addOverlay(route.polyline)
                     self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+
+
                 }
+                
+
             }
             
             addPins()
@@ -129,21 +144,29 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             locationManager.startUpdatingLocation()
         }
         
-
+        
     }
     
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        
         let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        
+        renderer.lineWidth = 4
+        
         if (overlay is MKPolyline) {
             if mapView.overlays.count == 1 {
-                renderer.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.75)
-                renderer.lineWidth = 4
-            } else {
-                renderer.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.4)
-                renderer.lineWidth = 3
-            }
+                switch kind {
+                case .Pickup:
+                    renderer.strokeColor = MapsDummyData.sharedInstance.pinColorPickup
+                case .Dropoff:
+                    renderer.strokeColor = MapsDummyData.sharedInstance.pinColorDropoff
+                }
+                
+            } else if mapView.overlays.count > 1 {
+                renderer.strokeColor = MapsDummyData.sharedInstance.pinColorDropoff                }
         }
+        
         return renderer
     }
     
@@ -173,10 +196,25 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             
-            pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColor
+            if annotation.isKindOfClass(DonationPin) == true {
+                if let pickupDonationPin = annotation as? DonationPin {
+                    if pickupDonationPin.kind == .Pickup {
+                        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
+                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                    } else if pickupDonationPin.kind == .Dropoff {
+                        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
+                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                    }
+                    let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
+                    pinView!.leftCalloutAccessoryView?.frame = frame
+                }
+            }
+            pinView?.canShowCallout = true
+            pinView?.selected = true
         }
         else {
             pinView?.annotation = annotation
+            pinView?.selected = true
         }
         
         return pinView
@@ -195,16 +233,13 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         // Set pin for pickup location
         if donation != nil {
             
-            pickupAnnotation = MKPointAnnotation()
+            pickupAnnotation = DonationPin()
             
             pickupAnnotation!.title = donation?.donor?.name
             pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
+            pickupAnnotation!.kind = .Pickup
             
-            
-            let pickupAnnotationView = MKPinAnnotationView(annotation: pickupAnnotation, reuseIdentifier: nil)
-            pickupAnnotationView.canShowCallout = true
-            pickupAnnotationView.selected = true
-            mapView.addAnnotation(pickupAnnotationView.annotation!)
+            mapView.addAnnotation(pickupAnnotation!)
         }
     }
     
@@ -212,17 +247,14 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     func addDropoffPin() {
         if donation != nil {
             
-            let dropoffAnnotation = MKPointAnnotation()
+            let dropoffAnnotation = DonationPin()
             
            
             dropoffAnnotation.title = donation?.recipient?.name
             dropoffAnnotation.coordinate = (donation?.dropoff?.coordinates)!
+            dropoffAnnotation.kind = .Dropoff
             
-            
-            let dropoffAnnotationView = MKPinAnnotationView(annotation: dropoffAnnotation, reuseIdentifier: nil)
-            dropoffAnnotationView.canShowCallout = true
-            dropoffAnnotationView.selected = true
-            mapView.addAnnotation(dropoffAnnotationView.annotation!)
+            mapView.addAnnotation(dropoffAnnotation)
         }
 
     }
