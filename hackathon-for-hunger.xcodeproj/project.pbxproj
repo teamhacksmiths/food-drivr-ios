@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CC1ABCA1CC15E8800E01EE0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */; };
+		3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */; };
 		3CC24B711CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */; };
 		3CC24B731CBC111F00ACC504 /* PendingDonationsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */; };
 		3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B741CBC244C00ACC504 /* AcceptButton.swift */; };
@@ -15,6 +17,8 @@
 		3CFDE8191CAD53B900D6172B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */; };
 		3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */; };
 		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
+		442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9751CC15CAD0002187D /* UserRegistration.swift */; };
+		442FE9781CC284230002187D /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9771CC284230002187D /* UserLogin.swift */; };
 		443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */; };
 		443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */; };
 		443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */; };
@@ -77,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboard.swift; sourceTree = "<group>"; };
 		3CC24B741CBC244C00ACC504 /* AcceptButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptButton.swift; sourceTree = "<group>"; };
@@ -85,6 +91,8 @@
 		3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewCell.swift; sourceTree = "<group>"; };
 		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
+		442FE9751CC15CAD0002187D /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
+		442FE9771CC284230002187D /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.ttf"; sourceTree = "<group>"; };
 		443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ColabThi.otf; sourceTree = "<group>"; };
@@ -179,6 +187,15 @@
 			name = MockData;
 			sourceTree = "<group>";
 		};
+		442FE9721CC15C3B0002187D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				442FE9751CC15CAD0002187D /* UserRegistration.swift */,
+				442FE9771CC284230002187D /* UserLogin.swift */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
 		443D1DA81CB6D56100E2E7B9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +247,7 @@
 		44A7250E1CAC4F2600D676C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				442FE9721CC15C3B0002187D /* DTO */,
 				4404F6BE1CBD1B11001B9293 /* MockData */,
 				44A7250F1CAC559500D676C3 /* Donation.swift */,
 				44573E5E1CAEF20D00A5F1C3 /* Location.swift */,
@@ -248,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */,
+				3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -283,6 +302,7 @@
 				44AEA8731CA9CBC100A52731 /* AppDelegate.swift */,
 				3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */,
 				3CFDE8151CAD4D8A00D6172B /* Main.storyboard */,
+				3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */,
 				3CFDE8181CAD53B900D6172B /* DashboardViewController.swift */,
 				3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */,
 				3CC24B741CBC244C00ACC504 /* AcceptButton.swift */,
@@ -553,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */,
 				44AEA8761CA9CBC100A52731 /* LoginViewController.swift in Sources */,
 				3CFDE8161CAD4D8A00D6172B /* LoginProvider.swift in Sources */,
 				4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */,
@@ -570,6 +591,7 @@
 				3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */,
 				639F7E211CB87213009EC623 /* LocationManager.swift in Sources */,
 				63FB1DA41CBE312C00EDB80F /* DriverMapPickupVC.swift in Sources */,
+				442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */,
 				6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */,
 				44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */,
 				44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */,
@@ -577,6 +599,7 @@
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
+				442FE9781CC284230002187D /* UserLogin.swift in Sources */,
 				44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */,
 				3CC24B731CBC111F00ACC504 /* PendingDonationsDashboard.swift in Sources */,
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,
@@ -589,6 +612,7 @@
 				44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */,
 				44484DE31CAFDA45002D7233 /* Token.swift in Sources */,
 				6395C08C1CB1F2B50059B5E1 /* DonorInfo.swift in Sources */,
+				3CC1ABCA1CC15E8800E01EE0 /* ProfileViewController.swift in Sources */,
 				44484DDE1CAFD857002D7233 /* User.swift in Sources */,
 				EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */,
 				6395C08E1CB247460059B5E1 /* DonationPin.swift in Sources */,

@@ -218,15 +218,15 @@ enum LoginProvider {
     private func loginUsingCustom(delegate: LoginProviderDelegate, email: String, password: String) {
         
         
-        DrivrAPI.sharedInstance.authenticate(email, password: password,
+        DrivrAPI.sharedInstance.authenticate(UserLogin(email: email, password: password),
             success: {
                 (JsonDict) in
+                print(JsonDict)
                 guard let user = JsonDict["user"] as? [String: AnyObject] else {
                     delegate.loginProvider(self, didFail: NSError(domain: "error retrieving user", code:422, userInfo: nil))
                     return
                 }
             AuthProvider.sharedInstance.storeCurrentUser(user)
-                dump(AuthProvider.sharedInstance.getCurrentUser())
                 delegate.loginProvider(self, didSucceed: JsonDict)
             },
             failure: {

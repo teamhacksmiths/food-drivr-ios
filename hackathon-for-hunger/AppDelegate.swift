@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import TwitterKit
 import Fabric
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,9 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        setupFacebookAndTwitter()
         
+//        if let _ = AuthProvider.sharedInstance.getCurrentUser() {
+//            // Code to execute if user is logged in
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! PendingDonationsDashboard
+//            let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
+//            let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+//            let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+//            self.window?.rootViewController = slideMenuController
+//            self.window?.makeKeyAndVisible()
+//            
+//        }
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+    }
+
+    private func setupFacebookAndTwitter() -> Bool {
         
         // Mark - loading the ApiKeys.plist file
         guard let filePath = NSBundle.mainBundle().pathForResource("ApiKeys", ofType: "plist") else {
@@ -31,12 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         
-        
         // Mark - configure Facebook
         guard let facebookAppId = dictionary["FACEBOOK_API_APP_ID"] as? String ,
             let facebookDisplayName = dictionary["FACEBOOK_API_DIPLAY_NAME"] as? String ,
             let appURLSchemeSuffix = dictionary["FACEBOOK_API_URL_SCHEME_SUFFIX"] as? String    else {
-            return true
+                return true
         }
         
         FBSDKSettings.setAppID(facebookAppId)
@@ -49,13 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return true
         }
         Twitter.sharedInstance().startWithConsumerKey(twitterAppKey, consumerSecret: twitterConsumerSecret)
-//        Fabric.with([Twitter.self])
-
-        
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
+        return true
     }
-
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
     {
