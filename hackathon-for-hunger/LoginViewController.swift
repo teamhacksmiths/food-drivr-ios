@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
     }
     
     private func segueToMenuController() {
-        let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Main") as! PendingDonationsDashboard
+        let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Main") as! DonationsOverviewViewController
         let leftViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)

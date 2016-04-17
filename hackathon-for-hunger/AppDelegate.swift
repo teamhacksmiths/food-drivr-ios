@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let _ = AuthProvider.sharedInstance.getCurrentUser() {
             // Code to execute if user is logged in
             
-            let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! PendingDonationsDashboard
+            let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! DonationsOverviewViewController
             let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
             let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
             let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
