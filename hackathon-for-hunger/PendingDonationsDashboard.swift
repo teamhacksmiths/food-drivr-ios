@@ -19,19 +19,20 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        DrivrAPI.sharedInstance.getDonations(success: {
-//                (results) in
-//                print(results)
-//            }, failure: {
-//                (error) in
-//                print(error)
-//        })
+        DrivrAPI.sharedInstance.getDonations(success: {
+                (results) in
+                self.donations = results
+            self.tableView.reloadData()
+            }, failure: {
+                (error) in
+                print(error)
+        })
     }
     
     //Mark - Setting up tableView
     
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mockData.count
+        return donations?.count ?? 0
     }
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -40,7 +41,7 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! PendingDonationsDashboardTableViewCell
         cell.delegate = self
         cell.indexPath = indexPath
-        cell.information = mockData[indexPath.row]
+        cell.information = donations![indexPath.row]
         if indexPath.row == 0 {
             cell.addBorderTop(size: 1, color: UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1))
         }
