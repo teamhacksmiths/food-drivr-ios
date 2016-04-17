@@ -25,11 +25,12 @@ class PendingDonationsDashboardTableViewCell: UITableViewCell {
     
 
     
-    var information: (String, String, String)? = nil {
+    var information: Donation? = nil {
         didSet {
-            fullNameLabel.text = information?.0.capitalizedString
-            amountLabel.text = information?.1.capitalizedString
-            locationLabel.text = information?.2.capitalizedString
+            fullNameLabel.text = information?.recipient?.name
+            print(information?.donationItems)
+            amountLabel.text = information?.donationItems.first?.name
+            locationLabel.text = information?.recipient?.street_address
         }
     }
     

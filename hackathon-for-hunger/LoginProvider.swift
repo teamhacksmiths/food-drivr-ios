@@ -229,6 +229,7 @@ enum LoginProvider {
                 DrivrAPI.sharedInstance.getUser(
                     {
                         response in
+                        print(response)
                         guard let user = response["user"] as? [String: AnyObject] else {
                             delegate.loginProvider(self, didFail: NSError(domain: "error retrieving user", code:422, userInfo: nil))
                             return
