@@ -37,7 +37,7 @@ class VSUserInfoViewController: UIViewController {
         if donorIsApproved{
             
         } else {
-            singUp()
+            signUp()
         }
     }
     
@@ -56,7 +56,7 @@ class VSUserInfoViewController: UIViewController {
 extension VSUserInfoViewController {
     
     
-    func singUp() {
+    func signUp() {
         
         let validationState = isValid()
         
