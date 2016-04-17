@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Token {
-    dynamic var token: String? = ""
+class Token: Object {
+    dynamic var token: String = ""
     dynamic var refreshToken: String? = ""
     dynamic var expires_on: NSDate = NSDate()
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import Alamofire
 
 class AuthProvider : NSObject {
     
@@ -35,5 +36,23 @@ class AuthProvider : NSObject {
                 realm.add(user)
             }
         return user
+    }
+    
+    func setToken(token: String) -> Void {
+        let tokenObj = Token()
+        tokenObj.token = token
+        try! realm.write {
+            realm.delete(realm.objects(Token))
+            realm.add(tokenObj)
+        }
+    }
+    func getToken() -> Token? {
+        return realm.objects(Token).first
+    }
+    
+    func destroyToken() {
+        try! realm.write {
+        realm.delete(realm.objects(Token))
+        }
     }
 }

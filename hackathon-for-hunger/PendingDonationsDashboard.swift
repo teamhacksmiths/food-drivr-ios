@@ -7,16 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PendingDonationsDashboard: UITableViewController {
     
     
     var mockData = [("baba","baba","baba"),
                     ("prapra","prapra","prapra")]
-    
+    var donations: Results<Donation>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        DrivrAPI.sharedInstance.getDonations(success: {
+//                (results) in
+//                print(results)
+//            }, failure: {
+//                (error) in
+//                print(error)
+//        })
     }
     
 

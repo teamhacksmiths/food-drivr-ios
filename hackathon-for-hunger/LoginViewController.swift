@@ -16,8 +16,21 @@ class LoginViewController: UIViewController {
     
     var loginProvider = LoginProvider.None
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("here")
+        if let _ = AuthProvider.sharedInstance.getCurrentUser() {
+            print("in here here")
+            segueToMenuController()
+        } else {
+            AuthProvider.sharedInstance.destroyToken()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
     }
 
     @IBAction func singInUsingFacebook(sender: UIButton) {
@@ -48,7 +61,12 @@ class LoginViewController: UIViewController {
         self.presentViewController(slideMenuController, animated: false, completion: nil)
     }
     
-    
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
+        print("calling segue")
+    let authProvider = AuthProvider.sharedInstance
+        authProvider.destroyUser()
+        authProvider.destroyToken()
+    }
 }
 
 

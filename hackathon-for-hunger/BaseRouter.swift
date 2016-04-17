@@ -59,9 +59,14 @@ class BaseRouter : URLRequestConvertible, APIConfiguration {
         _ = NSURLRequest(URL: baseURL!.URLByAppendingPathComponent(path))
         let mutableURLRequest = NSMutableURLRequest(URL: baseURL!.URLByAppendingPathComponent(path))
         mutableURLRequest.HTTPMethod = method.rawValue
+        if let token = AuthProvider.sharedInstance.getToken() {
+            mutableURLRequest.setValue(token.token, forHTTPHeaderField: "Authorization")
+        }
+        print(mutableURLRequest.allHTTPHeaderFields)
         if let encoding = encoding {
             return encoding.encode(mutableURLRequest, parameters: parameters).0
         }
+        
         return mutableURLRequest
     }
 }
