@@ -66,6 +66,7 @@
 		EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */; };
 		EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */; };
 		EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */; };
+		EAFEDF9A1CC2E26800C30693 /* DonorSignupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */; };
 		F7AFF7E51CBAD430008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
 		F7AFF7E61CBAF252008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
 /* End PBXBuildFile section */
@@ -148,6 +149,7 @@
 		EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAccountInfoViewController.swift; sourceTree = "<group>"; };
 		EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNavigationViewController.swift; sourceTree = "<group>"; };
 		EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalDriverViewController.swift; sourceTree = "<group>"; };
+		EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorSignupInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 		44A7250E1CAC4F2600D676C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EAFEDF981CC2E24700C30693 /* Signup */,
 				442FE9721CC15C3B0002187D /* DTO */,
 				4404F6BE1CBD1B11001B9293 /* MockData */,
 				44A7250F1CAC559500D676C3 /* Donation.swift */,
@@ -408,6 +411,14 @@
 				EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */,
 			);
 			name = SignUp;
+			sourceTree = "<group>";
+		};
+		EAFEDF981CC2E24700C30693 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */,
+			);
+			name = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -598,6 +609,7 @@
 				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
+				EAFEDF9A1CC2E26800C30693 /* DonorSignupInfo.swift in Sources */,
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
 				442FE9781CC284230002187D /* UserLogin.swift in Sources */,
 				44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */,
