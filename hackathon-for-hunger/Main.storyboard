@@ -1246,31 +1246,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jjA-mm-nmi">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="472"/>
                             </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gz1-f1-1aj">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="DQt-Aw-2Ad"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="hVA-d4-ur3"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem width="60" style="plain" systemItem="fixedSpace" id="4mi-Je-59F"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YSj-us-k9E"/>
-                                    <barButtonItem title="PICKED UP" id="UwM-ED-YLz">
-                                        <color key="tintColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="donationPickedUp:" destination="gGM-iH-0Tj" id="GKM-nJ-rg0"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cYK-TD-nef"/>
-                                    <barButtonItem title="Cancel" style="plain" id="Op2-x2-QiK">
-                                        <color key="tintColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="cancel:" destination="gGM-iH-0Tj" id="cKc-oG-r0w"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" red="0.1019607843" green="0.76470588240000004" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVm-hs-IDR">
                                 <rect key="frame" x="0.0" y="480" width="602" height="80"/>
                                 <subviews>
@@ -1391,29 +1366,71 @@
                                     <constraint firstItem="qm6-ey-7UH" firstAttribute="leading" secondItem="UVm-hs-IDR" secondAttribute="leading" constant="10" id="hAT-2i-nIV"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="am9-Z9-rpW">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="116" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsK-db-zvt">
+                                        <rect key="frame" x="230" y="7" width="140" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Jh7-wn-BTu"/>
+                                            <constraint firstAttribute="width" constant="140" id="gAL-8x-JXK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="DROPPED OFF">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="donationPickedUp:" destination="gGM-iH-0Tj" eventType="touchUpInside" id="kLz-df-Tnv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0f-QB-wgH">
+                                        <rect key="frame" x="488" y="7" width="104" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ovs-ta-RBG"/>
+                                            <constraint firstAttribute="width" constant="104" id="sDt-T7-SEi"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel Pickup">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.88" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="gGM-iH-0Tj" eventType="touchUpInside" id="Gck-RZ-7wG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1019607843" green="0.76470588240000004" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="I0f-QB-wgH" firstAttribute="centerY" secondItem="am9-Z9-rpW" secondAttribute="centerY" id="0co-nE-lH3"/>
+                                    <constraint firstItem="qsK-db-zvt" firstAttribute="centerX" secondItem="am9-Z9-rpW" secondAttribute="centerX" id="2I2-ER-5Gp"/>
+                                    <constraint firstAttribute="height" constant="44" id="NiZ-Rx-VQv"/>
+                                    <constraint firstAttribute="trailing" secondItem="I0f-QB-wgH" secondAttribute="trailing" constant="8" id="V8f-CQ-hg0"/>
+                                    <constraint firstItem="qsK-db-zvt" firstAttribute="centerY" secondItem="am9-Z9-rpW" secondAttribute="centerY" id="gpv-su-kVH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gz1-f1-1aj" firstAttribute="leading" secondItem="fEI-Hq-ukm" secondAttribute="leading" id="6SN-Cl-wj2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UVm-hs-IDR" secondAttribute="trailing" constant="-22" id="8GW-61-XQZ"/>
-                            <constraint firstAttribute="trailing" secondItem="gz1-f1-1aj" secondAttribute="trailing" id="AxL-yU-JfI"/>
+                            <constraint firstAttribute="trailing" secondItem="am9-Z9-rpW" secondAttribute="trailing" id="EGo-CI-hx4"/>
                             <constraint firstItem="jjA-mm-nmi" firstAttribute="leading" secondItem="fEI-Hq-ukm" secondAttribute="leading" id="FRX-d2-RXW"/>
                             <constraint firstItem="UVm-hs-IDR" firstAttribute="leading" secondItem="fEI-Hq-ukm" secondAttribute="leadingMargin" constant="-20" id="Hna-Ek-Go0"/>
-                            <constraint firstItem="fKf-el-uC3" firstAttribute="top" secondItem="gz1-f1-1aj" secondAttribute="bottom" id="fma-ws-9MY"/>
-                            <constraint firstItem="gz1-f1-1aj" firstAttribute="top" secondItem="jjA-mm-nmi" secondAttribute="bottom" constant="84" id="gVV-tL-1nf"/>
+                            <constraint firstItem="am9-Z9-rpW" firstAttribute="leading" secondItem="fEI-Hq-ukm" secondAttribute="leading" id="XtT-eZ-cgg"/>
+                            <constraint firstItem="fKf-el-uC3" firstAttribute="top" secondItem="am9-Z9-rpW" secondAttribute="bottom" id="Ygc-OV-TEc"/>
+                            <constraint firstItem="am9-Z9-rpW" firstAttribute="top" secondItem="jjA-mm-nmi" secondAttribute="bottom" constant="84" id="iIg-L9-ufL"/>
                             <constraint firstItem="jjA-mm-nmi" firstAttribute="top" secondItem="fEI-Hq-ukm" secondAttribute="top" id="o0W-et-hwf"/>
                             <constraint firstAttribute="trailing" secondItem="jjA-mm-nmi" secondAttribute="trailing" id="rvU-QF-HoB"/>
                             <constraint firstItem="UVm-hs-IDR" firstAttribute="bottom" secondItem="fKf-el-uC3" secondAttribute="top" constant="-40" id="yrM-q7-R2i"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonBackground" destination="am9-Z9-rpW" id="6UZ-qk-WlA"/>
+                        <outlet property="cancelPickupButton" destination="I0f-QB-wgH" id="oND-WQ-eXj"/>
                         <outlet property="donorCityLabel" destination="RlV-zL-dJb" id="6tH-1t-KSD"/>
                         <outlet property="donorContactLabel" destination="u9S-As-CzL" id="tg3-UP-J1Z"/>
                         <outlet property="donorNameLabel" destination="wS3-Uk-Edn" id="wRc-sN-ICy"/>
                         <outlet property="donorPhoneLabel" destination="9YH-14-XaP" id="B6t-dy-xWA"/>
                         <outlet property="donorStreetLabel" destination="u23-RM-OlY" id="EO3-xA-K8a"/>
                         <outlet property="mapView" destination="jjA-mm-nmi" id="w3I-R2-Dm2"/>
-                        <outlet property="pickupDropoffButton" destination="UwM-ED-YLz" id="LVt-ZR-CaT"/>
+                        <outlet property="pickupDropoffButton" destination="qsK-db-zvt" id="XwD-a6-qGH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWr-E2-OBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
