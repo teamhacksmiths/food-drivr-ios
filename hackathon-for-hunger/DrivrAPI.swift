@@ -21,9 +21,7 @@ class DrivrAPI {
     }
     
     func authenticate(credentials: UserLogin, success: (JsonDict)-> (), failure: (NSError?) ->()) {
-        
         let router = UserRouter(endpoint: .Login(credentials: credentials) )
-
         manager.request(router)
             .validate()
             .responseJSON {
@@ -40,7 +38,7 @@ class DrivrAPI {
     
     func registerUser(userData: UserRegistration, success: (JsonDict)-> (), failure: (NSError?) ->()) {
         let router = UserRouter(endpoint: .Register(userData: userData))
-        
+        print("registering user")
         manager.request(router)
             .validate()
             .responseJSON {
@@ -57,9 +55,33 @@ class DrivrAPI {
 
     }
     
-    func getDonations(completed: Bool? = false, dateRange: String?, completionHandler: (Results<Donation>?, NSError?)-> ()) {
+    func getUser(success: (JsonDict)-> (), failure: (NSError?) ->()) {
+        print("getting user")
+        guard let token = AuthProvider.sharedInstance.getToken() as Token? else {
+            failure(NSError(domain: "no token found for user", code:422, userInfo: nil))
+            return
+        }
+        let router = UserRouter(endpoint: .GetUser(token: token))
         
-        let router = DonationRouter(endpoint: .GetDonations(completed: completed!, dateRange: dateRange) )
+        manager.request(router)
+            .validate()
+            .responseJSON {
+                response in
+                switch response.result {
+                case .Success(let JSON):
+                    let user = JSON as! JsonDict
+                    success(user)
+                    
+                case .Failure(let error):
+                    failure(error)
+                }
+        }
+        
+    }
+    
+    func getDonations(completed: Bool = false, status: Int = 0,  success: (Results<Donation>)-> (), failure: (NSError?) ->()) {
+        print("getting donations")
+        let router = DonationRouter(endpoint: .GetDonations(completed: completed, status: status) )
         
         manager.request(router)
             .validate()
@@ -68,17 +90,22 @@ class DrivrAPI {
                 switch response.result {
                 case .Success(let JSON):
                     
-                    let donations = JSON as! [JsonDict]
-                    let realm = try! Realm()
-                    for donation:JsonDict in donations {
-                        try! realm.write {
-                            realm.add(Donation(dict: donation), update: true)
+                    
+                        let realm = try! Realm()
+                        if let donations = JSON["donations"] as! [JsonDict]? {
+                            print(donations)
+                            for donation: JsonDict in donations{
+                                try! realm.write {
+                                    realm.add(Donation(dict: donation), update: true)
+                                }
+                            }
+
                         }
-                    }
-                    completionHandler(realm.objects(Donation), nil)
+                        
+                    success(realm.objects(Donation))
                     
                 case .Failure(let error):
-                    completionHandler(nil, error)
+                    failure(error)
                 }
         }
     }

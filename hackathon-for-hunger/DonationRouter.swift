@@ -11,7 +11,7 @@ import Foundation
 import Alamofire
 
 enum DonationEndpoint {
-    case GetDonations(completed: Bool , dateRange: String?)
+    case GetDonations(completed: Bool , status: Int)
     case GetDonation(id: String)
     case UpdateDonation(donation: Donation)
     case DeleteDonation(id: String)
@@ -44,12 +44,10 @@ class DonationRouter : BaseRouter {
     
     override var parameters: APIParams {
         switch endpoint {
-        case .GetDonations(let completed, let dateRange):
+        case .GetDonations(let completed, let status):
             var response = [String: AnyObject]()
             response["completed"] = completed
-            if let dateRange = dateRange {
-                response["date_range"] = dateRange
-            }
+            response["status"] = status
             return response
             
         case .UpdateDonation(let donation):

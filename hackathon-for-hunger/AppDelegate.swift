@@ -21,20 +21,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         setupFacebookAndTwitter()
-        
-//        if let _ = AuthProvider.sharedInstance.getCurrentUser() {
-//            // Code to execute if user is logged in
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! PendingDonationsDashboard
-//            let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
-//            let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-//            let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
-//            self.window?.rootViewController = slideMenuController
-//            self.window?.makeKeyAndVisible()
-//            
-//        }
+        runLoginFlow()
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+    }
+    
+    func runLoginFlow() -> Void {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let _ = AuthProvider.sharedInstance.getCurrentUser() {
+            // Code to execute if user is logged in
+            
+            let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! DonationsOverviewViewController
+            let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
+            let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+            let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+            self.window?.rootViewController = slideMenuController
+            
+            
+        } else {
+            AuthProvider.sharedInstance.destroyToken()
+            let loginViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+            self.window?.rootViewController = loginViewController
+        }
+            self.window?.makeKeyAndVisible()
     }
 
     private func setupFacebookAndTwitter() -> Bool {

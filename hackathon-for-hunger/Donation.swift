@@ -52,7 +52,7 @@ class Donation: Object {
         
         self.init()
         self.id = dict["id"] as! Int
-        self.rawStatus = dict["status"] as! Int
+        self.rawStatus = dict["status_id"] as! Int
         self.created_at = formatStringToDate(dict["created_at"] as? String)
         self.updated_at = formatStringToDate(dict["updated_at"] as? String)
         
@@ -74,13 +74,14 @@ class Donation: Object {
             donationDropoff["actual"] = formatStringToDate(donationDropoff["actual"] as? String)
             self.dropoff = Location(dict: donationDropoff)
         }
-        addDonations(dict["donation_type"] as? [String])
+        addDonations(dict["donation_types"] as? [String])
         addParticipants(dict["participants"] as? JsonDict)
     }
     
     func addDonations(donations: [String]?) {
         if let newDonationItems = donations{
             for donationItem in newDonationItems {
+                print(donationItem)
                 self.donationItems.append(DonationType(value: ["name": donationItem]))
             }
         }

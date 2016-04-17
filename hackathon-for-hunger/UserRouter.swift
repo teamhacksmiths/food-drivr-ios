@@ -12,6 +12,7 @@ import Alamofire
 enum UserEndpoint {
     case Login(credentials: UserLogin)
     case Register(userData: UserRegistration)
+    case GetUser(token: Token)
 }
 
 class UserRouter : BaseRouter {
@@ -25,6 +26,7 @@ class UserRouter : BaseRouter {
         switch endpoint {
         case .Login: return .POST
         case .Register: return .POST
+        case .GetUser: return .GET
         }
     }
     
@@ -32,6 +34,7 @@ class UserRouter : BaseRouter {
         switch endpoint {
         case .Login: return "sessions"
         case .Register: return "users"
+        case .GetUser(let token): return "users/\(token.token)"
         }
     }
     
@@ -48,11 +51,12 @@ class UserRouter : BaseRouter {
         case .Register(let userData):
             do {
                 let user = try userData.toJSON()
-                print(user)
                 return ["user": user]
             } catch {
                 return [:]
             }
+        case .GetUser:
+            return nil
         }
     }
     
@@ -60,6 +64,7 @@ class UserRouter : BaseRouter {
         switch endpoint {
         case .Login: return .URL
         case .Register: return .URL
+        case .GetUser: return .URL
         }
     }
     
