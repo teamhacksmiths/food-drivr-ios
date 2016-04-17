@@ -221,13 +221,26 @@ enum LoginProvider {
         DrivrAPI.sharedInstance.authenticate(UserLogin(email: email, password: password),
             success: {
                 (JsonDict) in
-                print(JsonDict)
-                guard let user = JsonDict["user"] as? [String: AnyObject] else {
-                    delegate.loginProvider(self, didFail: NSError(domain: "error retrieving user", code:422, userInfo: nil))
+                    guard let token = JsonDict["authtoken"] as? [String: AnyObject] else {
                     return
                 }
-            AuthProvider.sharedInstance.storeCurrentUser(user)
+                AuthProvider.sharedInstance.setToken(token["auth_token"] as! String)
                 delegate.loginProvider(self, didSucceed: JsonDict)
+                DrivrAPI.sharedInstance.getUser(
+                    {
+                        response in
+                        guard let user = response["user"] as? [String: AnyObject] else {
+                            delegate.loginProvider(self, didFail: NSError(domain: "error retrieving user", code:422, userInfo: nil))
+                            return
+                        }
+                        AuthProvider.sharedInstance.storeCurrentUser(user)
+                        delegate.loginProvider(self, didSucceed: response)
+                    },
+                    failure: {
+                        error in
+                        print(error)
+                        delegate.loginProvider(self, didFail: error!)
+                })
             },
             failure: {
                 error in
