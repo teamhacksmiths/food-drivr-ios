@@ -26,6 +26,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
     var kind: PinType = .Pickup
     
+    var pickupRoute: MKPolylineRenderer?
     
     //MARK:- Outlets & Actions
     
@@ -57,12 +58,16 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    //MARK:- set the route (//TODO:- refactor this func to use with either pickup or dropoff)
+    //MARK:- get the route for the dropoff (//TODO:- refactor this func to use with either pickup or dropoff)
     func updateRoute() {
         if donation != nil {
             
             // remove the pickup route in prep to be replace with dropoff route
             //mapView.removeOverlays(mapView.overlays)
+            
+            // keep the pickup route on the map, but set the line thinner, and more transparent
+            pickupRoute?.lineWidth = 3.5
+            pickupRoute?.strokeColor = UIColor(red: 51/255, green: 195/255, blue: 0, alpha: 0.45)
             
             donorNameLabel.text = donation?.donor?.name
             
@@ -72,7 +77,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             let dropoffPlacemark = MKPlacemark(coordinate: (donation!.dropoff?.coordinates)!, addressDictionary: nil)
             let dropoffMapItem = MKMapItem(placemark: dropoffPlacemark)
             
-            
+            // geet the route from pickup to dropoff
             let request = MKDirectionsRequest()
             request.source = pickupMapItem
             request.destination = dropoffMapItem
@@ -113,6 +118,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             let pickupPlacemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
             let pickupMapItem = MKMapItem(placemark: pickupPlacemark)
             
+            // Create the route from user location to pickup
             let request = MKDirectionsRequest()
             request.source = userLocationMapItem
             request.destination = pickupMapItem
@@ -148,35 +154,13 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     }
     
     
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
-        
-        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
-        
-        renderer.lineWidth = 4
-        
-        if (overlay is MKPolyline) {
-            if mapView.overlays.count == 1 {
-                switch kind {
-                case .Pickup:
-                    renderer.strokeColor = MapsDummyData.sharedInstance.pinColorPickup
-                case .Dropoff:
-                    renderer.strokeColor = MapsDummyData.sharedInstance.pinColorDropoff
-                }
-                
-            } else if mapView.overlays.count > 1 {
-                renderer.strokeColor = MapsDummyData.sharedInstance.pinColorDropoff                }
-        }
-        
-        return renderer
-    }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
 
     }
     
-    //MARK:- mapView
+    //MARK:- MapView delegate methods
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         
@@ -219,6 +203,35 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         
         return pinView
     }
+    
+    // Set the appearance of the route polyline overlays
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        
+        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        
+        renderer.lineWidth = 4
+        
+        if (overlay is MKPolyline) {
+            if mapView.overlays.count == 1 {
+                
+                // save a ref to pickup route renderer so that its alpha can be modified later,
+                // when a 2nd overlay is added for the dropoff route
+                pickupRoute = renderer
+                
+                switch kind {
+                case .Pickup:
+                    renderer.strokeColor = MapsDummyData.sharedInstance.routeColorPickup
+                case .Dropoff:
+                    renderer.strokeColor = MapsDummyData.sharedInstance.routeColorDropoff
+                }
+                
+            } else if mapView.overlays.count > 1 {
+                renderer.strokeColor = MapsDummyData.sharedInstance.routeColorDropoff                }
+        }
+        
+        return renderer
+    }
+
     
     
     //MARK:- Annotations
