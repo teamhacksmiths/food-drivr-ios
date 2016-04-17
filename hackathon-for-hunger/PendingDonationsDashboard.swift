@@ -9,83 +9,65 @@
 import UIKit
 import RealmSwift
 
-class PendingDonationsDashboard: UITableViewController {
+class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    var mockData = [("baba","baba","baba"),
-                    ("prapra","prapra","prapra")]
+    var mockData = [("EINSTEINS BAGELS","3 dozen bagels","933 jaquan Lock, Portland"),
+                    ("CHEZ HEY","5 dozen bagels","933 hope street, Portland")]
     var donations: Results<Donation>?
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        DrivrAPI.sharedInstance.getDonations(success: {
-//                (results) in
-//                print(results)
-//            }, failure: {
-//                (error) in
-//                print(error)
-//        })
-    }
-    
-
-    
-    
-    
-    //Mark - Create the HeaderView to our tableView
-    lazy var containerView: UIView = {
-        
-        let placeHolderImage = UIImageView()
-        placeHolderImage.translatesAutoresizingMaskIntoConstraints = true
-        placeHolderImage.image = UIImage(imageLiteral: "personHolder")
-        
-        NSLayoutConstraint(item: placeHolderImage, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100.0).active = true
-        NSLayoutConstraint(item: placeHolderImage, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100.0).active = true
-        
-        let fullName = UILabel()
-        fullName.text = "PENDING DONATION"
-        fullName.textColor = UIColor.grayColor()
-        
-        let containerStackView = UIStackView(arrangedSubviews: [placeHolderImage, fullName])
-        containerStackView.axis = .Vertical
-        containerStackView.spacing = 10.0
-        containerStackView.alignment = .Center
-        containerStackView.distribution = .EqualCentering
-        
-        return containerStackView
-    }()
-    
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return containerView
-    }
-    
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 140.0
+        DrivrAPI.sharedInstance.getDonations(success: {
+                (results) in
+                self.donations = results
+            self.tableView.reloadData()
+            }, failure: {
+                (error) in
+                print(error)
+        })
     }
     
     //Mark - Setting up tableView
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mockData.count
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return donations?.count ?? 0
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let identifier = "pendingDonation"
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! PendingDonationsDashboardTableViewCell
         cell.delegate = self
         cell.indexPath = indexPath
-        cell.information = mockData[indexPath.row]
-        
+        cell.information = donations![indexPath.row]
+        if indexPath.row == 0 {
+            cell.addBorderTop(size: 1, color: UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1))
+        }
+        cell.addBorderBottom(size: 1, color: UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1))
         return cell
     }
     
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?
+    {
+        let accept = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Accept Donation" , handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
+            //go to accept donation
+        })
+        accept.backgroundColor = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
+        
+        
+        return [accept]
+    }
+    
+    //empty implementation
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
     
     @IBAction func toggleMenu(sender: AnyObject) {
         self.slideMenuController()?.openLeft()
     }
 }
-
-
 
 extension PendingDonationsDashboard: PendingDonationsDashboardTableViewCellDelegate {
     
