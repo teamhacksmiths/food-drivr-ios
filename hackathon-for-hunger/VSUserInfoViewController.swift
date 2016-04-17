@@ -8,12 +8,148 @@
 
 import UIKit
 
+enum State {
+    case UnCompleteField
+    case NotEmail
+    case Custom(String, String)
+    case None
+}
+
+
 class VSUserInfoViewController: UIViewController {
     
-    // MARK: Actions 
+    // Mark: Propety
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBAction func didPressNext(sender: UIButton) {
-        performSegueWithIdentifier("VolunteerAccountInfo", sender: nil)
+    
+    // Mark: Regular expression for email
+    static private let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+    
+    
+    static private var user = UserRegistration()
+    
+    // MARK: Actions
+    @IBAction func didPressSignUp(sender: AnyObject) {
+        let donorIsApproved = false
+        if donorIsApproved{
+            
+        } else {
+            singUp()
+        }
+    }
+    
+    // MARK: Navigation
+    
+    func showAwaitingApprovalView(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let awaitingApprovalViewController = storyboard.instantiateViewControllerWithIdentifier("AwaitingApprovalDriverView") as! AwaitingApprovalDriverViewController
+        navigationController?.pushViewController(awaitingApprovalViewController, animated: true)
     }
     
 }
+
+
+
+extension VSUserInfoViewController {
+    
+    
+    func singUp() {
+        
+        let validationState = isValid()
+        
+        switch(validationState) {
+            case .None:
+                createUser()
+                sendToServer()
+            case .UnCompleteField:
+                showAlert(validationState)
+            case .NotEmail:
+                showAlert(validationState)
+            default:
+                return
+        }
+        
+    }
+    
+    private func sendToServer() {
+        DrivrAPI.sharedInstance.registerUser(VSUserInfoViewController.user, success: {
+                (JsonDict) in
+            print (JsonDict)
+            self.showAwaitingApprovalView()
+            }, failure: {
+                (error) in
+                self.showAlert(.Custom("Server", error!.description))
+        })
+    }
+    
+    private func createUser() {
+        VSUserInfoViewController.user.email = emailTextField.text
+        VSUserInfoViewController.user.phone = phoneTextField.text
+        VSUserInfoViewController.user.name = nameTextField.text
+        VSUserInfoViewController.user.password = passwordTextField.text
+        VSUserInfoViewController.user.role = .Donor
+    }
+    
+    private func isValid() -> State {
+        
+        if nameTextField.text == "" && phoneTextField.text == ""
+            && emailTextField.text == "" && passwordTextField.text == "" {
+            return .UnCompleteField
+        }else if !isValidEmail(emailTextField.text!) {
+            return .NotEmail
+        }
+        return .None
+        
+    }
+    
+    // check if the email is valid
+    private func isValidEmail(email: String) -> Bool {
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", VSUserInfoViewController.emailRegEx)
+        return emailTest.evaluateWithObject(email)
+    }
+    
+    
+    private func showAlert(state: State) {
+        
+        var title = ""
+        var message = ""
+        let buttonTitle = "try"
+        
+        switch state {
+        case .UnCompleteField:
+            title = "Uncomplete Field"
+            message = "Please make sure to complete all field"
+        case .NotEmail:
+            title = "Wrong email"
+            message = "Please make sure to enter correct email"
+        case .Custom(let titleAlert, let messageAlert):
+            title = titleAlert
+            message = messageAlert
+        case .None:
+            return
+        }
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.Default, handler: {action in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
+        alert.addAction(alertAction)
+        presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
