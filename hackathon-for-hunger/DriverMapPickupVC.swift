@@ -16,6 +16,8 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         case Pickup
     }
     
+    var data = MapsDummyData.sharedInstance
+    
     var startingRegion = MapsDummyData.sharedInstance.startingRegion // used to retrieve precalculated starting region
     
     var locationManager = LocationManager.sharedInstance.locationManager
@@ -36,18 +38,22 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var donorCityLabel: UILabel!
     @IBOutlet weak var donorContactLabel: UILabel!
     @IBOutlet weak var donorPhoneLabel: UILabel!
+
+    @IBOutlet weak var pickupDropoffButton: UIButton!
+    @IBOutlet weak var cancelPickupButton: UIButton!
+    @IBOutlet weak var buttonBackground: UIView!
     
-    @IBOutlet weak var pickupDropoffButton: UIBarButtonItem!
-
     @IBAction func donationPickedUp(sender: AnyObject) {
-
-        pickupDropoffButton = UIBarButtonItem(title: "DROPPED OFF", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(donationDroppedOff))
+        
+        // Change button to Dropped Off and change the route from pickup to dropoff, but only if the route is currently set for pickup
+        if kind == .Pickup {
+            addDropoffPin()
+            updateRoute()
+        }
         
         kind = .Dropoff
-        addDropoffPin()
-        updateRoute()
+        updateUI()
         
-
     }
     
     func donationDroppedOff() {
@@ -56,6 +62,19 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func updateUI() {
+        switch kind {
+        case .Pickup:
+            buttonBackground.backgroundColor = data.pinColorPickup
+            pickupDropoffButton.setTitle("PICKED UP", forState: .Normal)
+            cancelPickupButton.hidden = false
+        case .Dropoff:
+            buttonBackground.backgroundColor = data.pinColorDropoff
+            pickupDropoffButton.setTitle("DROPPED OFF", forState: .Normal)
+            cancelPickupButton.hidden = true
+        }
     }
     
     //MARK:- get the route for the dropoff (//TODO:- refactor this func to use with either pickup or dropoff)
@@ -109,6 +128,8 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         mapView.setRegion(startingRegion, animated: true)
         
+        updateUI()
+        
         if donation != nil {
             donorNameLabel.text = donation?.donor?.name
             // TODO: need a street address for Donor Participant, to be passed to UI
@@ -153,12 +174,6 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         
     }
     
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-
-    }
     
     //MARK:- MapView delegate methods
     
