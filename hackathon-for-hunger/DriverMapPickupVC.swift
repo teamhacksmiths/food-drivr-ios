@@ -16,6 +16,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         case Pickup
     }
     
+    var mapsModel = MapsModel.sharedInstance
     var data = MapsDummyData.sharedInstance
     
     var startingRegion = MapsDummyData.sharedInstance.startingRegion // used to retrieve precalculated starting region
@@ -114,7 +115,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 }
                 if let first = self.mapView.overlays.first {
                     let rect = self.mapView.overlays.reduce(first.boundingMapRect, combine: {MKMapRectUnion($0, $1.boundingMapRect)})
-                    self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0), animated: true)
+                    self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 100.0, left: 100.0, bottom: 10.0, right: 100.0), animated: true)
                 }
             }
         }
@@ -126,7 +127,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         
         mapView.delegate = self
-        mapView.setRegion(startingRegion, animated: true)
+        mapView.setRegion(startingRegion, animated: true) // set starting region to overview map's region?
         
         updateUI()
         
@@ -153,8 +154,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 
                 for route in unwrappedResponse.routes {
                     self.mapView.addOverlay(route.polyline)
-                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-
+                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: UIEdgeInsets(top: 100.0, left: 80.0, bottom: 10.0, right: 80.0), animated: true)
 
                 }
                 
@@ -174,12 +174,18 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        zoomToFitMapAnnotations()
+    }
+    
     
     //MARK:- MapView delegate methods
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         
-        mapView.showAnnotations(mapView.annotations, animated: true)
+        //mapView.showAnnotations(mapView.annotations, animated: true)
+        zoomToFitMapAnnotations()
         
     }
     
@@ -283,9 +289,23 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             dropoffAnnotation.kind = .Dropoff
             
             mapView.addAnnotation(dropoffAnnotation)
+            mapView.selectAnnotation(dropoffAnnotation, animated: true)
         }
 
     }
+    
+    
+    func zoomToFitMapAnnotations() {
+        if mapView.annotations.count == 0 {
+            mapView.setRegion(startingRegion, animated: true)
+            return
+        }
+        
+        let region = mapsModel.getRegionForAnnotations(mapView.annotations)
+        
+        mapView.setVisibleMapRect(mapsModel.MKMapRectForCoordinateRegion(mapView.regionThatFits(region)), edgePadding: UIEdgeInsets(top: 50, left: 50, bottom: 0, right: 50), animated: true)
+    }
+    
 }
 
 
