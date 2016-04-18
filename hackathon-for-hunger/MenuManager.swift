@@ -44,7 +44,7 @@ enum MenuManager: Int {
         switch self {
             case .Dashboard:
                 let dashboardVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.dashboardIdentifier)
-                                            as! PendingDonationsDashboard
+                                            as! DonationsOverviewViewController
                 MenuManager.navigationController = UINavigationController(rootViewController: dashboardVC)
             case .DonationOverView:
                 let donationOverVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.donationOverViewIdentifier)

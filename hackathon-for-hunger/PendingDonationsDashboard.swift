@@ -11,22 +11,13 @@ import RealmSwift
 
 class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    var mockData = [("EINSTEINS BAGELS","3 dozen bagels","933 jaquan Lock, Portland"),
-                    ("CHEZ HEY","5 dozen bagels","933 hope street, Portland")]
+    var realm = try! Realm()
     var donations: Results<Donation>?
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        DrivrAPI.sharedInstance.getDonations(success: {
-                (results) in
-                self.donations = results
-            self.tableView.reloadData()
-            }, failure: {
-                (error) in
-                print(error)
-        })
+        self.getDonations()
     }
     
     //Mark - Setting up tableView
@@ -39,7 +30,6 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
         
         let identifier = "pendingDonation"
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! PendingDonationsDashboardTableViewCell
-        cell.delegate = self
         cell.indexPath = indexPath
         cell.information = donations![indexPath.row]
         if indexPath.row == 0 {
@@ -60,6 +50,10 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
         return [accept]
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("toDriverMapDetailPendingFromDashboard", sender: donations![indexPath.row])
+    }
+    
     //empty implementation
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     }
@@ -67,15 +61,38 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
     @IBAction func toggleMenu(sender: AnyObject) {
         self.slideMenuController()?.openLeft()
     }
-}
-
-extension PendingDonationsDashboard: PendingDonationsDashboardTableViewCellDelegate {
     
-    func cell(cell: PendingDonationsDashboardTableViewCell, didPress indexPath: NSIndexPath) {
-        mockData.removeAtIndex(indexPath.row)
-        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+    func getDonations() {
+        let pendingDonations = realm.objects(Donation)
+        guard pendingDonations.count > 0 else {
+            self.fetchRemoteDonations()
+            return
+        }
+        self.donations = pendingDonations
+        self.tableView.reloadData()
     }
-
+    
+    private func fetchRemoteDonations() {
+        DrivrAPI.sharedInstance.getDonations(success: {
+            (results) in
+            self.donations = results
+            self.tableView.reloadData()
+            }, failure: {
+                (error) in
+                print(error)
+        })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "toDriverMapDetailPendingFromDashboard") {
+            
+            if let donation = sender as? Donation {
+                let donationVC = segue.destinationViewController as! DriverMapDetailPendingVC
+                
+                donationVC.donation = donation
+            }
+        }
+    }
 }
 
 
