@@ -114,6 +114,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
 
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
         if annotation is MKUserLocation {
             return nil
         }
@@ -138,7 +139,6 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
                     pinView!.leftCalloutAccessoryView?.frame = frame
                 }
             }
-            
         }
         else {
             pinView?.annotation = annotation
