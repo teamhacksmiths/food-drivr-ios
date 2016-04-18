@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -326,13 +326,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="520" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Eed-5u-wRp">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Eed-5u-wRp">
                                                     <rect key="frame" x="0.0" y="0.0" width="303" height="80"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-54-2Kn">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-54-2Kn">
                                                             <rect key="frame" x="0.0" y="0.0" width="303" height="80"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EINSTEIN BAGELS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-Aj-TpH">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EINSTEIN BAGELS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-Aj-TpH">
                                                                     <rect key="frame" x="28" y="8" width="267" height="25"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="267" id="Kq3-GD-Pdq"/>
@@ -341,7 +341,7 @@
                                                                     <color key="textColor" red="0.51764705879999995" green="0.8862745098" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3 dozen bagels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcZ-MS-gC3">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 dozen bagels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcZ-MS-gC3">
                                                                     <rect key="frame" x="28" y="35" width="267" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="ZBy-85-5cN"/>
@@ -350,7 +350,7 @@
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="993 jaquan lock, Portland" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsc-YK-cWK">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="993 jaquan lock, Portland" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsc-YK-cWK">
                                                                     <rect key="frame" x="28" y="54" width="267" height="18"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="18" id="xuz-Cv-ikN"/>
@@ -415,11 +415,12 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="yHu-Kz-EeI" id="fOP-iU-iMO"/>
+                        <segue destination="B4v-Zv-mgG" kind="show" identifier="toDriverMapDetailPendingFromDashboard" id="28Q-Pg-iPg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzI-iM-6MS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1218" y="3879"/>
+            <point key="canvasLocation" x="-1087" y="3879"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Fcq-c4-cG8">
@@ -1273,14 +1274,14 @@
                         <viewControllerLayoutGuide type="bottom" id="fKf-el-uC3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fEI-Hq-ukm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jjA-mm-nmi">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="472"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="428"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVm-hs-IDR">
-                                <rect key="frame" x="0.0" y="480" width="602" height="80"/>
+                                <rect key="frame" x="0.0" y="436" width="602" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="qm6-ey-7UH">
                                         <rect key="frame" x="10" y="7" width="582" height="63"/>
@@ -1400,7 +1401,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="am9-Z9-rpW">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="512" width="600" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="116" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsK-db-zvt">
                                         <rect key="frame" x="230" y="7" width="140" height="30"/>
@@ -1531,7 +1532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0h-QS-XCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-336" y="3877"/>
+            <point key="canvasLocation" x="-391" y="3901"/>
         </scene>
         <!--Sign Up Navigation View Controller-->
         <scene sceneID="P65-Fk-X00">
@@ -1560,11 +1561,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rhh-lA-WFG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lWZ-Qn-5Mn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YKm-DA-pDF">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="377"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="333"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3W6-uJ-vaP">
                                 <rect key="frame" x="10" y="24" width="580" height="40"/>
@@ -1591,7 +1592,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qgv-ZE-hpj">
-                                <rect key="frame" x="10" y="385" width="580" height="160"/>
+                                <rect key="frame" x="10" y="341" width="580" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="v5F-OK-qzN">
                                         <rect key="frame" x="8" y="8" width="563" height="144"/>
@@ -1804,7 +1805,7 @@
                                 </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBh-Ud-TgU">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="512" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0gR-P3-Rvl"/>
                                 </constraints>
@@ -1858,7 +1859,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsP-Em-K0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="4609"/>
+            <point key="canvasLocation" x="500" y="3879"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zxc-Y5-6He">
@@ -1888,4 +1889,7 @@
         <image name="personHolder" width="1024" height="1024"/>
         <image name="twitter_white" width="40" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="28Q-Pg-iPg"/>
+    </inferredMetricsTieBreakers>
 </document>
