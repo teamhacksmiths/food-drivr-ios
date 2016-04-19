@@ -191,12 +191,37 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == annotationView.rightCalloutAccessoryView {
-            
-            let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-//            let placemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
-            let placemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
-            let pickupMapItem = MKMapItem(placemark: placemark)
-            MKMapItem.openMapsWithItems([pickupMapItem], launchOptions: launchOptions)
+            if let annotation = annotationView.annotation as? DonationPin {
+                let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+                
+                switch annotation.kind {
+                    
+                case .Pickup:
+                    let placemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
+                    let pickupMapItem = MKMapItem(placemark: placemark)
+                    pickupMapItem.name = donation?.donor?.name
+                    // with just 1 item, maps will give directions from user location to item
+                    MKMapItem.openMapsWithItems([pickupMapItem], launchOptions: launchOptions)
+                    
+                case .Dropoff:
+                    let pickupPlacemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
+                    let dropoffPlacemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
+                    let pickupMapItem = MKMapItem(placemark: pickupPlacemark)
+                    let dropoffMapItem = MKMapItem(placemark: dropoffPlacemark)
+                    pickupMapItem.name = donation?.donor?.name
+                    dropoffMapItem.name = donation?.recipient?.name
+                    // with 2 items, directions will be from the 1st to the 2nd item
+                    MKMapItem.openMapsWithItems([pickupMapItem, dropoffMapItem], launchOptions: launchOptions)
+                }
+                
+//                if annotation.kind == .Pickup {
+//                    
+//                    //            let placemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
+//                    let placemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
+//                    let pickupMapItem = MKMapItem(placemark: placemark)
+//                    MKMapItem.openMapsWithItems([pickupMapItem], launchOptions: launchOptions)
+//                }
+            }
         }
     }
     
