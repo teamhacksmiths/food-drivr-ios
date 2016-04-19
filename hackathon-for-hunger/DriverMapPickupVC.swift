@@ -189,6 +189,34 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         
     }
     
+    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == annotationView.rightCalloutAccessoryView {
+            if let annotation = annotationView.annotation as? DonationPin {
+                let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+                
+                switch annotation.kind {
+                    
+                case .Pickup:
+                    let placemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
+                    let pickupMapItem = MKMapItem(placemark: placemark)
+                    pickupMapItem.name = donation?.donor?.name
+                    // with just 1 item, maps will give directions from user location to item
+                    MKMapItem.openMapsWithItems([pickupMapItem], launchOptions: launchOptions)
+                    
+                case .Dropoff:
+                    let pickupPlacemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
+                    let dropoffPlacemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
+                    let pickupMapItem = MKMapItem(placemark: pickupPlacemark)
+                    let dropoffMapItem = MKMapItem(placemark: dropoffPlacemark)
+                    pickupMapItem.name = donation?.donor?.name
+                    dropoffMapItem.name = donation?.recipient?.name
+                    // with 2 items, directions will be from the 1st to the 2nd item
+                    MKMapItem.openMapsWithItems([pickupMapItem, dropoffMapItem], launchOptions: launchOptions)
+                }
+            }
+        }
+    }
+    
     
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -210,8 +238,14 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                         pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
                         pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
                     }
-                    let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
-                    pinView!.leftCalloutAccessoryView?.frame = frame
+                    let leftFrame = CGRectMake(0.0, 0.0, 70.0, 50.0)
+                    pinView!.leftCalloutAccessoryView?.frame = leftFrame
+                    
+                    let rightFrame = CGRectMake(0.0, 0.0, 58.0, 50.0)
+                    let directionButton = UIButton(frame: rightFrame)
+                    directionButton.setImage(UIImage(named: "directions_icon"), forState: UIControlState.Normal)
+                    pinView!.rightCalloutAccessoryView?.frame = rightFrame
+                    pinView!.rightCalloutAccessoryView = directionButton
                 }
             }
             pinView?.canShowCallout = true

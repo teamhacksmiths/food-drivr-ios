@@ -25,12 +25,12 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     
     override func viewDidLoad() {
+
         mapView.showsUserLocation = true
         getDonations()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
-
     }
     
     
