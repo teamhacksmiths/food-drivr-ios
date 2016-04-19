@@ -31,7 +31,6 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
-        print(donations)
     }
     
     

@@ -213,14 +213,6 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                     // with 2 items, directions will be from the 1st to the 2nd item
                     MKMapItem.openMapsWithItems([pickupMapItem, dropoffMapItem], launchOptions: launchOptions)
                 }
-                
-//                if annotation.kind == .Pickup {
-//                    
-//                    //            let placemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
-//                    let placemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
-//                    let pickupMapItem = MKMapItem(placemark: placemark)
-//                    MKMapItem.openMapsWithItems([pickupMapItem], launchOptions: launchOptions)
-//                }
             }
         }
     }
@@ -246,9 +238,14 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                         pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
                         pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
                     }
-                    let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
-                    pinView!.leftCalloutAccessoryView?.frame = frame
-                    pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+                    let leftFrame = CGRectMake(0.0, 0.0, 70.0, 50.0)
+                    pinView!.leftCalloutAccessoryView?.frame = leftFrame
+                    
+                    let rightFrame = CGRectMake(0.0, 0.0, 58.0, 50.0)
+                    let directionButton = UIButton(frame: rightFrame)
+                    directionButton.setImage(UIImage(named: "directions_icon"), forState: UIControlState.Normal)
+                    pinView!.rightCalloutAccessoryView?.frame = rightFrame
+                    pinView!.rightCalloutAccessoryView = directionButton
                 }
             }
             pinView?.canShowCallout = true
