@@ -119,33 +119,52 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
             return nil
         }
         
-        let reuseId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
-        if pinView == nil {
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            pinView!.canShowCallout = true
-            pinView?.selected = true
-            if annotation.isKindOfClass(DonationPin) == true {
-                if let pickupDonationPin = annotation as? DonationPin {
-                    
-                    if pickupDonationPin.kind == .Pickup {
-                        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
-                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
-                    } else if pickupDonationPin.kind == .Dropoff {
-                        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
-                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
-                    }
-                    let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
-                    pinView!.leftCalloutAccessoryView?.frame = frame
-                }
+        var reuseId = "pin"
+        if let pinAnnotation = annotation as? DonationPin {
+            switch pinAnnotation.kind {
+            case .Pickup:
+                reuseId = "pickup"
+            case .Dropoff:
+                reuseId = "dropoff"
             }
-        }
-        else {
-            pinView?.annotation = annotation
-            pinView?.selected = true
+            //}
+            
+            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+            
+            if pinView == nil {
+                //            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                //            pinView!.canShowCallout = true
+                //            pinView?.selected = true
+                //if annotation.isKindOfClass(DonationPin) == true {
+                //                if let pickupDonationPin = annotation as? DonationPin {
+                //                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                
+                if pinAnnotation.kind == .Pickup {
+                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pickup")
+                    pinView?.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
+                    pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                } else if pinAnnotation.kind == .Dropoff {
+                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "dropoff")
+                    pinView?.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
+                    pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                }
+                let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
+                pinView!.leftCalloutAccessoryView?.frame = frame
+                pinView!.canShowCallout = true
+                pinView?.selected = true
+            } else {
+                // pinView already exists, and has been dequeued
+                pinView?.annotation = annotation
+                pinView?.selected = true
+            }
+            
+            return pinView
+
+            //}
         }
         
-        return pinView
+        // something went wrong with the pinView so:
+        return nil
 
     }
     
