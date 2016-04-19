@@ -189,6 +189,17 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         
     }
     
+    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == annotationView.rightCalloutAccessoryView {
+            
+            let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+//            let placemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
+            let placemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
+            let pickupMapItem = MKMapItem(placemark: placemark)
+            MKMapItem.openMapsWithItems([pickupMapItem], launchOptions: launchOptions)
+        }
+    }
+    
     
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -212,6 +223,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                     }
                     let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
                     pinView!.leftCalloutAccessoryView?.frame = frame
+                    pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
                 }
             }
             pinView?.canShowCallout = true
