@@ -8,12 +8,15 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import NVActivityIndicatorView
 
 class LoginViewController: UIViewController {
-
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
+    let activityIndicator = NVActivityIndicatorView(frame: CGRectMake(0, 0, 15, 15), type: .BallScaleMultiple, color: UIColor.whiteColor(), padding: 0)
+    
+
     var loginProvider = LoginProvider.None
     
     override func viewDidAppear(animated: Bool) {
@@ -29,8 +32,24 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-
+    }
+    
+    func authReply(reply: String){
+        /* alert code courtesy of iOS Creator (http://www.ioscreator.com/tutorials/display-an-alert-view-in-ios8-with-swift ) */
+        let alertController = UIAlertController(title: "Food Drivr", message:
+            "\(reply)", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    
+    }
+    
+    func checkAuth(){
+        if(emailInput.text!.isEmpty || passwordInput.text!.isEmpty){
+            authReply("Please fill in both fields to proceed")
+        }
     }
 
     @IBAction func singInUsingFacebook(sender: UIButton) {
@@ -40,8 +59,11 @@ class LoginViewController: UIViewController {
 
     @IBAction func signInButtonClicked(sender: AnyObject) {
         //Suggestion for implementing the signIn
+        self.activityIndicator.startAnimation()
         loginProvider = .Custom(emailInput.text!, passwordInput.text!)
         loginProvider.login(self)
+        checkAuth()
+       // self.activityIndicator.stopAnimation()
         
     }
     
