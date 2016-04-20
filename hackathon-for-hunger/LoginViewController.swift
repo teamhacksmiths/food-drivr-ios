@@ -46,10 +46,11 @@ class LoginViewController: UIViewController {
     
     }
     
-    func checkAuth(){
+    func checkAuth() -> Bool{
         if(emailInput.text!.isEmpty || passwordInput.text!.isEmpty){
-            authReply("Please fill in both fields to proceed")
+            return false
         }
+        return true
     }
 
     @IBAction func singInUsingFacebook(sender: UIButton) {
@@ -60,9 +61,13 @@ class LoginViewController: UIViewController {
     @IBAction func signInButtonClicked(sender: AnyObject) {
         //Suggestion for implementing the signIn
         self.activityIndicator.startAnimation()
+        if !checkAuth() {
+            authReply("Please fill in both fields to proceed")
+            return
+        }
         loginProvider = .Custom(emailInput.text!, passwordInput.text!)
         loginProvider.login(self)
-        checkAuth()
+        
        // self.activityIndicator.stopAnimation()
         
     }
