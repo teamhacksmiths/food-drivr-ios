@@ -102,6 +102,7 @@ extension LoginViewController: LoginProviderDelegate {
     
     func loginProvider(loginProvider: LoginProvider, didFail error: NSError){
         print(error)
+        authReply("Please supply valid credentials to proceed")
     }
     
 }
