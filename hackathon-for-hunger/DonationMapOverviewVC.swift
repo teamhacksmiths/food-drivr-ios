@@ -9,12 +9,14 @@
 import UIKit
 import MapKit
 import CoreLocation
+import RealmSwift
 
 class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     let dummyData = MapsDummyData.sharedInstance
     var donorInfoArray: [DonorInfo]?
-    var donations: [Donation]?
+    var donations: Results<Donation>?
+    var realm = try! Realm()
     
     
     var locationManager = LocationManager.sharedInstance.locationManager
@@ -23,14 +25,12 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     
     override func viewDidLoad() {
-        donorInfoArray = dummyData.donorInfoArray
-        donations = dummyData.donations
-        mapView.showsUserLocation = true
 
+        mapView.showsUserLocation = true
+        getDonations()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
-
     }
     
     
@@ -45,7 +45,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        readAndDisplayAnnotations()
+        
     }
     
     func readAndDisplayAnnotations() {
@@ -161,5 +161,25 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
     }
     
+    func getDonations() {
+        let pendingDonations = realm.objects(Donation)
+        guard pendingDonations.count > 0 else {
+            self.fetchRemoteDonations()
+            return
+        }
+        self.donations = pendingDonations
+        readAndDisplayAnnotations()
+    }
+    
+    private func fetchRemoteDonations() {
+        DrivrAPI.sharedInstance.getDonations(success: {
+            (results) in
+            self.donations = results
+            self.readAndDisplayAnnotations()
+            }, failure: {
+                (error) in
+                print(error)
+        })
+    }
 }
 

@@ -13,8 +13,9 @@ import CoreLocation
 class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     var startingRegion = MapsDummyData.sharedInstance.startingRegion // used to retrieve precalculated starting region
+    var mapsModel = MapsModel.sharedInstance
     
-    var annotationsHaveBeenShown: Bool = false //to allow auto zooming to pins, but just once
+    //var annotationsHaveBeenShown: Bool = false //to allow auto zooming to pins, but just once
     
     var locationManager = LocationManager.sharedInstance.locationManager
     
@@ -48,7 +49,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
 
         mapView.delegate = self
-        mapView.setRegion(startingRegion, animated: true)
+        //mapView.setRegion(startingRegion, animated: true)
         if donation != nil {
             donorNameLabel.text = donation?.donor?.name
             // TODO: need a street address for Donor Participant, to be passed to UI
@@ -81,53 +82,89 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         
     }
     
+    func zoomToFitMapAnnotations() {
+        if mapView.annotations.count == 0 {
+            mapView.setRegion(startingRegion, animated: true)
+            return
+        }
+        
+        let region = mapsModel.getRegionForAnnotations(mapView.annotations)
+        
+        mapView.setVisibleMapRect(mapsModel.MKMapRectForCoordinateRegion(mapView.regionThatFits(region)), edgePadding: UIEdgeInsets(top: 50, left: 50, bottom: 0, right: 50), animated: true)
+    }
+    
+    
+    
     //MARK:- mapView
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         
-        if annotationsHaveBeenShown != true {
-            annotationsHaveBeenShown = true
-
-            mapView.showAnnotations(mapView.annotations, animated: true)
-        }
+//        if annotationsHaveBeenShown != true {
+//            annotationsHaveBeenShown = true
+        
+        // mapView.showAnnotations(mapView.annotations, animated: true)
+        zoomToFitMapAnnotations()
+//            
+//            mapView.setVisibleMapRect(mapView.visibleMapRect, edgePadding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10), animated: true)
+    //}
+        //zoomToFitMapAnnotations()
         
     }
     
 
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
         if annotation is MKUserLocation {
             return nil
         }
         
-        let reuseId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
-        if pinView == nil {
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            pinView!.canShowCallout = true
-            pinView?.selected = true
-            if annotation.isKindOfClass(DonationPin) == true {
-                if let pickupDonationPin = annotation as? DonationPin {
-                    
-                    if pickupDonationPin.kind == .Pickup {
-                        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
-                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
-                    } else if pickupDonationPin.kind == .Dropoff {
-                        pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
-                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
-                    }
-                    let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
-                    pinView!.leftCalloutAccessoryView?.frame = frame
+        var reuseId = "pin"
+        if let pinAnnotation = annotation as? DonationPin {
+            switch pinAnnotation.kind {
+            case .Pickup:
+                reuseId = "pickup"
+            case .Dropoff:
+                reuseId = "dropoff"
+            }
+            //}
+            
+            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+            
+            if pinView == nil {
+                //            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                //            pinView!.canShowCallout = true
+                //            pinView?.selected = true
+                //if annotation.isKindOfClass(DonationPin) == true {
+                //                if let pickupDonationPin = annotation as? DonationPin {
+                //                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                
+                if pinAnnotation.kind == .Pickup {
+                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pickup")
+                    pinView?.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
+                    pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                } else if pinAnnotation.kind == .Dropoff {
+                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "dropoff")
+                    pinView?.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
+                    pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
                 }
+                let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
+                pinView!.leftCalloutAccessoryView?.frame = frame
+                pinView!.canShowCallout = true
+                pinView?.selected = true
+            } else {
+                // pinView already exists, and has been dequeued
+                pinView?.annotation = annotation
+                pinView?.selected = true
             }
             
-        }
-        else {
-            pinView?.annotation = annotation
-            pinView?.selected = true
+            return pinView
+
+            //}
         }
         
-        return pinView
+        // something went wrong with the pinView so:
+        return nil
 
     }
     
@@ -168,12 +205,15 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
             
         }
         
+
+        for annotation in mapView.annotations {
+            mapView.selectAnnotation(annotation, animated: true)
+        }
+        
+        zoomToFitMapAnnotations() // calling too early here - no user location yet?
+        
     }
     
-//    // keep all callouts visible
-//    func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
-//        mapView.selectAnnotation(view.annotation!, animated: false)
-//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toDriverPickupMap") {
