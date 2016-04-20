@@ -709,15 +709,21 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R0W-U1-Nwc">
-                                <rect key="frame" x="30" y="124" width="540" height="240"/>
+                                <rect key="frame" x="30" y="124" width="540" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-yz-uSH">
                                         <rect key="frame" x="0.0" y="0.0" width="540" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCv-NM-dco">
                                                 <rect key="frame" x="0.0" y="0.0" width="540" height="54"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wU0-43-rki">
                                                 <rect key="frame" x="0.0" y="59" width="540" height="1"/>
@@ -728,30 +734,19 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cEO-DD-A3P">
-                                        <rect key="frame" x="0.0" y="60" width="540" height="60"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzK-NT-GYF">
-                                                <rect key="frame" x="0.0" y="0.0" width="540" height="54"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsZ-fx-7Zx">
-                                                <rect key="frame" x="0.0" y="59" width="540" height="1"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="6CL-RV-kLJ"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IEt-Yz-cmk">
-                                        <rect key="frame" x="0.0" y="120" width="540" height="60"/>
+                                        <rect key="frame" x="0.0" y="60" width="540" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-hy-VC4">
                                                 <rect key="frame" x="0.0" y="0.0" width="540" height="54"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hay-q2-jTe">
                                                 <rect key="frame" x="0.0" y="59" width="540" height="1"/>
@@ -762,19 +757,71 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="4aK-jW-A8e">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dpG-Bh-gGV">
+                                        <rect key="frame" x="0.0" y="120" width="540" height="60"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEt-fs-TTO">
+                                                <rect key="frame" x="0.0" y="0.0" width="540" height="54"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSD-2U-mdL">
+                                                <rect key="frame" x="0.0" y="59" width="540" height="1"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="wYo-sa-aJj"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nN8-WX-Yov">
                                         <rect key="frame" x="0.0" y="180" width="540" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MB5-KZ-4S9">
-                                                <rect key="frame" x="508" y="0.0" width="32" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Next">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-DZ-uSM">
+                                                <rect key="frame" x="0.0" y="0.0" width="540" height="54"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xx-sf-ZbA">
+                                                <rect key="frame" x="0.0" y="59" width="540" height="1"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="tJM-vT-0dp"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fr8-MK-6mu">
+                                        <rect key="frame" x="0.0" y="240" width="540" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Gh-zVL">
+                                                <rect key="frame" x="0.0" y="0.0" width="540" height="59"/>
+                                                <state key="normal" title="SIGN UP">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="didPressNext:" destination="941-pb-Pic" eventType="touchUpInside" id="gB2-VT-LER"/>
+                                                    <action selector="didPressSignUp:" destination="941-pb-Pic" eventType="touchUpInside" id="870-Ak-4xT"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyo-Dg-lAI">
+                                                <rect key="frame" x="0.0" y="59" width="540" height="1"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="dAM-e2-qIQ"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -785,7 +832,7 @@
                             <constraint firstItem="R0W-U1-Nwc" firstAttribute="top" secondItem="gUu-FF-tKI" secondAttribute="bottom" id="33O-5U-bAJ"/>
                             <constraint firstItem="gUu-FF-tKI" firstAttribute="height" secondItem="3r3-0o-D8Z" secondAttribute="height" multiplier="0.1" id="8iD-N1-caf"/>
                             <constraint firstItem="R0W-U1-Nwc" firstAttribute="leading" secondItem="3r3-0o-D8Z" secondAttribute="leadingMargin" constant="10" id="AVy-5a-GoC"/>
-                            <constraint firstItem="R0W-U1-Nwc" firstAttribute="height" secondItem="3r3-0o-D8Z" secondAttribute="height" multiplier="0.4" id="ImI-Uz-7hU"/>
+                            <constraint firstItem="R0W-U1-Nwc" firstAttribute="height" secondItem="3r3-0o-D8Z" secondAttribute="height" multiplier="0.5" id="ImI-Uz-7hU"/>
                             <constraint firstItem="gUu-FF-tKI" firstAttribute="top" secondItem="AGp-pF-bsl" secondAttribute="bottom" id="aTY-Yc-Wd2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="R0W-U1-Nwc" secondAttribute="trailing" constant="10" id="kUO-kI-MPq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gUu-FF-tKI" secondAttribute="trailing" id="nv9-28-gdh"/>
@@ -793,7 +840,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="VbI-z0-dLo" kind="show" identifier="VolunteerAccountInfo" id="brC-q3-x4p"/>
+                        <outlet property="emailTextField" destination="EEt-fs-TTO" id="XiD-NO-3aQ"/>
+                        <outlet property="nameTextField" destination="UCv-NM-dco" id="vUC-KZ-Q4Z"/>
+                        <outlet property="passwordTextField" destination="qhH-DZ-uSM" id="dvw-VY-EpJ"/>
+                        <outlet property="phoneTextField" destination="hf0-hy-VC4" id="m4Y-AJ-3SH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5q6-jC-Fns" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -953,7 +1003,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="CeO-Mk-KDC">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="CeO-Mk-KDC">
                                 <rect key="frame" x="20" y="64" width="560" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOLUNTEER SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxH-Nk-lxT">
@@ -964,7 +1014,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hMw-59-npA">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hMw-59-npA">
                                 <rect key="frame" x="30" y="124" width="540" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ybC-jJ-35u">
@@ -1082,7 +1132,7 @@
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m3V-mn-zKz" id="xu3-Q3-olx">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1154,7 +1204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jry-7P-ToY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1769" y="1061"/>
+            <point key="canvasLocation" x="1049" y="1509"/>
         </scene>
         <!--Account Info View Controller-->
         <scene sceneID="xwx-Rb-XC9">
