@@ -15,9 +15,12 @@ target 'hackathon-for-hunger' do
   pod 'TwitterCore'
   pod 'SwiftyJSON'
   pod 'JSONCodable', '~> 2.1'
+  pod 'NVActivityIndicatorView', '~> 2.5'
 end
+
 
 target 'hackathon-for-hungerTests' do
 
 end
+
 

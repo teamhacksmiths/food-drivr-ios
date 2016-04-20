@@ -8,12 +8,15 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import NVActivityIndicatorView
 
 class LoginViewController: UIViewController {
-
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
+    let activityIndicator = NVActivityIndicatorView(frame: CGRectMake(0, 0, 15, 15), type: .BallScaleMultiple, color: UIColor.whiteColor(), padding: 0)
+    
+
     var loginProvider = LoginProvider.None
     
     override func viewDidAppear(animated: Bool) {
@@ -29,8 +32,25 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-
+    }
+    
+    func authReply(reply: String){
+        /* alert code courtesy of iOS Creator (http://www.ioscreator.com/tutorials/display-an-alert-view-in-ios8-with-swift ) */
+        let alertController = UIAlertController(title: "Food Drivr", message:
+            "\(reply)", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    
+    }
+    
+    func checkAuth() -> Bool{
+        if(emailInput.text!.isEmpty || passwordInput.text!.isEmpty){
+            return false
+        }
+        return true
     }
 
     @IBAction func singInUsingFacebook(sender: UIButton) {
@@ -40,8 +60,15 @@ class LoginViewController: UIViewController {
 
     @IBAction func signInButtonClicked(sender: AnyObject) {
         //Suggestion for implementing the signIn
+        self.activityIndicator.startAnimation()
+        if !checkAuth() {
+            authReply("Please fill in both fields to proceed")
+            return
+        }
         loginProvider = .Custom(emailInput.text!, passwordInput.text!)
         loginProvider.login(self)
+        
+       // self.activityIndicator.stopAnimation()
         
     }
     
@@ -80,6 +107,7 @@ extension LoginViewController: LoginProviderDelegate {
     
     func loginProvider(loginProvider: LoginProvider, didFail error: NSError){
         print(error)
+        authReply("Please supply valid credentials to proceed")
     }
     
 }

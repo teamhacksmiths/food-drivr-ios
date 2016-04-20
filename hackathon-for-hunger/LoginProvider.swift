@@ -72,6 +72,8 @@ enum LoginProvider {
         
     }
     
+
+    
     private func loginUsingFacebook(delegate: LoginProviderDelegate, viewController: UIViewController) {
     
         LoginProvider.facebookLoginManager.logInWithReadPermissions(LoginProvider.permission, fromViewController: viewController, handler: {
