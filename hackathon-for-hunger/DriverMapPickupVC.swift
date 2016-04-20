@@ -69,11 +69,11 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         switch kind {
         case .Pickup:
             buttonBackground.backgroundColor = data.pinColorPickup
-            pickupDropoffButton.setTitle("PICKED UP", forState: .Normal)
+            pickupDropoffButton.setTitle("CONFIRM PICK UP", forState: .Normal)
             cancelPickupButton.hidden = false
         case .Dropoff:
             buttonBackground.backgroundColor = data.pinColorDropoff
-            pickupDropoffButton.setTitle("DROPPED OFF", forState: .Normal)
+            pickupDropoffButton.setTitle("CONFIRM DROP OFF", forState: .Normal)
             cancelPickupButton.hidden = true
         }
     }
