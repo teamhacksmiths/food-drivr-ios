@@ -9,7 +9,7 @@
 import UIKit
 
 enum State {
-    case UnCompleteField
+    case IncompleteField
     case NotEmail
     case Custom(String, String)
     case None
@@ -64,7 +64,7 @@ extension VSUserInfoViewController {
             case .None:
                 createUser()
                 sendToServer()
-            case .UnCompleteField:
+            case .IncompleteField:
                 showAlert(validationState)
             case .NotEmail:
                 showAlert(validationState)
@@ -97,7 +97,7 @@ extension VSUserInfoViewController {
         
         if nameTextField.text == "" && phoneTextField.text == ""
             && emailTextField.text == "" && passwordTextField.text == "" {
-            return .UnCompleteField
+            return .IncompleteField
         }else if !isValidEmail(emailTextField.text!) {
             return .NotEmail
         }
@@ -119,12 +119,12 @@ extension VSUserInfoViewController {
         let buttonTitle = "try"
         
         switch state {
-        case .UnCompleteField:
-            title = "Uncomplete Field"
-            message = "Please make sure to complete all field"
+        case .IncompleteField:
+            title = "Incomplete Field"
+            message = "Please ensure you complete all fields"
         case .NotEmail:
-            title = "Wrong email"
-            message = "Please make sure to enter correct email"
+            title = "Incorrect email"
+            message = "Please ensure you enter a valid email"
         case .Custom(let titleAlert, let messageAlert):
             title = titleAlert
             message = messageAlert
@@ -133,9 +133,7 @@ extension VSUserInfoViewController {
         }
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let alertAction = UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.Default, handler: {action in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        })
+        let alertAction = UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.Default, handler: nil )
         alert.addAction(alertAction)
         presentViewController(alert, animated: true, completion: nil)
         

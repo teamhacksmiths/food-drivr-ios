@@ -43,16 +43,9 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
         /* courtesy of stack overflow post: http://stackoverflow.com/questions/2339620/uitableview-add-content-offset-at-top*/
         //self.tableView.contentInset = UIEdgeInsetsMake(25, 0, 0, 0)
         
+        view.backgroundColor = UIColor(red: 77/255, green: 57/255, blue: 75/255, alpha: 1)
+        tableView.backgroundColor = UIColor(red: 77/255, green: 57/255, blue: 75/255, alpha: 1)
         // check to see if user is a driver or donor and set color appropriateley
-        switch user.id{
-            case 0:
-                view.backgroundColor = UIColor.orangeColor()
-                tableView.backgroundColor = UIColor.orangeColor()
-            case 1:
-                view.backgroundColor = UIColor.blueColor()
-                tableView.backgroundColor = UIColor.blueColor()
-            default: view.backgroundColor = UIColor.whiteColor()
-        }
         
     }
 
@@ -81,6 +74,7 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
             cell.textLabel!.textColor = UIColor.whiteColor()
             cell.textLabel!.font.fontWithSize(18.0)
             cell.backgroundColor = UIColor.clearColor()
+            cell.addBorderBottom(size: 1, color: UIColor.whiteColor().colorWithAlphaComponent(0.5))
         
                 // Configure the cell...
         return cell

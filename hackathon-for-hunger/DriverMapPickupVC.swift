@@ -16,6 +16,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         case Pickup
     }
     
+    var mapsModel = MapsModel.sharedInstance
     var data = MapsDummyData.sharedInstance
     
     var startingRegion = MapsDummyData.sharedInstance.startingRegion // used to retrieve precalculated starting region
@@ -114,7 +115,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 }
                 if let first = self.mapView.overlays.first {
                     let rect = self.mapView.overlays.reduce(first.boundingMapRect, combine: {MKMapRectUnion($0, $1.boundingMapRect)})
-                    self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0), animated: true)
+                    self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 100.0, left: 100.0, bottom: 10.0, right: 100.0), animated: true)
                 }
             }
         }
@@ -126,7 +127,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         
         mapView.delegate = self
-        mapView.setRegion(startingRegion, animated: true)
+        mapView.setRegion(startingRegion, animated: true) // set starting region to overview map's region?
         
         updateUI()
         
@@ -153,8 +154,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 
                 for route in unwrappedResponse.routes {
                     self.mapView.addOverlay(route.polyline)
-                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-
+                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: UIEdgeInsets(top: 100.0, left: 80.0, bottom: 10.0, right: 80.0), animated: true)
 
                 }
                 
@@ -174,13 +174,47 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        zoomToFitMapAnnotations()
+    }
+    
     
     //MARK:- MapView delegate methods
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         
-        mapView.showAnnotations(mapView.annotations, animated: true)
+        //mapView.showAnnotations(mapView.annotations, animated: true)
+        zoomToFitMapAnnotations()
         
+    }
+    
+    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == annotationView.rightCalloutAccessoryView {
+            if let annotation = annotationView.annotation as? DonationPin {
+                let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+                
+                switch annotation.kind {
+                    
+                case .Pickup:
+                    let placemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
+                    let pickupMapItem = MKMapItem(placemark: placemark)
+                    pickupMapItem.name = donation?.donor?.name
+                    // with just 1 item, maps will give directions from user location to item
+                    MKMapItem.openMapsWithItems([pickupMapItem], launchOptions: launchOptions)
+                    
+                case .Dropoff:
+                    let pickupPlacemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
+                    let dropoffPlacemark = MKPlacemark(coordinate: (annotationView.annotation?.coordinate)!, addressDictionary: nil)
+                    let pickupMapItem = MKMapItem(placemark: pickupPlacemark)
+                    let dropoffMapItem = MKMapItem(placemark: dropoffPlacemark)
+                    pickupMapItem.name = donation?.donor?.name
+                    dropoffMapItem.name = donation?.recipient?.name
+                    // with 2 items, directions will be from the 1st to the 2nd item
+                    MKMapItem.openMapsWithItems([pickupMapItem, dropoffMapItem], launchOptions: launchOptions)
+                }
+            }
+        }
     }
     
     
@@ -204,8 +238,14 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                         pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
                         pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
                     }
-                    let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
-                    pinView!.leftCalloutAccessoryView?.frame = frame
+                    let leftFrame = CGRectMake(0.0, 0.0, 70.0, 50.0)
+                    pinView!.leftCalloutAccessoryView?.frame = leftFrame
+                    
+                    let rightFrame = CGRectMake(0.0, 0.0, 58.0, 50.0)
+                    let directionButton = UIButton(frame: rightFrame)
+                    directionButton.setImage(UIImage(named: "directions_icon"), forState: UIControlState.Normal)
+                    pinView!.rightCalloutAccessoryView?.frame = rightFrame
+                    pinView!.rightCalloutAccessoryView = directionButton
                 }
             }
             pinView?.canShowCallout = true
@@ -283,9 +323,23 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             dropoffAnnotation.kind = .Dropoff
             
             mapView.addAnnotation(dropoffAnnotation)
+            mapView.selectAnnotation(dropoffAnnotation, animated: true)
         }
 
     }
+    
+    
+    func zoomToFitMapAnnotations() {
+        if mapView.annotations.count == 0 {
+            mapView.setRegion(startingRegion, animated: true)
+            return
+        }
+        
+        let region = mapsModel.getRegionForAnnotations(mapView.annotations)
+        
+        mapView.setVisibleMapRect(mapsModel.MKMapRectForCoordinateRegion(mapView.regionThatFits(region)), edgePadding: UIEdgeInsets(top: 50, left: 50, bottom: 0, right: 50), animated: true)
+    }
+    
 }
 
 

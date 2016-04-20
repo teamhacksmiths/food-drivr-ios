@@ -55,8 +55,8 @@ class BaseRouter : URLRequestConvertible, APIConfiguration {
     }
     
     var URLRequest: NSMutableURLRequest {
-        let baseURL = NSURL(string: baseUrl);
-        _ = NSURLRequest(URL: baseURL!.URLByAppendingPathComponent(path))
+        
+        let baseURL = NSURL(string: baseUrl)
         let mutableURLRequest = NSMutableURLRequest(URL: baseURL!.URLByAppendingPathComponent(path))
         mutableURLRequest.HTTPMethod = method.rawValue
         if let token = AuthProvider.sharedInstance.getToken() {
