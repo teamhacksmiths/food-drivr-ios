@@ -23,6 +23,13 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    // action for unwind segue
+    @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        
+//        let linkBrowserVC: LinkBrowser  = unwindSegue.sourceViewController as! LinkBrowser
+//        linkTextField.text = linkBrowserVC.linkTextField.text
+        
+    }
     
     override func viewDidLoad() {
 
@@ -41,12 +48,6 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
     }
     
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-
-        
-    }
     
     func readAndDisplayAnnotations() {
         
