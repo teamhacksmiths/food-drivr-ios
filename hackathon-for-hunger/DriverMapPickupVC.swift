@@ -41,7 +41,6 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var donorPhoneLabel: UILabel!
 
     @IBOutlet weak var pickupDropoffButton: UIButton!
-    @IBOutlet weak var cancelPickupButton: UIButton!
     @IBOutlet weak var buttonBackground: UIView!
     
     @IBAction func donationPickedUp(sender: AnyObject) {
@@ -69,12 +68,12 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         switch kind {
         case .Pickup:
             buttonBackground.backgroundColor = data.pinColorPickup
-            pickupDropoffButton.setTitle("PICKED UP", forState: .Normal)
-            cancelPickupButton.hidden = false
+            pickupDropoffButton.setTitle("CONFIRM PICK UP", forState: .Normal)
+
         case .Dropoff:
             buttonBackground.backgroundColor = data.pinColorDropoff
-            pickupDropoffButton.setTitle("DROPPED OFF", forState: .Normal)
-            cancelPickupButton.hidden = true
+            pickupDropoffButton.setTitle("CONFIRM DROP OFF", forState: .Normal)
+
         }
     }
     

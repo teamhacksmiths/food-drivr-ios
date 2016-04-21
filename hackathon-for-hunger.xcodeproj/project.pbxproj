@@ -48,6 +48,9 @@
 		44B7F0001CADAD5B00E7C609 /* DonationRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */; };
 		44C0CF521CBD670600EA3390 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C0CF511CBD670600EA3390 /* Setting.swift */; };
 		44C0CF561CBD6B9100EA3390 /* UserDonorMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */; };
+		634E34291CC84E7100DD48BF /* multiple-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34261CC84E7100DD48BF /* multiple-circle.png */; };
+		634E342A1CC84E7100DD48BF /* multiple-circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34271CC84E7100DD48BF /* multiple-circle@2x.png */; };
+		634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34281CC84E7100DD48BF /* multiple-circle@3x.png */; };
 		6352F18E1CC6114B0096FE59 /* directions_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6352F18D1CC6114B0096FE59 /* directions_icon.pdf */; };
 		6365C4711CC4C0CE004ABFF4 /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365C4701CC4C0CE004ABFF4 /* MapsModel.swift */; };
 		6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C0881CB1D69D0059B5E1 /* DonationMapOverviewVC.swift */; };
@@ -131,6 +134,9 @@
 		44C0CF511CBD670600EA3390 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDonorMock.json; sourceTree = "<group>"; };
 		4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		634E34261CC84E7100DD48BF /* multiple-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle.png"; sourceTree = "<group>"; };
+		634E34271CC84E7100DD48BF /* multiple-circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@2x.png"; sourceTree = "<group>"; };
+		634E34281CC84E7100DD48BF /* multiple-circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@3x.png"; sourceTree = "<group>"; };
 		6352F18D1CC6114B0096FE59 /* directions_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon.pdf; sourceTree = "<group>"; };
 		6365C4701CC4C0CE004ABFF4 /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
 		6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = ApiKeys.plist; sourceTree = "<group>"; };
@@ -390,6 +396,9 @@
 		63CAF7F61CC29BD4000D89A1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				634E34261CC84E7100DD48BF /* multiple-circle.png */,
+				634E34271CC84E7100DD48BF /* multiple-circle@2x.png */,
+				634E34281CC84E7100DD48BF /* multiple-circle@3x.png */,
 				6352F18D1CC6114B0096FE59 /* directions_icon.pdf */,
 				63CAF7F21CC29BC4000D89A1 /* dropoff_icon.pdf */,
 				63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */,
@@ -522,8 +531,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */,
+				634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */,
+				634E34291CC84E7100DD48BF /* multiple-circle.png in Resources */,
 				443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */,
 				F7AFF7E61CBAF252008C6004 /* ApiKeys.plist in Resources */,
+				634E342A1CC84E7100DD48BF /* multiple-circle@2x.png in Resources */,
 				443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */,
 				6395C0921CB83DE60059B5E1 /* Portland-BridgePortBrewPub.gpx in Resources */,
 				44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */,
