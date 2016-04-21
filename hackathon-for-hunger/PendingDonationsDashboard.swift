@@ -14,6 +14,7 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var imageView: UIImageView!
     var realm = try! Realm()
     var donations: Results<Donation>?
+    private var refreshControl: UIRefreshControl!
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -23,6 +24,17 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
         imageView.layer.cornerRadius = imageView.frame.size.height/2
         imageView.clipsToBounds = true
         self.getDonations()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(PendingDonationsDashboard.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    
+    func refresh(sender: AnyObject) {
+        
+        getDonations()
+        refreshControl?.endRefreshing()
     }
     
     //Mark - Setting up tableView
