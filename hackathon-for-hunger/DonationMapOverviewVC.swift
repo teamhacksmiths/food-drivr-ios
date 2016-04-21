@@ -26,9 +26,6 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     // action for unwind segue
     @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
         
-//        let linkBrowserVC: LinkBrowser  = unwindSegue.sourceViewController as! LinkBrowser
-//        linkTextField.text = linkBrowserVC.linkTextField.text
-        
     }
     
     override func viewDidLoad() {

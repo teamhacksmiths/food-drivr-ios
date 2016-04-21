@@ -1490,6 +1490,19 @@
                                     <constraint firstItem="qsK-db-zvt" firstAttribute="centerY" secondItem="am9-Z9-rpW" secondAttribute="centerY" id="gpv-su-kVH"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mut-UQ-0xE">
+                                <rect key="frame" x="558" y="20" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="1t8-Jl-xOJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="8Gv-IH-XdU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="NT6-tO-elF"/>
+                                    <constraint firstAttribute="height" constant="32" id="iwe-R1-Qya"/>
+                                </constraints>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <segue destination="cUn-5h-V2r" kind="unwind" unwindAction="unwindForSegue:towardsViewController:" id="eFM-5m-TWk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1499,7 +1512,9 @@
                             <constraint firstItem="UVm-hs-IDR" firstAttribute="leading" secondItem="fEI-Hq-ukm" secondAttribute="leadingMargin" constant="-20" id="Hna-Ek-Go0"/>
                             <constraint firstItem="am9-Z9-rpW" firstAttribute="leading" secondItem="fEI-Hq-ukm" secondAttribute="leading" id="XtT-eZ-cgg"/>
                             <constraint firstItem="fKf-el-uC3" firstAttribute="top" secondItem="am9-Z9-rpW" secondAttribute="bottom" id="Ygc-OV-TEc"/>
+                            <constraint firstItem="Mut-UQ-0xE" firstAttribute="top" secondItem="tRP-5h-4KX" secondAttribute="bottom" id="guL-kb-y21"/>
                             <constraint firstItem="am9-Z9-rpW" firstAttribute="top" secondItem="jjA-mm-nmi" secondAttribute="bottom" constant="84" id="iIg-L9-ufL"/>
+                            <constraint firstAttribute="trailing" secondItem="Mut-UQ-0xE" secondAttribute="trailing" constant="10" id="kUA-P6-MDf"/>
                             <constraint firstItem="jjA-mm-nmi" firstAttribute="top" secondItem="fEI-Hq-ukm" secondAttribute="top" id="o0W-et-hwf"/>
                             <constraint firstAttribute="trailing" secondItem="jjA-mm-nmi" secondAttribute="trailing" id="rvU-QF-HoB"/>
                             <constraint firstItem="UVm-hs-IDR" firstAttribute="bottom" secondItem="fKf-el-uC3" secondAttribute="top" constant="-40" id="yrM-q7-R2i"/>
@@ -1518,8 +1533,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWr-E2-OBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cUn-5h-V2r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2665" y="4633"/>
+            <point key="canvasLocation" x="1309" y="3857"/>
         </scene>
         <!--Donations-->
         <scene sceneID="WdT-v9-7JV">
@@ -1843,7 +1859,7 @@
                                         <color key="tintColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="acceptDonation:" destination="B4v-Zv-mgG" id="h8g-er-DVK"/>
-                                            <segue destination="gGM-iH-0Tj" kind="show" identifier="toDriverPickupMap" id="LHZ-n7-nss"/>
+                                            <segue destination="gGM-iH-0Tj" kind="presentation" identifier="toDriverPickupMap" id="LHZ-n7-nss"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cdg-2m-OHJ"/>
