@@ -11,12 +11,17 @@ import RealmSwift
 
 class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var imageView: UIImageView!
     var realm = try! Realm()
     var donations: Results<Donation>?
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.layer.borderWidth=1.0
+        imageView.layer.borderColor = UIColor.blackColor().CGColor
+        imageView.layer.cornerRadius = imageView.frame.size.height/2
+        imageView.clipsToBounds = true
         self.getDonations()
     }
     
@@ -32,10 +37,9 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! PendingDonationsDashboardTableViewCell
         cell.indexPath = indexPath
         cell.information = donations![indexPath.row]
-        if indexPath.row == 0 {
-            cell.addBorderTop(size: 1, color: UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1))
-        }
-        cell.addBorderBottom(size: 1, color: UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1))
+        cell.addBorderTop(size: 1, color: UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1))
+        
+        
         return cell
     }
     
