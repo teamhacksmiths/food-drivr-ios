@@ -13,6 +13,7 @@ enum DonationStatus: Int {
     case Pending
     case Active
     case Completed
+    case Any
 }
 
 class Donation: Object {

@@ -36,6 +36,7 @@
 		44638F061CC3EDD0005379FE /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44638F051CC3EDD0005379FE /* UIViewExtensions.swift */; };
 		4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464177E1CB182AC00F37F17 /* Recipient.swift */; };
 		446417811CB1872500F37F17 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446417801CB1872500F37F17 /* Image.swift */; };
+		447CC8CB1CC9F0980021A3D9 /* DonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447CC8CA1CC9F0980021A3D9 /* DonationViewModel.swift */; };
 		44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250A1CAC444100D676C3 /* BaseRouter.swift */; };
 		44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */; };
 		44A725101CAC559500D676C3 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250F1CAC559500D676C3 /* Donation.swift */; };
@@ -117,6 +118,7 @@
 		44638F051CC3EDD0005379FE /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		4464177E1CB182AC00F37F17 /* Recipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
 		446417801CB1872500F37F17 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		447CC8CA1CC9F0980021A3D9 /* DonationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewModel.swift; sourceTree = "<group>"; };
 		44A7250A1CAC444100D676C3 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouter.swift; sourceTree = "<group>"; };
 		44A7250F1CAC559500D676C3 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
@@ -246,6 +248,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		447CC8C91CC9F07F0021A3D9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				447CC8CA1CC9F0980021A3D9 /* DonationViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		44A725081CAC441F00D676C3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +327,7 @@
 		44AEA8721CA9CBC100A52731 /* hackathon-for-hunger */ = {
 			isa = PBXGroup;
 			children = (
+				447CC8C91CC9F07F0021A3D9 /* ViewModel */,
 				44638F041CC3EDBA005379FE /* Extensions */,
 				443D1DA81CB6D56100E2E7B9 /* Assets */,
 				44484DDF1CAFD8B2002D7233 /* Auth */,
@@ -656,6 +667,7 @@
 				44484DE31CAFDA45002D7233 /* Token.swift in Sources */,
 				6395C08C1CB1F2B50059B5E1 /* DonorInfo.swift in Sources */,
 				3CC1ABCA1CC15E8800E01EE0 /* ProfileViewController.swift in Sources */,
+				447CC8CB1CC9F0980021A3D9 /* DonationViewModel.swift in Sources */,
 				44484DDE1CAFD857002D7233 /* User.swift in Sources */,
 				EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */,
 				44638F061CC3EDD0005379FE /* UIViewExtensions.swift in Sources */,

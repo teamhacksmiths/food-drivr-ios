@@ -9,21 +9,26 @@
 import UIKit
 import RealmSwift
 
-class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PendingDonationsDashboard: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    var realm = try! Realm()
-    var donations: Results<Donation>?
+    @IBOutlet weak var tableView: UITableView!
     private var refreshControl: UIRefreshControl!
     
-    @IBOutlet weak var tableView: UITableView!
+    var realm = try! Realm()
+    var donationVM: DonationViewModel!
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.layer.borderWidth=1.0
         imageView.layer.borderColor = UIColor.blackColor().CGColor
         imageView.layer.cornerRadius = imageView.frame.size.height/2
         imageView.clipsToBounds = true
-        self.getDonations()
+        donationVM = DonationViewModel()
+        donationVM.delegate = self
+        donationVM.fetch(.Pending)
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PendingDonationsDashboard.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
@@ -33,72 +38,13 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
     
     func refresh(sender: AnyObject) {
         
-        getDonations()
+        donationVM.fetchRemotely(.Pending)
         refreshControl?.endRefreshing()
     }
-    
-    //Mark - Setting up tableView
-    
-     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return donations?.count ?? 0
-    }
-    
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let identifier = "pendingDonation"
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! PendingDonationsDashboardTableViewCell
-        cell.indexPath = indexPath
-        cell.information = donations![indexPath.row]
-        cell.addBorderTop(size: 1, color: UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1))
-        
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?
-    {
-        let accept = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Accept Donation" , handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-            //go to accept donation
-        })
-        accept.backgroundColor = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
-        
-        
-        return [accept]
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("toDriverMapDetailPendingFromDashboard", sender: donations![indexPath.row])
-    }
-    
-    //empty implementation
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    }
-    
+
     @IBAction func toggleMenu(sender: AnyObject) {
         self.slideMenuController()?.openLeft()
     }
-    
-    func getDonations() {
-        let pendingDonations = realm.objects(Donation)
-        guard pendingDonations.count > 0 else {
-            self.fetchRemoteDonations()
-            return
-        }
-        self.donations = pendingDonations
-        self.tableView.reloadData()
-    }
-    
-    private func fetchRemoteDonations() {
-        DrivrAPI.sharedInstance.getDonations(success: {
-            (results) in
-            self.donations = results
-            self.tableView.reloadData()
-            }, failure: {
-                (error) in
-                print(error)
-        })
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toDriverMapDetailPendingFromDashboard") {
             
@@ -108,11 +54,74 @@ class PendingDonationsDashboard: UIViewController, UITableViewDelegate, UITableV
                 donationVC.donation = donation
             }
         }
+        
+        if (segue.identifier == "acceptedDonation") {
+            
+            if let donation = sender as? Donation {
+                let donationVC = segue.destinationViewController as! DriverMapPickupVC
+                
+                donationVC.donation = donation
+            }
+        }
+
     }
 }
 
-
-
+extension PendingDonationsDashboard:  UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return donationVM.count()
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let identifier = "pendingDonation"
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! PendingDonationsDashboardTableViewCell
+        cell.indexPath = indexPath
+        cell.information = donationVM.donationAtIndex(indexPath.row)
+        cell.addBorderTop(size: 1, color: UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1))
+        
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?
+    {
+        let accept = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Accept Donation" , handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
+            let donation = self.donationVM.donationAtIndex(indexPath.row)
+            self.donationVM.updateDonationStatus(donation, status: .Active)
+            self.performSegueWithIdentifier("acceptedDonation", sender: self.donationVM.donationAtIndex(indexPath.row))
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
+        accept.backgroundColor = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
+        
+        
+        return [accept]
+    }
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
+        UIView.animateWithDuration(0.25, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1,1,1)
+        })
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("toDriverMapDetailPendingFromDashboard", sender: donationVM.donationAtIndex(indexPath.row))
+    }
+    
+    //empty implementation
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
+}
+extension PendingDonationsDashboard: DonationDelegate {
+    
+    func donationViewModel(sender: DonationViewModel, didSucceed donations: Results<Donation>) {
+        self.tableView.reloadData()
+    }
+    func donationViewModel(sender: DonationViewModel, didFail error: NSError) {
+        
+    }
+}
 
 
 
