@@ -14,7 +14,7 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     let user = User()
     
-    let data = ["Dashboard", "Donations", "My Profile"]
+    let data = ["Pending Donations", "Current Donations", "Donation History", "My Profile"]
     
     var menu = MenuManager.None
 
