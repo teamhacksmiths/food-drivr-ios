@@ -17,8 +17,9 @@ protocol MenuManagerDelegate {
 
 enum MenuManager: Int {
     
-    case Dashboard = 0
-    case DonationOverView
+    case PendingDonations = 0
+    case CurrentDonations
+    case DonationHistory
     case Profile
     case None
 
@@ -31,8 +32,8 @@ enum MenuManager: Int {
     
     
     private struct Identifier {
-        static let dashboardIdentifier = "Main"
-        static let donationOverViewIdentifier = "DonationOverviewMap"
+        static let pendingDonationsIdentifier = "Main"
+        static let currentDonationsIdentifier = "CurrentDonationLIstView"
         static let profileIdentifier = "ProfileViewController"
     }
     
@@ -42,13 +43,14 @@ enum MenuManager: Int {
     
     private func createNavigationController() {
         switch self {
-            case .Dashboard:
-                let dashboardVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.dashboardIdentifier)
+            case .PendingDonations:
+                let dashboardVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.pendingDonationsIdentifier)
                                             as! DonationsOverviewViewController
                 MenuManager.navigationController = UINavigationController(rootViewController: dashboardVC)
-            case .DonationOverView:
-                let donationOverVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.donationOverViewIdentifier)
-                    as! DonationMapOverviewVC
+            
+            case .CurrentDonations:
+                let donationOverVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.currentDonationsIdentifier)
+                    as! CurrentDonationsDashboard
                 MenuManager.navigationController = UINavigationController(rootViewController: donationOverVC)
         
                 // prepare for Core Location (allowing user location on maps)
@@ -58,10 +60,16 @@ enum MenuManager: Int {
                 locationManager.requestAlwaysAuthorization()
                 locationManager.requestWhenInUseAuthorization()
             
+        case .DonationHistory:
+            let profileVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.currentDonationsIdentifier)
+                as! CurrentDonationsDashboard
+            MenuManager.navigationController = UINavigationController(rootViewController: profileVC)
+            
             case .Profile:
                 let profileVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.profileIdentifier)
                     as! ProfileViewController
                 MenuManager.navigationController = UINavigationController(rootViewController: profileVC)
+            
             case None:
                 break
         }

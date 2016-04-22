@@ -20,6 +20,7 @@
             <string>Colaborate-Thin</string>
             <string>Colaborate-Thin</string>
             <string>Colaborate-Thin</string>
+            <string>Colaborate-Thin</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -421,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzI-iM-6MS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1088" y="3835"/>
+            <point key="canvasLocation" x="-920" y="3879"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Fcq-c4-cG8">
@@ -1911,6 +1912,124 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkc-5w-0cc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1937" y="4575"/>
+        </scene>
+        <!--Current Donations Dashboard-->
+        <scene sceneID="lNV-H6-O42">
+            <objects>
+                <viewController storyboardIdentifier="CurrentDonationLIstView" id="BdM-jH-JCw" customClass="CurrentDonationsDashboard" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lKR-KG-b95"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vre-B2-X9f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J0M-ZK-tUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SJx-kh-v2u">
+                                <rect key="frame" x="40" y="165" width="520" height="391"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="pendingDonation" selectionStyle="default" indentationWidth="10" reuseIdentifier="pendingDonation" rowHeight="70" id="uWG-Uv-qbz" customClass="PendingDonationsDashboardTableViewCell" customModule="hackathon_for_hunger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="520" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uWG-Uv-qbz" id="Enx-b0-qIv">
+                                            <rect key="frame" x="0.0" y="0.0" width="520" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-q9-SyY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="291" height="69"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-P9-Gyq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="291" height="69"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EINSTEIN BAGELS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIn-m0-cBt">
+                                                                    <rect key="frame" x="16" y="8" width="267" height="14"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="267" id="w0X-qS-qyB"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                                                    <color key="textColor" red="0.51764705879999995" green="0.8862745098" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 dozen bagels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r29-XP-PZW">
+                                                                    <rect key="frame" x="16" y="24" width="267" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="17" id="Mhc-4E-dYE"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="12"/>
+                                                                    <color key="textColor" red="0.55961538460000004" green="0.55961538460000004" blue="0.55961538460000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="993 jaquan lock, Portland" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E53-Hh-WJF">
+                                                                    <rect key="frame" x="16" y="43" width="267" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="NFT-XC-qo6"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="12"/>
+                                                                    <color key="textColor" red="0.55961538460000004" green="0.55961538460000004" blue="0.55961538460000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="8"/>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="a2y-q9-SyY" firstAttribute="top" secondItem="Enx-b0-qIv" secondAttribute="topMargin" constant="-8" id="ARl-cX-3OW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="a2y-q9-SyY" secondAttribute="bottom" constant="-8" id="amv-1J-Qsq"/>
+                                                <constraint firstItem="a2y-q9-SyY" firstAttribute="leading" secondItem="Enx-b0-qIv" secondAttribute="leadingMargin" constant="-8" id="tpe-cf-Aqx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="r29-XP-PZW" id="SR6-bE-vWJ"/>
+                                            <outlet property="fullNameLabel" destination="DIn-m0-cBt" id="wb3-mv-U4K"/>
+                                            <outlet property="locationLabel" destination="E53-Hh-WJF" id="PYb-Rq-rGn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BdM-jH-JCw" id="xFr-lN-UKq"/>
+                                    <outlet property="delegate" destination="BdM-jH-JCw" id="Mpr-rJ-hTG"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="YOUR CURRENT DONATIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdF-9T-lO4">
+                                <rect key="frame" x="40" y="105" width="520" height="21"/>
+                                <fontDescription key="fontDescription" name="Colaborate-Thin" family="Colaborate-Thin" pointSize="20"/>
+                                <color key="textColor" red="0.57373798080000005" green="0.57373798080000005" blue="0.57373798080000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="driver" translatesAutoresizingMaskIntoConstraints="NO" id="baj-8a-ez8">
+                                <rect key="frame" x="265" y="27" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="bVu-0G-Kq3"/>
+                                    <constraint firstAttribute="width" constant="70" id="yuD-TF-aeR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pdF-9T-lO4" firstAttribute="centerX" secondItem="J0M-ZK-tUZ" secondAttribute="centerX" id="2Sa-Wb-wHn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SJx-kh-v2u" secondAttribute="trailing" constant="20" id="8Ee-81-EHL"/>
+                            <constraint firstItem="SJx-kh-v2u" firstAttribute="top" secondItem="pdF-9T-lO4" secondAttribute="bottom" constant="39" id="F7O-L7-n7i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pdF-9T-lO4" secondAttribute="trailing" constant="20" id="GyO-yd-KMr"/>
+                            <constraint firstItem="pdF-9T-lO4" firstAttribute="top" secondItem="baj-8a-ez8" secondAttribute="bottom" constant="8" id="UWy-v5-b3p"/>
+                            <constraint firstItem="SJx-kh-v2u" firstAttribute="leading" secondItem="J0M-ZK-tUZ" secondAttribute="leadingMargin" constant="20" id="XGH-g0-C4V"/>
+                            <constraint firstItem="pdF-9T-lO4" firstAttribute="leading" secondItem="J0M-ZK-tUZ" secondAttribute="leadingMargin" constant="20" id="YEO-2g-xHa"/>
+                            <constraint firstItem="baj-8a-ez8" firstAttribute="top" secondItem="lKR-KG-b95" secondAttribute="bottom" constant="27" id="ZyL-zb-4XF"/>
+                            <constraint firstItem="Vre-B2-X9f" firstAttribute="top" secondItem="SJx-kh-v2u" secondAttribute="bottom" id="aMy-A1-nNg"/>
+                            <constraint firstItem="baj-8a-ez8" firstAttribute="centerX" secondItem="J0M-ZK-tUZ" secondAttribute="centerX" id="jCC-Te-8sh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="baj-8a-ez8" id="buD-Rt-cob"/>
+                        <outlet property="tableView" destination="SJx-kh-v2u" id="vuo-xD-3Ft"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zlV-eR-VZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-920" y="3207"/>
         </scene>
     </scenes>
     <resources>
