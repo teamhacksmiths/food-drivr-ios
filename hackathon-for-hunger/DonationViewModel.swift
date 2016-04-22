@@ -25,8 +25,8 @@ class DonationViewModel {
         return donations?.count ?? 0
     }
     
-    func filterByStatus(status: DonationStatus) {
-        
+    func donationAtIndex(index: Int) -> Donation {
+        return donations![index]
     }
     
     func fetch(status: DonationStatus? = .Any) {
@@ -35,7 +35,6 @@ class DonationViewModel {
             delegate?.donationViewModel(self, didSucceed: donations!)
             return
         }
-        print("CALLING FILTERED RESULTS \(status)")
         donations = realm.objects(Donation).filter("rawStatus = %@", status.rawValue)
         delegate?.donationViewModel(self, didSucceed: donations!)
         
@@ -49,6 +48,16 @@ class DonationViewModel {
             }, failure: {
                 (error) in
                 self.delegate?.donationViewModel(self, didFail: error!)
+        })
+    }
+    
+    func updateDonationStatus(donation: Donation, status: DonationStatus) {
+        DrivrAPI.sharedInstance.updateDonationStatus(donation, status:status,  success: {
+            _ in
+            print(donation)
+            }, failure: {
+                (error) in
+                print(error)
         })
     }
 }
