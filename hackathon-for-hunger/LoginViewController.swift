@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
-    let activityIndicator = NVActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50), type: .BallRotateChase, color:  UIColor(red: 31/255, green: 198/255, blue: 227/255, alpha: 0.7), padding: 0)
+    let activityIndicator = NVActivityIndicatorView(frame: CGRectMake(0, 0, 25, 25), type: .BallRotateChase, color:  UIColor(red: 31/255, green: 198/255, blue: 227/255, alpha: 0.7), padding: 0)
     
 
     var loginProvider = LoginProvider.None
