@@ -24,7 +24,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     // action for unwind segue
-    @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+    @IBAction func unwindDetailToPendingMap(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
         
     }
     
