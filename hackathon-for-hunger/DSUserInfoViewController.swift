@@ -57,10 +57,10 @@ class DSUserInfoViewController: UIViewController {
             phone = phoneTextField.text
             else { return false }
         
-        if name.isBlank() { return false }
-        if company.isBlank() { return false }
-        if adress.isBlank() { return false }
-        if phone.isBlank() { return false }
+        if name.isBlank { return false }
+        if company.isBlank { return false }
+        if adress.isBlank { return false }
+        if phone.isBlank { return false }
     
         return true
     }
@@ -97,11 +97,4 @@ extension DSUserInfoViewController: UITextFieldDelegate{
         return false
     }
     
-}
-
-extension String{
-    /// true if String is only white space
-    func isBlank() -> Bool{
-        return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).isEmpty
-    }
 }
