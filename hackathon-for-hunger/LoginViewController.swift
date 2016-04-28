@@ -9,6 +9,7 @@
 import UIKit
 import SlideMenuControllerSwift
 import NVActivityIndicatorView
+import CoreLocation
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailInput: UITextField!
@@ -33,6 +34,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(activityIndicator)
+        // Ask user for permission to use location services (should only ask the user the first time they use the app)
+        let locationManager = LocationManager.sharedInstance.locationManager
+        locationManager.delegate = LocationManager.sharedInstance
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
     }
     
     func authReply(reply: String){
