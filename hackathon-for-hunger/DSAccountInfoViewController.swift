@@ -74,8 +74,8 @@ class DSAccountInfoViewController: UIViewController {
         password = passwordTextField.text
             else { return false }
         
-        if email.isBlank() { return false }
-        if password.isBlank() { return false }
+        if email.isBlank { return false }
+        if password.isBlank { return false }
         
         return true
     }

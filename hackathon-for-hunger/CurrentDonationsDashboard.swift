@@ -11,6 +11,11 @@ import RealmSwift
 
 class CurrentDonationsDashboard: UIViewController {
     
+    // action for unwind segue
+    @IBAction func unwindForAccept(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        
+    }
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     private var refreshControl: UIRefreshControl!

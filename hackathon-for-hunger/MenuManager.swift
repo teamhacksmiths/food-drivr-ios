@@ -52,13 +52,6 @@ enum MenuManager: Int {
                 let donationOverVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.currentDonationsIdentifier)
                     as! CurrentDonationsDashboard
                 MenuManager.navigationController = UINavigationController(rootViewController: donationOverVC)
-        
-                // prepare for Core Location (allowing user location on maps)
-                let locationManager = LocationManager.sharedInstance.locationManager
-                locationManager.delegate = LocationManager.sharedInstance
-                locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                locationManager.requestAlwaysAuthorization()
-                locationManager.requestWhenInUseAuthorization()
             
         case .DonationHistory:
             let profileVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.currentDonationsIdentifier)

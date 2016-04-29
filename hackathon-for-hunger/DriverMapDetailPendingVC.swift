@@ -28,6 +28,11 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     //MARK:- Outlets & Actions
     
+    // action for unwind segue
+    @IBAction func unwindAcceptedToDetailPending(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        
+    }
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var recipientNameLabel: UILabel!
     @IBOutlet weak var recipientStreetLabel: UILabel!
