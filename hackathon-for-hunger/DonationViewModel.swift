@@ -41,14 +41,14 @@ class DonationViewModel {
     }
     
     func fetchRemotely(status: DonationStatus? = nil) {
-        DrivrAPI.sharedInstance.getDonations(success: {
-            (results) in
-            self.donations = results
+        DrivrAPI.sharedInstance.getDriverDonations().then() {
+            donations ->Void in
+            self.donations = donations
             self.fetch(status)
-            }, failure: {
-                (error) in
-                self.delegate?.donationViewModel(self, didFail: error!)
-        })
+            }.error {
+                error in
+                self.delegate?.donationViewModel(self, didFail: error as NSError)
+        }
     }
     
     func updateDonationStatus(donation: Donation, status: DonationStatus) {

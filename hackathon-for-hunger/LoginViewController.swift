@@ -111,8 +111,12 @@ extension LoginViewController: LoginProviderDelegate {
         self.segueToMenuController()
     }
     
+    func loginProvider(loginProvider: LoginProvider, didSucceed user: User?){
+        self.segueToMenuController()
+    }
+    
     func loginProvider(loginProvider: LoginProvider, didFail error: NSError){
-        print(error)
+        self.activityIndicator.stopAnimation()
         authReply("Please supply valid credentials to proceed")
     }
     

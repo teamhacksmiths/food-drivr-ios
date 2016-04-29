@@ -15,11 +15,30 @@ PODS:
     - FBSDKCoreKit
   - JSONCodable (2.1)
   - NVActivityIndicatorView (2.5)
-  - Realm (0.99.1):
-    - Realm/Headers (= 0.99.1)
-  - Realm/Headers (0.99.1)
-  - RealmSwift (0.99.1):
-    - Realm (= 0.99.1)
+  - OMGHTTPURLRQ (3.1.1):
+    - OMGHTTPURLRQ/RQ (= 3.1.1)
+  - OMGHTTPURLRQ/FormURLEncode (3.1.1)
+  - OMGHTTPURLRQ/RQ (3.1.1):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (3.1.1)
+  - PromiseKit (3.1.1):
+    - PromiseKit/Foundation (= 3.1.1)
+    - PromiseKit/QuartzCore (= 3.1.1)
+    - PromiseKit/UIKit (= 3.1.1)
+  - PromiseKit/CorePromise (3.1.1)
+  - PromiseKit/Foundation (3.1.1):
+    - OMGHTTPURLRQ (~> 3.1.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (3.1.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (3.1.1):
+    - PromiseKit/CorePromise
+  - Realm (0.98.8):
+    - Realm/Headers (= 0.98.8)
+  - Realm/Headers (0.98.8)
+  - RealmSwift (0.98.8):
+    - Realm (= 0.98.8)
   - SlideMenuControllerSwift (2.1.1)
   - SwiftyJSON (2.3.2)
   - TwitterCore (2.0.2):
@@ -35,6 +54,7 @@ DEPENDENCIES:
   - FBSDKShareKit
   - JSONCodable (~> 2.1)
   - NVActivityIndicatorView (~> 2.5)
+  - PromiseKit
   - RealmSwift
   - SlideMenuControllerSwift
   - SwiftyJSON
@@ -50,8 +70,10 @@ SPEC CHECKSUMS:
   FBSDKShareKit: 2d1746144cfc8a9dbbd24997c34ee0471be51b6a
   JSONCodable: d3bb8d1323bb4cbc381b16219046c5282565a4f1
   NVActivityIndicatorView: 18e82784c9cb2d5f3df3129a3e4754eb075ebca0
-  Realm: 522a0cc8e1f8755ee56d7dc16ca0fc380d045766
-  RealmSwift: 1d9c4299ef5dbf575c5da09fc706ed726327cfa0
+  OMGHTTPURLRQ: 633f98ee745aeda02345935a52eec1784cddb589
+  PromiseKit: 4e8127c22a9b29d1b44958ab2ec762ea6115cbfb
+  Realm: 0e293bb62999730599efc3048896bbd4f2e43bcd
+  RealmSwift: 064262d38113f23ff3508fb20a0a922e696bec01
   SlideMenuControllerSwift: 82ada9b04e03538c84d034cf1c09e5849c0113f7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TwitterCore: 0f44d8980a6879d5205dcb4e010d15e643e56fa0

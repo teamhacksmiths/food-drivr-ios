@@ -9,9 +9,10 @@
 import UIKit
 import FBSDKLoginKit
 import TwitterKit
+import PromiseKit
 
 protocol LoginProviderDelegate {
-    
+    func loginProvider(loginProvider: LoginProvider, didSucceed user: User?)
     func loginProvider(loginProvider: LoginProvider, didSucceed user: [String: AnyObject])
     func loginProvider(loginProvider: LoginProvider, didFail error: NSError)
     
@@ -219,38 +220,13 @@ enum LoginProvider {
     
     private func loginUsingCustom(delegate: LoginProviderDelegate, email: String, password: String) {
         
-        
-        DrivrAPI.sharedInstance.authenticate(UserLogin(email: email, password: password),
-            success: {
-                (JsonDict) in
-                    guard let token = JsonDict["authtoken"] as? [String: AnyObject] else {
-                    return
-                }
-                AuthProvider.sharedInstance.setToken(token["auth_token"] as! String)
-                delegate.loginProvider(self, didSucceed: JsonDict)
-                DrivrAPI.sharedInstance.getUser(
-                    {
-                        response in
-                        print(response)
-                        guard let user = response["user"] as? [String: AnyObject] else {
-                            delegate.loginProvider(self, didFail: NSError(domain: "error retrieving user", code:422, userInfo: nil))
-                            return
-                        }
-                        AuthProvider.sharedInstance.storeCurrentUser(user)
-                        delegate.loginProvider(self, didSucceed: response)
-                    },
-                    failure: {
-                        error in
-                        print(error)
-                        delegate.loginProvider(self, didFail: error!)
-                })
-            },
-            failure: {
-                error in
-                delegate.loginProvider(self, didFail: error!)
-            }
-        
-        )
+        DrivrAPI.sharedInstance.authenticateUser(UserLogin(email: email, password: password)).then() {
+            user ->Void in
+            delegate.loginProvider(self, didSucceed: user)
+            return
+        }.error { error in
+                delegate.loginProvider(self, didFail: error as NSError)
+        }
     }
     
     
