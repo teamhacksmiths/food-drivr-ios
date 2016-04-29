@@ -14,6 +14,7 @@
             <string>BebasNeue</string>
             <string>BebasNeue</string>
             <string>BebasNeue</string>
+            <string>BebasNeue</string>
         </mutableArray>
         <mutableArray key="ColabThi.otf">
             <string>Colaborate-Thin</string>
@@ -581,10 +582,10 @@
             </objects>
             <point key="canvasLocation" x="-1165" y="4799"/>
         </scene>
-        <!--View Controller-->
+        <!--Donor Donation View Controller-->
         <scene sceneID="fdK-PC-9ZN">
             <objects>
-                <viewController id="rSR-Kk-akt" sceneMemberID="viewController">
+                <viewController id="rSR-Kk-akt" customClass="DonorDonationViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iNp-7X-T5O"/>
                         <viewControllerLayoutGuide type="bottom" id="A0x-bz-UIv"/>
@@ -603,34 +604,106 @@
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rg2-vt-K4F">
                                         <rect key="frame" x="0.0" y="32" width="560" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Jq2-rc-BXa"/>
+                                            <constraint firstAttribute="height" constant="1" id="oL3-FZ-PCy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wmP-IY-3kd">
-                                <rect key="frame" x="20" y="113" width="560" height="467"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-w4-vnU">
+                                <rect key="frame" x="0.0" y="544" width="600" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aL-nh-jYe">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="BebasNeue" family="Bebas Neue" pointSize="36"/>
+                                        <state key="normal" title="Donate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapDonate:" destination="rSR-Kk-akt" eventType="touchUpInside" id="Twk-4M-nN3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NiZ-en-McF">
+                                <rect key="frame" x="20" y="113" width="560" height="431"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wmP-IY-3kd">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="431"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DonationCell" id="BLJ-wQ-3fd" customClass="DonationTableViewCell" customModule="hackathon_for_hunger" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BLJ-wQ-3fd" id="f8P-8X-3aC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syP-5S-yHW">
+                                                            <rect key="frame" x="8" y="8" width="552" height="28"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 dozen bagels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTI-AO-YKI">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="497" height="28"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umC-6b-b4z">
+                                                                    <rect key="frame" x="497" y="0.0" width="55" height="28"/>
+                                                                    <state key="normal" title="X">
+                                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="didTapCancel:" destination="BLJ-wQ-3fd" eventType="touchUpInside" id="fSX-zi-o8B"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="umC-6b-b4z" firstAttribute="width" secondItem="syP-5S-yHW" secondAttribute="width" multiplier="0.1" id="EB8-Rt-aEU"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="syP-5S-yHW" firstAttribute="leading" secondItem="f8P-8X-3aC" secondAttribute="leadingMargin" id="Hvq-W3-Q2a"/>
+                                                        <constraint firstItem="syP-5S-yHW" firstAttribute="top" secondItem="f8P-8X-3aC" secondAttribute="topMargin" id="W9r-iJ-3ME"/>
+                                                        <constraint firstAttribute="trailing" secondItem="syP-5S-yHW" secondAttribute="trailing" id="ZE1-Wn-FF6"/>
+                                                        <constraint firstItem="syP-5S-yHW" firstAttribute="bottom" secondItem="f8P-8X-3aC" secondAttribute="bottomMargin" id="dES-eT-rsp"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="label" destination="NTI-AO-YKI" id="1gm-lS-nI8"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wmP-IY-3kd" firstAttribute="leading" secondItem="DYV-ho-SCV" secondAttribute="leadingMargin" id="4Wg-dE-VJM"/>
-                            <constraint firstItem="Q2H-Qb-iPN" firstAttribute="leading" secondItem="DYV-ho-SCV" secondAttribute="leadingMargin" id="Kdf-QQ-dJK"/>
-                            <constraint firstItem="wmP-IY-3kd" firstAttribute="trailing" secondItem="DYV-ho-SCV" secondAttribute="trailingMargin" id="Nqx-3n-hs8"/>
-                            <constraint firstItem="Q2H-Qb-iPN" firstAttribute="trailing" secondItem="DYV-ho-SCV" secondAttribute="trailingMargin" id="f0J-ar-XPu"/>
-                            <constraint firstItem="Q2H-Qb-iPN" firstAttribute="top" secondItem="iNp-7X-T5O" secondAttribute="bottom" constant="8" id="gMH-DF-cRd"/>
-                            <constraint firstItem="wmP-IY-3kd" firstAttribute="top" secondItem="Q2H-Qb-iPN" secondAttribute="bottom" constant="8" id="q5V-h5-bcw"/>
-                            <constraint firstItem="A0x-bz-UIv" firstAttribute="top" secondItem="wmP-IY-3kd" secondAttribute="bottom" constant="20" id="whG-YV-EU6"/>
+                            <constraint firstItem="A0x-bz-UIv" firstAttribute="top" secondItem="ovU-w4-vnU" secondAttribute="bottom" id="CQl-iv-JmI"/>
+                            <constraint firstItem="ovU-w4-vnU" firstAttribute="leading" secondItem="DYV-ho-SCV" secondAttribute="leading" id="RwE-nl-23n"/>
+                            <constraint firstItem="NiZ-en-McF" firstAttribute="top" secondItem="Q2H-Qb-iPN" secondAttribute="bottom" constant="8" id="TBT-Gv-uj7"/>
+                            <constraint firstItem="Q2H-Qb-iPN" firstAttribute="top" secondItem="iNp-7X-T5O" secondAttribute="bottom" constant="8" id="Wh3-IO-DJb"/>
+                            <constraint firstItem="NiZ-en-McF" firstAttribute="leading" secondItem="DYV-ho-SCV" secondAttribute="leadingMargin" id="YUs-Zp-RdG"/>
+                            <constraint firstItem="ovU-w4-vnU" firstAttribute="top" secondItem="NiZ-en-McF" secondAttribute="bottom" id="bb4-wO-WBy"/>
+                            <constraint firstItem="NiZ-en-McF" firstAttribute="trailing" secondItem="DYV-ho-SCV" secondAttribute="trailingMargin" id="dOd-3X-bf4"/>
+                            <constraint firstItem="Q2H-Qb-iPN" firstAttribute="trailing" secondItem="DYV-ho-SCV" secondAttribute="trailingMargin" id="jve-5L-xFZ"/>
+                            <constraint firstItem="Q2H-Qb-iPN" firstAttribute="leading" secondItem="DYV-ho-SCV" secondAttribute="leadingMargin" id="tpt-qU-1Jz"/>
+                            <constraint firstAttribute="trailing" secondItem="ovU-w4-vnU" secondAttribute="trailing" id="xCv-Fg-T6j"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="4Xd-d7-aMv" id="OD9-cj-dng"/>
+                        <outlet property="tableView" destination="wmP-IY-3kd" id="BTO-SW-76d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7v-ey-dEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1234" y="6216"/>
+            <point key="canvasLocation" x="-1127" y="5873"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="x4Y-ro-LIc">

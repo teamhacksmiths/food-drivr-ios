@@ -76,6 +76,8 @@
 		EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */; };
 		EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */; };
 		EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */; };
+		EAD2DDED1CD32E22007454FB /* DonorDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */; };
+		EAD2DDF01CD330EF007454FB /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */; };
 		EAFEDF9A1CC2E26800C30693 /* DonorSignupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */; };
 		F7AFF7E51CBAD430008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
 		F7AFF7E61CBAF252008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
@@ -169,6 +171,8 @@
 		EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAccountInfoViewController.swift; sourceTree = "<group>"; };
 		EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNavigationViewController.swift; sourceTree = "<group>"; };
 		EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalDriverViewController.swift; sourceTree = "<group>"; };
+		EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorDonationViewController.swift; sourceTree = "<group>"; };
+		EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
 		EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorSignupInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +338,7 @@
 		44AEA8721CA9CBC100A52731 /* hackathon-for-hunger */ = {
 			isa = PBXGroup;
 			children = (
+				EAD2DDEE1CD330B7007454FB /* View */,
 				EA6C4C1E1CD1E7B800165F02 /* Support */,
 				447CC8C91CC9F07F0021A3D9 /* ViewModel */,
 				44638F041CC3EDBA005379FE /* Extensions */,
@@ -345,6 +350,7 @@
 				44AEA8731CA9CBC100A52731 /* AppDelegate.swift */,
 				3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */,
 				3CFDE8151CAD4D8A00D6172B /* Main.storyboard */,
+				EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */,
 				3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */,
 				3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */,
 				3CC24B741CBC244C00ACC504 /* AcceptButton.swift */,
@@ -473,6 +479,14 @@
 				EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */,
 			);
 			name = SignUp;
+			sourceTree = "<group>";
+		};
+		EAD2DDEE1CD330B7007454FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		EAFEDF981CC2E24700C30693 /* Signup */ = {
@@ -663,6 +677,7 @@
 				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
 				6365C4711CC4C0CE004ABFF4 /* MapsModel.swift in Sources */,
 				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
+				EAD2DDF01CD330EF007454FB /* DonationTableViewCell.swift in Sources */,
 				6395C0901CB25D400059B5E1 /* MapsDummyData.swift in Sources */,
 				446417811CB1872500F37F17 /* Image.swift in Sources */,
 				44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */,
@@ -677,6 +692,7 @@
 				44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */,
 				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
+				EAD2DDED1CD32E22007454FB /* DonorDonationViewController.swift in Sources */,
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
 				EAFEDF9A1CC2E26800C30693 /* DonorSignupInfo.swift in Sources */,
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
