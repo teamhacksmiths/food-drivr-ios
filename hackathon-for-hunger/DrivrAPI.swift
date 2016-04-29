@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import RealmSwift
 import SwiftyJSON
+import PromiseKit
 
 class DrivrAPI {
     
@@ -20,8 +21,9 @@ class DrivrAPI {
     init() {
     }
     
-    func authenticate(credentials: UserLogin, success: (JsonDict)-> (), failure: (NSError?) ->()) {
+    func authenticate(credentials: UserLogin) -> Promise<JsonDict> {
         let router = UserRouter(endpoint: .Login(credentials: credentials) )
+       return Promise { fulfill, reject in
         manager.request(router)
             .validate()
             .responseJSON {
@@ -29,10 +31,32 @@ class DrivrAPI {
                 switch response.result {
                 case .Success(let JSON):                    
                     let response = JSON as! JsonDict
-                    success(response)
+                    fulfill(response)
                 case .Failure(let error):
-                    failure(error)
+                    print(error)
+                    reject(NSError(domain: "error retrieving user", code:500, userInfo: nil))
                 }
+            }
+        }
+    }
+    
+    func authenticateUser(credentials: UserLogin) -> Promise<User?> {
+        return Promise { fulfill, reject in
+            self.authenticate(credentials).then() {
+                token -> Void in
+                AuthProvider.sharedInstance.setToken(token["authtoken"]!["auth_token"] as! String)
+                self.getUser().then() {
+                    userResponse -> Void in
+                    if let newUser = userResponse["user"] as? [String: AnyObject] {
+                        let user = AuthProvider.sharedInstance.storeCurrentUser(newUser)
+                        fulfill(user)
+                    } else {
+                        reject(NSError(domain: "error retrieving user", code:422, userInfo: nil))
+                    }
+                }
+                }.error { error in
+                    reject(error as NSError)
+            }
         }
     }
     
@@ -55,12 +79,15 @@ class DrivrAPI {
 
     }
     
-    func getUser(success: (JsonDict)-> (), failure: (NSError?) ->()) {
-        print("getting user")
+    func getUser() -> Promise<JsonDict> {
+        
+        return Promise { fulfill, reject in
+            
         guard let token = AuthProvider.sharedInstance.getToken() as Token? else {
-            failure(NSError(domain: "no token found for user", code:422, userInfo: nil))
+            reject(NSError(domain: "no token found for user", code:422, userInfo: nil))
             return
         }
+            
         let router = UserRouter(endpoint: .GetUser(token: token))
         
         manager.request(router)
@@ -70,44 +97,68 @@ class DrivrAPI {
                 switch response.result {
                 case .Success(let JSON):
                     let user = JSON as! JsonDict
-                    success(user)
+                    fulfill(user)
                     
                 case .Failure(let error):
-                    failure(error)
+                    reject(error)
                 }
+            }
         }
-        
-    }
+        }
     
-    func getDonations(completed: Bool = false, status: Int = 0,  success: (Results<Donation>)-> (), failure: (NSError?) ->()) {
-        print("getting donations")
-        let router = DonationRouter(endpoint: .GetDonations(completed: completed, status: status) )
-        
-        manager.request(router)
-            .validate()
-            .responseJSON {
-                response in
-                switch response.result {
-                case .Success(let JSON):
+    
+    func getDonations(completed: Bool = false, status: Int = 0) -> Promise<[JsonDict]> {
+        return Promise { fulfill, reject in
+            let router = DonationRouter(endpoint: .GetDonations(completed: completed, status: status) )
+            
+            manager.request(router)
+                .validate()
+                .responseJSON {
+                    response in
+                    switch response.result {
+                    case .Success(let JSON):
                     
-                    
-                        let realm = try! Realm()
                         if let donations = JSON["donations"] as! [JsonDict]? {
-                            print(donations)
-                            for donation: JsonDict in donations{
-                                try! realm.write {
-                                    realm.add(Donation(dict: donation), update: true)
-                                }
-                            }
-
+                            fulfill(donations)
                         }
                         
-                    success(realm.objects(Donation))
-                    
-                case .Failure(let error):
-                    failure(error)
-                }
+                    case .Failure(let error):
+                        print("REJECTING")
+                        reject(error)
+                    }
+            }
         }
+    }
+    
+    func updateRealmLayer(dict: [JsonDict]) -> Promise<Results<Donation>> {
+        return Promise { fulfill, reject in
+            let realm = try! Realm()
+            for donation: JsonDict in dict{
+                do {
+                    try realm.write {
+                        realm.add(Donation(dict: donation), update: true)
+                    }
+                } catch let error as NSError{
+                    reject(error)
+                }
+                
+            }
+            fulfill(realm.objects(Donation))
+        }
+    }
+    
+    func getDriverDonations() -> Promise<Results<Donation>> {
+        return Promise { fulfill, reject in
+            self.getDonations().then() {
+                donationsJson in
+                self.updateRealmLayer(donationsJson).then() {
+                    realmObjects in
+                    fulfill(realmObjects)
+                }
+            }
+
+        }
+        
     }
     
     func updateDonationStatus(donation: Donation, status: DonationStatus,  success: (Donation)-> (), failure: (NSError?) ->()) {

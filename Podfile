@@ -16,11 +16,10 @@ target 'hackathon-for-hunger' do
   pod 'SwiftyJSON'
   pod 'JSONCodable', '~> 2.1'
   pod 'NVActivityIndicatorView', '~> 2.5'
+  pod 'PromiseKit'
 end
 
 
 target 'hackathon-for-hungerTests' do
 
 end
-
-

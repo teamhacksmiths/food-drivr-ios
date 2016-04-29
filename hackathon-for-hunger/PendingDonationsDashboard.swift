@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class PendingDonationsDashboard: UIViewController {
+class PendingDonationsDashboard: UIViewController{
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!

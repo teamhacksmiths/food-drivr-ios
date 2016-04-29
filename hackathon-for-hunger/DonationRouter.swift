@@ -35,10 +35,10 @@ class DonationRouter : BaseRouter {
     
     override var path: String {
         switch endpoint {
-        case .GetDonations: return "donations"
-        case .GetDonation(let id): return "/donations/\(id)"
-        case .UpdateDonation(let donation): return "/donations/\(donation.id)"
-        case .DeleteDonation(let id): return "/donations/\(id)"
+        case .GetDonations: return "driver/donations/all"
+        case .GetDonation(let id): return "driver/donations/\(id)"
+        case .UpdateDonation(let donation): return "driver/donations/\(donation.id)"
+        case .DeleteDonation(let id): return "driver/donations/\(id)"
         }
     }
     

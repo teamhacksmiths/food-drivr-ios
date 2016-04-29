@@ -337,13 +337,11 @@
 				EAAD23B71CB37B5A005FD787 /* Controller */,
 				44A725081CAC441F00D676C3 /* Network */,
 				44AEA8731CA9CBC100A52731 /* AppDelegate.swift */,
-				3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */,
 				3CFDE8151CAD4D8A00D6172B /* Main.storyboard */,
 				3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */,
 				3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */,
 				3CC24B741CBC244C00ACC504 /* AcceptButton.swift */,
 				3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */,
-				44AEA8751CA9CBC100A52731 /* LoginViewController.swift */,
 				44AEA87A1CA9CBC100A52731 /* Assets.xcassets */,
 				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
 				44573E601CAEF35F00A5F1C3 /* DonationType.swift */,
@@ -386,6 +384,15 @@
 				44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */,
 			);
 			name = Routing;
+			sourceTree = "<group>";
+		};
+		44E668C61CD28C5D009A4B10 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3CFDE8141CAD4D8A00D6172B /* LoginProvider.swift */,
+				44AEA8751CA9CBC100A52731 /* LoginViewController.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		44F857711CCAA76000326293 /* Dashboards */ = {
@@ -439,6 +446,7 @@
 		EAAD23B71CB37B5A005FD787 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				44E668C61CD28C5D009A4B10 /* Login */,
 				44F857711CCAA76000326293 /* Dashboards */,
 				44AA631D1CB3F090005E02CC /* Menu */,
 				EAAD23B81CB37B78005FD787 /* SignUp */,
