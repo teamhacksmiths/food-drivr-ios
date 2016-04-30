@@ -155,18 +155,68 @@ class DrivrAPI {
                     realmObjects in
                     fulfill(realmObjects)
                 }
+                }.error {
+                    error in
+                    reject(error)
             }
 
         }
         
     }
     
-    func updateDonationStatus(donation: Donation, status: DonationStatus,  success: (Donation)-> (), failure: (NSError?) ->()) {
-        let realm = try! Realm()
-        try! realm.write {
-            donation.status = status
-            realm.add(donation, update: true)
+    func updateDonationStatus(donation: Donation, status: DonationStatus) -> Promise<Void>{
+        
+        let accepted = ["status": [
+            "donation_status": 1,
+            "pickup_status": 1,
+            "dropoff_status": 1
+            ]
+        ]
+        
+        let pickedUp = ["status": [
+            "donation_status": 1,
+            "pickup_status": 2,
+            "dropoff_status": 1
+            ]
+        ]
+
+        let droppedOff = ["status": [
+            "donation_status": 2,
+            "pickup_status": 2,
+            "dropoff_status": 2
+            ]
+        ]
+        var dict: JsonDict = [:]
+        switch(status) {
+        case .Active:
+            dict = accepted
+            break
+        case .PickedUp:
+            dict = pickedUp
+            break
+        case .Completed:
+            dict = droppedOff
+            break
+        default: dict = accepted
         }
-        success(donation)
+        return Promise { fulfill, reject in
+            
+            let router = DonationRouter(endpoint: .UpdateDonationStatus(donation: donation, status: dict))
+            
+            manager.request(router)
+                .validate()
+                .responseJSON {
+                    response in
+                    switch response.result {
+                    case .Success(let JSON):
+                        let user = JSON as! JsonDict
+                        print(user)
+                        fulfill()
+                        
+                    case .Failure(let error):
+                        reject(error)
+                    }
+            }
+        }
     }
 }

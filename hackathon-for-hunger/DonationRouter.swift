@@ -15,6 +15,7 @@ enum DonationEndpoint {
     case GetDonation(id: String)
     case UpdateDonation(donation: Donation)
     case DeleteDonation(id: String)
+    case UpdateDonationStatus(donation: Donation, status: [String: AnyObject])
 }
 
 class DonationRouter : BaseRouter {
@@ -30,6 +31,7 @@ class DonationRouter : BaseRouter {
         case .GetDonation: return .GET
         case .UpdateDonation: return .PUT
         case .DeleteDonation: return .DELETE
+        case .UpdateDonationStatus: return .POST
         }
     }
     
@@ -39,6 +41,7 @@ class DonationRouter : BaseRouter {
         case .GetDonation(let id): return "driver/donations/\(id)"
         case .UpdateDonation(let donation): return "driver/donations/\(donation.id)"
         case .DeleteDonation(let id): return "driver/donations/\(id)"
+        case .UpdateDonationStatus(let donation, _): return "driver/donations/\(donation.id)/status"
         }
     }
     
@@ -52,7 +55,8 @@ class DonationRouter : BaseRouter {
             
         case .UpdateDonation(let donation):
             return ["donation" : donation]
-            
+        case .UpdateDonationStatus( _, let status):
+            return ["status" : status]
         default: return nil
         }
     }

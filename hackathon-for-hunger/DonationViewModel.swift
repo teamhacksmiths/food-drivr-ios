@@ -47,17 +47,15 @@ class DonationViewModel {
             self.fetch(status)
             }.error {
                 error in
+                print(error)
                 self.delegate?.donationViewModel(self, didFail: error as NSError)
         }
     }
     
     func updateDonationStatus(donation: Donation, status: DonationStatus) {
-        DrivrAPI.sharedInstance.updateDonationStatus(donation, status:status,  success: {
+        DrivrAPI.sharedInstance.updateDonationStatus(donation, status:status).then() {
             _ in
             print(donation)
-            }, failure: {
-                (error) in
-                print(error)
-        })
+            }
     }
 }
