@@ -73,7 +73,6 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
 
         mapView.showAnnotations(annotations, animated: true)
         
-        // TODO: customize the callouts, and make sure they appear when pin is tapped
        
     }
     
@@ -89,7 +88,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
     }
     
-    // MARK: - MKMapViewDelegate
+    // MARK: - MKMapViewDelegate methods
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -153,6 +152,10 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
     }
     
+    
+
+    // MARK: - fetch donation methods
+    
     //TODO: uncomment below to use remote data instead of dummy data
     func getDonations() {
 //        let pendingDonations = realm.objects(Donation)
@@ -175,5 +178,6 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
 //                print(error)
 //        }
 //    }
+    
 }
 
