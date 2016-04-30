@@ -193,7 +193,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
         pickupAnnotation!.kind = .Pickup
         mapView.addAnnotation(pickupAnnotation!)
-        mapView.selectAnnotation(pickupAnnotation!, animated: true)
+        //mapView.selectAnnotation(pickupAnnotation!, animated: true)
         
         // Set pin for the optional dropoff location if it exists at this point
         if let dropoff = donation?.dropoff {
@@ -204,7 +204,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
             dropoffAnnotation!.kind = .Dropoff
             
             mapView.addAnnotation(dropoffAnnotation!)
-            mapView.selectAnnotation(dropoffAnnotation!, animated: true)
+            //mapView.selectAnnotation(dropoffAnnotation!, animated: true)
             
             
         } else {
@@ -214,9 +214,9 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         }
         
 
-        for annotation in mapView.annotations {
-            mapView.selectAnnotation(annotation, animated: true)
-        }
+//        for annotation in mapView.annotations {
+//            mapView.selectAnnotation(annotation, animated: true)
+//        }
         
         zoomToFitMapAnnotations() // calling too early here - no user location yet?
         
