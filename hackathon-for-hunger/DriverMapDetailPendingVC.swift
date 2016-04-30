@@ -134,7 +134,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
             }
             //}
             
-            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
             
             if pinView == nil {
                 //            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
@@ -145,22 +145,25 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
                 //                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                 
                 if pinAnnotation.kind == .Pickup {
-                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pickup")
+                    pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pickup")
                     pinView?.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
-                    pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                    //pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                    pinView?.image = UIImage(named: "pin_green")
                 } else if pinAnnotation.kind == .Dropoff {
-                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "dropoff")
+                    pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "dropoff")
                     pinView?.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
-                    pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                    //pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                    pinView?.image = UIImage(named: "pin_orange")
                 }
                 let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
                 pinView!.leftCalloutAccessoryView?.frame = frame
                 pinView!.canShowCallout = true
-                pinView?.selected = true
+                //pinView?.selected = true
             } else {
                 // pinView already exists, and has been dequeued
                 pinView?.annotation = annotation
-                pinView?.selected = true
+                pinView!.canShowCallout = true
+                //pinView?.selected = true
             }
             
             return pinView
@@ -190,7 +193,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         pickupAnnotation!.coordinate = (donation?.pickup?.coordinates)!
         pickupAnnotation!.kind = .Pickup
         mapView.addAnnotation(pickupAnnotation!)
-        mapView.selectAnnotation(pickupAnnotation!, animated: true)
+        //mapView.selectAnnotation(pickupAnnotation!, animated: true)
         
         // Set pin for the optional dropoff location if it exists at this point
         if let dropoff = donation?.dropoff {
@@ -201,7 +204,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
             dropoffAnnotation!.kind = .Dropoff
             
             mapView.addAnnotation(dropoffAnnotation!)
-            mapView.selectAnnotation(dropoffAnnotation!, animated: true)
+            //mapView.selectAnnotation(dropoffAnnotation!, animated: true)
             
             
         } else {
@@ -211,9 +214,9 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         }
         
 
-        for annotation in mapView.annotations {
-            mapView.selectAnnotation(annotation, animated: true)
-        }
+//        for annotation in mapView.annotations {
+//            mapView.selectAnnotation(annotation, animated: true)
+//        }
         
         zoomToFitMapAnnotations() // calling too early here - no user location yet?
         

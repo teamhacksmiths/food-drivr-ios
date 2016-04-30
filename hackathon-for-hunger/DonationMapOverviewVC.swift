@@ -15,7 +15,12 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     let dummyData = MapsDummyData.sharedInstance
     var donorInfoArray: [DonorInfo]?
-    var donations: Results<Donation>?
+    
+    // Uncomment "var donations: Results<Donation>?" to use remote data
+    //var donations: Results<Donation>?
+    // Comment out "var donations: [Donation]?" to use remote data
+    var donations: [Donation]?
+    
     var realm = try! Realm()
     
     
@@ -68,7 +73,6 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
 
         mapView.showAnnotations(annotations, animated: true)
         
-        // TODO: customize the callouts, and make sure they appear when pin is tapped
        
     }
     
@@ -84,7 +88,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
     }
     
-    // MARK: - MKMapViewDelegate
+    // MARK: - MKMapViewDelegate methods
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -93,20 +97,23 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
             return nil
         }
 
+        let pinImage = UIImage(named: "pin_green")
         
         let reuseId = "pin"
         
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
-        
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
         
         if pinView == nil {
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
+            pinView?.tintColor = dummyData.pinColorPickup
+            pinView?.image = pinImage
             //TODO: might not need these checks here because all these pins are pickup pins
             if annotation.isKindOfClass(DonationPin) == true {
                 if let pickupDonationPin = annotation as? DonationPin {
                     if pickupDonationPin.kind == .Pickup {
-                        pinView!.pinTintColor = dummyData.pinColorPickup
+                        
+                        //pinView!.pinTintColor = dummyData.pinColorPickup
                     }
                 }
             }
@@ -115,6 +122,8 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
         else {
             pinView!.annotation = annotation
+            pinView?.tintColor = dummyData.pinColorPickup
+
         }
         
         pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
@@ -143,25 +152,32 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
     }
     
+    
+
+    // MARK: - fetch donation methods
+    
+    //TODO: uncomment below to use remote data instead of dummy data
     func getDonations() {
-        let pendingDonations = realm.objects(Donation)
-        guard pendingDonations.count > 0 else {
-            self.fetchRemoteDonations()
-            return
-        }
-        self.donations = pendingDonations
+//        let pendingDonations = realm.objects(Donation)
+//        guard pendingDonations.count > 0 else {
+//            self.fetchRemoteDonations()
+//            return
+//        }
+//        self.donations = pendingDonations
+        donations = dummyData.donations
         readAndDisplayAnnotations()
     }
     
-    private func fetchRemoteDonations() {
-        DrivrAPI.sharedInstance.getDriverDonations().then(){
-            (results) -> Void in
-            self.donations = results
-            self.readAndDisplayAnnotations()
-            }.error{
-                (error) in
-                print(error)
-        }
-    }
+//    private func fetchRemoteDonations() {
+//        DrivrAPI.sharedInstance.getDriverDonations().then(){
+//            (results) -> Void in
+//            self.donations = results
+//            self.readAndDisplayAnnotations()
+//            }.error{
+//                (error) in
+//                print(error)
+//        }
+//    }
+    
 }
 

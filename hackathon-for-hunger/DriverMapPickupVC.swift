@@ -5,6 +5,8 @@
 //  Created by David Fierstein on 4/13/16.
 //  Copyright © 2016 Hacksmiths. All rights reserved.
 //
+//  Note: This View Controller is used for both the route to the pickup, and the route to the dropoff
+//  since they are similar. Upon tapping Confirm Pickup, the UI is updated from pickup to dropoff route
 
 import UIKit
 import MapKit
@@ -73,52 +75,61 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         case .Dropoff:
             buttonBackground.backgroundColor = data.pinColorDropoff
             pickupDropoffButton.setTitle("CONFIRM DROP OFF", forState: .Normal)
-
+            if donation != nil {
+                if donation?.recipient != nil {
+                    if donation?.recipient?.name != nil {
+                        donorNameLabel.text = donation?.recipient?.name
+                    }
+                } else {
+                    donorNameLabel.text = "No dropoff yet"
+                }
+            }
         }
     }
     
     //MARK:- get the route for the dropoff (//TODO:- refactor this func to use with either pickup or dropoff)
     func updateRoute() {
         if donation != nil {
-            
-            // remove the pickup route in prep to be replace with dropoff route
-            //mapView.removeOverlays(mapView.overlays)
-            
-            // keep the pickup route on the map, but set the line thinner, and more transparent
-            pickupRoute?.lineWidth = 3.5
-            pickupRoute?.strokeColor = UIColor(red: 51/255, green: 195/255, blue: 0, alpha: 0.45)
-            
-            donorNameLabel.text = donation?.donor?.name
-            
-            // create Map Items
-            let pickupPlacemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
-            let pickupMapItem = MKMapItem(placemark: pickupPlacemark)
-            let dropoffPlacemark = MKPlacemark(coordinate: (donation!.dropoff?.coordinates)!, addressDictionary: nil)
-            let dropoffMapItem = MKMapItem(placemark: dropoffPlacemark)
-            
-            // geet the route from pickup to dropoff
-            let request = MKDirectionsRequest()
-            request.source = pickupMapItem
-            request.destination = dropoffMapItem
-            request.requestsAlternateRoutes = false
-            request.transportType = .Automobile
-            
-            let directions = MKDirections(request: request)
-            
-            directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
-                guard let unwrappedResponse = response else { return }
+            if donation?.recipient != nil {
                 
-                for route in unwrappedResponse.routes {
-                    self.mapView.addOverlay(route.polyline)
-                    //self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-                }
-                if let first = self.mapView.overlays.first {
-                    let rect = self.mapView.overlays.reduce(first.boundingMapRect, combine: {MKMapRectUnion($0, $1.boundingMapRect)})
-                    self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 100.0, left: 100.0, bottom: 10.0, right: 100.0), animated: true)
+                // remove the pickup route in prep to be replace with dropoff route
+                //mapView.removeOverlays(mapView.overlays)
+                
+                // keep the pickup route on the map, but set the line thinner, and more transparent
+                pickupRoute?.lineWidth = 3.5
+                pickupRoute?.strokeColor = UIColor(red: 51/255, green: 195/255, blue: 0, alpha: 0.45)
+                
+                donorNameLabel.text = donation?.donor?.name
+                
+                // create Map Items
+                let pickupPlacemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
+                let pickupMapItem = MKMapItem(placemark: pickupPlacemark)
+                let dropoffPlacemark = MKPlacemark(coordinate: (donation!.dropoff?.coordinates)!, addressDictionary: nil)
+                let dropoffMapItem = MKMapItem(placemark: dropoffPlacemark)
+                
+                // get the route from pickup to dropoff
+                let request = MKDirectionsRequest()
+                request.source = pickupMapItem
+                request.destination = dropoffMapItem
+                request.requestsAlternateRoutes = false
+                request.transportType = .Automobile
+                
+                let directions = MKDirections(request: request)
+                
+                directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
+                    guard let unwrappedResponse = response else { return }
+                    
+                    for route in unwrappedResponse.routes {
+                        self.mapView.addOverlay(route.polyline)
+                        //self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                    }
+                    if let first = self.mapView.overlays.first {
+                        let rect = self.mapView.overlays.reduce(first.boundingMapRect, combine: {MKMapRectUnion($0, $1.boundingMapRect)})
+                        self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 100.0, left: 100.0, bottom: 10.0, right: 100.0), animated: true)
+                    }
                 }
             }
         }
-
     }
     
     //MARK:- View lifecycle
@@ -127,6 +138,9 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         
         mapView.delegate = self
         mapView.setRegion(startingRegion, animated: true) // set starting region to overview map's region?
+        for annot in mapView.annotations {
+            mapView.deselectAnnotation(annot, animated: true)
+        }
         
         updateUI()
         
@@ -224,18 +238,22 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         }
         
         let reuseId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
         if pinView == nil {
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             
             if annotation.isKindOfClass(DonationPin) == true {
                 if let pickupDonationPin = annotation as? DonationPin {
                     if pickupDonationPin.kind == .Pickup {
                         pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
-                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                        // uncomment the next line if using standard MKPinAnnotationView
+                        //pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                        pinView?.image = UIImage(named: "pin_green")
                     } else if pickupDonationPin.kind == .Dropoff {
                         pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
-                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                        // uncomment the next line if using standard MKPinAnnotationView
+                        //pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                        pinView?.image = UIImage(named: "pin_orange")
                     }
                     let leftFrame = CGRectMake(0.0, 0.0, 70.0, 50.0)
                     pinView!.leftCalloutAccessoryView?.frame = leftFrame
@@ -248,11 +266,11 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 }
             }
             pinView?.canShowCallout = true
-            pinView?.selected = true
+            //pinView?.selected = true
         }
         else {
             pinView?.annotation = annotation
-            pinView?.selected = true
+            //pinView?.selected = true
         }
         
         return pinView
@@ -313,16 +331,17 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     //TODO: consolidate with addPin func
     func addDropoffPin() {
         if donation != nil {
-            
-            let dropoffAnnotation = DonationPin()
-            
-           
-            dropoffAnnotation.title = donation?.recipient?.name
-            dropoffAnnotation.coordinate = (donation?.dropoff?.coordinates)!
-            dropoffAnnotation.kind = .Dropoff
-            
-            mapView.addAnnotation(dropoffAnnotation)
-            mapView.selectAnnotation(dropoffAnnotation, animated: true)
+            if donation?.recipient != nil {
+                let dropoffAnnotation = DonationPin()
+                
+                
+                dropoffAnnotation.title = donation?.recipient?.name
+                dropoffAnnotation.coordinate = (donation?.dropoff?.coordinates)!
+                dropoffAnnotation.kind = .Dropoff
+                
+                mapView.addAnnotation(dropoffAnnotation)
+                //mapView.selectAnnotation(dropoffAnnotation, animated: true)
+            }
         }
 
     }
