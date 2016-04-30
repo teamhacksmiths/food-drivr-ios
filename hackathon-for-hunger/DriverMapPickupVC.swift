@@ -5,6 +5,8 @@
 //  Created by David Fierstein on 4/13/16.
 //  Copyright © 2016 Hacksmiths. All rights reserved.
 //
+//  Note: This View Controller is used for both the route to the pickup, and the route to the dropoff
+//  since they are similar. Upon tapping Confirm Pickup, the UI is updated from pickup to dropoff route
 
 import UIKit
 import MapKit
@@ -224,18 +226,22 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         }
         
         let reuseId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
         if pinView == nil {
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             
             if annotation.isKindOfClass(DonationPin) == true {
                 if let pickupDonationPin = annotation as? DonationPin {
                     if pickupDonationPin.kind == .Pickup {
                         pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
-                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                        // uncomment the next line if using standard MKPinAnnotationView
+                        //pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                        pinView?.image = UIImage(named: "pin_green")
                     } else if pickupDonationPin.kind == .Dropoff {
                         pinView!.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
-                        pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                        // uncomment the next line if using standard MKPinAnnotationView
+                        //pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                        pinView?.image = UIImage(named: "pin_orange")
                     }
                     let leftFrame = CGRectMake(0.0, 0.0, 70.0, 50.0)
                     pinView!.leftCalloutAccessoryView?.frame = leftFrame
@@ -248,11 +254,11 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 }
             }
             pinView?.canShowCallout = true
-            pinView?.selected = true
+            //pinView?.selected = true
         }
         else {
             pinView?.annotation = annotation
-            pinView?.selected = true
+            //pinView?.selected = true
         }
         
         return pinView
@@ -322,7 +328,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
             dropoffAnnotation.kind = .Dropoff
             
             mapView.addAnnotation(dropoffAnnotation)
-            mapView.selectAnnotation(dropoffAnnotation, animated: true)
+            //mapView.selectAnnotation(dropoffAnnotation, animated: true)
         }
 
     }

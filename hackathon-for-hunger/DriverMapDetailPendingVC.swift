@@ -148,15 +148,17 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
                     pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pickup")
                     pinView?.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"pickup"))
                     pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorPickup
+                    pinView?.image = UIImage(named: "pin_green")
                 } else if pinAnnotation.kind == .Dropoff {
                     pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "dropoff")
                     pinView?.leftCalloutAccessoryView = UIImageView(image:UIImage(named:"dropoff"))
                     pinView?.pinTintColor = MapsDummyData.sharedInstance.pinColorDropoff
+                    pinView?.image = UIImage(named: "pin_orange")
                 }
                 let frame = CGRectMake(0.0, 0.0, 70.0, 50.0)
                 pinView!.leftCalloutAccessoryView?.frame = frame
                 pinView!.canShowCallout = true
-                pinView?.selected = true
+                //pinView?.selected = true
             } else {
                 // pinView already exists, and has been dequeued
                 pinView?.annotation = annotation

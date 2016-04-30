@@ -55,6 +55,9 @@
 		634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34281CC84E7100DD48BF /* multiple-circle@3x.png */; };
 		6352F18E1CC6114B0096FE59 /* directions_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6352F18D1CC6114B0096FE59 /* directions_icon.pdf */; };
 		6365C4711CC4C0CE004ABFF4 /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365C4701CC4C0CE004ABFF4 /* MapsModel.swift */; };
+		63823CF51CD4133200B258B4 /* drivr_pin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63823CF41CD4133200B258B4 /* drivr_pin.pdf */; };
+		63823CF91CD425EE00B258B4 /* drivr_pin_green.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63823CF81CD425EE00B258B4 /* drivr_pin_green.pdf */; };
+		63823CFB1CD42DBF00B258B4 /* drivr_pin_orange.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63823CFA1CD42DBF00B258B4 /* drivr_pin_orange.pdf */; };
 		6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C0881CB1D69D0059B5E1 /* DonationMapOverviewVC.swift */; };
 		6395C08C1CB1F2B50059B5E1 /* DonorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C08B1CB1F2B50059B5E1 /* DonorInfo.swift */; };
 		6395C08E1CB247460059B5E1 /* DonationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395C08D1CB247460059B5E1 /* DonationPin.swift */; };
@@ -147,6 +150,9 @@
 		634E34281CC84E7100DD48BF /* multiple-circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@3x.png"; sourceTree = "<group>"; };
 		6352F18D1CC6114B0096FE59 /* directions_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon.pdf; sourceTree = "<group>"; };
 		6365C4701CC4C0CE004ABFF4 /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
+		63823CF41CD4133200B258B4 /* drivr_pin.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = drivr_pin.pdf; sourceTree = "<group>"; };
+		63823CF81CD425EE00B258B4 /* drivr_pin_green.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = drivr_pin_green.pdf; sourceTree = "<group>"; };
+		63823CFA1CD42DBF00B258B4 /* drivr_pin_orange.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = drivr_pin_orange.pdf; sourceTree = "<group>"; };
 		6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = ApiKeys.plist; sourceTree = "<group>"; };
 		6395C0881CB1D69D0059B5E1 /* DonationMapOverviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationMapOverviewVC.swift; sourceTree = "<group>"; };
 		6395C08B1CB1F2B50059B5E1 /* DonorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorInfo.swift; sourceTree = "<group>"; };
@@ -436,6 +442,9 @@
 		63CAF7F61CC29BD4000D89A1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				63823CFA1CD42DBF00B258B4 /* drivr_pin_orange.pdf */,
+				63823CF81CD425EE00B258B4 /* drivr_pin_green.pdf */,
+				63823CF41CD4133200B258B4 /* drivr_pin.pdf */,
 				634E34261CC84E7100DD48BF /* multiple-circle.png */,
 				634E34271CC84E7100DD48BF /* multiple-circle@2x.png */,
 				634E34281CC84E7100DD48BF /* multiple-circle@3x.png */,
@@ -590,11 +599,14 @@
 			files = (
 				44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */,
 				634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */,
+				63823CFB1CD42DBF00B258B4 /* drivr_pin_orange.pdf in Resources */,
 				634E34291CC84E7100DD48BF /* multiple-circle.png in Resources */,
+				63823CF51CD4133200B258B4 /* drivr_pin.pdf in Resources */,
 				443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */,
 				F7AFF7E61CBAF252008C6004 /* ApiKeys.plist in Resources */,
 				634E342A1CC84E7100DD48BF /* multiple-circle@2x.png in Resources */,
 				443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */,
+				63823CF91CD425EE00B258B4 /* drivr_pin_green.pdf in Resources */,
 				6395C0921CB83DE60059B5E1 /* Portland-BridgePortBrewPub.gpx in Resources */,
 				44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */,
 				6352F18E1CC6114B0096FE59 /* directions_icon.pdf in Resources */,
