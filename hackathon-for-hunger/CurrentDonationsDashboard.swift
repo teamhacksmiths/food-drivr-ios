@@ -124,6 +124,9 @@ extension CurrentDonationsDashboard: DonationDelegate {
     
     func donationViewModel(sender: DonationViewModel, didSucceed donations: Results<Donation>) {
         self.tableView.reloadData()
+        for donation in donationVM.donations! {
+            print("id is \(donation.id) AND STATUS is \(donation.status.rawValue)")
+        }
     }
     func donationViewModel(sender: DonationViewModel, didFail error: NSError) {
         

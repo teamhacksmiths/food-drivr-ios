@@ -133,6 +133,9 @@ class DrivrAPI {
     func updateRealmLayer(dict: [JsonDict]) -> Promise<Results<Donation>> {
         return Promise { fulfill, reject in
             let realm = try! Realm()
+            try realm.write {
+                realm.delete(realm.objects(Donation))
+            }
             for donation: JsonDict in dict{
                 do {
                     try realm.write {

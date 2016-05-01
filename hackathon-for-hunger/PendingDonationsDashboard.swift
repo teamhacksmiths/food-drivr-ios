@@ -120,9 +120,9 @@ extension PendingDonationsDashboard: DonationDelegate {
     
     func donationViewModel(sender: DonationViewModel, didSucceed donations: Results<Donation>) {
         self.tableView.reloadData()
-    }
+            }
     func donationViewModel(sender: DonationViewModel, didFail error: NSError) {
-        
+        print(error)
     }
 }
 
