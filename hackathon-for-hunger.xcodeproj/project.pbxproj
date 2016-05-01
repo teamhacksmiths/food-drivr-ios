@@ -78,6 +78,8 @@
 		EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */; };
 		EAD2DDED1CD32E22007454FB /* DonorDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */; };
 		EAD2DDF01CD330EF007454FB /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */; };
+		EAD2DDF21CD58E8E007454FB /* DonorAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDF11CD58E8E007454FB /* DonorAddressViewController.swift */; };
+		EAD2DDF41CD58EF8007454FB /* DonorAddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDF31CD58EF8007454FB /* DonorAddAddressViewController.swift */; };
 		EAFEDF9A1CC2E26800C30693 /* DonorSignupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */; };
 		F7AFF7E51CBAD430008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
 		F7AFF7E61CBAF252008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
@@ -173,6 +175,8 @@
 		EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalDriverViewController.swift; sourceTree = "<group>"; };
 		EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorDonationViewController.swift; sourceTree = "<group>"; };
 		EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
+		EAD2DDF11CD58E8E007454FB /* DonorAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddressViewController.swift; sourceTree = "<group>"; };
+		EAD2DDF31CD58EF8007454FB /* DonorAddAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddAddressViewController.swift; sourceTree = "<group>"; };
 		EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorSignupInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -349,6 +353,8 @@
 				44A725081CAC441F00D676C3 /* Network */,
 				44AEA8731CA9CBC100A52731 /* AppDelegate.swift */,
 				3CFDE8151CAD4D8A00D6172B /* Main.storyboard */,
+				EAD2DDF11CD58E8E007454FB /* DonorAddressViewController.swift */,
+				EAD2DDF31CD58EF8007454FB /* DonorAddAddressViewController.swift */,
 				EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */,
 				3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */,
 				3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */,
@@ -692,6 +698,7 @@
 				3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */,
 				44F857731CCAA7C700326293 /* CurrentDonationsDashboard.swift in Sources */,
 				639F7E211CB87213009EC623 /* LocationManager.swift in Sources */,
+				EAD2DDF21CD58E8E007454FB /* DonorAddressViewController.swift in Sources */,
 				63FB1DA41CBE312C00EDB80F /* DriverMapPickupVC.swift in Sources */,
 				442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */,
 				6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */,
@@ -723,6 +730,7 @@
 				EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */,
 				44638F061CC3EDD0005379FE /* UIViewExtensions.swift in Sources */,
 				6395C08E1CB247460059B5E1 /* DonationPin.swift in Sources */,
+				EAD2DDF41CD58EF8007454FB /* DonorAddAddressViewController.swift in Sources */,
 				EAAD23BE1CB38014005FD787 /* VSAccountInfoViewController.swift in Sources */,
 				EA6C4C201CD1E80300165F02 /* Global.swift in Sources */,
 			);
