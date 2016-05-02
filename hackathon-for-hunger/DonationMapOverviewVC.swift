@@ -13,13 +13,14 @@ import RealmSwift
 
 class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
+    // Set to false to use data from the server. Set to true to use dummy data for testing purposes.
+    var useDummyData: Bool = false
+    
     let dummyData = MapsDummyData.sharedInstance
     var donorInfoArray: [DonorInfo]?
     
-    // Uncomment "var donations: Results<Donation>?" to use remote data
-    //var donations: Results<Donation>?
-    // Comment out "var donations: [Donation]?" to use remote data
-    var donations: [Donation]?
+    var donations: Results<Donation>?
+    var donationsDummyData: [Donation]?
     
     var realm = try! Realm()
     
@@ -56,17 +57,31 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
         var annotations = [DonationPin]()
 
-        
-        for donation in donations! { //TODO: - replace force unwrapping
-
-            // create the annotation and set its properties
-            let annotation = DonationPin()  // subclass of MKAnnotation()
-            annotation.donation = donation
-            annotation.kind = .Pickup
-
-            // place the annotation in an array of annotations.
-            annotations.append(annotation)
+        switch useDummyData {
+        case true:
+            for donation in donationsDummyData! { //TODO: - replace force unwrapping
+                
+                // create the annotation and set its properties
+                let annotation = DonationPin()  // subclass of MKAnnotation()
+                annotation.donation = donation
+                annotation.kind = .Pickup
+                
+                // place the annotation in an array of annotations.
+                annotations.append(annotation)
+            }
+        case false:
+            for donation in donations! { //TODO: - replace force unwrapping
+                
+                // create the annotation and set its properties
+                let annotation = DonationPin()  // subclass of MKAnnotation()
+                annotation.donation = donation
+                annotation.kind = .Pickup
+                
+                // place the annotation in an array of annotations.
+                annotations.append(annotation)
+            }
         }
+        
         
         // When the array is complete, add the annotations to the map.
         mapView.addAnnotations(annotations)
@@ -156,28 +171,34 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
 
     // MARK: - fetch donation methods
     
-    //TODO: uncomment below to use remote data instead of dummy data
     func getDonations() {
-//        let pendingDonations = realm.objects(Donation)
-//        guard pendingDonations.count > 0 else {
-//            self.fetchRemoteDonations()
-//            return
-//        }
-//        self.donations = pendingDonations
-        donations = dummyData.donations
+        
+        if useDummyData == true {
+            donationsDummyData = dummyData.donations
+            print("using dummy data")
+        } else {
+            
+            let pendingDonations = realm.objects(Donation)
+            guard pendingDonations.count > 0 else {
+                self.fetchRemoteDonations()
+                return
+            }
+            self.donations = pendingDonations
+        }
+        
         readAndDisplayAnnotations()
     }
     
-//    private func fetchRemoteDonations() {
-//        DrivrAPI.sharedInstance.getDriverDonations().then(){
-//            (results) -> Void in
-//            self.donations = results
-//            self.readAndDisplayAnnotations()
-//            }.error{
-//                (error) in
-//                print(error)
-//        }
-//    }
+    private func fetchRemoteDonations() {
+        DrivrAPI.sharedInstance.getDriverDonations().then(){
+            (results) -> Void in
+            self.donations = results
+            self.readAndDisplayAnnotations()
+            }.error{
+                (error) in
+                print(error)
+        }
+    }
     
 }
 
