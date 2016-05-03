@@ -17,6 +17,7 @@ class DonationsOverviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupMenuBar()
+        self.title = AuthProvider.sharedInstance.getCurrentUser()?.name ?? "Pending Donations"
         self.updateContainers(0)
         // Do any additional setup after loading the view.
     }
@@ -65,14 +66,13 @@ extension UIViewController {
         self.navigationController?.navigationBar.translucent = false;
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "OpenSans", size: 17)!]
         let menuBtn = UIButton()
-        menuBtn.setImage(UIImage(named: "burger"), forState: .Normal)
+        menuBtn.setImage(UIImage(named: "hamburger"), forState: .Normal)
         menuBtn.frame = CGRectMake(0, 0, 30, 30)
         menuBtn.addTarget(self, action: #selector(UIViewController.toggleMenu), forControlEvents: .TouchUpInside)
         let leftBarButton = UIBarButtonItem(customView: menuBtn)
         self.navigationItem.leftBarButtonItem = leftBarButton
-        self.title = "ian gristock"
     }
     
     func toggleMenu() {
