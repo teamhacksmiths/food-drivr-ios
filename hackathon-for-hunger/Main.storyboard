@@ -177,7 +177,7 @@
                                                     <constraint firstItem="xlU-3J-3T5" firstAttribute="top" secondItem="4TN-f4-0Rd" secondAttribute="top" id="ycT-HR-3Aa"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqc-hn-QaM">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqc-hn-QaM">
                                                 <rect key="frame" x="0.0" y="234" width="600" height="28"/>
                                                 <fontDescription key="fontDescription" name="Colaborate-Thin" family="Colaborate-Thin" pointSize="15"/>
                                                 <state key="normal" title="Forgot Your Password">
@@ -189,13 +189,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-dY-PN6">
                                         <rect key="frame" x="0.0" y="334" width="600" height="206"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Or Login with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ3-oe-KBP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Or Login with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ3-oe-KBP">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
                                                 <fontDescription key="fontDescription" name="Colaborate-Thin" family="Colaborate-Thin" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Lnw-0y-TPi">
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lnw-0y-TPi">
                                                 <rect key="frame" x="0.0" y="34" width="600" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -599,7 +599,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q2H-Qb-iPN">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q2H-Qb-iPN">
                                 <rect key="frame" x="20" y="72" width="560" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What would you like to donate today ? " textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Xd-d7-aMv">
@@ -607,7 +607,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rg2-vt-K4F">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rg2-vt-K4F">
                                         <rect key="frame" x="0.0" y="32" width="560" height="1"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -616,10 +616,10 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-w4-vnU">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-w4-vnU">
                                 <rect key="frame" x="0.0" y="544" width="600" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aL-nh-jYe">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aL-nh-jYe">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="BebasNeue" family="Bebas Neue" pointSize="36"/>

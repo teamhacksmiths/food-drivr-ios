@@ -15,8 +15,6 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     var startingRegion = MapsDummyData.sharedInstance.startingRegion // used to retrieve precalculated starting region
     var mapsModel = MapsModel.sharedInstance
     
-    //var annotationsHaveBeenShown: Bool = false //to allow auto zooming to pins, but just once
-    
     var locationManager = LocationManager.sharedInstance.locationManager
     
     var donation: Donation?
