@@ -28,8 +28,7 @@ class PendingDonationsDashboardTableViewCell: UITableViewCell {
     var information: Donation? = nil {
         didSet {
             fullNameLabel.text = information?.recipient?.name
-            print(information?.donationItems)
-            amountLabel.text = information?.donationItems.first?.name
+            amountLabel.text = information?.donationItems.first?.name ?? "no donation items found"
             locationLabel.text = information?.recipient?.street_address
         }
     }

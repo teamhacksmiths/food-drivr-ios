@@ -27,10 +27,8 @@ class CurrentDonationsDashboard: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.borderWidth=1.0
-        imageView.layer.borderColor = UIColor.blackColor().CGColor
-        imageView.layer.cornerRadius = imageView.frame.size.height/2
-        imageView.clipsToBounds = true
+        self.setupMenuBar()
+        self.title = AuthProvider.sharedInstance.getCurrentUser()?.name ?? "Current Donations"
         donationVM = DonationViewModel()
         donationVM.delegate = self
         donationVM.fetch(.Active)
@@ -51,7 +49,7 @@ class CurrentDonationsDashboard: UIViewController {
         self.slideMenuController()?.openLeft()
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toDriverMapDetailPendingFromDashboard") {
+        if (segue.identifier == "toDriverMapDetailCurrentFromDashboard") {
             
             if let donation = sender as? Donation {
                 let donationVC = segue.destinationViewController as! DriverMapDetailPendingVC
@@ -113,7 +111,7 @@ extension CurrentDonationsDashboard:  UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("toDriverMapDetailPendingFromDashboard", sender: donationVM.donationAtIndex(indexPath.row))
+        self.performSegueWithIdentifier("toDriverMapDetailCurrentFromDashboard", sender: donationVM.donationAtIndex(indexPath.row))
     }
     
     //empty implementation

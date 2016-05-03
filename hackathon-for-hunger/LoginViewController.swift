@@ -90,7 +90,10 @@ class LoginViewController: UIViewController {
         let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Main") as! DonationsOverviewViewController
         let leftViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        mainViewController.navigationController!.navigationBar.barTintColor = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
+        mainViewController.title = "WTF"
         let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        slideMenuController.addLeftBarButtonWithImage(UIImage(named:"hamburger")!)
         self.presentViewController(slideMenuController, animated: false, completion: nil)
     }
     
