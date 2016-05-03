@@ -25,10 +25,6 @@ class PendingDonationsDashboard: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.borderWidth=1.0
-        imageView.layer.borderColor = UIColor.blackColor().CGColor
-        imageView.layer.cornerRadius = imageView.frame.size.height/2
-        imageView.clipsToBounds = true
         donationVM = DonationViewModel()
         donationVM.delegate = self
         donationVM.fetch(.Pending)

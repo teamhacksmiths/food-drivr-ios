@@ -37,6 +37,15 @@
 		<string>BebasNeue.otf</string>
 		<string>ColabThi.otf</string>
 		<string>Deming EP.ttf</string>
+		<string>OpenSans-Bold.ttf</string>
+		<string>OpenSans-Bolditalic.ttf</string>
+		<string>OpenSans-ExtraBold.ttf</string>
+		<string>OpenSans-Italic.ttf</string>
+		<string>OpenSans-Light.ttf</string>
+		<string>OpenSans-Lightitalic.ttf</string>
+		<string>OpenSans-Regular.ttf</string>
+		<string>OpenSans-Semibold.ttf</string>
+		<string>OpenSans-SemiboldItalic.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
