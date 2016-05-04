@@ -164,12 +164,13 @@ class DrivrAPI {
         
     }
     
-    func updateDonationStatus(donation: Donation, status: DonationStatus,  success: (Donation)-> (), failure: (NSError?) ->()) {
-        let realm = try! Realm()
-        try! realm.write {
-            donation.status = status
-            realm.add(donation, update: true)
+    func updateDonationStatus(donation: Donation, status: DonationStatus) -> Promise<Donation> {
+        return Promise { fulfill, reject in
+            delay(4) {
+              fulfill(donation)  
+            }
+            
+            
         }
-        success(donation)
     }
 }

@@ -8,21 +8,18 @@
 
 import UIKit
 import SlideMenuControllerSwift
-import NVActivityIndicatorView
 import CoreLocation
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
-    let activityIndicator = NVActivityIndicatorView(frame: CGRectMake(0, 0, 25, 25), type: .BallRotateChase, color:  UIColor(red: 31/255, green: 198/255, blue: 227/255, alpha: 0.7), padding: 0)
-    
+    var activityIndicator : ActivityIndicatorView!
 
     var loginProvider = LoginProvider.None
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        activityIndicator.center = CGPointMake(self.view.frame.size.width / 2.0, self.view.frame.size.height / 2.0);
         if let _ = AuthProvider.sharedInstance.getCurrentUser() {
             print("in here here")
             segueToMenuController()
@@ -33,7 +30,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(activityIndicator)
+        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Please wait")
+        view.addSubview(self.activityIndicator)
         // Ask user for permission to use location services (should only ask the user the first time they use the app)
         let locationManager = LocationManager.sharedInstance.locationManager
         locationManager.delegate = LocationManager.sharedInstance
@@ -65,10 +63,10 @@ class LoginViewController: UIViewController {
 
     @IBAction func signInButtonClicked(sender: AnyObject) {
         //Suggestion for implementing the signIn
-        self.activityIndicator.startAnimation()
+        self.activityIndicator.startAnimating()
         if !checkAuth() {
             authReply("Please fill in both fields to proceed")
-            self.activityIndicator.stopAnimation()
+            self.activityIndicator.stopAnimating()
             return
         }
         loginProvider = .Custom(emailInput.text!, passwordInput.text!)
@@ -111,15 +109,17 @@ extension LoginViewController: LoginProviderDelegate {
      // MARK: LoginProviderDelegate Method
     
     func loginProvider(loginProvider: LoginProvider, didSucceed user: [String: AnyObject]){
+        self.activityIndicator.stopAnimating()
         self.segueToMenuController()
     }
     
     func loginProvider(loginProvider: LoginProvider, didSucceed user: User?){
+        self.activityIndicator.stopAnimating()
         self.segueToMenuController()
     }
     
     func loginProvider(loginProvider: LoginProvider, didFail error: NSError){
-        self.activityIndicator.stopAnimation()
+        self.activityIndicator.stopAnimating()
         authReply("Please supply valid credentials to proceed")
     }
     
