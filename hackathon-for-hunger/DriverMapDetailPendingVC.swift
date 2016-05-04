@@ -21,7 +21,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     var pickupAnnotation: DonationPin?
     var dropoffAnnotation: DonationPin?
-
+    var activityIndicator: ActivityIndicatorView!
     
     
     //MARK:- Outlets & Actions
@@ -40,6 +40,12 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var donorCityLabel: UILabel!
     
     @IBAction func acceptDonation(sender: AnyObject) {
+       activityIndicator.startAnimating()
+        DrivrAPI.sharedInstance.updateDonationStatus(donation!, status: .Active).then{
+            donation in
+            self.activityIndicator.stopAnimating()
+        }
+        
         // segue to view controller with route
     }
     
@@ -50,7 +56,8 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     //MARK:- View lifecycle
     
     override func viewDidLoad() {
-
+        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Accepting")
+        self.view.addSubview(activityIndicator)
         mapView.delegate = self
         //mapView.setRegion(startingRegion, animated: true)
         if donation != nil {
@@ -222,7 +229,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toDriverPickupMap") {
+        if (segue.identifier == "acceptedDonation") {
             
             if let driverMapPickupVC = segue.destinationViewController as? DriverMapPickupVC {
                 
