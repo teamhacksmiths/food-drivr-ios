@@ -52,12 +52,9 @@ class DonationViewModel {
     }
     
     func updateDonationStatus(donation: Donation, status: DonationStatus) {
-        DrivrAPI.sharedInstance.updateDonationStatus(donation, status:status,  success: {
-            _ in
+        DrivrAPI.sharedInstance.updateDonationStatus(donation, status:status).then {
+            donation in
             print(donation)
-            }, failure: {
-                (error) in
-                print(error)
-        })
+        }
     }
 }
