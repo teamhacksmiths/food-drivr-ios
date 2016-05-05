@@ -229,9 +229,8 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toDriverPickupMap") {
-            print(donation)
-            DrivrAPI.sharedInstance.updateDonationStatus(donation!, status: .Active)
+        if (segue.identifier == "acceptedDonation") {
+            
             if let driverMapPickupVC = segue.destinationViewController as? DriverMapPickupVC {
                 
                 driverMapPickupVC.donation = donation
