@@ -47,6 +47,7 @@ class DonationViewModel {
             self.fetch(status)
             }.error {
                 error in
+                print(error)
                 self.delegate?.donationViewModel(self, didFail: error as NSError)
         }
     }
