@@ -12,6 +12,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupMenuBar()
+        self.title = "Profile"
     }
     
     @IBAction func toggleMenu(sender: AnyObject) {

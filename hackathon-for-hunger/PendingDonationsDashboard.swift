@@ -25,10 +25,6 @@ class PendingDonationsDashboard: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.borderWidth=1.0
-        imageView.layer.borderColor = UIColor.blackColor().CGColor
-        imageView.layer.cornerRadius = imageView.frame.size.height/2
-        imageView.clipsToBounds = true
         donationVM = DonationViewModel()
         donationVM.delegate = self
         donationVM.fetch(.Pending)
@@ -120,9 +116,9 @@ extension PendingDonationsDashboard: DonationDelegate {
     
     func donationViewModel(sender: DonationViewModel, didSucceed donations: Results<Donation>) {
         self.tableView.reloadData()
-    }
+            }
     func donationViewModel(sender: DonationViewModel, didFail error: NSError) {
-        
+        print(error)
     }
 }
 

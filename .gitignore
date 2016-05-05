@@ -68,3 +68,4 @@ fastlane/screenshots
 # adding the api keys plist to gitignore to stop accidently exposing api credentials in github
 ApiKeys.plist
 .DS_Store
+.idea

@@ -13,9 +13,15 @@ import RealmSwift
 
 class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
+    // Set to false to use data from the server. Set to true to use dummy data for testing purposes.
+    var useDummyData: Bool = false
+    
     let dummyData = MapsDummyData.sharedInstance
     var donorInfoArray: [DonorInfo]?
+    
     var donations: Results<Donation>?
+    var donationsDummyData: [Donation]?
+    
     var realm = try! Realm()
     
     
@@ -51,24 +57,37 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
         var annotations = [DonationPin]()
 
-        
-        for donation in donations! { //TODO: - replace force unwrapping
-
-            // create the annotation and set its properties
-            let annotation = DonationPin()  // subclass of MKAnnotation()
-            annotation.donation = donation
-            annotation.kind = .Pickup
-
-            // place the annotation in an array of annotations.
-            annotations.append(annotation)
+        switch useDummyData {
+        case true:
+            for donation in donationsDummyData! { //TODO: - replace force unwrapping
+                
+                // create the annotation and set its properties
+                let annotation = DonationPin()  // subclass of MKAnnotation()
+                annotation.donation = donation
+                annotation.kind = .Pickup
+                
+                // place the annotation in an array of annotations.
+                annotations.append(annotation)
+            }
+        case false:
+            for donation in donations! { //TODO: - replace force unwrapping
+                
+                // create the annotation and set its properties
+                let annotation = DonationPin()  // subclass of MKAnnotation()
+                annotation.donation = donation
+                annotation.kind = .Pickup
+                
+                // place the annotation in an array of annotations.
+                annotations.append(annotation)
+            }
         }
+        
         
         // When the array is complete, add the annotations to the map.
         mapView.addAnnotations(annotations)
 
         mapView.showAnnotations(annotations, animated: true)
         
-        // TODO: customize the callouts, and make sure they appear when pin is tapped
        
     }
     
@@ -84,7 +103,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
     }
     
-    // MARK: - MKMapViewDelegate
+    // MARK: - MKMapViewDelegate methods
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -93,20 +112,23 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
             return nil
         }
 
+        let pinImage = UIImage(named: "pin_green")
         
         let reuseId = "pin"
         
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
-        
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
         
         if pinView == nil {
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
+            pinView?.tintColor = dummyData.pinColorPickup
+            pinView?.image = pinImage
             //TODO: might not need these checks here because all these pins are pickup pins
             if annotation.isKindOfClass(DonationPin) == true {
                 if let pickupDonationPin = annotation as? DonationPin {
                     if pickupDonationPin.kind == .Pickup {
-                        pinView!.pinTintColor = dummyData.pinColorPickup
+                        
+                        //pinView!.pinTintColor = dummyData.pinColorPickup
                     }
                 }
             }
@@ -115,6 +137,8 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
         else {
             pinView!.annotation = annotation
+            pinView?.tintColor = dummyData.pinColorPickup
+
         }
         
         pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
@@ -143,13 +167,25 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         }
     }
     
+    
+
+    // MARK: - fetch donation methods
+    
     func getDonations() {
-        let pendingDonations = realm.objects(Donation)
-        guard pendingDonations.count > 0 else {
-            self.fetchRemoteDonations()
-            return
+        
+        if useDummyData == true {
+            donationsDummyData = dummyData.donations
+            print("using dummy data")
+        } else {
+            
+            let pendingDonations = realm.objects(Donation)
+            guard pendingDonations.count > 0 else {
+                self.fetchRemoteDonations()
+                return
+            }
+            self.donations = pendingDonations
         }
-        self.donations = pendingDonations
+        
         readAndDisplayAnnotations()
     }
     
@@ -163,5 +199,6 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
                 print(error)
         }
     }
+    
 }
 
