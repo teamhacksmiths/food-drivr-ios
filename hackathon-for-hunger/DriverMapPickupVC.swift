@@ -41,6 +41,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var donorCityLabel: UILabel!
     @IBOutlet weak var donorContactLabel: UILabel!
     @IBOutlet weak var donorPhoneLabel: UILabel!
+    @IBOutlet weak var pickupLabelImage: UIImageView!
 
     @IBOutlet weak var pickupDropoffButton: UIButton!
     @IBOutlet weak var buttonBackground: UIView!
@@ -66,13 +67,20 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func askForDirections(sender: AnyObject) {
+    }
+    
     func updateUI() {
         switch kind {
         case .Pickup:
+            pickupLabelImage.image = UIImage(named: "pickup_label")
+            donorNameLabel.textColor = data.pinColorPickup
             buttonBackground.backgroundColor = data.pinColorPickup
             pickupDropoffButton.setTitle("CONFIRM PICK UP", forState: .Normal)
 
         case .Dropoff:
+            pickupLabelImage.image = UIImage(named: "dropoff_label")
+            donorNameLabel.textColor = data.pinColorDropoff
             buttonBackground.backgroundColor = data.pinColorDropoff
             pickupDropoffButton.setTitle("CONFIRM DROP OFF", forState: .Normal)
             if donation != nil {
@@ -146,6 +154,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         
         if donation != nil {
             donorNameLabel.text = donation?.donor?.name
+            donorNameLabel.textColor = data.pinColorPickup
             // TODO: need a street address for Donor Participant, to be passed to UI
             
             // create Map Items
