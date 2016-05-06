@@ -82,6 +82,7 @@
 		63FB1DA41CBE312C00EDB80F /* DriverMapPickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FB1DA31CBE312C00EDB80F /* DriverMapPickupVC.swift */; };
 		63FE866C1CDBB9D8000764B2 /* pickup_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */; };
 		63FE866E1CDBBFC5000764B2 /* dropoff_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */; };
+		63FE86721CDC4243000764B2 /* directions_icon_small.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE86711CDC4243000764B2 /* directions_icon_small.pdf */; };
 		69BBC19CAFAE9CEC7A5EECCE /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */; };
 		EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */; };
 		EA6C4C201CD1E80300165F02 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1F1CD1E80300165F02 /* Global.swift */; };
@@ -194,6 +195,7 @@
 		63FB1DA31CBE312C00EDB80F /* DriverMapPickupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapPickupVC.swift; sourceTree = "<group>"; };
 		63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pickup_label.pdf; sourceTree = "<group>"; };
 		63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dropoff_label.pdf; sourceTree = "<group>"; };
+		63FE86711CDC4243000764B2 /* directions_icon_small.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon_small.pdf; sourceTree = "<group>"; };
 		7D65AE8EA6D2673A5FC471F2 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C423D9E60134D94E263D2 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
 		EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 		63CAF7F61CC29BD4000D89A1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				63FE86711CDC4243000764B2 /* directions_icon_small.pdf */,
 				63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */,
 				63823CFA1CD42DBF00B258B4 /* drivr_pin_orange.pdf */,
 				63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */,
@@ -643,6 +646,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */,
+				63FE86721CDC4243000764B2 /* directions_icon_small.pdf in Resources */,
 				634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */,
 				63823CFB1CD42DBF00B258B4 /* drivr_pin_orange.pdf in Resources */,
 				63FE866C1CDBB9D8000764B2 /* pickup_label.pdf in Resources */,
