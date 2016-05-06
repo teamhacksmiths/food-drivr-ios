@@ -220,13 +220,13 @@ enum LoginProvider {
     
     private func loginUsingCustom(delegate: LoginProviderDelegate, email: String, password: String) {
         
-        DrivrAPI.sharedInstance.authenticateUser(UserLogin(email: email, password: password)).then() {
-            user ->Void in
-            delegate.loginProvider(self, didSucceed: user)
-            return
-        }.error { error in
-                delegate.loginProvider(self, didFail: error as NSError)
-        }
+//        DrivrAPI.sharedInstance.authenticateUser(UserLogin(email: email, password: password)).then() {
+//            user ->Void in
+//            delegate.loginProvider(self, didSucceed: user)
+//            return
+//        }.error { error in
+//                delegate.loginProvider(self, didFail: error as NSError)
+//        }
     }
     
     

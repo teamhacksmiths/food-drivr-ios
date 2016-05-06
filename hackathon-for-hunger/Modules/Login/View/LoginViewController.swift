@@ -15,21 +15,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     
     var activityIndicator : ActivityIndicatorView!
-
-    var loginProvider = LoginProvider.None
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        if let _ = AuthProvider.sharedInstance.getCurrentUser() {
-            print("in here here")
-            segueToMenuController()
-        } else {
-            AuthProvider.sharedInstance.destroyToken()
-        }
-    }
+    private let loginPresenter = LoginPresenter(userService: UserService())
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginPresenter.attachView(self)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Please wait")
         view.addSubview(self.activityIndicator)
         // Ask user for permission to use location services (should only ask the user the first time they use the app)
@@ -40,13 +30,11 @@ class LoginViewController: UIViewController {
     }
     
     func authReply(reply: String){
-        /* alert code courtesy of iOS Creator (http://www.ioscreator.com/tutorials/display-an-alert-view-in-ios8-with-swift ) */
         let alertController = UIAlertController(title: "Food Drivr", message:
             "\(reply)", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
-    
     }
     
     func checkAuth() -> Bool{
@@ -56,11 +44,22 @@ class LoginViewController: UIViewController {
         return true
     }
 
-    @IBAction func singInUsingFacebook(sender: UIButton) {
-        loginProvider = .Facebook
-        loginProvider.login(self)
+    
+    private func segueToMenuController() {
+        let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Main") as! DonationsOverviewViewController
+        let leftViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        slideMenuController.addLeftBarButtonWithImage(UIImage(named:"hamburger")!)
+        self.presentViewController(slideMenuController, animated: false, completion: nil)
     }
-
+    
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
+    let authProvider = AuthProvider.sharedInstance
+        authProvider.destroyUser()
+        authProvider.destroyToken()
+    }
+    
     @IBAction func signInButtonClicked(sender: AnyObject) {
         //Suggestion for implementing the signIn
         self.activityIndicator.startAnimating()
@@ -69,58 +68,29 @@ class LoginViewController: UIViewController {
             self.activityIndicator.stopAnimating()
             return
         }
-        loginProvider = .Custom(emailInput.text!, passwordInput.text!)
-        loginProvider.login(self)
-        
-       // self.activityIndicator.stopAnimation()
-        
-    }
-    
-
-    @IBAction func singUpUsingTwitter(sender: UIButton) {
-        
-        loginProvider = .Twitter
-        loginProvider.login(self)
-        
-    }
-    
-    private func segueToMenuController() {
-        let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Main") as! DonationsOverviewViewController
-        let leftViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-        mainViewController.navigationController!.navigationBar.barTintColor = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
-        mainViewController.title = "WTF"
-        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
-        slideMenuController.addLeftBarButtonWithImage(UIImage(named:"hamburger")!)
-        self.presentViewController(slideMenuController, animated: false, completion: nil)
-    }
-    
-    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
-        print("calling segue")
-    let authProvider = AuthProvider.sharedInstance
-        authProvider.destroyUser()
-        authProvider.destroyToken()
+        loginPresenter.authenticate(UserLogin(email: emailInput.text!,password: passwordInput.text!))
     }
 }
 
 
-extension LoginViewController: LoginProviderDelegate {
+extension LoginViewController: LoginView {
     
      // MARK: LoginProviderDelegate Method
+    func startLoading() {
+        self.activityIndicator.startAnimating()
+    }
     
-    func loginProvider(loginProvider: LoginProvider, didSucceed user: [String: AnyObject]){
+    func finishLoading() {
         self.activityIndicator.stopAnimating()
+    }
+    
+    func login(didSucceed user: User) {
+        self.finishLoading()
         self.segueToMenuController()
     }
     
-    func loginProvider(loginProvider: LoginProvider, didSucceed user: User?){
-        self.activityIndicator.stopAnimating()
-        self.segueToMenuController()
-    }
-    
-    func loginProvider(loginProvider: LoginProvider, didFail error: NSError){
-        self.activityIndicator.stopAnimating()
+    func login(didFail error: NSError) {
+        self.finishLoading()
         authReply("Please supply valid credentials to proceed")
     }
-    
 }

@@ -23,13 +23,7 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func logoutButtonClicked(sender: AnyObject) {
-        
-        guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
-            return
-        }
-        AuthProvider.sharedInstance.destroyUser()
-        AuthProvider.sharedInstance.destroyToken()
-        delegate.runLoginFlow()
+        self.logout()
     }
     
     override func viewDidLoad() {
