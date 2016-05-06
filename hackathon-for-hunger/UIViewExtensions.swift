@@ -28,3 +28,14 @@ extension UIView {
         layer.addSublayer(border)
     }
 }
+
+extension UIViewController {
+    func logout() {
+        guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
+            return
+        }
+        AuthProvider.sharedInstance.destroyUser()
+        AuthProvider.sharedInstance.destroyToken()
+        delegate.runLoginFlow()
+    }
+}

@@ -75,14 +75,14 @@ extension VSUserInfoViewController {
     }
     
     private func sendToServer() {
-        DrivrAPI.sharedInstance.registerUser(VSUserInfoViewController.user, success: {
-                (JsonDict) in
-            print (JsonDict)
-            self.showAwaitingApprovalView()
-            }, failure: {
-                (error) in
-                self.showAlert(.Custom("Server", error!.description))
-        })
+//        DrivrAPI.sharedInstance.registerUser(VSUserInfoViewController.user, success: {
+//                (JsonDict) in
+//            print (JsonDict)
+//            self.showAwaitingApprovalView()
+//            }, failure: {
+//                (error) in
+//                self.showAlert(.Custom("Server", error!.description))
+//        })
     }
     
     private func createUser() {

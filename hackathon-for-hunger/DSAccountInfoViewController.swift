@@ -48,13 +48,13 @@ class DSAccountInfoViewController: UIViewController {
         user.password_confirmation = donor.password!
         user.role = .Donor
         
-        DrivrAPI.sharedInstance.registerUser(user, success: {
-            (JsonDict) in
-            print (JsonDict)
-            }, failure: {
-                (error) in
-                print(error)
-        })
+//        DrivrAPI.sharedInstance.registerUser(user, success: {
+//            (JsonDict) in
+//            print (JsonDict)
+//            }, failure: {
+//                (error) in
+//                print(error)
+//        })
     }
     
     // MARK: Helper
