@@ -38,4 +38,42 @@ extension UIViewController {
         AuthProvider.sharedInstance.destroyToken()
         delegate.runLoginFlow()
     }
+    
+    func setupMenuBar() {
+        self.navigationController?.navigationBar.translucent = false;
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "OpenSans", size: 17)!]
+        let menuBtn = UIButton()
+        menuBtn.setImage(UIImage(named: "hamburger"), forState: .Normal)
+        menuBtn.frame = CGRectMake(0, 0, 30, 30)
+        menuBtn.addTarget(self, action: #selector(UIViewController.toggleMenu), forControlEvents: .TouchUpInside)
+        let leftBarButton = UIBarButtonItem(customView: menuBtn)
+        self.navigationItem.leftBarButtonItem = leftBarButton
+    }
+    
+    func toggleMenu() {
+        self.slideMenuController()?.openLeft()
+    }
+
+}
+
+extension UISegmentedControl {
+    func removeBorders() {
+        //setBackgroundImage(imageWithColor(UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)), forState: .Normal, barMetrics: .Default)
+        setBackgroundImage(imageWithColor(UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)), forState: .Selected, barMetrics: .Default)
+        setDividerImage(imageWithColor(UIColor.clearColor()), forLeftSegmentState: .Normal, rightSegmentState: .Normal, barMetrics: .Default)
+    }
+    
+    // create a 1x1 image with this color
+    private func imageWithColor(color: UIColor) -> UIImage {
+        let rect = CGRectMake(0.0, 0.0, 1.0, 1.0)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        CGContextFillRect(context, rect);
+        let image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return image
+    }
 }

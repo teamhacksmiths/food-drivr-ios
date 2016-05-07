@@ -41,10 +41,10 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     @IBAction func acceptDonation(sender: AnyObject) {
        activityIndicator.startAnimating()
-        DrivrAPI.sharedInstance.updateDonationStatus(donation!, status: .Active).then{
-            donation in
-            self.activityIndicator.stopAnimating()
-        }
+//        DrivrAPI.sharedInstance.updateDonationStatus(donation!, status: .Active).then{
+//            donation in
+//            self.activityIndicator.stopAnimating()
+//        }
         
         // segue to view controller with route
     }

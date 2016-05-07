@@ -9,11 +9,8 @@
 /* Begin PBXBuildFile section */
 		3CC1ABCA1CC15E8800E01EE0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */; };
 		3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */; };
-		3CC24B711CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */; };
-		3CC24B731CBC111F00ACC504 /* PendingDonationsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */; };
 		3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B741CBC244C00ACC504 /* AcceptButton.swift */; };
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
-		3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */; };
 		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
 		442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9751CC15CAD0002187D /* UserRegistration.swift */; };
 		442FE9781CC284230002187D /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9771CC284230002187D /* UserLogin.swift */; };
@@ -21,6 +18,7 @@
 		443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */; };
 		443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */; };
 		443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAD1CB6D57500E2E7B9 /* Deming EP.ttf */; };
+		44424D7D1CDDC07C00B2409F /* CurrentDonationsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D7C1CDDC07C00B2409F /* CurrentDonationsDashboard.swift */; };
 		44484DDE1CAFD857002D7233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DDD1CAFD857002D7233 /* User.swift */; };
 		44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE01CAFD8C0002D7233 /* AuthProvider.swift */; };
 		44484DE31CAFDA45002D7233 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE21CAFDA45002D7233 /* Token.swift */; };
@@ -31,7 +29,6 @@
 		44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E601CAEF35F00A5F1C3 /* DonationType.swift */; };
 		44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E621CAEF37400A5F1C3 /* MetaData.swift */; };
 		44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E641CAEF68500A5F1C3 /* Participant.swift */; };
-		44638F031CC3D160005379FE /* DonationsOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44638F021CC3D160005379FE /* DonationsOverviewViewController.swift */; };
 		44638F061CC3EDD0005379FE /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44638F051CC3EDD0005379FE /* UIViewExtensions.swift */; };
 		4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464177E1CB182AC00F37F17 /* Recipient.swift */; };
 		446417811CB1872500F37F17 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446417801CB1872500F37F17 /* Image.swift */; };
@@ -40,7 +37,11 @@
 		446A76D61CDD129400951319 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A76D51CDD129400951319 /* LoginPresenter.swift */; };
 		446A76D91CDD17A700951319 /* LegacyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A76D81CDD17A700951319 /* LegacyCode.swift */; };
 		446A76DB1CDD1B9800951319 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A76DA1CDD1B9800951319 /* LoginProvider.swift */; };
-		447CC8CB1CC9F0980021A3D9 /* DonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447CC8CA1CC9F0980021A3D9 /* DonationViewModel.swift */; };
+		446A77311CDD265200951319 /* DonationsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77301CDD265200951319 /* DonationsContainerViewController.swift */; };
+		446A77331CDD289600951319 /* PendingDonationsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77321CDD289600951319 /* PendingDonationsDashboard.swift */; };
+		446A77351CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77341CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift */; };
+		446A77371CDD291C00951319 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77361CDD291C00951319 /* DashboardPresenter.swift */; };
+		446A77391CDD29C400951319 /* DonationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77381CDD29C400951319 /* DonationService.swift */; };
 		44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250A1CAC444100D676C3 /* BaseRouter.swift */; };
 		44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */; };
 		44A725101CAC559500D676C3 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250F1CAC559500D676C3 /* Donation.swift */; };
@@ -48,7 +49,6 @@
 		44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8731CA9CBC100A52731 /* AppDelegate.swift */; };
 		44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87A1CA9CBC100A52731 /* Assets.xcassets */; };
 		44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */; };
-		44B7EFF91CAD95A600E7C609 /* DrivrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFF81CAD95A600E7C609 /* DrivrAPI.swift */; };
 		44B7F0001CADAD5B00E7C609 /* DonationRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */; };
 		44C0CF521CBD670600EA3390 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C0CF511CBD670600EA3390 /* Setting.swift */; };
 		44C0CF561CBD6B9100EA3390 /* UserDonorMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */; };
@@ -63,7 +63,6 @@
 		44C7C8631CD8DB76002ED3B6 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8591CD8DB76002ED3B6 /* OpenSans-Regular.ttf */; };
 		44C7C8641CD8DB76002ED3B6 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C85A1CD8DB76002ED3B6 /* OpenSans-Semibold.ttf */; };
 		44C7C8651CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C85B1CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf */; };
-		44F857731CCAA7C700326293 /* CurrentDonationsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F857721CCAA7C700326293 /* CurrentDonationsDashboard.swift */; };
 		634E34291CC84E7100DD48BF /* multiple-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34261CC84E7100DD48BF /* multiple-circle.png */; };
 		634E342A1CC84E7100DD48BF /* multiple-circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34271CC84E7100DD48BF /* multiple-circle@2x.png */; };
 		634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34281CC84E7100DD48BF /* multiple-circle@3x.png */; };
@@ -118,11 +117,8 @@
 /* Begin PBXFileReference section */
 		3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
-		3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboardTableViewCell.swift; sourceTree = "<group>"; };
-		3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboard.swift; sourceTree = "<group>"; };
 		3CC24B741CBC244C00ACC504 /* AcceptButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptButton.swift; sourceTree = "<group>"; };
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewCell.swift; sourceTree = "<group>"; };
 		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
 		442FE9751CC15CAD0002187D /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
 		442FE9771CC284230002187D /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
@@ -130,6 +126,7 @@
 		443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ColabThi.otf; sourceTree = "<group>"; };
 		443D1DAD1CB6D57500E2E7B9 /* Deming EP.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Deming EP.ttf"; sourceTree = "<group>"; };
+		44424D7C1CDDC07C00B2409F /* CurrentDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDonationsDashboard.swift; sourceTree = "<group>"; };
 		44484DDD1CAFD857002D7233 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		44484DE01CAFD8C0002D7233 /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		44484DE21CAFDA45002D7233 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -140,7 +137,6 @@
 		44573E601CAEF35F00A5F1C3 /* DonationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationType.swift; sourceTree = "<group>"; };
 		44573E621CAEF37400A5F1C3 /* MetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
 		44573E641CAEF68500A5F1C3 /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
-		44638F021CC3D160005379FE /* DonationsOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationsOverviewViewController.swift; sourceTree = "<group>"; };
 		44638F051CC3EDD0005379FE /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		4464177E1CB182AC00F37F17 /* Recipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
 		446417801CB1872500F37F17 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -149,7 +145,11 @@
 		446A76D51CDD129400951319 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		446A76D81CDD17A700951319 /* LegacyCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyCode.swift; sourceTree = "<group>"; };
 		446A76DA1CDD1B9800951319 /* LoginProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
-		447CC8CA1CC9F0980021A3D9 /* DonationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewModel.swift; sourceTree = "<group>"; };
+		446A77301CDD265200951319 /* DonationsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationsContainerViewController.swift; sourceTree = "<group>"; };
+		446A77321CDD289600951319 /* PendingDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboard.swift; sourceTree = "<group>"; };
+		446A77341CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		446A77361CDD291C00951319 /* DashboardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		446A77381CDD29C400951319 /* DonationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationService.swift; sourceTree = "<group>"; };
 		44A7250A1CAC444100D676C3 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouter.swift; sourceTree = "<group>"; };
 		44A7250F1CAC559500D676C3 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
@@ -161,7 +161,6 @@
 		44AEA87F1CA9CBC100A52731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44AEA8841CA9CBC100A52731 /* hackathon-for-hungerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hackathon-for-hungerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AEA88A1CA9CBC100A52731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44B7EFF81CAD95A600E7C609 /* DrivrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrivrAPI.swift; sourceTree = "<group>"; };
 		44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouterTest.swift; sourceTree = "<group>"; };
 		44C0CF511CBD670600EA3390 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDonorMock.json; sourceTree = "<group>"; };
@@ -176,7 +175,6 @@
 		44C7C8591CD8DB76002ED3B6 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		44C7C85A1CD8DB76002ED3B6 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../../OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		44C7C85B1CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "../../OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
-		44F857721CCAA7C700326293 /* CurrentDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDonationsDashboard.swift; sourceTree = "<group>"; };
 		4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E34261CC84E7100DD48BF /* multiple-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle.png"; sourceTree = "<group>"; };
 		634E34271CC84E7100DD48BF /* multiple-circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@2x.png"; sourceTree = "<group>"; };
@@ -326,6 +324,7 @@
 		446A76C61CDD0FCC00951319 /* Driver */ = {
 			isa = PBXGroup;
 			children = (
+				446A76DC1CDD209100951319 /* Dashboards */,
 			);
 			path = Driver;
 			sourceTree = "<group>";
@@ -351,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				446A76CE1CDD116000951319 /* UserService.swift */,
+				446A77381CDD29C400951319 /* DonationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -387,18 +387,37 @@
 			path = Legacy;
 			sourceTree = "<group>";
 		};
-		447CC8C91CC9F07F0021A3D9 /* ViewModel */ = {
+		446A76DC1CDD209100951319 /* Dashboards */ = {
 			isa = PBXGroup;
 			children = (
-				447CC8CA1CC9F0980021A3D9 /* DonationViewModel.swift */,
+				446A772F1CDD255700951319 /* Presenter */,
+				446A76DD1CDD20B200951319 /* Views */,
 			);
-			name = ViewModel;
+			path = Dashboards;
+			sourceTree = "<group>";
+		};
+		446A76DD1CDD20B200951319 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424D7C1CDDC07C00B2409F /* CurrentDonationsDashboard.swift */,
+				446A77341CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift */,
+				446A77321CDD289600951319 /* PendingDonationsDashboard.swift */,
+				446A77301CDD265200951319 /* DonationsContainerViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		446A772F1CDD255700951319 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				446A77361CDD291C00951319 /* DashboardPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		44A725081CAC441F00D676C3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				44B7EFF71CAD959400E7C609 /* API */,
 				44A725091CAC442E00D676C3 /* Routing */,
 				44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */,
 			);
@@ -471,7 +490,6 @@
 				446A76C51CDD0FA800951319 /* Modules */,
 				EAD2DDEE1CD330B7007454FB /* View */,
 				EA6C4C1E1CD1E7B800165F02 /* Support */,
-				447CC8C91CC9F07F0021A3D9 /* ViewModel */,
 				44638F041CC3EDBA005379FE /* Extensions */,
 				443D1DA81CB6D56100E2E7B9 /* Assets */,
 				44484DDF1CAFD8B2002D7233 /* Auth */,
@@ -484,16 +502,13 @@
 				EAD2DDF31CD58EF8007454FB /* DonorAddAddressViewController.swift */,
 				EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */,
 				3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */,
-				3CC24B701CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift */,
 				3CC24B741CBC244C00ACC504 /* AcceptButton.swift */,
-				3CFDE8201CAF26CB00D6172B /* DashboardViewCell.swift */,
 				44AEA87A1CA9CBC100A52731 /* Assets.xcassets */,
 				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
 				44573E601CAEF35F00A5F1C3 /* DonationType.swift */,
 				44AEA87F1CA9CBC100A52731 /* Info.plist */,
 				44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */,
 				6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */,
-				44638F021CC3D160005379FE /* DonationsOverviewViewController.swift */,
 			);
 			path = "hackathon-for-hunger";
 			sourceTree = "<group>";
@@ -505,14 +520,6 @@
 				44AEA88A1CA9CBC100A52731 /* Info.plist */,
 			);
 			path = "hackathon-for-hungerTests";
-			sourceTree = "<group>";
-		};
-		44B7EFF71CAD959400E7C609 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				44B7EFF81CAD95A600E7C609 /* DrivrAPI.swift */,
-			);
-			name = API;
 			sourceTree = "<group>";
 		};
 		44B7EFFD1CADAD2300E7C609 /* Network */ = {
@@ -529,15 +536,6 @@
 				44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */,
 			);
 			name = Routing;
-			sourceTree = "<group>";
-		};
-		44F857711CCAA76000326293 /* Dashboards */ = {
-			isa = PBXGroup;
-			children = (
-				3CC24B721CBC111F00ACC504 /* PendingDonationsDashboard.swift */,
-				44F857721CCAA7C700326293 /* CurrentDonationsDashboard.swift */,
-			);
-			name = Dashboards;
 			sourceTree = "<group>";
 		};
 		6395C08A1CB1D6A70059B5E1 /* Maps */ = {
@@ -596,7 +594,6 @@
 		EAAD23B71CB37B5A005FD787 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				44F857711CCAA76000326293 /* Dashboards */,
 				44AA631D1CB3F090005E02CC /* Menu */,
 				EAAD23B81CB37B78005FD787 /* SignUp */,
 				6395C08A1CB1D6A70059B5E1 /* Maps */,
@@ -820,21 +817,19 @@
 			files = (
 				3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */,
 				4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */,
-				3CFDE8211CAF26CB00D6172B /* DashboardViewCell.swift in Sources */,
-				44B7EFF91CAD95A600E7C609 /* DrivrAPI.swift in Sources */,
-				3CC24B711CBC10A100ACC504 /* PendingDonationsDashboardTableViewCell.swift in Sources */,
 				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
+				446A77351CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift in Sources */,
 				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
 				EAAD23BC1CB37FF8005FD787 /* VSUserInfoViewController.swift in Sources */,
 				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
 				6365C4711CC4C0CE004ABFF4 /* MapsModel.swift in Sources */,
 				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
+				446A77371CDD291C00951319 /* DashboardPresenter.swift in Sources */,
 				EAD2DDF01CD330EF007454FB /* DonationTableViewCell.swift in Sources */,
 				6395C0901CB25D400059B5E1 /* MapsDummyData.swift in Sources */,
 				446417811CB1872500F37F17 /* Image.swift in Sources */,
 				44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */,
 				3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */,
-				44F857731CCAA7C700326293 /* CurrentDonationsDashboard.swift in Sources */,
 				639F7E211CB87213009EC623 /* LocationManager.swift in Sources */,
 				EAD2DDF21CD58E8E007454FB /* DonorAddressViewController.swift in Sources */,
 				63FB1DA41CBE312C00EDB80F /* DriverMapPickupVC.swift in Sources */,
@@ -843,6 +838,7 @@
 				6395C0891CB1D69D0059B5E1 /* DonationMapOverviewVC.swift in Sources */,
 				EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */,
 				44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */,
+				446A77391CDD29C400951319 /* DonationService.swift in Sources */,
 				44484DE11CAFD8C0002D7233 /* AuthProvider.swift in Sources */,
 				44C702691CDA86E000E4A2EA /* ActivityIndicatorView.swift in Sources */,
 				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
@@ -854,10 +850,9 @@
 				446A76CF1CDD116000951319 /* UserService.swift in Sources */,
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
 				446A76D41CDD126A00951319 /* LoginViewController.swift in Sources */,
-				44638F031CC3D160005379FE /* DonationsOverviewViewController.swift in Sources */,
 				442FE9781CC284230002187D /* UserLogin.swift in Sources */,
 				44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */,
-				3CC24B731CBC111F00ACC504 /* PendingDonationsDashboard.swift in Sources */,
+				446A77331CDD289600951319 /* PendingDonationsDashboard.swift in Sources */,
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,
 				639F7E231CB875A7009EC623 /* TempLocationVC.swift in Sources */,
 				EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */,
@@ -867,9 +862,9 @@
 				44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */,
 				44484DE31CAFDA45002D7233 /* Token.swift in Sources */,
 				6395C08C1CB1F2B50059B5E1 /* DonorInfo.swift in Sources */,
+				446A77311CDD265200951319 /* DonationsContainerViewController.swift in Sources */,
 				446A76D61CDD129400951319 /* LoginPresenter.swift in Sources */,
 				3CC1ABCA1CC15E8800E01EE0 /* ProfileViewController.swift in Sources */,
-				447CC8CB1CC9F0980021A3D9 /* DonationViewModel.swift in Sources */,
 				44484DDE1CAFD857002D7233 /* User.swift in Sources */,
 				EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */,
 				44638F061CC3EDD0005379FE /* UIViewExtensions.swift in Sources */,
@@ -877,6 +872,7 @@
 				EAD2DDF41CD58EF8007454FB /* DonorAddAddressViewController.swift in Sources */,
 				EAAD23BE1CB38014005FD787 /* VSAccountInfoViewController.swift in Sources */,
 				EA6C4C201CD1E80300165F02 /* Global.swift in Sources */,
+				44424D7D1CDDC07C00B2409F /* CurrentDonationsDashboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
