@@ -230,7 +230,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
             
             if let driverMapPickupVC = segue.destinationViewController as? DriverMapPickupVC {
                 
-                driverMapPickupVC.donation = donation
+                driverMapPickupVC.mapViewPresenter = MapViewPresenter(donationService: DonationService(), donation: donation!)
             }
         }
     }

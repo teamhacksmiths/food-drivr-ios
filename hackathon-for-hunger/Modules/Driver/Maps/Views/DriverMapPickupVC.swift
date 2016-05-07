@@ -27,6 +27,10 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
     var donation: Donation?
     
+    var mapViewPresenter: MapViewPresenter?
+    
+    var activityIndicator: ActivityIndicatorView!
+    
     var pickupAnnotation: DonationPin?
     
     var kind: PinType = .Pickup
@@ -60,7 +64,8 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     }
     
     func donationDroppedOff() {
-        print("Send message: dropoff complete")
+        self.startLoading()
+        mapViewPresenter?.updateDonationStatus(donation!, status: .Completed)
     }
     
     @IBAction func cancel(sender: AnyObject) {
@@ -143,7 +148,10 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     //MARK:- View lifecycle
     
     override func viewDidLoad() {
-        
+        mapViewPresenter?.attachView(self)
+        self.donation = mapViewPresenter?.getDonation()
+        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Confirming")
+        self.view.addSubview(activityIndicator)
         mapView.delegate = self
         mapView.setRegion(startingRegion, animated: true) // set starting region to overview map's region?
         for annot in mapView.annotations {
@@ -369,4 +377,27 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
 }
 
+
+extension DriverMapPickupVC: MapView {
+    
+    func startLoading() {
+        activityIndicator.startAnimating()
+    }
+    
+    func finishLoading() {
+        activityIndicator.stopAnimating()
+    }
+    
+    func donationStatusUpdate(sender: MapViewPresenter, didSucceed donation: Donation) {
+        self.finishLoading()
+        self.donation = donation
+        if donation.status == .Completed {
+            print("closing")
+        }
+    }
+    
+    func donationStatusUpdate(sender: MapViewPresenter, didFail error: NSError) {
+        
+    }
+}
 
