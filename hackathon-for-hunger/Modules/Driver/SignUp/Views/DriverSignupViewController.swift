@@ -16,7 +16,7 @@ enum State {
 }
 
 
-class VSUserInfoViewController: UIViewController {
+class DriverSignupViewController: UIViewController {
     
     // Mark: Propety
     @IBOutlet weak var nameTextField: UITextField!
@@ -26,10 +26,20 @@ class VSUserInfoViewController: UIViewController {
     
     
     // Mark: Regular expression for email
-    static private let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+    private let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
     
     
-    static private var user = UserRegistration()
+    private var user = UserRegistration()
+    private let signupPresenter = DriverSignupPresenter(userService: UserService())
+    
+    var activityIndicator: ActivityIndicatorView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Registering")
+        self.view.addSubview(activityIndicator)
+        signupPresenter.attachView(self)
+    }
     
     // MARK: Actions
     @IBAction func didPressSignUp(sender: AnyObject) {
@@ -53,7 +63,7 @@ class VSUserInfoViewController: UIViewController {
 
 
 
-extension VSUserInfoViewController {
+extension DriverSignupViewController {
     
     
     func signUp() {
@@ -75,22 +85,16 @@ extension VSUserInfoViewController {
     }
     
     private func sendToServer() {
-//        DrivrAPI.sharedInstance.registerUser(VSUserInfoViewController.user, success: {
-//                (JsonDict) in
-//            print (JsonDict)
-//            self.showAwaitingApprovalView()
-//            }, failure: {
-//                (error) in
-//                self.showAlert(.Custom("Server", error!.description))
-//        })
+    self.startLoading()
+    signupPresenter.register(self.user)
     }
     
     private func createUser() {
-        VSUserInfoViewController.user.email = emailTextField.text
-        VSUserInfoViewController.user.phone = phoneTextField.text
-        VSUserInfoViewController.user.name = nameTextField.text
-        VSUserInfoViewController.user.password = passwordTextField.text
-        VSUserInfoViewController.user.role = .Donor
+        self.user.email = emailTextField.text
+        self.user.phone = phoneTextField.text
+        self.user.name = nameTextField.text
+        self.user.password = passwordTextField.text
+        self.user.role = .Donor
     }
     
     private func isValid() -> State {
@@ -107,7 +111,7 @@ extension VSUserInfoViewController {
     
     // check if the email is valid
     private func isValidEmail(email: String) -> Bool {
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", VSUserInfoViewController.emailRegEx)
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", self.emailRegEx)
         return emailTest.evaluateWithObject(email)
     }
     
@@ -141,13 +145,25 @@ extension VSUserInfoViewController {
     
 }
 
-
-
-
-
-
-
-
-
-
-
+extension DriverSignupViewController: SignupView {
+    func startLoading() {
+        self.activityIndicator.startAnimating()
+    }
+    
+    func finishLoading() {
+        self.activityIndicator.stopAnimating()
+    }
+    
+    func registration(sender: DriverSignupPresenter, didSucceed success: [String: AnyObject]) {
+        self.activityIndicator.stopAnimating()
+        self.showAwaitingApprovalView()
+    }
+    
+    func registration(sender: DriverSignupPresenter, didFail error: NSError) {
+        self.activityIndicator.stopAnimating()
+        let alert = UIAlertController(title: "There was a problem", message: "Unable to register you at this time", preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil )
+        alert.addAction(alertAction)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+}
