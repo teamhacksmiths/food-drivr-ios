@@ -35,6 +35,8 @@
 		44424DA21CDDF39E00B2409F /* DonorAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */; };
 		44424DA61CDDF3EB00B2409F /* DonorDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA51CDDF3EB00B2409F /* DonorDonationViewController.swift */; };
 		44424DAA1CDDF47300B2409F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA91CDDF47300B2409F /* ProfileViewController.swift */; };
+		44424DB01CDE359C00B2409F /* DriverSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DAF1CDE359C00B2409F /* DriverSignupViewController.swift */; };
+		44424DB21CDE370600B2409F /* DriverSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DB11CDE370600B2409F /* DriverSignupPresenter.swift */; };
 		44484DDE1CAFD857002D7233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DDD1CAFD857002D7233 /* User.swift */; };
 		44484DE31CAFDA45002D7233 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE21CAFDA45002D7233 /* Token.swift */; };
 		44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */; };
@@ -94,7 +96,6 @@
 		EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */; };
 		EA6C4C201CD1E80300165F02 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1F1CD1E80300165F02 /* Global.swift */; };
 		EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */; };
-		EAAD23BC1CB37FF8005FD787 /* VSUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BB1CB37FF8005FD787 /* VSUserInfoViewController.swift */; };
 		EAAD23BE1CB38014005FD787 /* VSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BD1CB38014005FD787 /* VSAccountInfoViewController.swift */; };
 		EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */; };
 		EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */; };
@@ -145,6 +146,8 @@
 		44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddressViewController.swift; sourceTree = "<group>"; };
 		44424DA51CDDF3EB00B2409F /* DonorDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorDonationViewController.swift; sourceTree = "<group>"; };
 		44424DA91CDDF47300B2409F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		44424DAF1CDE359C00B2409F /* DriverSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverSignupViewController.swift; sourceTree = "<group>"; };
+		44424DB11CDE370600B2409F /* DriverSignupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverSignupPresenter.swift; sourceTree = "<group>"; };
 		44484DDD1CAFD857002D7233 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		44484DE21CAFDA45002D7233 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPStatusCodes.swift; path = ../HTTPStatusCodes.swift; sourceTree = "<group>"; };
@@ -212,7 +215,6 @@
 		EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		EA6C4C1F1CD1E80300165F02 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		EAAD23BB1CB37FF8005FD787 /* VSUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSUserInfoViewController.swift; sourceTree = "<group>"; };
 		EAAD23BD1CB38014005FD787 /* VSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSAccountInfoViewController.swift; sourceTree = "<group>"; };
 		EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSUserInfoViewController.swift; sourceTree = "<group>"; };
 		EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAccountInfoViewController.swift; sourceTree = "<group>"; };
@@ -398,6 +400,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		44424DAC1CDE34E700B2409F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				44424DAD1CDE34E700B2409F /* Presenter */,
+				44424DAE1CDE34E700B2409F /* Views */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		44424DAD1CDE34E700B2409F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				44424DB11CDE370600B2409F /* DriverSignupPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		44424DAE1CDE34E700B2409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424DAF1CDE359C00B2409F /* DriverSignupViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		44638F041CC3EDBA005379FE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +448,7 @@
 		446A76C61CDD0FCC00951319 /* Driver */ = {
 			isa = PBXGroup;
 			children = (
+				44424DAC1CDE34E700B2409F /* SignUp */,
 				44424D7E1CDDDA4B00B2409F /* Maps */,
 				446A76DC1CDD209100951319 /* Dashboards */,
 			);
@@ -675,7 +703,6 @@
 			isa = PBXGroup;
 			children = (
 				EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */,
-				EAAD23BB1CB37FF8005FD787 /* VSUserInfoViewController.swift */,
 				EAAD23BD1CB38014005FD787 /* VSAccountInfoViewController.swift */,
 				EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */,
 				EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */,
@@ -891,7 +918,6 @@
 				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
 				446A77351CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift in Sources */,
 				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
-				EAAD23BC1CB37FF8005FD787 /* VSUserInfoViewController.swift in Sources */,
 				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
 				44424DA61CDDF3EB00B2409F /* DonorDonationViewController.swift in Sources */,
 				44424D921CDDEBF400B2409F /* DonorInfo.swift in Sources */,
@@ -915,6 +941,7 @@
 				446A77391CDD29C400951319 /* DonationService.swift in Sources */,
 				44C702691CDA86E000E4A2EA /* ActivityIndicatorView.swift in Sources */,
 				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
+				44424DB21CDE370600B2409F /* DriverSignupPresenter.swift in Sources */,
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
 				44424D9A1CDDEC6A00B2409F /* TempLocationVC.swift in Sources */,
@@ -927,6 +954,7 @@
 				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
 				446A76D41CDD126A00951319 /* LoginViewController.swift in Sources */,
 				442FE9781CC284230002187D /* UserLogin.swift in Sources */,
+				44424DB01CDE359C00B2409F /* DriverSignupViewController.swift in Sources */,
 				44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */,
 				446A77331CDD289600951319 /* PendingDonationsDashboard.swift in Sources */,
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,

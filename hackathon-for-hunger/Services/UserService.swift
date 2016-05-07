@@ -68,9 +68,9 @@ class UserService {
         }
     }
     
-    func registerUser(userData: UserRegistration, success: (JsonDict)-> (), failure: (NSError?) ->()) {
+    func registerUser(userData: UserRegistration) -> Promise<JsonDict> {
+        return Promise { fulfill, reject in
         let router = UserRouter(endpoint: .Register(userData: userData))
-        print("registering user")
         manager.request(router)
             .validate()
             .responseJSON {
@@ -78,11 +78,12 @@ class UserService {
                 switch response.result {
                 case .Success(let JSON):
                     let user = JSON as! JsonDict
-                    success(user)
+                    fulfill(user)
                     
                 case .Failure(let error):
-                    failure(error)
+                    reject(error)
                 }
+            }
         }
 
     }
