@@ -34,8 +34,8 @@ extension UIViewController {
         guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
             return
         }
-        AuthProvider.sharedInstance.destroyUser()
-        AuthProvider.sharedInstance.destroyToken()
+        AuthService.sharedInstance.destroyUser()
+        AuthService.sharedInstance.destroyToken()
         delegate.runLoginFlow()
     }
     

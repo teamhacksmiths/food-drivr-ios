@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
-    let authProvider = AuthProvider.sharedInstance
+    let authProvider = AuthService.sharedInstance
         authProvider.destroyUser()
         authProvider.destroyToken()
     }

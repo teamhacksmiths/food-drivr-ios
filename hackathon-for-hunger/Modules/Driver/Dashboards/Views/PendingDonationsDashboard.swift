@@ -47,8 +47,7 @@ class PendingDonationsDashboard: UIViewController {
             
             if let donation = sender as? Donation {
                 let donationVC = segue.destinationViewController as! DriverMapDetailPendingVC
-                
-                donationVC.donation = donation
+                donationVC.mapViewPresenter = MapViewPresenter(donationService: DonationService(), donation: donation)
             }
         }
         

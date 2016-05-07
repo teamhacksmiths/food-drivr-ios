@@ -47,16 +47,16 @@ class UserService {
                     "role_id": 0
                 ]
         
-            AuthProvider.sharedInstance.setToken("1234567890")
-            let user = AuthProvider.sharedInstance.storeCurrentUser(newUser)
+            AuthService.sharedInstance.setToken("1234567890")
+            let user = AuthService.sharedInstance.storeCurrentUser(newUser)
             fulfill(user)
             self.authenticate(credentials).then() {
                 token -> Void in
-                AuthProvider.sharedInstance.setToken(token["authtoken"]!["auth_token"] as! String)
+                AuthService.sharedInstance.setToken(token["authtoken"]!["auth_token"] as! String)
                 self.getUser().then() {
                     userResponse -> Void in
                     if let newUser = userResponse["user"] as? [String: AnyObject] {
-                        let user = AuthProvider.sharedInstance.storeCurrentUser(newUser)
+                        let user = AuthService.sharedInstance.storeCurrentUser(newUser)
                         fulfill(user)
                     } else {
                         reject(NSError(domain: "error retrieving user", code:422, userInfo: nil))
@@ -91,7 +91,7 @@ class UserService {
         
         return Promise { fulfill, reject in
             
-        guard let token = AuthProvider.sharedInstance.getToken() as Token? else {
+        guard let token = AuthService.sharedInstance.getToken() as Token? else {
             reject(NSError(domain: "no token found for user", code:422, userInfo: nil))
             return
         }

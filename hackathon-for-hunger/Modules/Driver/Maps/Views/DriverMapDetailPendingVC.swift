@@ -22,8 +22,8 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     var pickupAnnotation: DonationPin?
     var dropoffAnnotation: DonationPin?
     var activityIndicator: ActivityIndicatorView!
-    
-    
+    var mapViewPresenter: MapViewPresenter?
+
     //MARK:- Outlets & Actions
     
     // action for unwind segue
@@ -40,13 +40,8 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var donorCityLabel: UILabel!
     
     @IBAction func acceptDonation(sender: AnyObject) {
-       activityIndicator.startAnimating()
-//        DrivrAPI.sharedInstance.updateDonationStatus(donation!, status: .Active).then{
-//            donation in
-//            self.activityIndicator.stopAnimating()
-//        }
-        
-        // segue to view controller with route
+        activityIndicator.startAnimating()
+        mapViewPresenter?.updateDonationStatus(donation!, status: .Active)
     }
     
     @IBAction func cancel(sender: AnyObject) {
@@ -56,6 +51,8 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     //MARK:- View lifecycle
     
     override func viewDidLoad() {
+        mapViewPresenter?.attachView(self)
+        self.donation = mapViewPresenter?.getDonation()
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Accepting")
         self.view.addSubview(activityIndicator)
         mapView.delegate = self
@@ -239,4 +236,26 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     }
     
     
+}
+
+
+extension DriverMapDetailPendingVC: MapView {
+    
+    func startLoading() {
+        activityIndicator.startAnimating()
+    }
+    
+    func finishLoading() {
+        activityIndicator.stopAnimating()
+    }
+    
+    func donationStatusUpdate(sender: MapViewPresenter, didSucceed donation: Donation) {
+        self.finishLoading()
+        self.donation = donation
+        self.performSegueWithIdentifier("acceptedDonation", sender: self)
+    }
+    
+    func donationStatusUpdate(sender: MapViewPresenter, didFail error: NSError) {
+        
+    }
 }
