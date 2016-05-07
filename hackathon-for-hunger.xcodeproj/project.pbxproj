@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CC1ABCA1CC15E8800E01EE0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */; };
 		3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */; };
 		3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B741CBC244C00ACC504 /* AcceptButton.swift */; };
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
@@ -32,6 +31,10 @@
 		44424D991CDDEC6A00B2409F /* DriverMapPickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D971CDDEC6A00B2409F /* DriverMapPickupVC.swift */; };
 		44424D9A1CDDEC6A00B2409F /* TempLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D981CDDEC6A00B2409F /* TempLocationVC.swift */; };
 		44424D9C1CDDF00100B2409F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D9B1CDDF00100B2409F /* AuthService.swift */; };
+		44424DA11CDDF39E00B2409F /* DonorAddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D9F1CDDF39E00B2409F /* DonorAddAddressViewController.swift */; };
+		44424DA21CDDF39E00B2409F /* DonorAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */; };
+		44424DA61CDDF3EB00B2409F /* DonorDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA51CDDF3EB00B2409F /* DonorDonationViewController.swift */; };
+		44424DAA1CDDF47300B2409F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA91CDDF47300B2409F /* ProfileViewController.swift */; };
 		44484DDE1CAFD857002D7233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DDD1CAFD857002D7233 /* User.swift */; };
 		44484DE31CAFDA45002D7233 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE21CAFDA45002D7233 /* Token.swift */; };
 		44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */; };
@@ -97,10 +100,7 @@
 		EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */; };
 		EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */; };
 		EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */; };
-		EAD2DDED1CD32E22007454FB /* DonorDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */; };
 		EAD2DDF01CD330EF007454FB /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */; };
-		EAD2DDF21CD58E8E007454FB /* DonorAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDF11CD58E8E007454FB /* DonorAddressViewController.swift */; };
-		EAD2DDF41CD58EF8007454FB /* DonorAddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDF31CD58EF8007454FB /* DonorAddAddressViewController.swift */; };
 		EAFEDF9A1CC2E26800C30693 /* DonorSignupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */; };
 		F7AFF7E51CBAD430008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
 		F7AFF7E61CBAF252008C6004 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */; };
@@ -117,7 +117,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		3CC24B741CBC244C00ACC504 /* AcceptButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptButton.swift; sourceTree = "<group>"; };
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -142,9 +141,13 @@
 		44424D971CDDEC6A00B2409F /* DriverMapPickupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapPickupVC.swift; sourceTree = "<group>"; };
 		44424D981CDDEC6A00B2409F /* TempLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempLocationVC.swift; sourceTree = "<group>"; };
 		44424D9B1CDDF00100B2409F /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		44424D9F1CDDF39E00B2409F /* DonorAddAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddAddressViewController.swift; sourceTree = "<group>"; };
+		44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddressViewController.swift; sourceTree = "<group>"; };
+		44424DA51CDDF3EB00B2409F /* DonorDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorDonationViewController.swift; sourceTree = "<group>"; };
+		44424DA91CDDF47300B2409F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		44484DDD1CAFD857002D7233 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		44484DE21CAFDA45002D7233 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
+		44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPStatusCodes.swift; path = ../HTTPStatusCodes.swift; sourceTree = "<group>"; };
 		44484DE61CAFFECA002D7233 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeysDist.plist; sourceTree = "<group>"; };
 		44573E5E1CAEF20D00A5F1C3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -215,10 +218,7 @@
 		EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAccountInfoViewController.swift; sourceTree = "<group>"; };
 		EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNavigationViewController.swift; sourceTree = "<group>"; };
 		EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalDriverViewController.swift; sourceTree = "<group>"; };
-		EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorDonationViewController.swift; sourceTree = "<group>"; };
 		EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
-		EAD2DDF11CD58E8E007454FB /* DonorAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddressViewController.swift; sourceTree = "<group>"; };
-		EAD2DDF31CD58EF8007454FB /* DonorAddAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddAddressViewController.swift; sourceTree = "<group>"; };
 		EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorSignupInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -349,6 +349,55 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		44424D9D1CDDF33700B2409F /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				44424D9E1CDDF38600B2409F /* Views */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		44424D9E1CDDF38600B2409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424D9F1CDDF39E00B2409F /* DonorAddAddressViewController.swift */,
+				44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44424DA31CDDF3BB00B2409F /* AddDonation */ = {
+			isa = PBXGroup;
+			children = (
+				44424DA41CDDF3C500B2409F /* Views */,
+			);
+			path = AddDonation;
+			sourceTree = "<group>";
+		};
+		44424DA41CDDF3C500B2409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424DA51CDDF3EB00B2409F /* DonorDonationViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44424DA71CDDF44600B2409F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				44424DA81CDDF44F00B2409F /* Views */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		44424DA81CDDF44F00B2409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424DA91CDDF47300B2409F /* ProfileViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		44638F041CC3EDBA005379FE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +410,7 @@
 		446A76C51CDD0FA800951319 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				44424DA71CDDF44600B2409F /* User */,
 				446A76C81CDD0FF800951319 /* Login */,
 				446A76C71CDD0FE000951319 /* Donor */,
 				446A76C61CDD0FCC00951319 /* Driver */,
@@ -380,6 +430,8 @@
 		446A76C71CDD0FE000951319 /* Donor */ = {
 			isa = PBXGroup;
 			children = (
+				44424DA31CDDF3BB00B2409F /* AddDonation */,
+				44424D9D1CDDF33700B2409F /* Address */,
 			);
 			path = Donor;
 			sourceTree = "<group>";
@@ -397,6 +449,8 @@
 		446A76CD1CDD114400951319 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				44A725091CAC442E00D676C3 /* Routing */,
+				44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */,
 				44424D9B1CDDF00100B2409F /* AuthService.swift */,
 				446A76CE1CDD116000951319 /* UserService.swift */,
 				446A77381CDD29C400951319 /* DonationService.swift */,
@@ -464,15 +518,6 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		44A725081CAC441F00D676C3 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				44A725091CAC442E00D676C3 /* Routing */,
-				44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */,
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
 		44A725091CAC442E00D676C3 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +526,7 @@
 				44484DE61CAFFECA002D7233 /* UserRouter.swift */,
 			);
 			name = Routing;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		44A7250E1CAC4F2600D676C3 /* Models */ = {
@@ -490,6 +536,7 @@
 				442FE9721CC15C3B0002187D /* DTO */,
 				4404F6BE1CBD1B11001B9293 /* MockData */,
 				44A7250F1CAC559500D676C3 /* Donation.swift */,
+				44573E601CAEF35F00A5F1C3 /* DonationType.swift */,
 				44573E5E1CAEF20D00A5F1C3 /* Location.swift */,
 				44573E621CAEF37400A5F1C3 /* MetaData.swift */,
 				44573E641CAEF68500A5F1C3 /* Participant.swift */,
@@ -543,20 +590,10 @@
 				443D1DA81CB6D56100E2E7B9 /* Assets */,
 				44A7250E1CAC4F2600D676C3 /* Models */,
 				EAAD23B71CB37B5A005FD787 /* Controller */,
-				44A725081CAC441F00D676C3 /* Network */,
 				44AEA8731CA9CBC100A52731 /* AppDelegate.swift */,
-				3CFDE8151CAD4D8A00D6172B /* Main.storyboard */,
-				EAD2DDF11CD58E8E007454FB /* DonorAddressViewController.swift */,
-				EAD2DDF31CD58EF8007454FB /* DonorAddAddressViewController.swift */,
-				EAD2DDEC1CD32E22007454FB /* DonorDonationViewController.swift */,
-				3CC1ABC91CC15E8800E01EE0 /* ProfileViewController.swift */,
-				3CC24B741CBC244C00ACC504 /* AcceptButton.swift */,
 				44AEA87A1CA9CBC100A52731 /* Assets.xcassets */,
 				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
-				44573E601CAEF35F00A5F1C3 /* DonationType.swift */,
-				44AEA87F1CA9CBC100A52731 /* Info.plist */,
-				44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */,
-				6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */,
+				3CFDE8151CAD4D8A00D6172B /* Main.storyboard */,
 			);
 			path = "hackathon-for-hunger";
 			sourceTree = "<group>";
@@ -617,6 +654,9 @@
 		EA6C4C1E1CD1E7B800165F02 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				44AEA87F1CA9CBC100A52731 /* Info.plist */,
+				44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */,
+				6395C0861CB1D34A0059B5E1 /* ApiKeys.plist */,
 				EA6C4C1F1CD1E80300165F02 /* Global.swift */,
 			);
 			name = Support;
@@ -648,6 +688,7 @@
 		EAD2DDEE1CD330B7007454FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3CC24B741CBC244C00ACC504 /* AcceptButton.swift */,
 				EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */,
 				44C702681CDA86E000E4A2EA /* ActivityIndicatorView.swift */,
 			);
@@ -852,6 +893,7 @@
 				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
 				EAAD23BC1CB37FF8005FD787 /* VSUserInfoViewController.swift in Sources */,
 				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
+				44424DA61CDDF3EB00B2409F /* DonorDonationViewController.swift in Sources */,
 				44424D921CDDEBF400B2409F /* DonorInfo.swift in Sources */,
 				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
 				44424D851CDDDB7300B2409F /* DriverMapDetailPendingVC.swift in Sources */,
@@ -862,8 +904,10 @@
 				44424D961CDDEC2400B2409F /* MapsModel.swift in Sources */,
 				44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */,
 				3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */,
-				EAD2DDF21CD58E8E007454FB /* DonorAddressViewController.swift in Sources */,
+				44424DA11CDDF39E00B2409F /* DonorAddAddressViewController.swift in Sources */,
 				446A76D91CDD17A700951319 /* LegacyCode.swift in Sources */,
+				44424DA21CDDF39E00B2409F /* DonorAddressViewController.swift in Sources */,
+				44424DAA1CDDF47300B2409F /* ProfileViewController.swift in Sources */,
 				44424D891CDDE5D200B2409F /* DonationMapOverviewVC.swift in Sources */,
 				442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */,
 				EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */,
@@ -872,7 +916,6 @@
 				44C702691CDA86E000E4A2EA /* ActivityIndicatorView.swift in Sources */,
 				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
-				EAD2DDED1CD32E22007454FB /* DonorDonationViewController.swift in Sources */,
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
 				44424D9A1CDDEC6A00B2409F /* TempLocationVC.swift in Sources */,
 				44424D911CDDEBF400B2409F /* DonationPin.swift in Sources */,
@@ -895,12 +938,10 @@
 				446A77311CDD265200951319 /* DonationsContainerViewController.swift in Sources */,
 				44424D8E1CDDEBBD00B2409F /* LocationManager.swift in Sources */,
 				446A76D61CDD129400951319 /* LoginPresenter.swift in Sources */,
-				3CC1ABCA1CC15E8800E01EE0 /* ProfileViewController.swift in Sources */,
 				44484DDE1CAFD857002D7233 /* User.swift in Sources */,
 				EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */,
 				44638F061CC3EDD0005379FE /* UIViewExtensions.swift in Sources */,
 				44424D871CDDDFBB00B2409F /* MapViewPresenter.swift in Sources */,
-				EAD2DDF41CD58EF8007454FB /* DonorAddAddressViewController.swift in Sources */,
 				EAAD23BE1CB38014005FD787 /* VSAccountInfoViewController.swift in Sources */,
 				EA6C4C201CD1E80300165F02 /* Global.swift in Sources */,
 				44424D8B1CDDE6F400B2409F /* MapOverviewPresenter.swift in Sources */,
