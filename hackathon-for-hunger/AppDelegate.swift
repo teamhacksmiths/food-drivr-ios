@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func runLoginFlow() -> Void {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let _ = AuthProvider.sharedInstance.getCurrentUser() {
+        if let _ = AuthService.sharedInstance.getCurrentUser() {
             // Code to execute if user is logged in
             
             let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! DonationsContainerViewController
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             
         } else {
-            AuthProvider.sharedInstance.destroyToken()
+            AuthService.sharedInstance.destroyToken()
             let loginViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
             self.window?.rootViewController = loginViewController
         }

@@ -248,7 +248,6 @@
         <!--Main-->
         <scene sceneID="gNl-lI-dYH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iBO-e6-iL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Main" title="Main" id="2EM-3U-CdT" customClass="DonationsContainerViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xBc-uZ-NwW"/>
@@ -307,8 +306,9 @@
                         <outlet property="segmentedControl" destination="d6w-HX-icu" id="q9A-kU-W8e"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBO-e6-iL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1942" y="3877"/>
+            <point key="canvasLocation" x="-1942" y="3901"/>
         </scene>
         <!--Pending Donations Dashboard-->
         <scene sceneID="nPD-aX-ukW">
@@ -419,7 +419,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="yHu-Kz-EeI" id="fOP-iU-iMO"/>
-                        <segue destination="B4v-Zv-mgG" kind="presentation" identifier="toDriverMapDetailPendingFromDashboard" id="28Q-Pg-iPg"/>
+                        <segue destination="B4v-Zv-mgG" kind="presentation" identifier="toDriverMapDetailPendingFromDashboard" modalTransitionStyle="crossDissolve" id="28Q-Pg-iPg"/>
                         <segue destination="gGM-iH-0Tj" kind="presentation" identifier="acceptedDonation" id="Ihg-Kb-z1R"/>
                     </connections>
                 </viewController>
@@ -1739,7 +1739,7 @@
                                     <constraint firstItem="qsK-db-zvt" firstAttribute="centerY" secondItem="am9-Z9-rpW" secondAttribute="centerY" id="gpv-su-kVH"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mut-UQ-0xE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mut-UQ-0xE">
                                 <rect key="frame" x="558" y="0.0" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="1t8-Jl-xOJ"/>
@@ -1783,7 +1783,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWr-E2-OBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656" y="3790"/>
+            <point key="canvasLocation" x="521" y="3660"/>
         </scene>
         <!--Donations-->
         <scene sceneID="WdT-v9-7JV">
@@ -1819,12 +1819,25 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx6-ds-UkC">
+                                        <rect key="frame" x="548" y="8" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="1WM-aA-GqP"/>
+                                            <constraint firstAttribute="width" constant="24" id="eOv-Rh-V8R"/>
+                                        </constraints>
+                                        <state key="normal" image="refresh"/>
+                                        <connections>
+                                            <action selector="refreshDonaitons:" destination="51h-zf-Rpo" eventType="touchUpInside" id="5wf-q2-jFZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3989009261" green="0.77493035789999998" blue="0.83127403259999999" alpha="0.84462098817567566" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="E1o-lP-zXA"/>
                                     <constraint firstItem="yQV-ft-qun" firstAttribute="centerY" secondItem="vaS-2l-2SP" secondAttribute="centerY" constant="-1.5" id="JZf-ZQ-qA5"/>
+                                    <constraint firstAttribute="trailing" secondItem="mx6-ds-UkC" secondAttribute="trailing" constant="8" id="YYI-Vb-Atq"/>
                                     <constraint firstItem="yQV-ft-qun" firstAttribute="centerX" secondItem="vaS-2l-2SP" secondAttribute="centerX" id="fAy-t7-r7M"/>
+                                    <constraint firstItem="mx6-ds-UkC" firstAttribute="top" secondItem="vaS-2l-2SP" secondAttribute="top" constant="8" id="wdc-ej-gZ4"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -2118,7 +2131,7 @@
                                 </items>
                                 <color key="barTintColor" red="0.10196078431372549" green="0.76470588235294112" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrQ-TN-f8m">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrQ-TN-f8m">
                                 <rect key="frame" x="558" y="20" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="Ap0-k7-JLj"/>
@@ -2126,7 +2139,7 @@
                                 </constraints>
                                 <state key="normal" image="cancel"/>
                                 <connections>
-                                    <segue destination="Bmm-Tb-mgQ" kind="unwind" identifier="unwindDetailToOverview" unwindAction="unwindDetailToPendingMap:towardsViewController:" id="RxN-JX-VNM"/>
+                                    <action selector="cancel:" destination="B4v-Zv-mgG" eventType="touchUpInside" id="jKK-QS-Sl0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2158,7 +2171,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsP-Em-K0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Bmm-Tb-mgQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="656" y="4738"/>
         </scene>
@@ -2306,11 +2318,12 @@
         <image name="facebook_white" width="32" height="32"/>
         <image name="personHolder" width="50" height="50"/>
         <image name="pickup_label" width="60" height="12"/>
+        <image name="refresh" width="32" height="32"/>
         <image name="twitter_white" width="40" height="32"/>
         <image name="van" width="16" height="14"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="28Q-Pg-iPg"/>
-        <segue reference="eSy-9O-U2e"/>
+        <segue reference="vAS-rJ-zI1"/>
+        <segue reference="jJM-Iw-fbP"/>
     </inferredMetricsTieBreakers>
 </document>

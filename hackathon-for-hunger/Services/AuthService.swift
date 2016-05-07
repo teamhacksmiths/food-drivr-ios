@@ -10,11 +10,11 @@ import Foundation
 import RealmSwift
 import Alamofire
 
-class AuthProvider : NSObject {
+class AuthService : NSObject {
     
     typealias JsonDict = [String: AnyObject]
 
-    static let sharedInstance = AuthProvider()
+    static let sharedInstance = AuthService()
     let realm = try! Realm()
     
     

@@ -18,7 +18,7 @@ class DonationsContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupMenuBar()
-        self.title = AuthProvider.sharedInstance.getCurrentUser()?.name ?? "Pending Donations"
+        self.title = AuthService.sharedInstance.getCurrentUser()?.name ?? "Pending Donations"
         self.updateContainers(0)
         segmentBackground.addBorderTop(size: 1, color: UIColor.grayColor())
         segmentedControl.frame = CGRect(x: segmentedControl.frame.origin.x, y: segmentedControl.frame.origin.y, width: segmentedControl.frame.size.width, height: 64);

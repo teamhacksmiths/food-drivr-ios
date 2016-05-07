@@ -18,11 +18,10 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     
     let dummyData = MapsDummyData.sharedInstance
     var donorInfoArray: [DonorInfo]?
-    
     var donations: Results<Donation>?
-    var donationsDummyData: [Donation]?
-    
-    var realm = try! Realm()
+    //var donationsDummyData: [Donation]?
+    var activityIndicator : ActivityIndicatorView!
+    private let dashboardPresenter = MapOverviewPresenter(donationService: DonationService())
     
     
     var locationManager = LocationManager.sharedInstance.locationManager
@@ -34,13 +33,21 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
     }
     
+    @IBAction func refreshDonaitons(sender: AnyObject) {
+        self.startLoading()
+        self.dashboardPresenter.fetchRemotely(.Pending)
+    }
     override func viewDidLoad() {
 
         mapView.showsUserLocation = true
-        getDonations()
+        dashboardPresenter.attachView(self)
+        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Syncing")
+        view.addSubview(self.activityIndicator)
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+        self.startLoading()
+        dashboardPresenter.fetch(.Pending)
     }
     
     
@@ -57,31 +64,39 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
         
         var annotations = [DonationPin]()
 
-        switch useDummyData {
-        case true:
-            for donation in donationsDummyData! { //TODO: - replace force unwrapping
-                
-                // create the annotation and set its properties
-                let annotation = DonationPin()  // subclass of MKAnnotation()
-                annotation.donation = donation
-                annotation.kind = .Pickup
-                
-                // place the annotation in an array of annotations.
-                annotations.append(annotation)
-            }
-        case false:
-            for donation in donations! { //TODO: - replace force unwrapping
-                
-                // create the annotation and set its properties
-                let annotation = DonationPin()  // subclass of MKAnnotation()
-                annotation.donation = donation
-                annotation.kind = .Pickup
-                
-                // place the annotation in an array of annotations.
-                annotations.append(annotation)
-            }
+//        switch useDummyData {
+//        case true:
+//            for donation in donationsDummyData! { //TODO: - replace force unwrapping
+//                
+//                // create the annotation and set its properties
+//                let annotation = DonationPin()  // subclass of MKAnnotation()
+//                annotation.donation = donation
+//                annotation.kind = .Pickup
+//                
+//                // place the annotation in an array of annotations.
+//                annotations.append(annotation)
+//            }
+//        case false:
+//            for donation in donations! { //TODO: - replace force unwrapping
+//                
+//                // create the annotation and set its properties
+//                let annotation = DonationPin()  // subclass of MKAnnotation()
+//                annotation.donation = donation
+//                annotation.kind = .Pickup
+//                
+//                // place the annotation in an array of annotations.
+//                annotations.append(annotation)
+//            }
+//        }
+        for donation in donations! { //TODO: - replace force unwrapping
+            // create the annotation and set its properties
+            let annotation = DonationPin()  // subclass of MKAnnotation()
+            annotation.donation = donation
+            annotation.kind = .Pickup
+            
+            // place the annotation in an array of annotations.
+            annotations.append(annotation)
         }
-        
         
         // When the array is complete, add the annotations to the map.
         mapView.addAnnotations(annotations)
@@ -98,7 +113,7 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
             if let pin = sender as? DonationPin {
                 let donationVC = segue.destinationViewController as! DriverMapDetailPendingVC
                 
-                donationVC.donation = pin.donation
+                donationVC.mapViewPresenter = MapViewPresenter(donationService: DonationService(), donation: pin.donation!)
             }
         }
     }
@@ -166,39 +181,38 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
             
         }
     }
-    
-    
+}
 
-    // MARK: - fetch donation methods
+extension DonationMapOverviewVC: MapOverviewView {
+    func startLoading() {
+        self.activityIndicator.startAnimating()
+    }
     
-    func getDonations() {
-        
-        if useDummyData == true {
-            donationsDummyData = dummyData.donations
-            print("using dummy data")
-        } else {
-            
-            let pendingDonations = realm.objects(Donation)
-            guard pendingDonations.count > 0 else {
-                self.fetchRemoteDonations()
-                return
-            }
-            self.donations = pendingDonations
-        }
-        
+    func finishLoading() {
+        self.activityIndicator.stopAnimating()
+    }
+    
+    func donations(sender: MapOverviewPresenter, didSucceed donations: Results<Donation>) {
+        self.finishLoading()
+        self.donations = donations
         readAndDisplayAnnotations()
     }
     
-    private func fetchRemoteDonations() {
-//        DrivrAPI.sharedInstance.getDriverDonations().then(){
-//            (results) -> Void in
-//            self.donations = results
-//            self.readAndDisplayAnnotations()
-//            }.error{
-//                (error) in
-//                print(error)
-//        }
+    func donations(sender: MapOverviewPresenter, didFail error: NSError) {
+        self.finishLoading()
+        if error.code == 401 {
+            let refreshAlert = UIAlertController(title: "Unable To Sync.", message: "Your session has expired. Please log back in", preferredStyle: UIAlertControllerStyle.Alert)
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                self.logout()
+            }))
+            presentViewController(refreshAlert, animated: true, completion: nil)
+        } else {
+            let refreshAlert = UIAlertController(title: "Unable To Sync", message: "Could not fetch new donations.", preferredStyle: UIAlertControllerStyle.Alert)
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                    }))
+            presentViewController(refreshAlert, animated: true, completion: nil)
+        }
+        
     }
-    
 }
 

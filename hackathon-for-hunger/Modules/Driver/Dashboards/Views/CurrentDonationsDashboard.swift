@@ -28,7 +28,7 @@ class CurrentDonationsDashboard: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupMenuBar()
-        self.title = AuthProvider.sharedInstance.getCurrentUser()?.name ?? "Current Donations"
+        self.title = AuthService.sharedInstance.getCurrentUser()?.name ?? "Current Donations"
         dashboardPresenter.attachView(self)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Syncing")
         view.addSubview(self.activityIndicator)
