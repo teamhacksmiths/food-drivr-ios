@@ -44,4 +44,11 @@ class DonationsContainerViewController: UIViewController {
                 newController.didMoveToParentViewController(self)
         })
     }
+    
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
+        guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
+            return
+        }
+        delegate.runLoginFlow()
+    }
 }

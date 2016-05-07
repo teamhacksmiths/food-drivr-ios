@@ -44,6 +44,9 @@ class LoginViewController: UIViewController {
         return true
     }
 
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
+        segueToMenuController()
+    }
     
     private func segueToMenuController() {
         let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Main") as! DonationsContainerViewController
@@ -52,12 +55,6 @@ class LoginViewController: UIViewController {
         let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
         slideMenuController.addLeftBarButtonWithImage(UIImage(named:"hamburger")!)
         self.presentViewController(slideMenuController, animated: false, completion: nil)
-    }
-    
-    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
-    let authProvider = AuthService.sharedInstance
-        authProvider.destroyUser()
-        authProvider.destroyToken()
     }
     
     @IBAction func signInButtonClicked(sender: AnyObject) {

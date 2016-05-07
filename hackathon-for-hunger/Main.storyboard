@@ -1749,7 +1749,7 @@
                                 </constraints>
                                 <state key="normal" image="cancel"/>
                                 <connections>
-                                    <segue destination="BdM-jH-JCw" kind="presentation" identifier="toDriverMapDetailCurrentFromDashboard" modalTransitionStyle="crossDissolve" id="wZ0-wN-De7"/>
+                                    <segue destination="OjA-UQ-UuY" kind="unwind" unwindAction="unwindToMenu:" id="hsJ-GY-gxg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1782,8 +1782,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWr-E2-OBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OjA-UQ-UuY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="521" y="3660"/>
+            <point key="canvasLocation" x="1038" y="3512"/>
         </scene>
         <!--Donations-->
         <scene sceneID="WdT-v9-7JV">
@@ -2287,7 +2288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlV-eR-VZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-564" y="3242"/>
+            <point key="canvasLocation" x="-564" y="3298"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a02-4X-AeB">
@@ -2323,7 +2324,7 @@
         <image name="van" width="16" height="14"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="eSy-9O-U2e"/>
         <segue reference="vAS-rJ-zI1"/>
-        <segue reference="jJM-Iw-fbP"/>
     </inferredMetricsTieBreakers>
 </document>
