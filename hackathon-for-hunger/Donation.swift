@@ -14,6 +14,7 @@ enum DonationStatus: Int {
     case Active
     case PickedUp
     case Completed
+    case Cancelled
     case Any
 }
 

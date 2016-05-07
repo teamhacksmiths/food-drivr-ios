@@ -1,10 +1,12 @@
 //
-//  DrivrAPI.swift
+//  DonationService.swift
 //  hackathon-for-hunger
 //
-//  Created by Ian Gristock on 3/31/16.
+//  Created by Ian Gristock on 5/6/16.
 //  Copyright © 2016 Hacksmiths. All rights reserved.
 //
+
+import Foundation
 
 import Foundation
 import Alamofire
@@ -12,9 +14,8 @@ import RealmSwift
 import SwiftyJSON
 import PromiseKit
 
-class DrivrAPI {
+class DonationService {
     
-    static let sharedInstance = DrivrAPI()
     let manager = Manager()
     typealias JsonDict = [String: AnyObject]
     
@@ -28,7 +29,7 @@ class DrivrAPI {
                     response in
                     switch response.result {
                     case .Success(let JSON):
-                    
+                        
                         if let donations = JSON["donations"] as! [JsonDict]? {
                             fulfill(donations)
                         }
@@ -73,7 +74,7 @@ class DrivrAPI {
                     error in
                     reject(error)
             }
-
+            
         }
         
     }
@@ -93,7 +94,7 @@ class DrivrAPI {
             "dropoff_status": 1
             ]
         ]
-
+        
         let droppedOff = ["status": [
             "donation_status": 2,
             "pickup_status": 2,

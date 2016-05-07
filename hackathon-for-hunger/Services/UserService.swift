@@ -37,7 +37,19 @@ class UserService {
     }
     
     func authenticateUser(credentials: UserLogin) -> Promise<User?> {
-        return Promise { fulfill, reject in
+               return Promise { fulfill, reject in
+                // dummy user to get app running
+                let newUser = [
+                    "auth_token": "1234567890",
+                    "email": "placeholder@holder.com",
+                    "id": 2,
+                    "name": "Test User",
+                    "role_id": 0
+                ]
+        
+            AuthProvider.sharedInstance.setToken("1234567890")
+            let user = AuthProvider.sharedInstance.storeCurrentUser(newUser)
+            fulfill(user)
             self.authenticate(credentials).then() {
                 token -> Void in
                 AuthProvider.sharedInstance.setToken(token["authtoken"]!["auth_token"] as! String)

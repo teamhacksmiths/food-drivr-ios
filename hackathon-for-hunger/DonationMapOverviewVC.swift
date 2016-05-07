@@ -190,14 +190,14 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
     }
     
     private func fetchRemoteDonations() {
-        DrivrAPI.sharedInstance.getDriverDonations().then(){
-            (results) -> Void in
-            self.donations = results
-            self.readAndDisplayAnnotations()
-            }.error{
-                (error) in
-                print(error)
-        }
+//        DrivrAPI.sharedInstance.getDriverDonations().then(){
+//            (results) -> Void in
+//            self.donations = results
+//            self.readAndDisplayAnnotations()
+//            }.error{
+//                (error) in
+//                print(error)
+//        }
     }
     
 }
