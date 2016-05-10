@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class ProfileViewController: UIViewController {
     
@@ -18,21 +17,20 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.setupMenuBar()
         self.title = "Profile"
+
         
-//        let json = "{ \"people\": [{ \"firstName\": \"Paul\", \"lastName\": \"Hudson\", \"isAlive\": true }, { \"firstName\": \"Angela\", \"lastName\": \"Merkel\", \"isAlive\": true }, { \"firstName\": \"George\", \"lastName\": \"Washington\", \"isAlive\": false } ] }"
-//        
-//        if let data = json.dataUsingEncoding(NSUTF8StringEncoding) {
-//            let json = JSON(data: data)
-//            
-//            for item in json["people"].arrayValue {
-//                print(item["firstName"].stringValue)
-//            }
-//        }
+        let user = AuthService.sharedInstance.getCurrentUser()
+
+        userNameLabel.text = user?.name
+        emailTF.text = user?.email
         
+        
+        /* //
         let session = NSURLSession.sharedSession()
         
         let url = NSURL(string: "https://wastenotfoodtaxi.herokuapp.com/api/v1/users/5WUjNbdsSmUYs9FboeEP")!
         let request = NSURLRequest(URL: url)
+        
         
         // Initialize task for getting data
         let task = session.dataTaskWithRequest(request) { (data, response, error) in
@@ -80,12 +78,14 @@ class ProfileViewController: UIViewController {
                     return
             }
             
+            print(parsedResult)
             self.userNameLabel.text = name
             self.emailTF.text = email
 
         }
         
         task.resume()
+        */
     }
     
     @IBAction func toggleMenu(sender: AnyObject) {
