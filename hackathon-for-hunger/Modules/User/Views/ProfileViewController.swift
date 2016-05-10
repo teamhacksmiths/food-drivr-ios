@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ProfileViewController: UIViewController {
     
@@ -17,6 +18,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.setupMenuBar()
         self.title = "Profile"
+        
+        let json = "{ \"people\": [{ \"firstName\": \"Paul\", \"lastName\": \"Hudson\", \"isAlive\": true }, { \"firstName\": \"Angela\", \"lastName\": \"Merkel\", \"isAlive\": true }, { \"firstName\": \"George\", \"lastName\": \"Washington\", \"isAlive\": false } ] }";
+        
+        if let data = json.dataUsingEncoding(NSUTF8StringEncoding) {
+            let json = JSON(data: data)
+            
+            for item in json["people"].arrayValue {
+                print(item["firstName"].stringValue)
+            }
+        }
         
         let session = NSURLSession.sharedSession()
         
@@ -63,6 +74,7 @@ class ProfileViewController: UIViewController {
             
             print("PARSED RESULT: \(parsedResult)")
             
+
 //            // GUARD: Did Flickr return an error (stat != ok)?
 //            guard let stat = parsedResult["stat"] as? String where stat == "ok" else {
 //                print("Flickr API returned an error. See error code and message in \(parsedResult)")
