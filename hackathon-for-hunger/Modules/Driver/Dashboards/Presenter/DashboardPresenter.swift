@@ -59,8 +59,8 @@ class DashboardPresenter {
     
     func updateDonationStatus(donation: Donation, status: DonationStatus) {
         donationService.updateDonationStatus(donation, status:status).then {
-            donation in
-            print(donation)
+            donation -> Void in
+            
         }
     }
 }
