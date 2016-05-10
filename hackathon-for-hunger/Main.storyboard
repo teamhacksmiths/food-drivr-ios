@@ -572,8 +572,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="email" destination="KWl-XL-LbS" id="b4X-KV-xyl"/>
-                        <outlet property="userName" destination="bIA-UW-H2V" id="rPQ-rB-38N"/>
+                        <outlet property="emailTF" destination="KWl-XL-LbS" id="wTa-CL-ffe"/>
+                        <outlet property="userNameLabel" destination="bIA-UW-H2V" id="tQX-ff-hHt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85v-5S-3Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>

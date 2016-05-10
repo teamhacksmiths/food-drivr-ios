@@ -11,27 +11,27 @@ import SwiftyJSON
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var emailTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupMenuBar()
         self.title = "Profile"
         
-        let json = "{ \"people\": [{ \"firstName\": \"Paul\", \"lastName\": \"Hudson\", \"isAlive\": true }, { \"firstName\": \"Angela\", \"lastName\": \"Merkel\", \"isAlive\": true }, { \"firstName\": \"George\", \"lastName\": \"Washington\", \"isAlive\": false } ] }";
-        
-        if let data = json.dataUsingEncoding(NSUTF8StringEncoding) {
-            let json = JSON(data: data)
-            
-            for item in json["people"].arrayValue {
-                print(item["firstName"].stringValue)
-            }
-        }
+//        let json = "{ \"people\": [{ \"firstName\": \"Paul\", \"lastName\": \"Hudson\", \"isAlive\": true }, { \"firstName\": \"Angela\", \"lastName\": \"Merkel\", \"isAlive\": true }, { \"firstName\": \"George\", \"lastName\": \"Washington\", \"isAlive\": false } ] }"
+//        
+//        if let data = json.dataUsingEncoding(NSUTF8StringEncoding) {
+//            let json = JSON(data: data)
+//            
+//            for item in json["people"].arrayValue {
+//                print(item["firstName"].stringValue)
+//            }
+//        }
         
         let session = NSURLSession.sharedSession()
         
-        let url = NSURL(string: "https://wastenotfoodtaxi.herokuapp.com/api/v1/users/ePQ1M_71enVov2zzdQrg")!
+        let url = NSURL(string: "https://wastenotfoodtaxi.herokuapp.com/api/v1/users/5WUjNbdsSmUYs9FboeEP")!
         let request = NSURLRequest(URL: url)
         
         // Initialize task for getting data
@@ -71,15 +71,18 @@ class ProfileViewController: UIViewController {
                 print("Could not parse the data as JSON: '\(data)'")
                 return
             }
-            
-            print("PARSED RESULT: \(parsedResult)")
-            
 
-//            // GUARD: Did Flickr return an error (stat != ok)?
-//            guard let stat = parsedResult["stat"] as? String where stat == "ok" else {
-//                print("Flickr API returned an error. See error code and message in \(parsedResult)")
-//                return
-//            }
+            
+            guard let userDict = parsedResult["user"] as? NSDictionary,
+                name = userDict["name"] as? String, email = userDict["email"] as? String else {
+                    print("Cannot find keys 'photos' and 'photo' in \(parsedResult)")
+                    
+                    return
+            }
+            
+            self.userNameLabel.text = name
+            self.emailTF.text = email
+
         }
         
         task.resume()
