@@ -36,18 +36,18 @@ class DashboardPresenter {
         dashboardView = nil
     }
     
-    func fetch(status: DonationStatus? = .Any) {
-        guard let status = status where status != .Any else {
+    func fetch(status: [Int]?) {
+        guard let status = status where status.count > 0 else {
             let donations = realm.objects(Donation)
             self.dashboardView?.donations(self, didSucceed: donations)
             return
         }
-        let donations = realm.objects(Donation).filter("rawStatus = %@", status.rawValue)
+        let donations = realm.objects(Donation).filter("rawStatus IN %@", status)
         self.dashboardView?.donations(self, didSucceed: donations)
         
     }
     
-    func fetchRemotely(status: DonationStatus? = nil) {
+    func fetchRemotely(status: [Int]?) {
         donationService.getDriverDonations().then() {
             donations -> Void in
             self.fetch(status)
@@ -60,7 +60,10 @@ class DashboardPresenter {
     func updateDonationStatus(donation: Donation, status: DonationStatus) {
         donationService.updateDonationStatus(donation, status:status).then {
             donation -> Void in
-            
+            self.dashboardView?.donationStatusUpdate(self, didSucceed: donation)
+            }.error {
+                error in
+                self.dashboardView?.donationStatusUpdate(self, didFail: error as NSError)
         }
     }
 }

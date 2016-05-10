@@ -65,7 +65,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
     func donationDroppedOff() {
         self.startLoading()
-        mapViewPresenter?.updateDonationStatus(donation!, status: .Completed)
+        mapViewPresenter?.updateDonationStatus(donation!, status: .DroppedOff)
     }
     
     @IBAction func cancel(sender: AnyObject) {
@@ -391,8 +391,11 @@ extension DriverMapPickupVC: MapView {
     func donationStatusUpdate(sender: MapViewPresenter, didSucceed donation: Donation) {
         self.finishLoading()
         self.donation = donation
-        if donation.status == .Completed {
-            print("closing")
+        if donation.status == .DroppedOff {
+            guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
+                return
+            }
+            delegate.runLoginFlow()
         }
     }
     

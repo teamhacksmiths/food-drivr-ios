@@ -30,6 +30,7 @@ extension UIView {
 }
 
 extension UIViewController {
+    
     func logout() {
         guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
             return

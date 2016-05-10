@@ -41,7 +41,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     
     @IBAction func acceptDonation(sender: AnyObject) {
         activityIndicator.startAnimating()
-        mapViewPresenter?.updateDonationStatus(donation!, status: .Active)
+        mapViewPresenter?.updateDonationStatus(donation!, status: .Accepted)
     }
     
     @IBAction func cancel(sender: AnyObject) {
