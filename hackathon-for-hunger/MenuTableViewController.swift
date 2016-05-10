@@ -14,10 +14,11 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     let user = User()
     
-    let data = ["Pending Donations", "Current Donations", "Donation History", "My Profile"]
+    var  data: [String]? = nil
     
     var menu = MenuManager.None
-
+    var typeUser = TypeUser.None
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -41,6 +42,8 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.backgroundColor = UIColor(red: 77/255, green: 57/255, blue: 75/255, alpha: 1)
         // check to see if user is a driver or donor and set color appropriateley
         
+        //create menu based on type user
+        typeUser.createMenu(self)
     }
 
     
@@ -58,13 +61,13 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return data.count
+        return data!.count
     }
 
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-            cell.textLabel!.text = data[indexPath.row]
+            cell.textLabel!.text = data![indexPath.row]
             cell.textLabel!.textColor = UIColor.whiteColor()
             cell.textLabel!.font.fontWithSize(18.0)
             cell.backgroundColor = UIColor.clearColor()
@@ -87,12 +90,24 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
    
 }
 
-extension MenuTableViewController: MenuManagerDelegate {
+extension MenuTableViewController: MenuManagerDelegate, TypeUserDelegate {
 
     //Mark - delegate
     func menuManage(menuManager: MenuManager,changeMainViewController navigationController: UINavigationController){
         slideMenuController()?.changeMainViewController(navigationController, close: true)
     }
+    
+    func menuManager(menuManager: MenuManager,pickTypeUser typeUser: TypeUser) -> TypeUser? {
+        switch user.role {
+        case 0 :
+            return TypeUser.Donor
+        case 1:
+            return TypeUser.Driver
+        default:
+            return nil
+        }
+    }
+
 }
 
 

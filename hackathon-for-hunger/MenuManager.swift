@@ -9,23 +9,66 @@
 import UIKit
 import CoreLocation
 
+protocol TypeUserDelegate {
+    func typeUser(pickUpTypeUser typeUser: TypeUser) -> TypeUser?
+    func typeUser(typeUser: TypeUser, sendMenuData data: [String])
+}
 
 protocol MenuManagerDelegate {
     func menuManage(menuManager: MenuManager,changeMainViewController navigationController: UINavigationController)
+
 }
+
+protocol Menu {
+    var storyboard: UIStoryboard { get set }
+    var navigationController: UINavigationController { get set }
+    func navigation(delegate: MenuManagerDelegate)
+    
+}
+
+enum TypeUser {
+    //data contain 
+    case Donor
+    case Driver
+    case None
+    
+    static private var menuData: [String]? = nil
+    
+    func createMenu(delegate: TypeUserDelegate) {
+        let typeUser = delegate.typeUser(pickUpTypeUser: self)!
+        switch typeUser {
+        case .Donor:
+            TypeUser.menuData = ["Pending Donations", "Current Donations", "Donation History", "My Profile"]
+            delegate.typeUser(self, sendMenuData: TypeUser.menuData!)
+        case .Driver:
+            TypeUser.menuData = ["Dashboard", "Donations", "Addresses", "My Profile"]
+            delegate.typeUser(self, sendMenuData: TypeUser.menuData!)
+        case .None:
+            break
+        }
+    }
+    
+}
+
+
 
 
 enum MenuManager: Int {
     
+
     case PendingDonations = 0
     case CurrentDonations
     case DonationHistory
     case Profile
     case None
 
+    case Dashboard
+    case Donations
+    case MyProfile
+    case Addresses
 
     func navigation(delegate: MenuManagerDelegate) {
-        createNavigationController()
+        createNavigationControllerForDonor()
         delegate.menuManage(self, changeMainViewController: MenuManager.navigationController!)
         
     }
@@ -41,7 +84,7 @@ enum MenuManager: Int {
     static private var navigationController: UINavigationController? = nil
     
     
-    private func createNavigationController() {
+    private func createNavigationControllerForDonor() {
         switch self {
             case .PendingDonations:
                 let dashboardVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.pendingDonationsIdentifier)
@@ -65,9 +108,29 @@ enum MenuManager: Int {
             
             case None:
                 break
+        default:break
         }
         
+    }
+    private func createNavigationControllerForDriver(){
+        switch self {
+        case .Dashboard:
+            break
+        case .Donations:
+            break
+        case .MyProfile:
+            break
+        case .Addresses:
+            break
+        case .None:
+            break
+        default:break
+        }
     }
     
 }
 
+
+
+
+//

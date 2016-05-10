@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rSR-Kk-akt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rSR-Kk-akt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -1298,8 +1298,6 @@
         <!--Awaiting Approval Driver View Controller-->
         <scene sceneID="sFC-3j-BLz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jry-7P-ToY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="sFY-3y-BCx" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController storyboardIdentifier="AwaitingApprovalDriverView" id="ka2-Zv-jhu" customClass="AwaitingApprovalDriverViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0gw-Tl-EkC"/>
@@ -1346,6 +1344,8 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jry-7P-ToY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sFY-3y-BCx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="826" y="1509"/>
         </scene>
@@ -2229,7 +2229,7 @@
         <image name="van" width="16" height="14"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eSy-9O-U2e"/>
         <segue reference="vAS-rJ-zI1"/>
+        <segue reference="eSy-9O-U2e"/>
     </inferredMetricsTieBreakers>
 </document>

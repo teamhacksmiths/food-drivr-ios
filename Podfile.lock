@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (3.3.1)
+  - Alamofire (3.4.0)
   - Bolts (1.7.0):
     - Bolts/AppLinks (= 1.7.0)
     - Bolts/Tasks (= 1.7.0)
@@ -34,11 +34,11 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (3.1.1):
     - PromiseKit/CorePromise
-  - Realm (0.100.0):
-    - Realm/Headers (= 0.100.0)
-  - Realm/Headers (0.100.0)
-  - RealmSwift (0.100.0):
-    - Realm (= 0.100.0)
+  - Realm (0.101.0):
+    - Realm/Headers (= 0.101.0)
+  - Realm/Headers (0.101.0)
+  - RealmSwift (0.101.0):
+    - Realm (= 0.101.0)
   - SlideMenuControllerSwift (2.1.1)
   - SwiftyJSON (2.3.2)
   - TwitterCore (2.0.2):
@@ -62,7 +62,7 @@ DEPENDENCIES:
   - TwitterKit
 
 SPEC CHECKSUMS:
-  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   FBSDKCoreKit: 686ac982723a14ec9ddb85e2f81235d7706c891b
@@ -72,8 +72,8 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 18e82784c9cb2d5f3df3129a3e4754eb075ebca0
   OMGHTTPURLRQ: 633f98ee745aeda02345935a52eec1784cddb589
   PromiseKit: 4e8127c22a9b29d1b44958ab2ec762ea6115cbfb
-  Realm: b13b548e712d28a66678970c45cd245ebb94ba3b
-  RealmSwift: 1bb0ba2ceaa06b65d740b4f91bfa06e3fd1b805c
+  Realm: b21596d6d7e1c054f6fae967d27263d2593ca309
+  RealmSwift: 5247501bcd68b9db3a718cba808e1ce45ba67034
   SlideMenuControllerSwift: 82ada9b04e03538c84d034cf1c09e5849c0113f7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TwitterCore: 0f44d8980a6879d5205dcb4e010d15e643e56fa0
