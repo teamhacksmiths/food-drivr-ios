@@ -29,13 +29,13 @@ class PendingDonationsDashboard: UIViewController {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PendingDonationsDashboard.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
-        dashboardPresenter.fetch(.Pending)
+        dashboardPresenter.fetch([DonationStatus.Pending.rawValue])
     }
     
     
     func refresh(sender: AnyObject) {
         self.startLoading()
-        dashboardPresenter.fetchRemotely(.Pending)
+        dashboardPresenter.fetchRemotely([DonationStatus.Pending.rawValue])
         refreshControl?.endRefreshing()
     }
 
@@ -86,7 +86,7 @@ extension PendingDonationsDashboard:  UITableViewDelegate, UITableViewDataSource
         let accept = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Accept Donation" , handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
             let donation = self.pendingDonations![indexPath.row]
             self.activityIndicator.title = "Accepting"
-            self.dashboardPresenter.updateDonationStatus(donation, status: .Active)
+            self.dashboardPresenter.updateDonationStatus(donation, status: .Accepted)
         })
         accept.backgroundColor = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
         
@@ -157,7 +157,7 @@ extension PendingDonationsDashboard: DashboardView {
             let refreshAlert = UIAlertController(title: "Unable To Accept.", message: "Donation might have already been accepted. Resync your donations?.", preferredStyle: UIAlertControllerStyle.Alert)
             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
                 self.startLoading()
-                self.dashboardPresenter.fetchRemotely(.Pending)
+                self.dashboardPresenter.fetchRemotely([DonationStatus.Pending.rawValue])
             }))
             refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
                 

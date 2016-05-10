@@ -17,6 +17,8 @@ import PromiseKit
 class DonationService {
     
     let manager = Manager()
+    let realm = try! Realm()
+    
     typealias JsonDict = [String: AnyObject]
     
     func getDonations(completed: Bool = false, status: Int = 0) -> Promise<[JsonDict]> {
@@ -44,7 +46,7 @@ class DonationService {
     
     func updateRealmLayer(dict: [JsonDict]) -> Promise<Results<Donation>> {
         return Promise { fulfill, reject in
-            let realm = try! Realm()
+            
             try realm.write {
                 realm.delete(realm.objects(Donation))
             }
@@ -79,54 +81,25 @@ class DonationService {
         
     }
     
-    func updateDonationStatus(donation: Donation, status: DonationStatus) -> Promise<Void>{
+    func updateDonationStatus(donation: Donation, status: DonationStatus) -> Promise<Donation>{
         
-        let accepted = ["status": [
-            "donation_status": 1,
-            "pickup_status": 1,
-            "dropoff_status": 1
-            ]
-        ]
-        
-        let pickedUp = ["status": [
-            "donation_status": 1,
-            "pickup_status": 2,
-            "dropoff_status": 1
-            ]
-        ]
-        
-        let droppedOff = ["status": [
-            "donation_status": 2,
-            "pickup_status": 2,
-            "dropoff_status": 2
-            ]
-        ]
-        var dict: JsonDict = [:]
-        switch(status) {
-        case .Active:
-            dict = accepted
-            break
-        case .PickedUp:
-            dict = pickedUp
-            break
-        case .Completed:
-            dict = droppedOff
-            break
-        default: dict = accepted
-        }
         return Promise { fulfill, reject in
             
-            let router = DonationRouter(endpoint: .UpdateDonationStatus(donation: donation, status: dict))
+            let router = DonationRouter(endpoint: .UpdateDonationStatus(donation: donation, status: ["status_id": status.rawValue]))
             
             manager.request(router)
                 .validate()
                 .responseJSON {
                     response in
                     switch response.result {
-                    case .Success(let JSON):
-                        let user = JSON as! JsonDict
-                        print(user)
-                        fulfill()
+                    case .Success(_):
+                        do {
+                            try self.realm.write {
+                                donation.status = status
+                            }
+                        } catch let error as NSError{
+                            reject(error)
+                        }
                         
                     case .Failure(let error):
                         reject(error)
