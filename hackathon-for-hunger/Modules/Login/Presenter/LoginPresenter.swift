@@ -36,12 +36,6 @@ class LoginPresenter {
             user -> () in
             self.loginView?.login(didSucceed: user!)
             
-            
-            //temp check to get auth code so I can work with User Profile -df
-            print(user)
-            //////////////////
-            
-            
             }.error { error in 
             self.loginView?.login(didFail: error as NSError)
         }
