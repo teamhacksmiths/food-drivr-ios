@@ -85,8 +85,7 @@ class DonationService {
         
         return Promise { fulfill, reject in
             
-            let router = DonationRouter(endpoint: .UpdateDonationStatus(donation: donation, status: ["status_id": status.rawValue]))
-            
+            let router = DonationRouter(endpoint: .UpdateDonationStatus(donation: donation, status: ["donation_status": status.rawValue]))
             manager.request(router)
                 .validate()
                 .responseJSON {
@@ -97,6 +96,7 @@ class DonationService {
                             try self.realm.write {
                                 donation.status = status
                             }
+                            fulfill(donation)
                         } catch let error as NSError{
                             reject(error)
                         }

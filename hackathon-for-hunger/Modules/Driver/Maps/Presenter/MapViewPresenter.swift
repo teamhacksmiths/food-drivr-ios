@@ -41,14 +41,14 @@ class MapViewPresenter {
     }
     
     func updateDonationStatus(donation: Donation, status: DonationStatus) {
-        //temp faux call as no api
-        delay(2) {
-            self.mapView?.donationStatusUpdate(self, didSucceed: donation)
+
+    donationService.updateDonationStatus(donation, status:status).then {
+            donation in
+           self.mapView?.donationStatusUpdate(self, didSucceed: donation)
+        }.error {
+            error in
+            print(error)
+            self.mapView?.donationStatusUpdate(self, didFail: error as NSError)
         }
-        
-//        donationService.updateDonationStatus(donation, status:status).then {
-//            donation in
-//            print(donation)
-//        }
     }
 }
