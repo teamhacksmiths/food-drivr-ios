@@ -447,12 +447,11 @@
                                                             <constraint firstAttribute="height" constant="100" id="jrx-At-DZ7"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIA-UW-H2V">
-                                                        <rect key="frame" x="279" y="110" width="42" height="67"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="user name" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kie-T7-T1m">
+                                                        <rect key="frame" x="264" y="110" width="72" height="67"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                    </textField>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -496,7 +495,7 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pRb-WD-LK2">
                                                                 <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IqL-YE-bcA">
                                                                 <rect key="frame" x="0.0" y="55" width="500" height="1"/>
@@ -541,6 +540,9 @@
                                                         <state key="normal" title="Save">
                                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="save:" destination="SiY-CT-JRa" eventType="touchUpInside" id="cat-2b-iXf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -573,7 +575,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailTF" destination="KWl-XL-LbS" id="wTa-CL-ffe"/>
-                        <outlet property="userNameLabel" destination="bIA-UW-H2V" id="tQX-ff-hHt"/>
+                        <outlet property="userNameTF" destination="kie-T7-T1m" id="sM7-wu-Yxq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85v-5S-3Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
