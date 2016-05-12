@@ -54,7 +54,6 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         mapViewPresenter?.attachView(self)
         self.donation = mapViewPresenter?.getDonation()
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Accepting")
-        self.view.addSubview(activityIndicator)
         mapView.delegate = self
         //mapView.setRegion(startingRegion, animated: true)
         if donation != nil {

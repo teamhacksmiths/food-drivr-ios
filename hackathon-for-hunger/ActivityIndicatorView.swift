@@ -16,6 +16,7 @@ class ActivityIndicatorView: UIView
     var title: String!
     var indicatorColor: UIColor!
     var loadingViewColor: UIColor!
+    var inview: UIView!
     
     init(inview:UIView, loadingViewColor:UIColor, indicatorColor:UIColor, msg:String){
         
@@ -23,6 +24,7 @@ class ActivityIndicatorView: UIView
         self.loadingViewColor = loadingViewColor
         self.title = msg
         super.init(frame: CGRectMake(inview.frame.midX - 100, inview.frame.midY - 25 , 200, 50))
+        self.inview = inview
         initalize()
         
     }
@@ -39,7 +41,7 @@ class ActivityIndicatorView: UIView
         messageFrame.alpha = 0.8
         messageFrame.addSubview(activityIndicator)
         messageFrame.addSubview(strLabel)
-        
+        self.addSubview(messageFrame)
         
     }
     
@@ -59,19 +61,18 @@ class ActivityIndicatorView: UIView
 
     func startAnimating()
     {
-        if !self.subviews.contains(messageFrame){
+        if !inview.subviews.contains(self){
             activityIndicator.startAnimation()
-            self.addSubview(messageFrame)
+            inview.addSubview(self)
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         }
     }
     
     func stopAnimating()
     {
-        if self.subviews.contains(messageFrame){
-            
+        if inview.subviews.contains(self){
             activityIndicator.stopAnimation()
-            messageFrame.removeFromSuperview()
+            self.removeFromSuperview()
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
 
         }

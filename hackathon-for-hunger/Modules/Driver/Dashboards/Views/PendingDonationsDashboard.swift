@@ -25,7 +25,6 @@ class PendingDonationsDashboard: UIViewController {
         super.viewDidLoad()
         dashboardPresenter.attachView(self)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Syncing")
-        view.addSubview(self.activityIndicator)
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PendingDonationsDashboard.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
@@ -61,6 +60,10 @@ class PendingDonationsDashboard: UIViewController {
         }
 
     }
+    
+    deinit {
+        print("DEINITIALIZING")
+    }
 }
 
 extension PendingDonationsDashboard:  UITableViewDelegate, UITableViewDataSource {
@@ -75,7 +78,7 @@ extension PendingDonationsDashboard:  UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! PendingDonationsDashboardTableViewCell
         cell.indexPath = indexPath
         cell.information = pendingDonations![indexPath.row]
-        cell.addBorderTop(size: 1, color: UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1))
+        cell.addBorderTop(size: 1, color: UIColor.lightGrayColor())
         
         
         return cell

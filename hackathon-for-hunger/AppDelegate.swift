@@ -51,18 +51,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Mark - loading the ApiKeys.plist file
         guard let filePath = NSBundle.mainBundle().pathForResource("ApiKeys", ofType: "plist") else {
-            return true
+            return false
         }
         // Mark - insert to in dictionary
         guard let dictionary = NSDictionary(contentsOfFile:filePath) else {
-            return true
+            return false
         }
         
         // Mark - configure Facebook
         guard let facebookAppId = dictionary["FACEBOOK_API_APP_ID"] as? String ,
             let facebookDisplayName = dictionary["FACEBOOK_API_DIPLAY_NAME"] as? String ,
             let appURLSchemeSuffix = dictionary["FACEBOOK_API_URL_SCHEME_SUFFIX"] as? String    else {
-                return true
+                return false
         }
         
         FBSDKSettings.setAppID(facebookAppId)

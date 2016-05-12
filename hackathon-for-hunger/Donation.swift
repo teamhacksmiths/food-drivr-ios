@@ -12,10 +12,10 @@ import RealmSwift
 enum DonationStatus: Int {
     case Pending = 0
     case Accepted
-    case PickedUp
-    case DroppedOff
     case Suspended
     case Cancelled
+    case PickedUp
+    case DroppedOff
     case Any
 }
 
