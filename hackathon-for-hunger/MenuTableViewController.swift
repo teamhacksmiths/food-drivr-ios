@@ -16,16 +16,13 @@ class MenuTableViewController: UIViewController, UITableViewDelegate{
     
     var  data: [String]? = nil
     
-    private  var vs: [UIViewController]?
+    
     
     private let menuPresenter = MenuPresenter(authService: AuthService())
     private var menuToDisplay = [Int: Menu]()
-//    private var menuToDisplay = [UserViewData]()
     
-    
-//    var menu = MenuManager.None
-//    var typeUser = TypeUser.None
-    
+    private var cacheVC: [NSIndexPath: UIViewController]?
+
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -70,13 +67,15 @@ class MenuTableViewController: UIViewController, UITableViewDelegate{
     
 
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        if let menu = MenuManager(rawValue: indexPath.item) {
-//            menu.navigation(self)
-//        }
-        let identifier = menuToDisplay[indexPath.row]!.identifier
-        let vc = storyboard?.instantiateViewControllerWithIdentifier(identifier)
-        navigationController?.presentViewController(vc!, animated: true, completion: nil)
-        
+
+        if let vc = cacheVC![indexPath] {
+            slideMenuController()?.changeMainViewController(vc, close: true)
+        }else{
+            let identifier = menuToDisplay[indexPath.row]!.identifier
+            let vc = storyboard?.instantiateViewControllerWithIdentifier(identifier)
+            cacheVC![indexPath] = vc
+            slideMenuController()?.changeMainViewController(vc!, close: true)
+        }
     }
     
     deinit {
@@ -123,27 +122,6 @@ extension MenuTableViewController: MenuView{
 }
 
 
-
-//extension MenuTableViewController: MenuManagerDelegate, TypeUserDelegate {
-//
-//    //Mark - delegate
-//    func menuManage(menuManager: MenuManager,changeMainViewController navigationController: UINavigationController){
-//        slideMenuController()?.changeMainViewController(navigationController, close: true)
-//    }
-//    
-//    func menuManager(menuManager: MenuManager,pickTypeUser typeUser: TypeUser) -> TypeUser? {
-//        switch user.role {
-//        case 0 :
-//            return TypeUser.Donor
-//        case 1:
-//            return TypeUser.Driver
-//        default:
-//            return nil
-//        }
-//    }
-//
-//}
-//
 
 
 

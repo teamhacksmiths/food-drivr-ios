@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */; };
+		3CC1ABCC1CC172E500E01EE0 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABCB1CC172E500E01EE0 /* MenuPresenter.swift */; };
 		3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B741CBC244C00ACC504 /* AcceptButton.swift */; };
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
 		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
@@ -118,7 +118,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		3CC1ABCB1CC172E500E01EE0 /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		3CC24B741CBC244C00ACC504 /* AcceptButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptButton.swift; sourceTree = "<group>"; };
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
@@ -250,6 +250,22 @@
 				4809E5DB080879951A7B12E9 /* Pods_hackathon_for_hunger.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C3EB9D31CE4E0A300470E14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3C3EB9D41CE4E0B600470E14 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3CC1ABCB1CC172E500E01EE0 /* MenuPresenter.swift */,
+			);
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 		4404F6BE1CBD1B11001B9293 /* MockData */ = {
@@ -438,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				44424DA71CDDF44600B2409F /* User */,
+				44AA631D1CB3F090005E02CC /* Menu */,
 				446A76C81CDD0FF800951319 /* Login */,
 				446A76C71CDD0FE000951319 /* Donor */,
 				446A76C61CDD0FCC00951319 /* Driver */,
@@ -580,10 +597,11 @@
 		44AA631D1CB3F090005E02CC /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */,
-				3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */,
+				3C3EB9D31CE4E0A300470E14 /* Views */,
+				3C3EB9D41CE4E0B600470E14 /* Presenter */,
 			);
 			name = Menu;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		44AEA8671CA9CBC100A52731 = {
@@ -693,7 +711,6 @@
 		EAAD23B71CB37B5A005FD787 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				44AA631D1CB3F090005E02CC /* Menu */,
 				EAAD23B81CB37B78005FD787 /* SignUp */,
 			);
 			name = Controller;
@@ -913,7 +930,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */,
+				3CC1ABCC1CC172E500E01EE0 /* MenuPresenter.swift in Sources */,
 				4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */,
 				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
 				446A77351CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift in Sources */,
