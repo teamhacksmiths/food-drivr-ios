@@ -9,19 +9,28 @@
 import UIKit
 
 
-class MenuTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MenuTableViewController: UIViewController, UITableViewDelegate{
 
     
     let user = User()
     
     var  data: [String]? = nil
     
-    var menu = MenuManager.None
-    var typeUser = TypeUser.None
+    private  var vs: [UIViewController]?
+    
+    private let menuPresenter = MenuPresenter(authService: AuthService())
+    private var menuToDisplay = [Int: Menu]()
+//    private var menuToDisplay = [UserViewData]()
+    
+    
+//    var menu = MenuManager.None
+//    var typeUser = TypeUser.None
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    
     
     @IBAction func logoutButtonClicked(sender: AnyObject) {
         self.logout()
@@ -42,8 +51,12 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.backgroundColor = UIColor(red: 77/255, green: 57/255, blue: 75/255, alpha: 1)
         // check to see if user is a driver or donor and set color appropriateley
         
+        //SetUp menu based on type of user
+        menuPresenter.attachView(self)
+        
+        
         //create menu based on type user
-        typeUser.createMenu(self)
+//        typeUser.createMenu(self)
     }
 
     
@@ -54,34 +67,16 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
     // MARK: - Table view data source
 
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return data!.count
-    }
-
-    
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-            cell.textLabel!.text = data![indexPath.row]
-            cell.textLabel!.textColor = UIColor.whiteColor()
-            cell.textLabel!.font.fontWithSize(18.0)
-            cell.backgroundColor = UIColor.clearColor()
-            cell.addBorderBottom(size: 1, color: UIColor.whiteColor().colorWithAlphaComponent(0.5))
-        
-                // Configure the cell...
-        return cell
-    }
     
 
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let menu = MenuManager(rawValue: indexPath.item) {
-            menu.navigation(self)
-        }
+//        if let menu = MenuManager(rawValue: indexPath.item) {
+//            menu.navigation(self)
+//        }
+        let identifier = menuToDisplay[indexPath.row]!.identifier
+        let vc = storyboard?.instantiateViewControllerWithIdentifier(identifier)
+        navigationController?.presentViewController(vc!, animated: true, completion: nil)
+        
     }
     
     deinit {
@@ -90,26 +85,65 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
    
 }
 
-extension MenuTableViewController: MenuManagerDelegate, TypeUserDelegate {
 
-    //Mark - delegate
-    func menuManage(menuManager: MenuManager,changeMainViewController navigationController: UINavigationController){
-        slideMenuController()?.changeMainViewController(navigationController, close: true)
+extension MenuTableViewController: UITableViewDataSource {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
     
-    func menuManager(menuManager: MenuManager,pickTypeUser typeUser: TypeUser) -> TypeUser? {
-        switch user.role {
-        case 0 :
-            return TypeUser.Donor
-        case 1:
-            return TypeUser.Driver
-        default:
-            return nil
-        }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return menuToDisplay.count
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        
+        cell.textLabel!.text = menuToDisplay[indexPath.row]!.itemName
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        cell.textLabel!.font.fontWithSize(18.0)
+        cell.backgroundColor = UIColor.clearColor()
+        cell.addBorderBottom(size: 1, color: UIColor.whiteColor().colorWithAlphaComponent(0.5))
+        
+        // Configure the cell...
+        return cell
     }
 
 }
 
+extension MenuTableViewController: MenuView{
+    
+    func setMenuItems(menuItems: [Int: Menu]){
+        menuToDisplay = menuItems
+    }
+    
+}
+
+
+
+//extension MenuTableViewController: MenuManagerDelegate, TypeUserDelegate {
+//
+//    //Mark - delegate
+//    func menuManage(menuManager: MenuManager,changeMainViewController navigationController: UINavigationController){
+//        slideMenuController()?.changeMainViewController(navigationController, close: true)
+//    }
+//    
+//    func menuManager(menuManager: MenuManager,pickTypeUser typeUser: TypeUser) -> TypeUser? {
+//        switch user.role {
+//        case 0 :
+//            return TypeUser.Donor
+//        case 1:
+//            return TypeUser.Driver
+//        default:
+//            return nil
+//        }
+//    }
+//
+//}
+//
 
 
 

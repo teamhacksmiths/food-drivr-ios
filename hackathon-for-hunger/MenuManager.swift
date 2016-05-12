@@ -9,128 +9,157 @@
 import UIKit
 import CoreLocation
 
-protocol TypeUserDelegate {
-    func typeUser(pickUpTypeUser typeUser: TypeUser) -> TypeUser?
-    func typeUser(typeUser: TypeUser, sendMenuData data: [String])
+
+protocol MenuView: NSObjectProtocol {
+    func setMenuItems(menuItems: [Int: Menu])
 }
 
-protocol MenuManagerDelegate {
-    func menuManage(menuManager: MenuManager,changeMainViewController navigationController: UINavigationController)
 
+
+struct Menu {
+    let itemName: String
+    let identifier: String
 }
 
-protocol Menu {
-    var storyboard: UIStoryboard { get set }
-    var navigationController: UINavigationController { get set }
-    func navigation(delegate: MenuManagerDelegate)
+class MenuPresenter {
+    private let authService : AuthService
+    weak private var menuView: MenuView?
     
-}
-
-enum TypeUser {
-    //data contain 
-    case Donor
-    case Driver
-    case None
-    
-    static private var menuData: [String]? = nil
-    
-    func createMenu(delegate: TypeUserDelegate) {
-        let typeUser = delegate.typeUser(pickUpTypeUser: self)!
-        switch typeUser {
-        case .Donor:
-            TypeUser.menuData = ["Pending Donations", "Current Donations", "Donation History", "My Profile"]
-            delegate.typeUser(self, sendMenuData: TypeUser.menuData!)
-        case .Driver:
-            TypeUser.menuData = ["Dashboard", "Donations", "Addresses", "My Profile"]
-            delegate.typeUser(self, sendMenuData: TypeUser.menuData!)
-        case .None:
-            break
-        }
+    init(authService: AuthService) {
+        self.authService = authService
     }
     
-}
-
-
-
-
-enum MenuManager: Int {
+    func attachView(view: MenuView){
+        menuView = view
+    }
     
-
-    case PendingDonations = 0
-    case CurrentDonations
-    case DonationHistory
-    case Profile
-    case None
-
-    case Dashboard
-    case Donations
-    case MyProfile
-    case Addresses
-
-    func navigation(delegate: MenuManagerDelegate) {
-        createNavigationControllerForDonor()
-        delegate.menuManage(self, changeMainViewController: MenuManager.navigationController!)
+    func detachView() {
+        menuView = nil
+    }
+    
+    func getMenuItems() {
+        
+        let role =  AuthService.sharedInstance.getCurrentUser()!.role
+        
+        switch role {
+        case 0 :
+            let menu = [ 0: Menu(itemName: "Pending Donations", identifier: "Main"),
+                         1: Menu(itemName: "Current Donations", identifier: "CurrentDonationLIstView"),
+                         2: Menu(itemName: "Donation History", identifier: "CurrentDonationLIstView"),
+                         3: Menu(itemName: "My Profile", identifier: "ProfileViewController")
+            ]
+            menuView?.setMenuItems(menu)
+        case 1:
+            let menu = [ 0: Menu(itemName: "Dashboard", identifier: "Main"),
+                         1: Menu(itemName: "Donations", identifier: "CurrentDonationLIstView"),
+                         2: Menu(itemName: "Addresses", identifier: "CurrentDonationLIstView"),
+                         3: Menu(itemName: "My Profile", identifier: "ProfileViewController")
+            ]
+            menuView?.setMenuItems(menu)
+        default :
+            break
+        }
         
     }
     
-    
-    private struct Identifier {
-        static let pendingDonationsIdentifier = "Main"
-        static let currentDonationsIdentifier = "CurrentDonationLIstView"
-        static let profileIdentifier = "ProfileViewController"
-    }
-    
-    static private let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    static private var navigationController: UINavigationController? = nil
-    
-    
-    private func createNavigationControllerForDonor() {
-        switch self {
-            case .PendingDonations:
-                let dashboardVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.pendingDonationsIdentifier)
-                                            as! DonationsContainerViewController
-                MenuManager.navigationController = UINavigationController(rootViewController: dashboardVC)
-            
-            case .CurrentDonations:
-                let donationOverVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.currentDonationsIdentifier)
-                    as! CurrentDonationsDashboard
-                MenuManager.navigationController = UINavigationController(rootViewController: donationOverVC)
-            
-        case .DonationHistory:
-            let profileVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.currentDonationsIdentifier)
-                as! CurrentDonationsDashboard
-            MenuManager.navigationController = UINavigationController(rootViewController: profileVC)
-            
-            case .Profile:
-                let profileVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.profileIdentifier)
-                    as! ProfileViewController
-                MenuManager.navigationController = UINavigationController(rootViewController: profileVC)
-            
-            case None:
-                break
-        default:break
-        }
-        
-    }
-    private func createNavigationControllerForDriver(){
-        switch self {
-        case .Dashboard:
-            break
-        case .Donations:
-            break
-        case .MyProfile:
-            break
-        case .Addresses:
-            break
-        case .None:
-            break
-        default:break
-        }
-    }
-    
 }
-
-
-
 
 //
+//
+//protocol MenuManagerDelegate {
+//    func menuManage(menuManager: MenuManager,changeMainViewController navigationController: UINavigationController)
+//
+//}
+//
+//protocol Menu {
+//    var storyboard: UIStoryboard { get set }
+//    var navigationController: UINavigationController { get set }
+//    func navigation(delegate: MenuManagerDelegate)
+//    
+//}
+//
+//
+//
+//
+//
+//enum MenuManager: Int {
+//    
+//
+//    case PendingDonations = 0
+//    case CurrentDonations
+//    case DonationHistory
+//    case Profile
+//    case None
+//
+//    case Dashboard
+//    case Donations
+//    case MyProfile
+//    case Addresses
+//
+//    func navigation(delegate: MenuManagerDelegate) {
+//        createNavigationControllerForDonor()
+//        delegate.menuManage(self, changeMainViewController: MenuManager.navigationController!)
+//        
+//    }
+//    
+//    
+//    private struct Identifier {
+//        static let pendingDonationsIdentifier = "Main"
+//        static let currentDonationsIdentifier = "CurrentDonationLIstView"
+//        static let profileIdentifier = "ProfileViewController"
+//    }
+//    
+//    static private let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//    static private var navigationController: UINavigationController? = nil
+//    
+//    
+//    private func createNavigationControllerForDonor() {
+//        switch self {
+//            case .PendingDonations:
+//                let dashboardVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.pendingDonationsIdentifier)
+//                                            as! DonationsContainerViewController
+//                MenuManager.navigationController = UINavigationController(rootViewController: dashboardVC)
+//            
+//            case .CurrentDonations:
+//                let donationOverVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.currentDonationsIdentifier)
+//                    as! CurrentDonationsDashboard
+//                MenuManager.navigationController = UINavigationController(rootViewController: donationOverVC)
+//            
+//        case .DonationHistory:
+//            let profileVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.currentDonationsIdentifier)
+//                as! CurrentDonationsDashboard
+//            MenuManager.navigationController = UINavigationController(rootViewController: profileVC)
+//            
+//            case .Profile:
+//                let profileVC = MenuManager.storyboard.instantiateViewControllerWithIdentifier(Identifier.profileIdentifier)
+//                    as! ProfileViewController
+//                MenuManager.navigationController = UINavigationController(rootViewController: profileVC)
+//            
+//            case None:
+//                break
+//        default:break
+//        }
+//        
+//    }
+//    private func createNavigationControllerForDriver(){
+//        switch self {
+//        case .Dashboard:
+//            break
+//        case .Donations:
+//            break
+//        case .MyProfile:
+//            break
+//        case .Addresses:
+//            break
+//        case .None:
+//            break
+//        default:break
+//        }
+//    }
+//    
+//}
+//
+//
+//
+//
+////
