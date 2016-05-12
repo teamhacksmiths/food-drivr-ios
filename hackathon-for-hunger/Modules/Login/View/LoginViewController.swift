@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         loginPresenter.attachView(self)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Please wait")
-        view.addSubview(self.activityIndicator)
+        //view.addSubview(self.activityIndicator)
         // Ask user for permission to use location services (should only ask the user the first time they use the app)
         let locationManager = LocationManager.sharedInstance.locationManager
         locationManager.delegate = LocationManager.sharedInstance

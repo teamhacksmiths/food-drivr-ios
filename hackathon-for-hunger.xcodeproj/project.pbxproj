@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */; };
-		3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC24B741CBC244C00ACC504 /* AcceptButton.swift */; };
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
 		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
 		442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9751CC15CAD0002187D /* UserRegistration.swift */; };
@@ -119,7 +118,6 @@
 
 /* Begin PBXFileReference section */
 		3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
-		3CC24B741CBC244C00ACC504 /* AcceptButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptButton.swift; sourceTree = "<group>"; };
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
 		442FE9751CC15CAD0002187D /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
@@ -129,16 +127,16 @@
 		443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ColabThi.otf; sourceTree = "<group>"; };
 		443D1DAD1CB6D57500E2E7B9 /* Deming EP.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Deming EP.ttf"; sourceTree = "<group>"; };
 		44424D7C1CDDC07C00B2409F /* CurrentDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDonationsDashboard.swift; sourceTree = "<group>"; };
-		44424D821CDDDB4A00B2409F /* Portland-BridgePortBrewPub.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Portland-BridgePortBrewPub.gpx"; sourceTree = "<group>"; };
+		44424D821CDDDB4A00B2409F /* Portland-BridgePortBrewPub.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Portland-BridgePortBrewPub.gpx"; path = "Modules/Driver/Maps/Models/Portland-BridgePortBrewPub.gpx"; sourceTree = "<group>"; };
 		44424D841CDDDB7300B2409F /* DriverMapDetailPendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapDetailPendingVC.swift; sourceTree = "<group>"; };
 		44424D861CDDDFBB00B2409F /* MapViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
 		44424D881CDDE5D200B2409F /* DonationMapOverviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationMapOverviewVC.swift; sourceTree = "<group>"; };
 		44424D8A1CDDE6F400B2409F /* MapOverviewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOverviewPresenter.swift; sourceTree = "<group>"; };
 		44424D8D1CDDEBBD00B2409F /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		44424D8F1CDDEBF400B2409F /* DonationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationPin.swift; sourceTree = "<group>"; };
-		44424D901CDDEBF400B2409F /* DonorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorInfo.swift; sourceTree = "<group>"; };
-		44424D931CDDEC2400B2409F /* MapsDummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsDummyData.swift; sourceTree = "<group>"; };
-		44424D941CDDEC2400B2409F /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
+		44424D8F1CDDEBF400B2409F /* DonationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationPin.swift; path = Modules/Driver/Maps/Models/DonationPin.swift; sourceTree = "<group>"; };
+		44424D901CDDEBF400B2409F /* DonorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonorInfo.swift; path = Modules/Driver/Maps/Models/DonorInfo.swift; sourceTree = "<group>"; };
+		44424D931CDDEC2400B2409F /* MapsDummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsDummyData.swift; path = Modules/Driver/Maps/Models/MapsDummyData.swift; sourceTree = "<group>"; };
+		44424D941CDDEC2400B2409F /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsModel.swift; path = Modules/Driver/Maps/Models/MapsModel.swift; sourceTree = "<group>"; };
 		44424D971CDDEC6A00B2409F /* DriverMapPickupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapPickupVC.swift; sourceTree = "<group>"; };
 		44424D981CDDEC6A00B2409F /* TempLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempLocationVC.swift; sourceTree = "<group>"; };
 		44424D9B1CDDF00100B2409F /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -220,7 +218,7 @@
 		EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAccountInfoViewController.swift; sourceTree = "<group>"; };
 		EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNavigationViewController.swift; sourceTree = "<group>"; };
 		EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalDriverViewController.swift; sourceTree = "<group>"; };
-		EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
+		EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationTableViewCell.swift; path = ../../../../DonationTableViewCell.swift; sourceTree = "<group>"; };
 		EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorSignupInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -304,7 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				44424D8C1CDDEBA300B2409F /* Service */,
-				44424D811CDDDAA500B2409F /* Models */,
 				44424D801CDDDA9500B2409F /* Views */,
 				44424D7F1CDDDA7B00B2409F /* Presenter */,
 			);
@@ -329,18 +326,6 @@
 				44424D841CDDDB7300B2409F /* DriverMapDetailPendingVC.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		44424D811CDDDAA500B2409F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				44424D931CDDEC2400B2409F /* MapsDummyData.swift */,
-				44424D941CDDEC2400B2409F /* MapsModel.swift */,
-				44424D8F1CDDEBF400B2409F /* DonationPin.swift */,
-				44424D901CDDEBF400B2409F /* DonorInfo.swift */,
-				44424D821CDDDB4A00B2409F /* Portland-BridgePortBrewPub.gpx */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		44424D8C1CDDEBA300B2409F /* Service */ = {
@@ -428,6 +413,7 @@
 		44638F041CC3EDBA005379FE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				44C702681CDA86E000E4A2EA /* ActivityIndicatorView.swift */,
 				44638F051CC3EDD0005379FE /* UIViewExtensions.swift */,
 				EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */,
 			);
@@ -467,7 +453,6 @@
 		446A76C81CDD0FF800951319 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				446A76D11CDD124D00951319 /* Model */,
 				446A76D21CDD124D00951319 /* View */,
 				446A76D01CDD123800951319 /* Presenter */,
 			);
@@ -492,13 +477,6 @@
 				446A76D51CDD129400951319 /* LoginPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		446A76D11CDD124D00951319 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		446A76D21CDD124D00951319 /* View */ = {
@@ -530,6 +508,7 @@
 		446A76DD1CDD20B200951319 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */,
 				44424D7C1CDDC07C00B2409F /* CurrentDonationsDashboard.swift */,
 				446A77341CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift */,
 				446A77321CDD289600951319 /* PendingDonationsDashboard.swift */,
@@ -560,6 +539,11 @@
 		44A7250E1CAC4F2600D676C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				44424D931CDDEC2400B2409F /* MapsDummyData.swift */,
+				44424D941CDDEC2400B2409F /* MapsModel.swift */,
+				44424D8F1CDDEBF400B2409F /* DonationPin.swift */,
+				44424D901CDDEBF400B2409F /* DonorInfo.swift */,
+				44424D821CDDDB4A00B2409F /* Portland-BridgePortBrewPub.gpx */,
 				EAFEDF981CC2E24700C30693 /* Signup */,
 				442FE9721CC15C3B0002187D /* DTO */,
 				4404F6BE1CBD1B11001B9293 /* MockData */,
@@ -612,7 +596,6 @@
 				446A76D71CDD179A00951319 /* Legacy */,
 				446A76CD1CDD114400951319 /* Services */,
 				446A76C51CDD0FA800951319 /* Modules */,
-				EAD2DDEE1CD330B7007454FB /* View */,
 				EA6C4C1E1CD1E7B800165F02 /* Support */,
 				44638F041CC3EDBA005379FE /* Extensions */,
 				443D1DA81CB6D56100E2E7B9 /* Assets */,
@@ -712,16 +695,6 @@
 			name = SignUp;
 			sourceTree = "<group>";
 		};
-		EAD2DDEE1CD330B7007454FB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3CC24B741CBC244C00ACC504 /* AcceptButton.swift */,
-				EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */,
-				44C702681CDA86E000E4A2EA /* ActivityIndicatorView.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		EAFEDF981CC2E24700C30693 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +756,7 @@
 				TargetAttributes = {
 					44AEA86F1CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = B69U5P3C32;
 					};
 					44AEA8831CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
@@ -929,7 +903,6 @@
 				446417811CB1872500F37F17 /* Image.swift in Sources */,
 				44424D961CDDEC2400B2409F /* MapsModel.swift in Sources */,
 				44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */,
-				3CC24B751CBC244C00ACC504 /* AcceptButton.swift in Sources */,
 				44424DA11CDDF39E00B2409F /* DonorAddAddressViewController.swift in Sources */,
 				446A76D91CDD17A700951319 /* LegacyCode.swift in Sources */,
 				44424DA21CDDF39E00B2409F /* DonorAddressViewController.swift in Sources */,

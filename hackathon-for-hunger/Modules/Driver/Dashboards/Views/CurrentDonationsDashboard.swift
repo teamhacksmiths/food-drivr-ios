@@ -31,7 +31,6 @@ class CurrentDonationsDashboard: UIViewController {
         self.title = AuthService.sharedInstance.getCurrentUser()?.name ?? "Current Donations"
         dashboardPresenter.attachView(self)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Syncing")
-        view.addSubview(self.activityIndicator)
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PendingDonationsDashboard.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
