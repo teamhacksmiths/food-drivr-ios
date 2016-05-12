@@ -114,4 +114,28 @@ class UserService {
             }
         }
     }
+    
+    func updateUser(userData: JsonDict) -> Promise<JsonDict> {
+        return Promise { fulfill, reject in
+            guard let token = AuthService.sharedInstance.getToken() as Token? else {
+                reject(NSError(domain: "no token found for user", code:422, userInfo: nil))
+                return
+            }
+
+            let router = UserRouter(endpoint: .Update(token: token, userData: userData))
+            manager.request(router)
+                .validate()
+                .responseJSON {
+                    response in
+                    switch response.result {
+                    case .Success(let JSON):
+                        let user = JSON as! JsonDict
+                        fulfill(user)
+                        
+                    case .Failure(let error):
+                        reject(error)
+                    }
+            }
+        }
+    }
 }
