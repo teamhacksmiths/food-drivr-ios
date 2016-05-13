@@ -150,29 +150,44 @@ class ProfileViewController: UIViewController {
     
     func updateUser() {
         
-        let user = AuthService.sharedInstance.getCurrentUser()
+        let userToUpdate = AuthService.sharedInstance.getCurrentUser()
+        
+        var user = UserRegistration()
+        user.email = "email@email.com"
+        user.phone = "3211231234"
+        user.name = "donor17"
+        user.password = "password"
+        user.role = .Donor
         
         
-        let token = (AuthService.sharedInstance.getToken()?.token)! as String
-        print(token)
-        print("CURRENT USER: \(user)")
-        let currentID = (user?.id)! as Int
         
-        let settings = Setting()
-        settings.active = 1
-        settings.notifications = 1
+        userToUpdate?.name = "Driver16)"
+        userService.updateUser(user).then() {
+            user -> Void in
+            print(userToUpdate)
+        }
         
-        let updatedUser: [String: AnyObject] = [
-            "phone": "13211234",
-            "description": "A new description",
-            "name": "Test User2",
-            "email": "new@hacksmiths.com",
-            "company": "Hacksmiths",
-            "avatar": "http://avatarurl.com",
-            "role_id": 1,
-            "setting_attributes": settings
-
-        ]
+        
+        
+//        let token = (AuthService.sharedInstance.getToken()?.token)! as String
+//        
+//        let currentID = (user?.id)! as Int
+//        
+//        let settings = Setting()
+//        settings.active = 1
+//        settings.notifications = 1
+//        
+//        let updatedUser: [String: AnyObject] = [
+//            "phone": "13211234",
+//            "description": "A new description",
+//            "name": "Test User2",
+//            "email": "new@hacksmiths.com",
+//            "company": "Hacksmiths",
+//            "avatar": "http://avatarurl.com",
+//            "role_id": 1,
+//            "setting_attributes": settings
+//
+//        ]
         
         //userService.updateUser(updatedUser)
         //print("NEW USER: \(AuthService.sharedInstance.getCurrentUser())")
@@ -182,88 +197,88 @@ class ProfileViewController: UIViewController {
         
         
         
-        let session = NSURLSession.sharedSession()
-        let urlString = "https://wastenotfoodtaxi.herokuapp.com/api/v1/users/" + token
-        print("urlString: \(urlString)")
-        let url = NSURL(string: urlString)!
-        let request = NSMutableURLRequest(URL: url)
+//        let session = NSURLSession.sharedSession()
+//        let urlString = "https://wastenotfoodtaxi.herokuapp.com/api/v1/users/" + token
+//        print("urlString: \(urlString)")
+//        let url = NSURL(string: urlString)!
+//        let request = NSMutableURLRequest(URL: url)
+//        
+//        request.HTTPMethod = "PATCH"
+//        request.addValue(token, forHTTPHeaderField: "Authorization")
+//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//        
+//        var HTTPBodyString = "[{\"op\": \"replace\", \"path\": \"/name\", \"value\": \"Driver 13\"}]"
+//        
+////        var HTTPBodyString = "{\"user\": {\"phone\": \"+1 123 456 789\", \"description\": \"A dummy driver user\", \"name\": \"" + userName! + "\", \"email\": \"driver@hacksmiths.com\", \"company\": \"Hacksmiths\", \"avatar\": \"http://avatarurl.com\", \"role_id\": 1, \"setting_attributes\": {\"notifications\": true,\"active\": true}}}"
+//        
+//        print(HTTPBodyString)
+//        
+//        request.HTTPBody = HTTPBodyString.dataUsingEncoding(NSUTF8StringEncoding)
+//        
+//        let task = session.dataTaskWithRequest(request) { (data, response, error) in
+//            
+//            // Check for a successful response
+//            // GUARD: Was there an error?
+//            guard (error == nil) else {
+//                print("There was an error with your request: \(error)")
+//                return
+//            }
+//            
+//            // GUARD: Did we get a successful 2XX response?
+//            guard let statusCode = (response as? NSHTTPURLResponse)?.statusCode where statusCode >= 200 && statusCode <= 299 else {
+//                if let response = response as? NSHTTPURLResponse {
+//                    print("Your request returned an invalid response! Status code: \(response.statusCode)!")
+//                } else if let response = response {
+//                    print("Your request returned an invalid response! Response: \(response)!")
+//                } else {
+//                    print("Your request returned an invalid response!")
+//                }
+//                return
+//            }
+//            
+//            // GUARD: Was there any data returned?
+//            guard let data = data else {
+//                print("No data was returned by the request!")
+//                return
+//            }
+//            
+//            // - Parse the data
+//            let parsedResult: AnyObject!
+//            do {
+//                parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+//            } catch {
+//                parsedResult = nil
+//                print("Could not parse the data as JSON: '\(data)'")
+//                return
+//            }
+//            
+//            print("parsedResult: \(parsedResult)")
+//            dispatch_async(dispatch_get_main_queue(), {
+//                
+//                //self.userNameTF.text = userName
+//                self.emailTF.text = user?.email
+//                
+//                guard let userDict = parsedResult["user"] as? NSDictionary else {
+//                    print("Cannot make dict from \(parsedResult)")
+//                    return
+//                }
+//                AuthService.sharedInstance.storeCurrentUser(userDict as! [String : AnyObject])
+//            })
+//            
+//            
+//            
+//            //            guard let userDict = parsedResult["user"] as? NSDictionary,
+//            //                name = userDict["name"] as? String, email = userDict["email"] as? String else {
+//            //                    print("Cannot find keys 'photos' and 'photo' in \(parsedResult)")
+//            //                    return
+//            //            }
+//            
+//            
+//        }
+//        
+        //task.resume()
         
-        request.HTTPMethod = "PATCH"
-        request.addValue(token, forHTTPHeaderField: "Authorization")
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        var HTTPBodyString = "[{\"op\": \"replace\", \"path\": \"/name\", \"value\": \"Driver 13\"}]"
-        
-//        var HTTPBodyString = "{\"user\": {\"phone\": \"+1 123 456 789\", \"description\": \"A dummy driver user\", \"name\": \"" + userName! + "\", \"email\": \"driver@hacksmiths.com\", \"company\": \"Hacksmiths\", \"avatar\": \"http://avatarurl.com\", \"role_id\": 1, \"setting_attributes\": {\"notifications\": true,\"active\": true}}}"
-        
-        print(HTTPBodyString)
-        
-        request.HTTPBody = HTTPBodyString.dataUsingEncoding(NSUTF8StringEncoding)
-        
-        let task = session.dataTaskWithRequest(request) { (data, response, error) in
-            
-            // Check for a successful response
-            // GUARD: Was there an error?
-            guard (error == nil) else {
-                print("There was an error with your request: \(error)")
-                return
-            }
-            
-            // GUARD: Did we get a successful 2XX response?
-            guard let statusCode = (response as? NSHTTPURLResponse)?.statusCode where statusCode >= 200 && statusCode <= 299 else {
-                if let response = response as? NSHTTPURLResponse {
-                    print("Your request returned an invalid response! Status code: \(response.statusCode)!")
-                } else if let response = response {
-                    print("Your request returned an invalid response! Response: \(response)!")
-                } else {
-                    print("Your request returned an invalid response!")
-                }
-                return
-            }
-            
-            // GUARD: Was there any data returned?
-            guard let data = data else {
-                print("No data was returned by the request!")
-                return
-            }
-            
-            // - Parse the data
-            let parsedResult: AnyObject!
-            do {
-                parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-            } catch {
-                parsedResult = nil
-                print("Could not parse the data as JSON: '\(data)'")
-                return
-            }
-            
-            print("parsedResult: \(parsedResult)")
-            dispatch_async(dispatch_get_main_queue(), {
-                
-                //self.userNameTF.text = userName
-                self.emailTF.text = user?.email
-                
-                guard let userDict = parsedResult["user"] as? NSDictionary else {
-                    print("Cannot make dict from \(parsedResult)")
-                    return
-                }
-                AuthService.sharedInstance.storeCurrentUser(userDict as! [String : AnyObject])
-            })
-            
-            
-            
-            //            guard let userDict = parsedResult["user"] as? NSDictionary,
-            //                name = userDict["name"] as? String, email = userDict["email"] as? String else {
-            //                    print("Cannot find keys 'photos' and 'photo' in \(parsedResult)")
-            //                    return
-            //            }
-            
-            
-        }
-        
-        task.resume()
-        
-        print(AuthService.sharedInstance.getCurrentUser())
+        //print(AuthService.sharedInstance.getCurrentUser())
         //userNameTF.text = userName  //AuthService.sharedInstance.getCurrentUser()?.name
 
     }

@@ -13,7 +13,7 @@ enum UserEndpoint {
     case Login(credentials: UserLogin)
     case Register(userData: UserRegistration)
     case GetUser(token: Token)
-    case Update(token: Token, userData: [String: AnyObject])
+    case Update(token: Token, userData: UserRegistration)
 }
 
 class UserRouter : BaseRouter {
@@ -64,7 +64,12 @@ class UserRouter : BaseRouter {
             return nil
             
         case .Update(_, let userData):
-            return ["user": userData]
+            do {
+                let user = try userData.toJSON()
+                return ["user": user]
+            } catch {
+                return [:]
+            }
         }
 //        case .Update(let userData):
 //            do {
