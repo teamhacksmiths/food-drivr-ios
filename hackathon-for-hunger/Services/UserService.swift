@@ -39,20 +39,20 @@ class UserService {
     func authenticateUser(credentials: UserLogin) -> Promise<User?> {
                return Promise { fulfill, reject in
                 
-            self.authenticate(credentials).then() {
-                token -> Void in
-                AuthService.sharedInstance.setToken(token["authtoken"]!["auth_token"] as! String)
-                self.getUser().then() {
-                    userResponse -> Void in
-                    if let newUser = userResponse["user"] as? [String: AnyObject] {
-                        let user = AuthService.sharedInstance.storeCurrentUser(newUser)
-                        fulfill(user)
-                    } else {
-                        reject(NSError(domain: "error retrieving user", code:422, userInfo: nil))
+                self.authenticate(credentials).then() {
+                    token -> Void in
+                    AuthService.sharedInstance.setToken(token["authtoken"]!["auth_token"] as! String)
+                    self.getUser().then() {
+                        userResponse -> Void in
+                        if let newUser = userResponse["user"] as? [String: AnyObject] {
+                            let user = AuthService.sharedInstance.storeCurrentUser(newUser)
+                            fulfill(user)
+                        } else {
+                            reject(NSError(domain: "error retrieving user", code:422, userInfo: nil))
+                        }
                     }
-                }
-                }.error { error in
-                    reject(error as NSError)
+                    }.error { error in
+                        reject(error as NSError)
             }
         }
     }
@@ -118,16 +118,13 @@ class UserService {
                     response in
                     switch response.result {
                     case .Success(let JSON):
-                        let updatedUser = JSON as! JsonDict
-                        _ = AuthService.sharedInstance.storeCurrentUser(updatedUser)
-                        fulfill(updatedUser)
-/////////
-                        
-  
-            
-    
-                        
-//////////
+
+                        if let newUser = response.result.value!["user"] as? [String: AnyObject] {
+
+                            let user = AuthService.sharedInstance.storeCurrentUser(newUser)
+                            fulfill(newUser)
+                        }
+
 
                         
                     case .Failure(let error):
