@@ -37,7 +37,6 @@ class DriverSignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Registering")
-        self.view.addSubview(activityIndicator)
         signupPresenter.attachView(self)
     }
     

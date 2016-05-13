@@ -31,17 +31,16 @@ class CurrentDonationsDashboard: UIViewController {
         self.title = AuthService.sharedInstance.getCurrentUser()?.name ?? "Current Donations"
         dashboardPresenter.attachView(self)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Syncing")
-        view.addSubview(self.activityIndicator)
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PendingDonationsDashboard.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
-        dashboardPresenter.fetch(.Active)
+        dashboardPresenter.fetch([DonationStatus.Accepted.rawValue, DonationStatus.PickedUp.rawValue])
     }
     
     
     func refresh(sender: AnyObject) {
         self.startLoading()
-        dashboardPresenter.fetchRemotely(.Active)
+        dashboardPresenter.fetchRemotely([DonationStatus.Accepted.rawValue, DonationStatus.PickedUp.rawValue])
         refreshControl?.endRefreshing()
     }
     
@@ -166,7 +165,7 @@ extension CurrentDonationsDashboard: DashboardView {
             let refreshAlert = UIAlertController(title: "Unable To Accept.", message: "Donation might have already been cancelled. Resync your donations?.", preferredStyle: UIAlertControllerStyle.Alert)
             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
                 self.startLoading()
-                self.dashboardPresenter.fetchRemotely(.Active)
+                self.dashboardPresenter.fetchRemotely([DonationStatus.Accepted.rawValue, DonationStatus.PickedUp.rawValue])
             }))
             refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
                 

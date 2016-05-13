@@ -65,7 +65,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
     func donationDroppedOff() {
         self.startLoading()
-        mapViewPresenter?.updateDonationStatus(donation!, status: .Completed)
+        mapViewPresenter?.updateDonationStatus(donation!, status: .DroppedOff)
     }
     
     @IBAction func cancel(sender: AnyObject) {
@@ -151,7 +151,6 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         mapViewPresenter?.attachView(self)
         self.donation = mapViewPresenter?.getDonation()
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Confirming")
-        self.view.addSubview(activityIndicator)
         mapView.delegate = self
         mapView.setRegion(startingRegion, animated: true) // set starting region to overview map's region?
         for annot in mapView.annotations {
@@ -391,8 +390,11 @@ extension DriverMapPickupVC: MapView {
     func donationStatusUpdate(sender: MapViewPresenter, didSucceed donation: Donation) {
         self.finishLoading()
         self.donation = donation
-        if donation.status == .Completed {
-            print("closing")
+        if donation.status == .DroppedOff {
+            guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
+                return
+            }
+            delegate.runLoginFlow()
         }
     }
     
