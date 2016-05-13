@@ -37,8 +37,8 @@ class UserService {
     }
     
     func authenticateUser(credentials: UserLogin) -> Promise<User?> {
-        return Promise { fulfill, reject in
-            
+               return Promise { fulfill, reject in
+                
             self.authenticate(credentials).then() {
                 token -> Void in
                 AuthService.sharedInstance.setToken(token["authtoken"]!["auth_token"] as! String)
