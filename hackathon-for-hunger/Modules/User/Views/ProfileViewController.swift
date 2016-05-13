@@ -28,6 +28,7 @@ class ProfileViewController: UIViewController {
         self.title = "Profile"
         let currentUser = AuthService.sharedInstance.getCurrentUser()
         userNameTF.text = currentUser?.name
+        emailTF.text = currentUser?.email
 
 
     }
@@ -36,7 +37,7 @@ class ProfileViewController: UIViewController {
         
         
         var user = UserRegistration()
-        user.email = "donor@hacksmiths.com"
+        user.email = emailTF.text ?? "donor@hacksmiths.com"
         user.phone = "3211231234"
         user.name = userNameTF.text ?? "please enter your name"
         user.password = "password"
