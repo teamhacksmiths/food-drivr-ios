@@ -46,25 +46,25 @@ class UserService {
                     "name": "Test User",
                     "role_id": 0
                 ]
-        
-            AuthService.sharedInstance.setToken("1234567890")
-            let user = AuthService.sharedInstance.storeCurrentUser(newUser)
-            fulfill(user)
-            self.authenticate(credentials).then() {
-                token -> Void in
-                AuthService.sharedInstance.setToken(token["authtoken"]!["auth_token"] as! String)
-                self.getUser().then() {
-                    userResponse -> Void in
-                    if let newUser = userResponse["user"] as? [String: AnyObject] {
-                        let user = AuthService.sharedInstance.storeCurrentUser(newUser)
-                        fulfill(user)
-                    } else {
-                        reject(NSError(domain: "error retrieving user", code:422, userInfo: nil))
+                
+                AuthService.sharedInstance.setToken("1234567890")
+                let user = AuthService.sharedInstance.storeCurrentUser(newUser)
+                fulfill(user)
+                self.authenticate(credentials).then() {
+                    token -> Void in
+                    AuthService.sharedInstance.setToken(token["authtoken"]!["auth_token"] as! String)
+                    self.getUser().then() {
+                        userResponse -> Void in
+                        if let newUser = userResponse["user"] as? [String: AnyObject] {
+                            let user = AuthService.sharedInstance.storeCurrentUser(newUser)
+                            fulfill(user)
+                        } else {
+                            reject(NSError(domain: "error retrieving user", code:422, userInfo: nil))
+                        }
                     }
+                    }.error { error in
+                        reject(error as NSError)
                 }
-                }.error { error in
-                    reject(error as NSError)
-            }
         }
     }
     
@@ -129,6 +129,23 @@ class UserService {
                     response in
                     switch response.result {
                     case .Success(let JSON):
+                        
+/////////
+                        
+                        userResponse -> Void in
+                        if let newUser = userResponse["user"] as? [String: AnyObject] {
+                            let user = AuthService.sharedInstance.storeCurrentUser(newUser)
+                            fulfill(user)
+                        } else {
+                            reject(NSError(domain: "error retrieving user", code:422, userInfo: nil))
+                        }
+                    }
+            }.error { error in
+                reject(error as NSError)
+            }
+    
+                        
+//////////
                         let user = JSON as! JsonDict
                         fulfill(user)
                         

@@ -62,14 +62,18 @@ class UserRouter : BaseRouter {
             }
         case .GetUser:
             return nil
-        case .Update(let userData):
-            do {
-                let user = try userData.userData.toJSON()
-                return ["user": user]
-            } catch {
-                return [:]
-            }
+            
+        case .Update(_, let userData):
+            return ["user": userData]
         }
+//        case .Update(let userData):
+//            do {
+//                let user = try userData.userData.toJSON()
+//                return ["user": user]
+//            } catch {
+//                return [:]
+//            }
+//        }
     }
 
     override var encoding: Alamofire.ParameterEncoding? {
