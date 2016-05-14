@@ -13,7 +13,7 @@ enum UserEndpoint {
     case Login(credentials: UserLogin)
     case Register(userData: UserRegistration)
     case GetUser(token: Token)
-    case Update(token: Token, userData: UserRegistration)
+    case Update(token: Token, userData: UserData)
 }
 
 class UserRouter : BaseRouter {
@@ -71,14 +71,6 @@ class UserRouter : BaseRouter {
                 return [:]
             }
         }
-//        case .Update(let userData):
-//            do {
-//                let user = try userData.userData.toJSON()
-//                return ["user": user]
-//            } catch {
-//                return [:]
-//            }
-//        }
     }
 
     override var encoding: Alamofire.ParameterEncoding? {
