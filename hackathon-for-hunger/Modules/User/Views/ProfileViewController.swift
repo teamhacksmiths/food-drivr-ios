@@ -13,6 +13,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     private let userService: UserService = UserService()
 
+    var activityIndicator : ActivityIndicatorView!
+    private let profilePresenter = ProfilePresenter(userService: UserService())
+
  
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -29,6 +32,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profilePresenter.attachView(self)
+//        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Please wait")
+//        startLoading()
         self.setupMenuBar()
         self.title = "Profile"
         let currentUser = AuthService.sharedInstance.getCurrentUser()
@@ -37,7 +43,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(ProfileViewController.avatarTapped(_:)))
         avatarView.addGestureRecognizer(tapGestureRecognizer)
-        avatarView.invalidateIntrinsicContentSize()
+        avatarView.invalidateIntrinsicContentSize() // let the profile image size be set by constraints, not by the intrinsic size of the photo
         
         avatarView.contentMode = .ScaleAspectFill
         avatarImageView.contentMode = .ScaleAspectFill
@@ -75,20 +81,21 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         var user = UserUpdate()
         user.email = emailTextField.text ?? "donor@hacksmiths.com"
-        //user.phone = "3211231234"
         user.name = userNameTextField.text ?? "please enter your name"
         user.password = "password"
-        //user.role = .Donor
+
+        profilePresenter.update(user)
+        let currentUser = AuthService.sharedInstance.getCurrentUser()
+        userNameTextField.text = currentUser?.name
+        emailTextField.text = currentUser?.email
         
-        
-        
-        userService.updateUser(user).then() {
-            updatedUser -> Void in
-            print("USER::: \(updatedUser)")
-            let userToUpdate = AuthService.sharedInstance.getCurrentUser()
-            print("CURRENT USER: \(userToUpdate)")
-            
-        }
+//        userService.updateUser(user).then() {
+//            updatedUser -> Void in
+//            print("USER::: \(updatedUser)")
+//            let userToUpdate = AuthService.sharedInstance.getCurrentUser()
+//            print("CURRENT USER: \(userToUpdate)")
+//            
+//        }
         
         
     }
@@ -120,4 +127,25 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         super.touchesBegan(touches, withEvent:event)
     }
+}
+
+extension ProfileViewController: ProfileView {
+    
+    func startLoading() {
+        self.activityIndicator.startAnimating()
+    }
+    
+    func finishLoading() {
+        self.activityIndicator.stopAnimating()
+    }
+    
+//    func login(didSucceed user: User) {
+//        self.finishLoading()
+//        self.segueToMenuController()
+//    }
+//    
+//    func login(didFail error: NSError) {
+//        self.finishLoading()
+//        authReply("Please supply valid credentials to proceed")
+//    }
 }

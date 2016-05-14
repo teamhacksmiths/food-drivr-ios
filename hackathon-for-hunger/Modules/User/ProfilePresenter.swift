@@ -11,8 +11,8 @@ import Foundation
 protocol ProfileView: NSObjectProtocol {
     func startLoading()
     func finishLoading()
-    func login(didSucceed user: User)
-    func login(didFail error: NSError)
+//    func login(didSucceed user: User)
+//    func login(didFail error: NSError)
 }
 
 class ProfilePresenter {
@@ -30,6 +30,21 @@ class ProfilePresenter {
     func detachView() {
         profileView = nil
     }
+    
+    func update(userData: UserUpdate) {
+//        var user = UserUpdate()
+//        user.email = "donor@hacksmiths.com"
+//        user.name = "enter your name please"
+//        user.password = "password"
+        userService.updateUser(userData).then() {
+            updatedUser -> Void in
+            print("USER::: \(updatedUser)")
+            let userToUpdate = AuthService.sharedInstance.getCurrentUser()
+            print("CURRENT USER: \(userToUpdate)")
+            
+        }
+    }
+    
     
 //    func authenticate(credentials: UserLogin){
 //        userService.authenticateUser(credentials).then() {
