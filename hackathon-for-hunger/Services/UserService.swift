@@ -104,7 +104,7 @@ class UserService {
         }
     }
     
-    func updateUser(userData: UserData) -> Promise<JsonDict> {
+    func updateUser(userData: UserUpdate) -> Promise<JsonDict> {
         return Promise { fulfill, reject in
             guard let token = AuthService.sharedInstance.getToken() as Token? else {
                 reject(NSError(domain: "no token found for user", code:422, userInfo: nil))

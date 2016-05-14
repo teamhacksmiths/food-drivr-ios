@@ -73,7 +73,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     func updateUser() {
         
         
-        var user = UserData()
+        var user = UserUpdate()
         user.email = emailTextField.text ?? "donor@hacksmiths.com"
         //user.phone = "3211231234"
         user.name = userNameTextField.text ?? "please enter your name"

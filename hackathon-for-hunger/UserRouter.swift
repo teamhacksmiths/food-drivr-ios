@@ -13,7 +13,7 @@ enum UserEndpoint {
     case Login(credentials: UserLogin)
     case Register(userData: UserRegistration)
     case GetUser(token: Token)
-    case Update(token: Token, userData: UserData)
+    case Update(token: Token, userData: UserUpdate)
 }
 
 class UserRouter : BaseRouter {

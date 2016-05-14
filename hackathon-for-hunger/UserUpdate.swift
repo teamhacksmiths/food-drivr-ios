@@ -1,11 +1,9 @@
 //
-//  UserData.swift
+//  UserUpdate.swift
 //  hackathon-for-hunger
 //
 //  Created by David Fierstein on 5/14/16.
 //  Copyright © 2016 Hacksmiths. All rights reserved.
-//  data model for updating user profile
-//  
 //
 //  based on RegistrationDTO.swift by Ian Gristock
 //  hackathon-for-hunger
@@ -14,7 +12,7 @@
 import Foundation
 import JSONCodable
 
-struct UserData {
+struct UserUpdate {
     
     
     var name: String?
@@ -26,7 +24,7 @@ struct UserData {
     
 }
 
-extension UserData: JSONEncodable {
+extension UserUpdate: JSONEncodable {
     func toJSON() throws -> [String:AnyObject] {
         return try JSONEncoder.create({ (encoder) -> Void in
             try encoder.encode(name, key: "name")
