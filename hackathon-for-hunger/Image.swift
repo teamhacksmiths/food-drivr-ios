@@ -8,9 +8,17 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 
-class Image: Object {
+class Image: Object, Mappable {
     
     dynamic var url: String? = nil
     
+    required convenience init?(_ map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        url <- map["url"]
+    }
 }

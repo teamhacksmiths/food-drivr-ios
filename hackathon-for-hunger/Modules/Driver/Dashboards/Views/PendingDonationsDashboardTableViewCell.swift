@@ -28,7 +28,13 @@ class PendingDonationsDashboardTableViewCell: UITableViewCell {
     var information: Donation? = nil {
         didSet {
             fullNameLabel.text = information?.recipient?.name
-            amountLabel.text = information?.donationItems.first?.name ?? "no donation items found"
+            if let description = information?.donationItems.first?.type_description,
+                    quantity = information?.donationItems.first?.quantity,
+                    unit = information?.donationItems.first?.unit {
+                amountLabel.text = "\(quantity) \(unit) \(description)"
+            } else {
+                amountLabel.text = "no donation items found"
+            }
             locationLabel.text = information?.recipient?.street_address
         }
     }

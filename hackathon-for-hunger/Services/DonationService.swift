@@ -13,6 +13,7 @@ import Alamofire
 import RealmSwift
 import SwiftyJSON
 import PromiseKit
+import ObjectMapper
 
 class DonationService {
     
@@ -21,7 +22,7 @@ class DonationService {
     
     typealias JsonDict = [String: AnyObject]
     
-    func getDonations(completed: Bool = false, status: Int = 0) -> Promise<[JsonDict]> {
+    func getDonations(completed: Bool = false, status: Int = 0) -> Promise<[Donation]?> {
         return Promise { fulfill, reject in
             let router = DonationRouter(endpoint: .GetDonations(completed: completed, status: status) )
             
@@ -31,12 +32,20 @@ class DonationService {
                     response in
                     switch response.result {
                     case .Success(let JSON):
-                        
-                        if let donations = JSON["donations"] as! [JsonDict]? {
-                            fulfill(donations)
-                        }
-                        
+                        print(JSON["donations"] as! [JsonDict]?)
+                        let donations = Mapper<Donation>().mapArray(JSON["donations"] as! [JsonDict]?)
+                        fulfill(donations)
                     case .Failure(let error):
+                    if let data = response.data {
+                        let responseJSON = JSON(data: data)
+                        print("HERE")
+                        print(responseJSON)
+                        if let message: String = responseJSON["message"].stringValue {
+                            if !message.isEmpty {
+                                print(responseJSON)
+                            }
+                        }
+                    }
                         print("REJECTING")
                         reject(error)
                     }
@@ -44,21 +53,20 @@ class DonationService {
         }
     }
     
-    func updateRealmLayer(dict: [JsonDict]) -> Promise<Results<Donation>> {
+    func updateRealmLayer(donations: [Donation]?) -> Promise<Results<Donation>> {
         return Promise { fulfill, reject in
             
             try realm.write {
                 realm.delete(realm.objects(Donation))
             }
-            for donation: JsonDict in dict{
+            if !donations!.isEmpty {
                 do {
                     try realm.write {
-                        realm.add(Donation(dict: donation), update: true)
+                        realm.add(donations!, update: true)
                     }
                 } catch let error as NSError{
                     reject(error)
                 }
-                
             }
             fulfill(realm.objects(Donation))
         }
@@ -69,7 +77,8 @@ class DonationService {
             self.getDonations().then() {
                 donationsJson in
                 self.updateRealmLayer(donationsJson).then() {
-                    realmObjects in
+                    realmObjects -> Void in
+                    print(realmObjects)
                     fulfill(realmObjects)
                 }
                 }.error {
