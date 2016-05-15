@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3CA010801CE7877D0050FE2F /* ListTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */; };
-		3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */; };
+		3CCD09EF1CE8C9F900B8E32C /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */; };
 		3CD790541CE7250E00569587 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CD790531CE7250E00569587 /* ApiKeys.plist */; };
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
 		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
@@ -123,7 +123,7 @@
 /* Begin PBXFileReference section */
 		29B9151924AE0F91CFB9A69B /* Pods_hackathon_for_hungerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hungerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTransformer.swift; sourceTree = "<group>"; };
-		3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		3CD790531CE7250E00569587 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 		44A7250A1CAC444100D676C3 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouter.swift; sourceTree = "<group>"; };
 		44A7250F1CAC559500D676C3 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
-		44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = ../MenuTableViewController.swift; sourceTree = "<group>"; };
 		44AEA8701CA9CBC100A52731 /* hackathon-for-hunger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hackathon-for-hunger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AEA8731CA9CBC100A52731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44AEA87A1CA9CBC100A52731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -269,6 +269,31 @@
 				3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */,
 			);
 			name = Transformer;
+			sourceTree = "<group>";
+		};
+		3CCD09EB1CE8C9BE00B8E32C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3CCD09ED1CE8C9E000B8E32C /* Views */,
+				3CCD09EC1CE8C9D800B8E32C /* Presenter */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		3CCD09EC1CE8C9D800B8E32C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		3CCD09ED1CE8C9E000B8E32C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		4404F6BE1CBD1B11001B9293 /* MockData */ = {
@@ -446,6 +471,7 @@
 		446A76C51CDD0FA800951319 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3CCD09EB1CE8C9BE00B8E32C /* Menu */,
 				44424DA71CDDF44600B2409F /* User */,
 				446A76C81CDD0FF800951319 /* Login */,
 				446A76C71CDD0FE000951319 /* Donor */,
@@ -585,15 +611,6 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		44AA631D1CB3F090005E02CC /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */,
-				3CC1ABCB1CC172E500E01EE0 /* MenuManager.swift */,
-			);
-			name = Menu;
-			sourceTree = "<group>";
-		};
 		44AEA8671CA9CBC100A52731 = {
 			isa = PBXGroup;
 			children = (
@@ -711,7 +728,6 @@
 		EAAD23B71CB37B5A005FD787 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				44AA631D1CB3F090005E02CC /* Menu */,
 				EAAD23B81CB37B78005FD787 /* SignUp */,
 			);
 			name = Controller;
@@ -970,7 +986,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC1ABCC1CC172E500E01EE0 /* MenuManager.swift in Sources */,
 				4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */,
 				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
 				446A77351CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift in Sources */,
@@ -1029,6 +1044,7 @@
 				EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */,
 				44638F061CC3EDD0005379FE /* UIViewExtensions.swift in Sources */,
 				44424D871CDDDFBB00B2409F /* MapViewPresenter.swift in Sources */,
+				3CCD09EF1CE8C9F900B8E32C /* MenuPresenter.swift in Sources */,
 				EAAD23BE1CB38014005FD787 /* VSAccountInfoViewController.swift in Sources */,
 				EA6C4C201CD1E80300165F02 /* Global.swift in Sources */,
 				44424D8B1CDDE6F400B2409F /* MapOverviewPresenter.swift in Sources */,
