@@ -451,17 +451,29 @@
                                                                     <constraint firstAttribute="height" constant="100" id="jrx-At-DZ7"/>
                                                                 </constraints>
                                                             </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_mask" translatesAutoresizingMaskIntoConstraints="NO" id="8u2-a6-Bjn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="K3f-Pe-hJF"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="NQB-c9-wfn"/>
+                                                                </constraints>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
+                                                            <constraint firstItem="8u2-a6-Bjn" firstAttribute="leading" secondItem="ZWj-hF-WSl" secondAttribute="leading" id="4n9-CU-70U"/>
                                                             <constraint firstItem="3Ef-C2-sht" firstAttribute="top" secondItem="ZWj-hF-WSl" secondAttribute="top" id="9nv-rY-m3P"/>
                                                             <constraint firstAttribute="width" constant="100" id="S5v-bm-POe"/>
+                                                            <constraint firstItem="8u2-a6-Bjn" firstAttribute="top" secondItem="ZWj-hF-WSl" secondAttribute="top" id="ssr-zv-6lj"/>
                                                             <constraint firstAttribute="height" constant="100" id="tPq-m7-0PM"/>
                                                             <constraint firstItem="3Ef-C2-sht" firstAttribute="leading" secondItem="ZWj-hF-WSl" secondAttribute="leading" id="y0X-9c-Vhy"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="user name" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kie-T7-T1m">
-                                                        <rect key="frame" x="264" y="110" width="72" height="67"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="user name" textAlignment="center" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kie-T7-T1m">
+                                                        <rect key="frame" x="200" y="110" width="200" height="67"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="XHs-ez-f2x"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
@@ -590,6 +602,7 @@
                         <outlet property="avatarImageView" destination="3Ef-C2-sht" id="iEN-vm-Tsf"/>
                         <outlet property="avatarView" destination="ZWj-hF-WSl" id="Rl9-1Q-4fb"/>
                         <outlet property="emailTextField" destination="KWl-XL-LbS" id="R6a-SP-K67"/>
+                        <outlet property="passwordTextField" destination="pRb-WD-LK2" id="ghG-fv-2Kg"/>
                         <outlet property="userNameTextField" destination="kie-T7-T1m" id="ttf-EG-VD7"/>
                     </connections>
                 </viewController>
@@ -2247,6 +2260,7 @@
         <image name="facebook_white" width="32" height="32"/>
         <image name="personHolder" width="50" height="50"/>
         <image name="pickup_label" width="60" height="12"/>
+        <image name="profile_mask" width="100" height="100"/>
         <image name="profile_pic" width="85" height="84"/>
         <image name="refresh" width="32" height="32"/>
         <image name="twitter_white" width="40" height="32"/>

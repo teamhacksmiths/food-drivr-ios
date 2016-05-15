@@ -47,7 +47,6 @@ class ProfilePresenter {
         
         userService.updateUser(userData).then() {
             updatedUser -> () in
-            print("USER::: \(updatedUser)")
             
             self.profileView?.update(didSucceed: updatedUser)
             

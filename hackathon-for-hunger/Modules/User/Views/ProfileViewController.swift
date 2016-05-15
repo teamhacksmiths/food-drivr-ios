@@ -14,9 +14,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     var activityIndicator : ActivityIndicatorView!
     private let profilePresenter = ProfilePresenter(userService: UserService(), authService:  AuthService())
 
- 
+    var imageData: NSData?
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var avatarView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -24,7 +26,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func save(sender: AnyObject) {
-        print("Save pressed")
         updateUser()
     }
     
@@ -79,10 +80,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         if emailTextField.text != nil && emailTextField.text != "" {
             user.email = emailTextField.text
         }
-        if userNameTextField != nil && userNameTextField.text != nil {
+        if userNameTextField != nil && userNameTextField.text != "" {
             user.name = userNameTextField.text
         }
-        user.password = "password"
+
 
         profilePresenter.updateUser(user)
         
@@ -91,6 +92,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func updateUI() {
         let currentUser = profilePresenter.getUser()
+
         if currentUser != nil {
             userNameTextField.text = currentUser?.name
             emailTextField.text = currentUser?.email
@@ -110,7 +112,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     //MARK:- Gesture Recognizer functions
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
         // Don't let tap GR hide textfields if a textfield is being touched for editing
-        if touch.view == userNameTextField || touch.view == emailTextField {
+        if touch.view == userNameTextField || touch.view == emailTextField || touch.view == passwordTextField {
             return false
         }
         // Anywhere else on the screen, allow the tap gesture recognizer to hideToolBars
@@ -119,11 +121,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     // Cancels textfield editing when user touches outside the textfield
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if userNameTextField.isFirstResponder() || emailTextField.isFirstResponder() {
+        if userNameTextField.isFirstResponder() || emailTextField.isFirstResponder() || passwordTextField.isFirstResponder() {
             view.endEditing(true)
         }
         super.touchesBegan(touches, withEvent:event)
     }
+    
+
 }
 
 extension ProfileViewController: ProfileView {
