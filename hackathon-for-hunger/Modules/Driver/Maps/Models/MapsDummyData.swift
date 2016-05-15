@@ -76,8 +76,8 @@ class MapsDummyData {
             
             let donation = Donation()//    dict: ["id": 1, "status": 1, "donor": donor, "pickup": pickup])
             donation.donor = donor
-            pickup.latitude = RealmOptional(info.lat)
-            pickup.longitude = RealmOptional(info.lon)
+            pickup.latitude = info.lat!
+            pickup.longitude = info.lon!
             donation.pickup = pickup
             
             donations?.append(donation)
@@ -89,8 +89,8 @@ class MapsDummyData {
         let donation01 = Donation()
         
         let location01 = Location()
-        location01.latitude = RealmOptional(voodoo.lat)
-        location01.longitude = RealmOptional(voodoo.lon)
+        location01.latitude = voodoo.lat!
+        location01.longitude = voodoo.lon!
         
         let participant01 = Participant()
         participant01.name = voodoo.name
@@ -111,8 +111,8 @@ class MapsDummyData {
                     donation01.recipient = recipient01
                     self.donations![0].recipient = recipient01
                     let dropoff = Location()
-                    dropoff.latitude = RealmOptional(coords.latitude)
-                    dropoff.longitude = RealmOptional(coords.longitude)
+                    dropoff.latitude = coords.latitude
+                    dropoff.longitude = coords.longitude
                     
                     donation01.dropoff = dropoff
                     self.donations![0].dropoff = dropoff

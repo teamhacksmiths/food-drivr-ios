@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 
 enum DonationStatus: Int {
     case Pending = 0
@@ -19,7 +20,7 @@ enum DonationStatus: Int {
     case Any
 }
 
-class Donation: Object {
+class Donation: Object, Mappable {
     
     typealias JsonDict = [String: AnyObject]
     
@@ -30,9 +31,7 @@ class Donation: Object {
     dynamic var pickup: Location?
     dynamic var dropoff: Location?
     dynamic var meta: MetaData?
-    dynamic var created_at: NSDate? = nil
-    dynamic var updated_at: NSDate? = nil
-    let donationItems = List<DonationType>()
+    var donationItems = List<DonationType>()
     
     private dynamic var rawStatus = 0
     
@@ -52,69 +51,19 @@ class Donation: Object {
         return "id"
     }
     
-    convenience init(dict: JsonDict) {
-        
+    required convenience init?(_ map: Map) {
         self.init()
-        self.id = dict["id"] as! Int
-        self.rawStatus = dict["status_id"] as! Int
-        self.created_at = formatStringToDate(dict["created_at"] as? String)
-        self.updated_at = formatStringToDate(dict["updated_at"] as? String)
-        
-        if let newRecipient = dict["recipient"] as? JsonDict {
-            self.recipient = Recipient(value: newRecipient)
-        }
-        if let meta = dict["meta"] as? JsonDict {
-            self.meta = MetaData(dict: meta)
-        }
-        
-        if var donationPickup = dict["pickup"] as? JsonDict {
-            donationPickup["estimated"] = formatStringToDate(donationPickup["estimated"] as? String)
-            donationPickup["actual"] = formatStringToDate(donationPickup["actual"] as? String)
-            self.pickup = Location(dict: donationPickup)
-        }
-        
-        if var donationDropoff = dict["dropoff"] as? JsonDict {
-            donationDropoff["estimated"] = formatStringToDate(donationDropoff["estimated"] as? String)
-            donationDropoff["actual"] = formatStringToDate(donationDropoff["actual"] as? String)
-            self.dropoff = Location(dict: donationDropoff)
-        }
-        addDonations(dict["donation_types"] as? [String])
-        addParticipants(dict["participants"] as? JsonDict)
     }
     
-    func addDonations(donations: [String]?) {
-        if let newDonationItems = donations{
-            for donationItem in newDonationItems {
-                print(donationItem)
-                self.donationItems.append(DonationType(value: ["name": donationItem]))
-            }
-        }
-    }
-    
-    func addParticipants(participants: JsonDict?) {
-        if let participants = participants {
-            if var driver = participants["driver"] as? JsonDict {
-                driver["updated_at"] = formatStringToDate(driver["updated_at"] as? String)
-                driver["created_at"] = formatStringToDate(driver["created_at"] as? String)
-                self.driver = Participant(value: driver)
-            }
-            
-            if var donor = participants["donor"] as? JsonDict {
-                donor["updated_at"] = formatStringToDate(donor["updated_at"] as? String)
-                donor["created_at"] = formatStringToDate(donor["created_at"] as? String)
-                self.donor = Participant(value: donor)
-            }
-        }
-
-    }
-    
-    private func formatStringToDate(dateString: String?, format: String = "yyyy-MM-dd'T'HH:mm:ss") -> NSDate? {
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = format
-        guard let date = dateString else {
-            return nil
-        }
-        return dateFormatter.dateFromString(date)
+    func mapping(map: Map) {
+        id              <- map["id"]
+        rawStatus       <- map["status_id"]
+        donor           <- map["participants.donor"]
+        driver          <- map["participants.driver"]
+        donationItems   <- (map["items"], ListTransform<DonationType>())
+        pickup          <- map["pickup"]
+        dropoff         <- map["dropoff"]
+        recipient       <- map["recipient"]
+        meta            <- map["meta"]
     }
  }
