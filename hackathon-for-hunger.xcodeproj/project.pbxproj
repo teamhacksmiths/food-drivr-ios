@@ -686,7 +686,6 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
-		9A1D0309B43AB0ACBBC48A9F /* Pods */ = {
 		B40D3564AFEFBA9A72F0627D /* Pods */ = {
 			isa = PBXGroup;
 			children = (

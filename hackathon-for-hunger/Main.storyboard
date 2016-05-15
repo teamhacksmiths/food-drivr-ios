@@ -327,42 +327,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="519" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Eed-5u-wRp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="291" height="69"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-54-2Kn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="519" height="71"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-54-2Kn">
-                                                            <rect key="frame" x="0.0" y="0.0" width="291" height="69"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EINSTEIN BAGELS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-Aj-TpH">
-                                                                    <rect key="frame" x="16" y="8" width="267" height="18"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="267" id="Kq3-GD-Pdq"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
-                                                                    <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3 dozen bagels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcZ-MS-gC3">
-                                                                    <rect key="frame" x="16" y="26" width="79" height="17"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="17" id="ZBy-85-5cN"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
-                                                                    <color key="textColor" red="0.55961538461538463" green="0.55961538461538463" blue="0.55961538461538463" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="993 jaquan lock, Portland" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsc-YK-cWK">
-                                                                    <rect key="frame" x="16" y="43" width="137" height="18"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="18" id="xuz-Cv-ikN"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
-                                                                    <color key="textColor" red="0.55961538460000004" green="0.55961538460000004" blue="0.55961538460000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="8"/>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EINSTEIN BAGELS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-Aj-TpH">
+                                                            <rect key="frame" x="16" y="8" width="117" height="20"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
+                                                            <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 dozen bagels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcZ-MS-gC3">
+                                                            <rect key="frame" x="16" y="29" width="79" height="17"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
+                                                            <color key="textColor" red="0.55961538461538463" green="0.55961538461538463" blue="0.55961538461538463" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="993 jaquan lock, Portland" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Rsc-YK-cWK">
+                                                            <rect key="frame" x="16" y="46" width="137" height="17"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
+                                                            <color key="textColor" red="0.55961538460000004" green="0.55961538460000004" blue="0.55961538460000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="8"/>
                                                 </stackView>
@@ -2271,5 +2256,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Ihg-Kb-z1R"/>
         <segue reference="28Q-Pg-iPg"/>
+        <segue reference="Ihg-Kb-z1R"/>
     </inferredMetricsTieBreakers>
 </document>
