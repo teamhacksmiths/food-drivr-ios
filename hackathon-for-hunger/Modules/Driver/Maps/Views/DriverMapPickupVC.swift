@@ -69,8 +69,10 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func cancel(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+        guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
+            return
+        }
+        delegate.runLoginFlow()    }
     
     @IBAction func askForDirections(sender: AnyObject) {
     }

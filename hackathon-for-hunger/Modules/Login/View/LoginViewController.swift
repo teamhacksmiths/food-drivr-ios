@@ -49,12 +49,8 @@ class LoginViewController: UIViewController {
     }
     
     private func segueToMenuController() {
-        let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Main") as! DonationsContainerViewController
-        let leftViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
-        slideMenuController.addLeftBarButtonWithImage(UIImage(named:"hamburger")!)
-        self.presentViewController(slideMenuController, animated: false, completion: nil)
+        self.performSegueWithIdentifier("startMenu", sender: self)
+
     }
     
     @IBAction func signInButtonClicked(sender: AnyObject) {

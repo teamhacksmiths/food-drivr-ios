@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3CA010801CE7877D0050FE2F /* ListTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */; };
 		3CCD09EF1CE8C9F900B8E32C /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */; };
+		3CCD09F11CE8EC6200B8E32C /* SlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09F01CE8EC6200B8E32C /* SlideMenuVC.swift */; };
 		3CD790541CE7250E00569587 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CD790531CE7250E00569587 /* ApiKeys.plist */; };
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
 		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
@@ -124,6 +125,7 @@
 		29B9151924AE0F91CFB9A69B /* Pods_hackathon_for_hungerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hungerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTransformer.swift; sourceTree = "<group>"; };
 		3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		3CCD09F01CE8EC6200B8E32C /* SlideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuVC.swift; sourceTree = "<group>"; };
 		3CD790531CE7250E00569587 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */,
+				3CCD09F01CE8EC6200B8E32C /* SlideMenuVC.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -997,6 +1000,7 @@
 				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
 				3CA010801CE7877D0050FE2F /* ListTransformer.swift in Sources */,
 				44424D851CDDDB7300B2409F /* DriverMapDetailPendingVC.swift in Sources */,
+				3CCD09F11CE8EC6200B8E32C /* SlideMenuVC.swift in Sources */,
 				446A77371CDD291C00951319 /* DashboardPresenter.swift in Sources */,
 				EAD2DDF01CD330EF007454FB /* DonationTableViewCell.swift in Sources */,
 				44424D951CDDEC2400B2409F /* MapsDummyData.swift in Sources */,
