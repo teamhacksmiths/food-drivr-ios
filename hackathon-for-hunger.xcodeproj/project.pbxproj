@@ -91,6 +91,9 @@
 		63823CFB1CD42DBF00B258B4 /* drivr_pin_orange.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63823CFA1CD42DBF00B258B4 /* drivr_pin_orange.pdf */; };
 		63CAF7F41CC29BC4000D89A1 /* dropoff_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63CAF7F21CC29BC4000D89A1 /* dropoff_icon.pdf */; };
 		63CAF7F51CC29BC4000D89A1 /* pickup_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */; };
+		63D351D31CE78ABE005EAD72 /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D351D21CE78ABE005EAD72 /* UserUpdate.swift */; };
+		63D351D51CE7926D005EAD72 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D351D41CE7926D005EAD72 /* ProfilePresenter.swift */; };
+		63D351D81CE83FA2005EAD72 /* profile_pic_mask.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63D351D71CE83FA2005EAD72 /* profile_pic_mask.pdf */; };
 		63FE866C1CDBB9D8000764B2 /* pickup_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */; };
 		63FE866E1CDBBFC5000764B2 /* dropoff_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */; };
 		63FE86721CDC4243000764B2 /* directions_icon_small.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE86711CDC4243000764B2 /* directions_icon_small.pdf */; };
@@ -208,6 +211,9 @@
 		639C2E601CB8463900275C3E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		63CAF7F21CC29BC4000D89A1 /* dropoff_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dropoff_icon.pdf; sourceTree = "<group>"; };
 		63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pickup_icon.pdf; sourceTree = "<group>"; };
+		63D351D21CE78ABE005EAD72 /* UserUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
+		63D351D41CE7926D005EAD72 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		63D351D71CE83FA2005EAD72 /* profile_pic_mask.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = profile_pic_mask.pdf; sourceTree = "<group>"; };
 		63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pickup_label.pdf; sourceTree = "<group>"; };
 		63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dropoff_label.pdf; sourceTree = "<group>"; };
 		63FE86711CDC4243000764B2 /* directions_icon_small.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon_small.pdf; sourceTree = "<group>"; };
@@ -279,6 +285,7 @@
 			children = (
 				442FE9751CC15CAD0002187D /* UserRegistration.swift */,
 				442FE9771CC284230002187D /* UserLogin.swift */,
+				63D351D21CE78ABE005EAD72 /* UserUpdate.swift */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -388,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				44424DA81CDDF44F00B2409F /* Views */,
+				63D351D61CE7949F005EAD72 /* Presenter */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -653,6 +661,7 @@
 		63CAF7F61CC29BD4000D89A1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				63D351D71CE83FA2005EAD72 /* profile_pic_mask.pdf */,
 				63FE86711CDC4243000764B2 /* directions_icon_small.pdf */,
 				63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */,
 				63823CFA1CD42DBF00B258B4 /* drivr_pin_orange.pdf */,
@@ -667,6 +676,14 @@
 				63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		63D351D61CE7949F005EAD72 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				63D351D41CE7926D005EAD72 /* ProfilePresenter.swift */,
+			);
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 		B40D3564AFEFBA9A72F0627D /* Pods */ = {
@@ -777,7 +794,7 @@
 				TargetAttributes = {
 					44AEA86F1CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = B69U5P3C32;
+						DevelopmentTeam = ZG4367LV78;
 					};
 					44AEA8831CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
@@ -821,6 +838,7 @@
 				44C7C85C1CD8DB76002ED3B6 /* OpenSans-Bold.ttf in Resources */,
 				63FE866E1CDBBFC5000764B2 /* dropoff_label.pdf in Resources */,
 				44C7C85D1CD8DB76002ED3B6 /* OpenSans-BoldItalic.ttf in Resources */,
+				63D351D81CE83FA2005EAD72 /* profile_pic_mask.pdf in Resources */,
 				44C7C85E1CD8DB76002ED3B6 /* OpenSans-ExtraBold.ttf in Resources */,
 				44C7C85F1CD8DB76002ED3B6 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				44C7C8601CD8DB76002ED3B6 /* OpenSans-Italic.ttf in Resources */,
@@ -956,6 +974,7 @@
 				4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */,
 				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
 				446A77351CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift in Sources */,
+				63D351D51CE7926D005EAD72 /* ProfilePresenter.swift in Sources */,
 				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
 				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
 				44424DA61CDDF3EB00B2409F /* DonorDonationViewController.swift in Sources */,
@@ -982,6 +1001,7 @@
 				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
 				44424DB21CDE370600B2409F /* DriverSignupPresenter.swift in Sources */,
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
+				63D351D31CE78ABE005EAD72 /* UserUpdate.swift in Sources */,
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
 				44424D9A1CDDEC6A00B2409F /* TempLocationVC.swift in Sources */,
 				44424D911CDDEBF400B2409F /* DonationPin.swift in Sources */,

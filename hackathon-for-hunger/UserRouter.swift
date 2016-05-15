@@ -13,9 +13,12 @@ enum UserEndpoint {
     case Login(credentials: UserLogin)
     case Register(userData: UserRegistration)
     case GetUser(token: Token)
+    case Update(token: Token, userData: UserUpdate)
 }
 
 class UserRouter : BaseRouter {
+    
+    typealias JsonDict = [String: AnyObject]
     
     var endpoint: UserEndpoint
     init(endpoint: UserEndpoint) {
@@ -27,6 +30,7 @@ class UserRouter : BaseRouter {
         case .Login: return .POST
         case .Register: return .POST
         case .GetUser: return .GET
+        case .Update: return .PATCH
         }
     }
     
@@ -35,6 +39,7 @@ class UserRouter : BaseRouter {
         case .Login: return "sessions"
         case .Register: return "users"
         case .GetUser(let token): return "users/\(token.token)"
+        case .Update(let token): return "users/\(token.token)"
         }
     }
     
@@ -57,14 +62,23 @@ class UserRouter : BaseRouter {
             }
         case .GetUser:
             return nil
+            
+        case .Update(_, let userData):
+            do {
+                let user = try userData.toJSON()
+                return ["user": user]
+            } catch {
+                return [:]
+            }
         }
     }
-    
+
     override var encoding: Alamofire.ParameterEncoding? {
         switch endpoint {
         case .Login: return .URL
         case .Register: return .URL
         case .GetUser: return .URL
+        case .Update: return .URL
         }
     }
     

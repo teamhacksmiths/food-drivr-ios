@@ -35,6 +35,7 @@ class LoginPresenter {
         userService.authenticateUser(credentials).then() {
             user -> () in
             self.loginView?.login(didSucceed: user!)
+            
             }.error { error in 
             self.loginView?.login(didFail: error as NSError)
         }
