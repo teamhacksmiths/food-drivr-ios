@@ -31,12 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let _ = AuthService.sharedInstance.getCurrentUser() {
             // Code to execute if user is logged in
-            
-            let mainViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! DonationsContainerViewController
-            let leftViewController = storyboard.instantiateViewControllerWithIdentifier("Left") as! MenuTableViewController
-            let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-            let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
-            self.window?.rootViewController = slideMenuController
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let setViewController = mainStoryboard.instantiateViewControllerWithIdentifier("SlideMenuVC") as! SlideMenuVC
+            self.window?.rootViewController = setViewController
             
             
         } else {
