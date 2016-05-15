@@ -10,11 +10,9 @@ import UIKit
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
-
-    private let userService: UserService = UserService()
-
+    
     var activityIndicator : ActivityIndicatorView!
-    private let profilePresenter = ProfilePresenter(userService: UserService())
+    private let profilePresenter = ProfilePresenter(userService: UserService(), authService:  AuthService())
 
  
     @IBOutlet weak var userNameTextField: UITextField!
@@ -37,9 +35,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 //        startLoading()
         self.setupMenuBar()
         self.title = "Profile"
-        let currentUser = AuthService.sharedInstance.getCurrentUser()
-        userNameTextField.text = currentUser?.name
-        emailTextField.text = currentUser?.email
+  
+        updateUI()
 
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(ProfileViewController.avatarTapped(_:)))
         avatarView.addGestureRecognizer(tapGestureRecognizer)
@@ -72,7 +69,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        //checkPickingInLandscape()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -80,24 +76,25 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         
         var user = UserUpdate()
-        user.email = emailTextField.text ?? "donor@hacksmiths.com"
-        user.name = userNameTextField.text ?? "please enter your name"
+        if emailTextField.text != nil && emailTextField.text != "" {
+            user.email = emailTextField.text
+        }
+        if userNameTextField != nil && userNameTextField.text != nil {
+            user.name = userNameTextField.text
+        }
         user.password = "password"
 
-        profilePresenter.update(user)
-        let currentUser = AuthService.sharedInstance.getCurrentUser()
-        userNameTextField.text = currentUser?.name
-        emailTextField.text = currentUser?.email
-        
-//        userService.updateUser(user).then() {
-//            updatedUser -> Void in
-//            print("USER::: \(updatedUser)")
-//            let userToUpdate = AuthService.sharedInstance.getCurrentUser()
-//            print("CURRENT USER: \(userToUpdate)")
-//            
-//        }
+        profilePresenter.updateUser(user)
         
         
+    }
+    
+    func updateUI() {
+        let currentUser = profilePresenter.getUser()
+        if currentUser != nil {
+            userNameTextField.text = currentUser?.name
+            emailTextField.text = currentUser?.email
+        }
     }
     
     @IBAction func toggleMenu(sender: AnyObject) {
@@ -139,13 +136,23 @@ extension ProfileViewController: ProfileView {
         self.activityIndicator.stopAnimating()
     }
     
-//    func login(didSucceed user: User) {
-//        self.finishLoading()
-//        self.segueToMenuController()
-//    }
-//    
-//    func login(didFail error: NSError) {
-//        self.finishLoading()
-//        authReply("Please supply valid credentials to proceed")
-//    }
+    func update(didSucceed user: [String: AnyObject]) {
+        //self.finishLoading()
+        updateUI()
+    }
+    
+    func update(didFail error: NSError) {
+        //self.finishLoading()
+        print("Error in saving user profile info: \(error)")
+        // The new data didn't save, reload the UI with the current data
+        updateUI()
+    }
+    
+    func getUser(didSucceed user: [String: AnyObject]) {
+        print("getUser: \(user)")
+    }
+    
+    func getUser(didFail error: NSError) {
+        print(error)
+    }
 }

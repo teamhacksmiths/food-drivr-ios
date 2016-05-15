@@ -11,16 +11,20 @@ import Foundation
 protocol ProfileView: NSObjectProtocol {
     func startLoading()
     func finishLoading()
-//    func login(didSucceed user: User)
-//    func login(didFail error: NSError)
+    func update(didSucceed user: [String: AnyObject])
+    func update(didFail error: NSError)
+    func getUser(didSucceed user: [String: AnyObject])
+    func getUser(didFail error: NSError)
 }
 
 class ProfilePresenter {
     private let userService: UserService
+    private let authService: AuthService
     private var profileView: ProfileView?
     
-    init(userService: UserService){
+    init(userService: UserService, authService: AuthService){
         self.userService = userService
+        self.authService = authService
     }
     
     func attachView(view: ProfileView){
@@ -31,28 +35,26 @@ class ProfilePresenter {
         profileView = nil
     }
     
-    func update(userData: UserUpdate) {
-//        var user = UserUpdate()
-//        user.email = "donor@hacksmiths.com"
-//        user.name = "enter your name please"
-//        user.password = "password"
+    func getUser() -> User? {
+        return authService.getCurrentUser()
+//        userService.getUser().then() {
+//            user -> () in
+//            self.profileView?.getUser(didSucceed: user)
+//        }
+    }
+    
+    func updateUser(userData: UserUpdate) {
+        
         userService.updateUser(userData).then() {
-            updatedUser -> Void in
+            updatedUser -> () in
             print("USER::: \(updatedUser)")
-            let userToUpdate = AuthService.sharedInstance.getCurrentUser()
-            print("CURRENT USER: \(userToUpdate)")
             
+            self.profileView?.update(didSucceed: updatedUser)
+            
+            }.error { error in
+                
+            self.profileView?.update(didFail: error as NSError)
         }
     }
     
-    
-//    func authenticate(credentials: UserLogin){
-//        userService.authenticateUser(credentials).then() {
-//            user -> () in
-//            self.profileView?.login(didSucceed: user!)
-//            
-//            }.error { error in
-//                self.profileView?.login(didFail: error as NSError)
-//        }
-//    }
 }

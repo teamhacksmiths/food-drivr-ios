@@ -117,11 +117,11 @@ class UserService {
                 .responseJSON {
                     response in
                     switch response.result {
-                    case .Success(let JSON):
+                    case .Success(_):
 
                         if let newUser = response.result.value!["user"] as? [String: AnyObject] {
 
-                            let user = AuthService.sharedInstance.storeCurrentUser(newUser)
+                            _ = AuthService.sharedInstance.storeCurrentUser(newUser)
                             fulfill(newUser)
                         }
                         
