@@ -8,11 +8,11 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
+import SwiftyJSON
 
-class Participant: Object {
+class Participant: Object, Mappable {
     dynamic var id: Int = 0
-    dynamic var updated_at: NSDate? = nil
-    dynamic var created_at: NSDate? = nil
     dynamic var name: String? = ""
     dynamic var email: String? = ""
     dynamic var avatar: String? = ""
@@ -21,5 +21,18 @@ class Participant: Object {
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    required convenience init?(_ map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        id      <- map["id"]
+        name    <- map["name"]
+        email   <- map["email"]
+        avatar  <- map["avatar"]
+        phone   <- map["phone"]
+        role    <- map["role"]
     }
 }

@@ -78,9 +78,6 @@ extension PendingDonationsDashboard:  UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! PendingDonationsDashboardTableViewCell
         cell.indexPath = indexPath
         cell.information = pendingDonations![indexPath.row]
-        cell.addBorderTop(size: 1, color: UIColor.lightGrayColor())
-        
-        
         return cell
     }
     

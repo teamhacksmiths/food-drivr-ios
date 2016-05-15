@@ -9,32 +9,28 @@
 import Foundation
 import RealmSwift
 import MapKit
+import ObjectMapper
 
-class Location: Object {
+class Location: Object, Mappable {
     typealias JsonDict = [String: AnyObject]
-    var latitude = RealmOptional<Double>()
-    var longitude = RealmOptional<Double>()
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
     dynamic var estimated: NSDate? = nil
     dynamic var actual: NSDate? = nil
     
     
     var coordinates: CLLocationCoordinate2D? {
-        if let latitude = latitude.value, longitude = longitude.value {
-            return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        }
-        return nil
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
-    convenience init(dict: JsonDict) {
-        
+    required convenience init?(_ map: Map) {
         self.init()
-        if let lat = dict["latitude"] as? String {
-            self.latitude.value = Double(lat)
-        }
-        if let lon = dict["longitude"] as? String {
-            self.longitude.value = Double(lon)
-        }
-        self.estimated = dict["estimated"] as? NSDate
-        self.actual = dict["actual"] as? NSDate
+    }
+    
+    func mapping(map: Map) {
+        latitude        <- map["latitude"]
+        longitude       <- map["longitude"]
+        estimated       <- (map["estimated"], DateTransform())
+        actual          <- (map["participants.driver"], DateTransform())
     }
 }

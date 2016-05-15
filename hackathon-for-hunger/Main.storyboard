@@ -364,12 +364,14 @@
                                                             <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="8"/>
                                                         </stackView>
                                                     </subviews>
+                                                    <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="8"/>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Eed-5u-wRp" firstAttribute="top" secondItem="yKv-mN-qhx" secondAttribute="topMargin" constant="-8" id="6Qo-nO-6lk"/>
-                                                <constraint firstItem="Eed-5u-wRp" firstAttribute="leading" secondItem="yKv-mN-qhx" secondAttribute="leadingMargin" constant="-8" id="TuF-MF-grg"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Eed-5u-wRp" secondAttribute="bottom" constant="-8" id="nAv-d0-0qy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Kzj-54-2Kn" secondAttribute="bottom" constant="-10" id="Fph-Wp-8AF"/>
+                                                <constraint firstItem="Kzj-54-2Kn" firstAttribute="top" secondItem="yKv-mN-qhx" secondAttribute="topMargin" constant="-8" id="PcQ-rV-j0X"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Kzj-54-2Kn" secondAttribute="trailing" constant="-8" id="hZT-HG-tmg"/>
+                                                <constraint firstItem="Kzj-54-2Kn" firstAttribute="leading" secondItem="yKv-mN-qhx" secondAttribute="leadingMargin" constant="-8" id="ssY-ex-fUe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1268,10 +1270,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6G-UC-dOo">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="20" y="556" width="560" height="44"/>
                                 <color key="backgroundColor" red="0.30196078431372547" green="0.22352941176470587" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="rjQ-LF-Lsb"/>
+                                    <constraint firstAttribute="height" constant="44" id="H2D-s6-G6Y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Colaborate-Thin" family="Colaborate-Thin" pointSize="15"/>
                                 <state key="normal" title="LOGOUT">
@@ -1281,6 +1283,15 @@
                                     <action selector="logoutButtonClicked:" destination="egX-BY-shK" eventType="touchUpInside" id="ArX-n3-6PM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRIVR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4x-iB-ss6">
+                                <rect key="frame" x="20" y="20" width="560" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="63F-JF-L1V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1hp-bJ-oda">
                                 <rect key="frame" x="20" y="82" width="560" height="466"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1299,28 +1310,19 @@
                                     <outlet property="delegate" destination="egX-BY-shK" id="gmz-w4-Y61"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRIVR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4x-iB-ss6">
-                                <rect key="frame" x="20" y="20" width="560" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="63F-JF-L1V"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="42"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="R6G-UC-dOo" firstAttribute="top" secondItem="1hp-bJ-oda" secondAttribute="bottom" constant="8" id="6hr-Gb-2q8"/>
                             <constraint firstItem="1hp-bJ-oda" firstAttribute="trailing" secondItem="gpn-lw-lfG" secondAttribute="trailingMargin" id="BWT-01-eZz"/>
-                            <constraint firstItem="R6G-UC-dOo" firstAttribute="leading" secondItem="gpn-lw-lfG" secondAttribute="leadingMargin" constant="-20" id="Cj9-AP-hR7"/>
-                            <constraint firstItem="R6G-UC-dOo" firstAttribute="top" secondItem="1hp-bJ-oda" secondAttribute="bottom" constant="8" id="Dt9-RO-mR6"/>
                             <constraint firstItem="1hp-bJ-oda" firstAttribute="leading" secondItem="gpn-lw-lfG" secondAttribute="leadingMargin" id="PwZ-yx-8dv"/>
-                            <constraint firstItem="qhc-G7-R4p" firstAttribute="top" secondItem="R6G-UC-dOo" secondAttribute="bottom" id="ShO-5V-SKh"/>
                             <constraint firstItem="Y4x-iB-ss6" firstAttribute="top" secondItem="tkg-QJ-HAz" secondAttribute="bottom" id="Xz9-uY-245"/>
                             <constraint firstItem="Y4x-iB-ss6" firstAttribute="leading" secondItem="gpn-lw-lfG" secondAttribute="leadingMargin" id="bEn-SL-cYi"/>
                             <constraint firstItem="1hp-bJ-oda" firstAttribute="top" secondItem="Y4x-iB-ss6" secondAttribute="bottom" constant="4" id="fNm-25-KxG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="R6G-UC-dOo" secondAttribute="trailing" constant="-20" id="oUp-VB-EqH"/>
+                            <constraint firstItem="R6G-UC-dOo" firstAttribute="leading" secondItem="gpn-lw-lfG" secondAttribute="leadingMargin" id="hnw-Ce-AMd"/>
+                            <constraint firstItem="R6G-UC-dOo" firstAttribute="trailing" secondItem="gpn-lw-lfG" secondAttribute="trailingMargin" id="jQL-gI-DNz"/>
                             <constraint firstItem="Y4x-iB-ss6" firstAttribute="trailing" secondItem="gpn-lw-lfG" secondAttribute="trailingMargin" id="sO0-0r-rjW"/>
+                            <constraint firstItem="qhc-G7-R4p" firstAttribute="top" secondItem="R6G-UC-dOo" secondAttribute="bottom" id="w94-PS-ZjO"/>
                         </constraints>
                     </view>
                     <connections>

@@ -8,12 +8,13 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 
-class MetaData: Object {
+class MetaData: Object, Mappable {
     
     typealias JsonDict = [String: AnyObject]
 
-    let images = List<Image>()
+    var images = List<Image>()
     var donationDescription: String? = nil
     
     convenience init(dict: JsonDict) {
@@ -32,5 +33,14 @@ class MetaData: Object {
                 }
             }
         }
+    }
+    
+    required convenience init?(_ map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        donationDescription <- map["description"]
+        images              <- (map["images"], ListTransform<Image>())
     }
 }

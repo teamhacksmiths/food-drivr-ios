@@ -17,6 +17,7 @@ target 'hackathon-for-hunger' do
   pod 'JSONCodable', '~> 2.1'
   pod 'NVActivityIndicatorView', '~> 2.5'
   pod 'PromiseKit'
+  pod 'ObjectMapper', '~> 1.3'
 end
 
 

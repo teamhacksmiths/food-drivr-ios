@@ -24,8 +24,8 @@ class DonationPin: NSObject, MKAnnotation {
     }
     var donation: Donation? {
         didSet {
-            lat = donation?.pickup?.latitude.value
-            lon = donation?.pickup?.longitude.value
+            lat = donation?.pickup?.latitude
+            lon = donation?.pickup?.longitude
             title = donation?.donor?.name
         
         }
