@@ -23,7 +23,10 @@ class PendingDonationsDashboardTableViewCell: UITableViewCell {
     
     weak var delegate: PendingDonationsDashboardTableViewCellDelegate?
     
-
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        locationLabel.adjustsFontSizeToFitWidth = true
+    }
     
     var information: Donation? = nil {
         didSet {
