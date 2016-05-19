@@ -16,7 +16,7 @@ class UserService {
     
     let manager = Manager()
     typealias JsonDict = [String: AnyObject]
-    
+
     func authenticate(credentials: UserLogin) -> Promise<JsonDict> {
         let router = UserRouter(endpoint: .Login(credentials: credentials) )
         return Promise { fulfill, reject in
