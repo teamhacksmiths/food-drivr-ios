@@ -17,8 +17,31 @@ class UserService {
     let manager = Manager()
     typealias JsonDict = [String: AnyObject]
     
+    var returnValue = 0
+    func isReachable() -> Int {
+        
+        let url = NSURL(string: "http://www.google.com")
+        let request = NSURLRequest(URL: url!)
+        let sharedSession = NSURLSession.sharedSession()
+        let task = sharedSession.dataTaskWithRequest(request) { (data, response, error) in
+            guard let statusCode = (response as? NSHTTPURLResponse)?.statusCode where statusCode >= 200 && statusCode <= 299
+                else{
+                    self.returnValue = 0
+                    print("nope")
+                    return
+            }
+            print(statusCode)
+            self.returnValue = statusCode
+            print("returnValue: \(self.returnValue)")
+        }
+        task.resume()
+        print(returnValue)
+        return returnValue
+    }
+    
     func authenticate(credentials: UserLogin) -> Promise<JsonDict> {
         let router = UserRouter(endpoint: .Login(credentials: credentials) )
+        print(isReachable())
         return Promise { fulfill, reject in
             manager.request(router)
                 .validate()

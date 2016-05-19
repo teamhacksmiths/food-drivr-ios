@@ -252,53 +252,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWG-Rf-Ao8">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <segue destination="OaP-fe-RFT" kind="embed" id="RuP-gi-aT0"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSY-jx-LoT">
-                                <rect key="frame" x="0.0" y="536" width="600" height="64"/>
-                                <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="d6w-HX-icu">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="WgG-6R-Viq"/>
-                                        </constraints>
-                                        <segments>
-                                            <segment title="LIST VIEW"/>
-                                            <segment title="MAP VIEW"/>
-                                        </segments>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="segmentedControlUpdated:" destination="2EM-3U-CdT" eventType="valueChanged" id="STV-mc-NLw"/>
-                                        </connections>
-                                    </segmentedControl>
-                                </subviews>
-                                <color key="backgroundColor" red="0.11764705882352941" green="0.81568627450980391" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vK3-tw-7UT">
+                                <rect key="frame" x="266" y="524" width="68" height="68"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="d6w-HX-icu" firstAttribute="top" secondItem="fSY-jx-LoT" secondAttribute="top" id="3PW-Dk-Hg7"/>
-                                    <constraint firstItem="d6w-HX-icu" firstAttribute="leading" secondItem="fSY-jx-LoT" secondAttribute="leading" id="LAP-VF-pPl"/>
-                                    <constraint firstAttribute="trailing" secondItem="d6w-HX-icu" secondAttribute="trailing" id="k08-ai-uVn"/>
-                                    <constraint firstAttribute="height" constant="64" id="oYn-oP-2Ug"/>
+                                    <constraint firstAttribute="width" constant="68" id="coE-i3-2w4"/>
+                                    <constraint firstAttribute="height" constant="68" id="tYa-x3-KpE"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" image="map-icon"/>
+                                <connections>
+                                    <action selector="containerButtonToggled:" destination="2EM-3U-CdT" eventType="touchUpInside" id="xfD-Tw-SqX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fSY-jx-LoT" firstAttribute="top" secondItem="PWG-Rf-Ao8" secondAttribute="bottom" id="2Oh-LV-ghf"/>
-                            <constraint firstItem="7bc-xT-rgC" firstAttribute="top" secondItem="fSY-jx-LoT" secondAttribute="bottom" id="3hI-Si-4UZ"/>
-                            <constraint firstItem="PWG-Rf-Ao8" firstAttribute="top" secondItem="0Ad-y1-iOT" secondAttribute="topMargin" id="95o-FW-y1H"/>
-                            <constraint firstItem="fSY-jx-LoT" firstAttribute="leading" secondItem="0Ad-y1-iOT" secondAttribute="leadingMargin" constant="-20" id="BIW-7d-iKf"/>
-                            <constraint firstItem="PWG-Rf-Ao8" firstAttribute="leading" secondItem="0Ad-y1-iOT" secondAttribute="leadingMargin" constant="-20" id="Ekq-mJ-K7H"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PWG-Rf-Ao8" secondAttribute="trailing" constant="-20" id="Xfg-yZ-oNt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fSY-jx-LoT" secondAttribute="trailing" constant="-20" id="dto-BI-Ubu"/>
+                            <constraint firstItem="PWG-Rf-Ao8" firstAttribute="top" secondItem="0Ad-y1-iOT" secondAttribute="topMargin" id="QwD-oe-AcV"/>
+                            <constraint firstItem="PWG-Rf-Ao8" firstAttribute="leading" secondItem="0Ad-y1-iOT" secondAttribute="leadingMargin" constant="-20" id="XAM-PH-W7f"/>
+                            <constraint firstItem="7bc-xT-rgC" firstAttribute="top" secondItem="PWG-Rf-Ao8" secondAttribute="bottom" id="Zog-72-bqP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PWG-Rf-Ao8" secondAttribute="trailing" constant="-20" id="dFv-dx-fy9"/>
+                            <constraint firstItem="vK3-tw-7UT" firstAttribute="centerX" secondItem="0Ad-y1-iOT" secondAttribute="centerX" id="gEd-ke-CMF"/>
+                            <constraint firstItem="7bc-xT-rgC" firstAttribute="top" secondItem="vK3-tw-7UT" secondAttribute="bottom" constant="8" id="qXN-DY-PVT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dashboardContainerView" destination="PWG-Rf-Ao8" id="pPd-6I-4OL"/>
-                        <outlet property="segmentBackground" destination="fSY-jx-LoT" id="5jT-Y6-7lm"/>
-                        <outlet property="segmentedControl" destination="d6w-HX-icu" id="q9A-kU-W8e"/>
+                        <outlet property="toggleButton" destination="vK3-tw-7UT" id="lj8-u2-mAa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBO-e6-iL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,11 +298,11 @@
                         <viewControllerLayoutGuide type="bottom" id="vJ4-6P-AHB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleAspectFit" id="mzN-u7-Ncc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yHu-Kz-EeI">
-                                <rect key="frame" x="40" y="184" width="519" height="352"/>
+                                <rect key="frame" x="40" y="184" width="519" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="pendingDonation" selectionStyle="default" indentationWidth="10" reuseIdentifier="pendingDonation" rowHeight="70" id="igI-2z-mL5" customClass="PendingDonationsDashboardTableViewCell" customModule="hackathon_for_hunger" customModuleProvider="target">
@@ -2264,6 +2248,7 @@
         <image name="driver" width="56" height="48"/>
         <image name="dropoff_label" width="60" height="12"/>
         <image name="facebook_white" width="32" height="32"/>
+        <image name="map-icon" width="45" height="41"/>
         <image name="personHolder" width="50" height="50"/>
         <image name="pickup_label" width="60" height="12"/>
         <image name="profile_mask" width="100" height="100"/>
