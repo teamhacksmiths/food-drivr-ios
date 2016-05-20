@@ -31,7 +31,6 @@
 		44424D951CDDEC2400B2409F /* MapsDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D931CDDEC2400B2409F /* MapsDummyData.swift */; };
 		44424D961CDDEC2400B2409F /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D941CDDEC2400B2409F /* MapsModel.swift */; };
 		44424D991CDDEC6A00B2409F /* DriverMapPickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D971CDDEC6A00B2409F /* DriverMapPickupVC.swift */; };
-		44424D9A1CDDEC6A00B2409F /* TempLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D981CDDEC6A00B2409F /* TempLocationVC.swift */; };
 		44424D9C1CDDF00100B2409F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D9B1CDDF00100B2409F /* AuthService.swift */; };
 		44424DA11CDDF39E00B2409F /* DonorAddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D9F1CDDF39E00B2409F /* DonorAddAddressViewController.swift */; };
 		44424DA21CDDF39E00B2409F /* DonorAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */; };
@@ -147,7 +146,6 @@
 		44424D931CDDEC2400B2409F /* MapsDummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsDummyData.swift; path = Modules/Driver/Maps/Models/MapsDummyData.swift; sourceTree = "<group>"; };
 		44424D941CDDEC2400B2409F /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsModel.swift; path = Modules/Driver/Maps/Models/MapsModel.swift; sourceTree = "<group>"; };
 		44424D971CDDEC6A00B2409F /* DriverMapPickupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapPickupVC.swift; sourceTree = "<group>"; };
-		44424D981CDDEC6A00B2409F /* TempLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempLocationVC.swift; sourceTree = "<group>"; };
 		44424D9B1CDDF00100B2409F /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		44424D9F1CDDF39E00B2409F /* DonorAddAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddAddressViewController.swift; sourceTree = "<group>"; };
 		44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddressViewController.swift; sourceTree = "<group>"; };
@@ -371,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				44424D971CDDEC6A00B2409F /* DriverMapPickupVC.swift */,
-				44424D981CDDEC6A00B2409F /* TempLocationVC.swift */,
 				44424D881CDDE5D200B2409F /* DonationMapOverviewVC.swift */,
 				44424D841CDDDB7300B2409F /* DriverMapDetailPendingVC.swift */,
 			);
@@ -770,6 +767,7 @@
 				44AEA86E1CA9CBC100A52731 /* Resources */,
 				CDBAFA21D41609DA9B1A06AE /* 📦 Embed Pods Frameworks */,
 				FAA73D68C4A6EA41F2786E6B /* 📦 Copy Pods Resources */,
+				D30AFB4C78BB96CD9FF4B735 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -967,6 +965,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D30AFB4C78BB96CD9FF4B735 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FAA73D68C4A6EA41F2786E6B /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1022,7 +1035,6 @@
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
 				63D351D31CE78ABE005EAD72 /* UserUpdate.swift in Sources */,
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
-				44424D9A1CDDEC6A00B2409F /* TempLocationVC.swift in Sources */,
 				44424D911CDDEBF400B2409F /* DonationPin.swift in Sources */,
 				44424D9C1CDDF00100B2409F /* AuthService.swift in Sources */,
 				EAFEDF9A1CC2E26800C30693 /* DonorSignupInfo.swift in Sources */,

@@ -51,14 +51,16 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var buttonBackground: UIView!
     
     @IBAction func donationPickedUp(sender: AnyObject) {
-        
+        print(kind)
         // Change button to Dropped Off and change the route from pickup to dropoff, but only if the route is currently set for pickup
         if kind == .Pickup {
+            mapViewPresenter?.updateDonationStatus(donation!, status: .PickedUp)
             addDropoffPin()
             updateRoute()
         }
         
         kind = .Dropoff
+        donationDroppedOff()
         updateUI()
         
     }
@@ -72,7 +74,8 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
             return
         }
-        delegate.runLoginFlow()    }
+        delegate.runLoginFlow()
+    }
     
     @IBAction func askForDirections(sender: AnyObject) {
     }
@@ -392,16 +395,15 @@ extension DriverMapPickupVC: MapView {
     func donationStatusUpdate(sender: MapViewPresenter, didSucceed donation: Donation) {
         self.finishLoading()
         self.donation = donation
+        print("adkljalksdj")
         if donation.status == .DroppedOff {
-            guard let delegate = UIApplication.sharedApplication().delegate as? AppDelegate  else {
-                return
-            }
-            delegate.runLoginFlow()
+            print("unwinding")
+           self.performSegueWithIdentifier("unwindToVC", sender: self)
         }
     }
     
     func donationStatusUpdate(sender: MapViewPresenter, didFail error: NSError) {
-        
+        print(error)
     }
 }
 

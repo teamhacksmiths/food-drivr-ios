@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
+        let color = UIColor(red: 20/255, green: 207/255, blue: 232/255, alpha: 1)
+        UITabBar.appearance().barTintColor = color
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
         setupFacebookAndTwitter()
         runLoginFlow()
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -32,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let _ = AuthService.sharedInstance.getCurrentUser() {
             // Code to execute if user is logged in
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let setViewController = mainStoryboard.instantiateViewControllerWithIdentifier("SlideMenuVC") as! SlideMenuVC
+            let setViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DriverTabMenu")
             self.window?.rootViewController = setViewController
             
             

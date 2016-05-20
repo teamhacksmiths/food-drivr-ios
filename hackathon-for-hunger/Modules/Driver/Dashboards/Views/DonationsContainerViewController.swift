@@ -29,7 +29,7 @@ class DonationsContainerViewController: UIViewController {
     }
     
     private func setupView() {
-        self.title = AuthService.sharedInstance.getCurrentUser()?.name ?? "Pending Donations"
+        self.title = "Pending Donations"
         
         self.donationListView = self.storyboard?.instantiateViewControllerWithIdentifier("DonationLIstView") as? PendingDonationsDashboard
         self.currentViewController = self.donationListView

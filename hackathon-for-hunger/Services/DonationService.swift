@@ -105,11 +105,11 @@ class DonationService {
                             try self.realm.write {
                                 donation.status = status
                             }
-                            fulfill(donation)
+                            
                         } catch let error as NSError{
                             reject(error)
                         }
-                        
+                        fulfill(donation)
                     case .Failure(let error):
                         reject(error)
                     }

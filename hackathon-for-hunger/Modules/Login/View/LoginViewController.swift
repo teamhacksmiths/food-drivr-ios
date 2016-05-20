@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
     }
     
     private func segueToMenuController() {
-        self.performSegueWithIdentifier("startMenu", sender: self)
+        self.performSegueWithIdentifier("loginAsDriver", sender: self)
 
     }
     

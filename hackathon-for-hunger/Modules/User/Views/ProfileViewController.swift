@@ -30,12 +30,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     override func viewDidLoad() {
+        self.title = "My Profile"
         super.viewDidLoad()
         profilePresenter.attachView(self)
 //        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Please wait")
 //        startLoading()
         self.setupMenuBar()
-        self.title = "Profile"
   
         updateUI()
 

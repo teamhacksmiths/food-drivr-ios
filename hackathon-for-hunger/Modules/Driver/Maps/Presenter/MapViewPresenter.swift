@@ -41,7 +41,7 @@ class MapViewPresenter {
     }
     
     func updateDonationStatus(donation: Donation, status: DonationStatus) {
-
+print("UPDATING DONATION")
     donationService.updateDonationStatus(donation, status:status).then {
             donation in
            self.mapView?.donationStatusUpdate(self, didSucceed: donation)

@@ -11,6 +11,7 @@ import RealmSwift
 
 class PendingDonationsDashboard: UIViewController {
     
+    @IBOutlet weak var noDonationsView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     private var refreshControl: UIRefreshControl!
@@ -23,6 +24,7 @@ class PendingDonationsDashboard: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        noDonationsView.hidden = true
         dashboardPresenter.attachView(self)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Syncing")
         refreshControl = UIRefreshControl()
