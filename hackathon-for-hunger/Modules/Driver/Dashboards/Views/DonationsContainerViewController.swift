@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DonationsContainerViewController: UIViewController {
+class DonationsContainerViewController: UIViewController, PendingDashboardControllerDelegate {
 
     enum ActiveBoard : Int {
         case List
@@ -23,15 +23,13 @@ class DonationsContainerViewController: UIViewController {
     var currentActiveView: ActiveBoard = .List
     
     override func viewDidLoad() {
-        self.setupMenuBar()
         self.setupView()
         super.viewDidLoad()
     }
     
     private func setupView() {
-        self.title = "Pending Donations"
-        
         self.donationListView = self.storyboard?.instantiateViewControllerWithIdentifier("DonationLIstView") as? PendingDonationsDashboard
+        self.donationListView?.delegate = self
         self.currentViewController = self.donationListView
         self.toggleButton.layer.cornerRadius = 0.5 * self.toggleButton.bounds.width
         self.toggleButton.layer.shadowColor = UIColor.blackColor().CGColor
@@ -111,5 +109,13 @@ class DonationsContainerViewController: UIViewController {
             return
         }
         delegate.runLoginFlow()
+    }
+    
+    func showToggleButton() {
+        self.toggleButton.hidden = false
+    }
+    
+    func hideToggleButton() {
+        self.toggleButton.hidden = true
     }
 }

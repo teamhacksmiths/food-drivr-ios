@@ -51,23 +51,25 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var buttonBackground: UIView!
     
     @IBAction func donationPickedUp(sender: AnyObject) {
-        print(kind)
+        
         // Change button to Dropped Off and change the route from pickup to dropoff, but only if the route is currently set for pickup
-        if kind == .Pickup {
+        if donation!.status == .Accepted {
+            self.startLoading()
             mapViewPresenter?.updateDonationStatus(donation!, status: .PickedUp)
+            kind = .Dropoff
             addDropoffPin()
             updateRoute()
+            updateUI()
+            return
         }
         
-        kind = .Dropoff
-        donationDroppedOff()
-        updateUI()
+        if donation!.status == .PickedUp {
+            print("SENDING NOW", donation)
+            self.startLoading()
+            mapViewPresenter?.updateDonationStatus(donation!, status: .DroppedOff)
+        }
         
-    }
-    
-    func donationDroppedOff() {
-        self.startLoading()
-        mapViewPresenter?.updateDonationStatus(donation!, status: .DroppedOff)
+        
     }
     
     @IBAction func cancel(sender: AnyObject) {
@@ -81,14 +83,14 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     }
     
     func updateUI() {
-        switch kind {
-        case .Pickup:
+        switch donation!.status {
+        case .Accepted:
             pickupLabelImage.image = UIImage(named: "pickup_label")
             donorNameLabel.textColor = data.pinColorPickup
             buttonBackground.backgroundColor = data.pinColorPickup
             pickupDropoffButton.setTitle("CONFIRM PICK UP", forState: .Normal)
 
-        case .Dropoff:
+        case .PickedUp:
             pickupLabelImage.image = UIImage(named: "dropoff_label")
             donorNameLabel.textColor = data.pinColorDropoff
             buttonBackground.backgroundColor = data.pinColorDropoff
@@ -102,6 +104,8 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                     donorNameLabel.text = "No dropoff yet"
                 }
             }
+        default : break
+            
         }
     }
     
@@ -161,7 +165,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
         for annot in mapView.annotations {
             mapView.deselectAnnotation(annot, animated: true)
         }
-        
+        print(donation)
         updateUI()
         
         if donation != nil {
@@ -395,14 +399,19 @@ extension DriverMapPickupVC: MapView {
     func donationStatusUpdate(sender: MapViewPresenter, didSucceed donation: Donation) {
         self.finishLoading()
         self.donation = donation
-        print("adkljalksdj")
+        print("Finishing loading")
+        if donation.status == .PickedUp {
+            addDropoffPin()
+            updateRoute()
+        }
+        updateUI()
         if donation.status == .DroppedOff {
-            print("unwinding")
-           self.performSegueWithIdentifier("unwindToVC", sender: self)
+           self.performSegueWithIdentifier("unwindToPendingDashboard", sender: self)
         }
     }
     
     func donationStatusUpdate(sender: MapViewPresenter, didFail error: NSError) {
+        self.finishLoading()
         print(error)
     }
 }

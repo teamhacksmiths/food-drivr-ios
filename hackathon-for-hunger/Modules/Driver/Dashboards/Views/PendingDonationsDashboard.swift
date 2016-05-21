@@ -9,6 +9,12 @@
 import UIKit
 import RealmSwift
 
+protocol PendingDashboardControllerDelegate {
+    func showToggleButton()
+    func hideToggleButton()
+}
+
+
 class PendingDonationsDashboard: UIViewController {
     
     @IBOutlet weak var noDonationsView: UIView!
@@ -18,21 +24,34 @@ class PendingDonationsDashboard: UIViewController {
     var activityIndicator : ActivityIndicatorView!
     private let dashboardPresenter = DashboardPresenter(donationService: DonationService())
     var pendingDonations: Results<Donation>?
+    var delegate: PendingDashboardControllerDelegate?
 
+    @IBOutlet weak var refreshButton: UIButton!
     
+    @IBAction func onRefreshButtonClick(sender: AnyObject) {
+        self.refresh(sender)
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.refreshButton.layer.cornerRadius = 0.5 * self.refreshButton.bounds.width
+        self.refreshButton.layer.shadowColor = UIColor.blackColor().CGColor
+        self.refreshButton.layer.shadowOffset = CGSizeMake(2, 2)
+        self.refreshButton.layer.shadowRadius = 2
+        self.refreshButton.layer.shadowOpacity = 0.5
         noDonationsView.hidden = true
         dashboardPresenter.attachView(self)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Syncing")
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PendingDonationsDashboard.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
-        dashboardPresenter.fetch([DonationStatus.Pending.rawValue])
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        dashboardPresenter.fetch([DonationStatus.Pending.rawValue])
+    }
     
     func refresh(sender: AnyObject) {
         self.startLoading()
@@ -56,15 +75,14 @@ class PendingDonationsDashboard: UIViewController {
             
             if let donation = sender as? Donation {
                 let donationVC = segue.destinationViewController as! DriverMapPickupVC
-                
-                donationVC.donation = donation
+            
+                donationVC.mapViewPresenter = MapViewPresenter(donationService: DonationService(), donation: donation)
             }
         }
 
     }
     
-    deinit {
-        print("DEINITIALIZING")
+    @IBAction func unwindToPendingDashboard(segue: UIStoryboardSegue) {
     }
 }
 
@@ -103,6 +121,7 @@ extension PendingDonationsDashboard:  UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
         self.performSegueWithIdentifier("toDriverMapDetailPendingFromDashboard", sender: pendingDonations![indexPath.row])
     }
     
@@ -125,7 +144,17 @@ extension PendingDonationsDashboard: DashboardView {
     func donations(sender: DashboardPresenter, didSucceed donations: Results<Donation>) {
         self.finishLoading()
         self.pendingDonations = donations
-        self.tableView.reloadData()
+        if(donations.isEmpty) {
+            print("HERE")
+            self.tableView.hidden = true
+            self.noDonationsView.hidden = false
+            self.delegate?.hideToggleButton()
+        } else {
+            self.tableView.hidden = false
+            self.noDonationsView.hidden = true
+            self.delegate?.showToggleButton()
+            self.tableView.reloadData()
+        }
     }
     
     func donations(sender: DashboardPresenter, didFail error: NSError) {
@@ -141,10 +170,7 @@ extension PendingDonationsDashboard: DashboardView {
     
     func donationStatusUpdate(sender: DashboardPresenter, didSucceed donation: Donation) {
         self.finishLoading()
-        let index = pendingDonations!.indexOf(donation)
         self.performSegueWithIdentifier("acceptedDonation", sender: donation)
-        let indexPath = NSIndexPath(forRow: index!, inSection: 0)
-        self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
     }
     
     func donationStatusUpdate(sender: DashboardPresenter, didFail error: NSError) {
