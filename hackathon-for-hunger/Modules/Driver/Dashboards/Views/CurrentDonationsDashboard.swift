@@ -34,9 +34,12 @@ class CurrentDonationsDashboard: UIViewController {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PendingDonationsDashboard.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
-        dashboardPresenter.fetch([DonationStatus.Accepted.rawValue, DonationStatus.PickedUp.rawValue])
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        dashboardPresenter.fetch([DonationStatus.Accepted.rawValue, DonationStatus.PickedUp.rawValue])
+    }
     
     func refresh(sender: AnyObject) {
         self.startLoading()

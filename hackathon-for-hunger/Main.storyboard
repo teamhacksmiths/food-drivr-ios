@@ -287,7 +287,7 @@
                             <constraint firstItem="7bc-xT-rgC" firstAttribute="top" secondItem="vK3-tw-7UT" secondAttribute="bottom" constant="8" id="qXN-DY-PVT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pending" image="basket" id="I0f-bf-GKM"/>
+                    <tabBarItem key="tabBarItem" title="Pending" image="Pending" id="I0f-bf-GKM"/>
                     <connections>
                         <outlet property="dashboardContainerView" destination="PWG-Rf-Ao8" id="pPd-6I-4OL"/>
                         <outlet property="toggleButton" destination="vK3-tw-7UT" id="lj8-u2-mAa"/>
@@ -635,7 +635,7 @@ Please check back soon.</string>
                             <constraint firstItem="gFz-Y1-kVL" firstAttribute="top" secondItem="Xta-EW-qE1" secondAttribute="bottom" id="zKf-2J-HRe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Profile" image="person-list" id="k0p-JK-5qA"/>
+                    <tabBarItem key="tabBarItem" title="My Profile" image="Profile" id="k0p-JK-5qA"/>
                     <navigationItem key="navigationItem" id="ZRm-m8-K9i">
                         <barButtonItem key="leftBarButtonItem" image="burger" id="XRT-Px-GEN">
                             <connections>
@@ -2144,7 +2144,7 @@ Please check back soon.</string>
                             <outlet property="delegate" destination="QXS-BM-hl5" id="vjr-6H-mwA"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="More" image="more" id="GMz-gj-yEz"/>
+                    <tabBarItem key="tabBarItem" title="More" image="More Icon" id="GMz-gj-yEz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUU-0t-W5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2259,7 +2259,7 @@ Please check back soon.</string>
                             <constraint firstItem="u2a-u0-t9S" firstAttribute="centerX" secondItem="zrw-tu-Z15" secondAttribute="centerX" id="vUW-PS-tcn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Current" image="clipboard" id="SKT-BS-ZuZ"/>
+                    <tabBarItem key="tabBarItem" title="Current" image="Current" id="SKT-BS-ZuZ"/>
                     <connections>
                         <outlet property="imageView" destination="u2a-u0-t9S" id="otQ-Aq-gim"/>
                         <outlet property="noDonationsView" destination="bqo-f4-Y7K" id="U6Z-Sw-0vk"/>
@@ -2408,7 +2408,7 @@ Please check back soon.</string>
                             <constraint firstItem="spq-Fl-j3D" firstAttribute="top" secondItem="Arg-oh-Nkr" secondAttribute="bottom" id="xdm-92-6BQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" image="clock" id="OQ2-zw-bjR"/>
+                    <tabBarItem key="tabBarItem" title="History" image="History" id="OQ2-zw-bjR"/>
                     <connections>
                         <outlet property="imageView" destination="Q6o-Vf-oTe" id="7c9-Og-Elf"/>
                         <outlet property="noDonationsView" destination="Arg-oh-Nkr" id="6Jw-IH-w2r"/>
@@ -2422,19 +2422,19 @@ Please check back soon.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="basket" width="32" height="26"/>
+        <image name="Current" width="22" height="25"/>
+        <image name="History" width="22" height="22"/>
+        <image name="More Icon" width="20" height="4"/>
+        <image name="Pending" width="24" height="25"/>
+        <image name="Profile" width="22" height="22"/>
         <image name="burger" width="72" height="72"/>
         <image name="cancel" width="32" height="32"/>
-        <image name="clipboard" width="28" height="32"/>
-        <image name="clock" width="32" height="32"/>
         <image name="directions" width="48" height="42"/>
         <image name="donor" width="48" height="50"/>
         <image name="driver" width="56" height="48"/>
         <image name="dropoff_label" width="60" height="12"/>
         <image name="facebook_white" width="32" height="32"/>
         <image name="map-icon" width="45" height="41"/>
-        <image name="more" width="80" height="80"/>
-        <image name="person-list" width="32" height="32"/>
         <image name="personHolder" width="50" height="50"/>
         <image name="pickup_label" width="60" height="12"/>
         <image name="profile_mask" width="100" height="100"/>

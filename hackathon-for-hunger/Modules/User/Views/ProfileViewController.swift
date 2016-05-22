@@ -33,10 +33,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.title = "My Profile"
         super.viewDidLoad()
         profilePresenter.attachView(self)
-//        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Please wait")
-//        startLoading()
-        self.setupMenuBar()
-  
         updateUI()
 
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(ProfileViewController.avatarTapped(_:)))
@@ -64,7 +60,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.dismissViewControllerAnimated(true, completion: nil)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             avatarImageView.image = image
-
         }
         
     }
