@@ -49,7 +49,20 @@ class LoginViewController: UIViewController {
     }
     
     private func segueToMenuController() {
-        self.performSegueWithIdentifier("loginAsDriver", sender: self)
+        
+        guard let user = AuthService.sharedInstance.getCurrentUser() else {
+            authReply("Could not load user")
+            return
+        }
+        
+        switch user.userRole {
+        case .Donor :
+            self.performSegueWithIdentifier("loginAsDonor", sender: self)
+            break
+        case .Driver :
+            self.performSegueWithIdentifier("loginAsDriver", sender: self)
+            break
+        }
 
     }
     

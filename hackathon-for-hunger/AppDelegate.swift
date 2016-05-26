@@ -32,11 +32,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func runLoginFlow() -> Void {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let _ = AuthService.sharedInstance.getCurrentUser() {
+        if let user = AuthService.sharedInstance.getCurrentUser() {
             // Code to execute if user is logged in
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let setViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DriverTabMenu")
-            self.window?.rootViewController = setViewController
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            switch user.userRole {
+            case .Donor :
+                let setViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DonorTabMenu")
+                self.window?.rootViewController = setViewController
+                break
+            case .Driver :
+                let setViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DriverTabMenu")
+                self.window?.rootViewController = setViewController
+                break
+            }
+            
             
             
         } else {

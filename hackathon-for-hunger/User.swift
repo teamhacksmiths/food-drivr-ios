@@ -8,8 +8,14 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 
-class User: Object {
+enum UserRole: Int {
+    case Donor = 0
+    case Driver = 1
+}
+
+class User: Object, Mappable {
     typealias JsonDict = [String: AnyObject]
 
     
@@ -23,6 +29,33 @@ class User: Object {
     dynamic var role = 0
     dynamic var settings: Setting?
     
+    var userRole: UserRole {
+        get{
+            if let userRole = UserRole(rawValue: role) {
+                return userRole
+            }
+            return .Donor
+        }
+        set{
+            role = newValue.rawValue
+        }
+    }
+    
+    required convenience init?(_ map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        id              <- map["id"]
+        auth_token      <- map["auth_token"]
+        name            <- map["name"]
+        email           <- map["email"]
+        avatar          <- map["avatar"]
+        organisation    <- map["organization.name"]
+        phone           <- map["phone"]
+        role            <- map["role_id"]
+        settings        <- map["setting"]
+    }
     
     convenience init(dict: JsonDict) {
             self.init()

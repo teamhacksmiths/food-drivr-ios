@@ -8,8 +8,18 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 
-class Setting: Object {
+class Setting: Object, Mappable {
     dynamic var active = 0
     dynamic var notifications = 0
+    
+    required convenience init?(_ map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        active             <- map["active"]
+        notifications      <- map["notifications"]
+    }
 }

@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 import Alamofire
+import ObjectMapper
 
 class AuthService : NSObject {
     
@@ -31,9 +32,9 @@ class AuthService : NSObject {
     
     func storeCurrentUser(user: JsonDict) -> User? {
         self.destroyUser()
-        let user = User(dict: user)
+        let user = Mapper<User>().map(user)
             try! realm.write {
-                realm.add(user)
+                realm.add(user!)
             }
         return user
     }
