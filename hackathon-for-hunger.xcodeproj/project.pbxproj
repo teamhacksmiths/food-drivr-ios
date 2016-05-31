@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00132873720C5F13F1ED7952 /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8208818EEBD1B493449DBF9 /* Pods_hackathon_for_hunger.framework */; };
+		3C2C9B4E1CFD87E8009B34C9 /* DonationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */; };
+		3C2C9B501CFD94C6009B34C9 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */; };
 		3C74C3D81CEF948E004FDD27 /* DonationHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74C3D71CEF948E004FDD27 /* DonationHistoryViewController.swift */; };
 		3CA010801CE7877D0050FE2F /* ListTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */; };
 		3CCD09EF1CE8C9F900B8E32C /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */; };
@@ -124,6 +126,8 @@
 
 /* Begin PBXFileReference section */
 		3B7C428FADF6091F43FC62A6 /* Pods_hackathon_for_hungerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hungerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationPresenter.swift; sourceTree = "<group>"; };
+		3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		3C74C3D71CEF948E004FDD27 /* DonationHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationHistoryViewController.swift; sourceTree = "<group>"; };
 		3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTransformer.swift; sourceTree = "<group>"; };
 		3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
@@ -267,6 +271,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3C2C9B4C1CFD87CD009B34C9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
 		3CA0107E1CE787630050FE2F /* Transformer */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +419,7 @@
 		44424DA31CDDF3BB00B2409F /* AddDonation */ = {
 			isa = PBXGroup;
 			children = (
+				3C2C9B4C1CFD87CD009B34C9 /* Presenter */,
 				44424DA41CDDF3C500B2409F /* Views */,
 			);
 			path = AddDonation;
@@ -468,6 +481,7 @@
 				44C702681CDA86E000E4A2EA /* ActivityIndicatorView.swift */,
 				44638F051CC3EDD0005379FE /* UIViewExtensions.swift */,
 				EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */,
+				3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1022,8 +1036,10 @@
 				44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */,
 				446A77391CDD29C400951319 /* DonationService.swift in Sources */,
 				44C702691CDA86E000E4A2EA /* ActivityIndicatorView.swift in Sources */,
+				3C2C9B501CFD94C6009B34C9 /* SweetAlert.swift in Sources */,
 				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
 				44424DB21CDE370600B2409F /* DriverSignupPresenter.swift in Sources */,
+				3C2C9B4E1CFD87E8009B34C9 /* DonationPresenter.swift in Sources */,
 				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
 				63D351D31CE78ABE005EAD72 /* UserUpdate.swift in Sources */,
 				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,

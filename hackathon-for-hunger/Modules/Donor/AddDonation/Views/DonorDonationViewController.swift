@@ -14,19 +14,34 @@ class DonorDonationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private let cellIdentifier = "DonationCell"
     var foodToDonate: [String]!
+    private let donationPresenter = DonationPresenter(donationService: DonationService())
+    @IBOutlet weak var addDonationButton: UIButton!
+    var activityIndicator : ActivityIndicatorView!
     
     override func viewDidLoad() {
+        addDonationButton.enabled = false
         foodToDonate = [String]()
-        
+        donationPresenter.attachView(self)
         tableView.dataSource = self
         tableView.delegate = self
         inputTextField.delegate = self
+        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Saving")
     }
     
     //MARK: Actions 
     
     @IBAction func didTapDonate(sender: AnyObject) {
-        print("Donate button was tapped on DonorDonationViewController")
+        self.startLoading()
+        donationPresenter.createDonation(self.foodToDonate)
+    }
+    
+    func checkButtonStatus()
+    {
+        if foodToDonate.count > 0 {
+            addDonationButton.enabled = true
+        } else {
+            addDonationButton.enabled = false
+        }
     }
     
 }
@@ -59,6 +74,7 @@ extension DonorDonationViewController: DonationCellDelegate{
         if let selectedIndex = tableView.indexPathForCell(cell){
             foodToDonate.removeAtIndex(selectedIndex.row)
             tableView.deleteRowsAtIndexPaths([selectedIndex], withRowAnimation: .Fade)
+            checkButtonStatus()
         }
     }
 }
@@ -77,6 +93,26 @@ extension DonorDonationViewController: UITextFieldDelegate{
             foodToDonate.append(food)
             tableView.reloadData() //TODO: update table view correctly
             textField.text = nil
+            checkButtonStatus()
         }
+    }
+}
+
+extension DonorDonationViewController: DonationView {
+    func startLoading() {
+        self.activityIndicator.startAnimating()
+    }
+    func finishLoading() {
+        self.activityIndicator.stopAnimating()
+    }
+    func donations(sender: DonationPresenter, didSucceed donation: Donation) {
+        self.finishLoading()
+        self.foodToDonate = []
+        self.tableView.reloadData()
+        SweetAlert().showAlert("Donation Saved!", subTitle: nil, style: AlertStyle.Success)
+    }
+    func donations(sender: DonationPresenter, didFail error: NSError) {
+        self.finishLoading()
+        SweetAlert().showAlert("Could not save donation!", subTitle: error.localizedDescription, style: AlertStyle.Error)
     }
 }

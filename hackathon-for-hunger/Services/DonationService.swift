@@ -116,4 +116,33 @@ class DonationService {
             }
         }
     }
+    
+    func createDonation(items: [String]) -> Promise<Donation> {
+        return Promise { fulfill, reject in
+            
+            let router = DonationRouter(endpoint: .CreateDonation(items: items))
+            manager.request(router)
+                .validate()
+                .responseJSON {
+                    response in
+                    switch response.result {
+                    case .Success(let JSON):
+                        print(JSON)
+                        let donation = Mapper<Donation>().map(JSON["donation"] as! JsonDict?)
+                        do {
+                            try self.realm.write {
+                                self.realm.add(donation!, update: true)
+                            }
+                            
+                        } catch let error as NSError{
+                            reject(error)
+                        }
+                        fulfill(donation!)
+                    case .Failure(let error):
+                        reject(error)
+                    }
+            }
+        }
+
+    }
 }

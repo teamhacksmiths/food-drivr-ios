@@ -257,8 +257,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rSR-Kk-akt" kind="relationship" relationship="viewControllers" id="fwZ-Ky-Ttg"/>
                         <segue destination="exg-ke-MNO" kind="relationship" relationship="viewControllers" id="AUi-5C-uom"/>
+                        <segue destination="rSR-Kk-akt" kind="relationship" relationship="viewControllers" id="fwZ-Ky-Ttg"/>
                         <segue destination="MXl-Ak-uC9" kind="relationship" relationship="viewControllers" id="URs-wV-kja"/>
                         <segue destination="NjO-CE-dpU" kind="relationship" relationship="viewControllers" id="58e-s7-NmO"/>
                     </connections>
@@ -409,7 +409,7 @@
                                             <constraint firstAttribute="width" constant="68" id="B0b-9Z-cj4"/>
                                         </constraints>
                                         <state key="normal" image="refresh">
-                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onRefreshButtonClick:" destination="OaP-fe-RFT" eventType="touchUpInside" id="JCG-Wg-5wT"/>
@@ -423,7 +423,7 @@ Thank you for checking!
 
 Please check back soon.</string>
                                         <fontDescription key="fontDescription" name="OpenSansLight-Italic" family="Open Sans" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -798,6 +798,7 @@ Please check back soon.</string>
                     <tabBarItem key="tabBarItem" title="Add Donation" image="Pending" id="aXc-Cy-D2X"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="addDonationButton" destination="9aL-nh-jYe" id="QTk-Oz-8Sn"/>
                         <outlet property="inputTextField" destination="4Xd-d7-aMv" id="OD9-cj-dng"/>
                         <outlet property="tableView" destination="wmP-IY-3kd" id="BTO-SW-76d"/>
                     </connections>
@@ -856,7 +857,7 @@ Please check back soon.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fsn-kc-Z5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1852" y="8856"/>
+            <point key="canvasLocation" x="-1846" y="8896"/>
         </scene>
         <!--Donor Add Address View Controller-->
         <scene sceneID="9fs-6R-nxC">
@@ -908,7 +909,7 @@ Please check back soon.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9d2-Lh-M6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1012" y="8856"/>
+            <point key="canvasLocation" x="-1009" y="8896"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="x4Y-ro-LIc">
@@ -2153,7 +2154,7 @@ Please check back soon.</string>
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="n5O-BM-2Ne">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Settings" id="3Da-bO-uVg">
                                 <cells>
@@ -2170,7 +2171,7 @@ Please check back soon.</string>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vz-31-Am0">
                                                             <rect key="frame" x="0.0" y="11" width="535" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tOb-nH-lmM">
@@ -2248,7 +2249,7 @@ Thank you for checking!
 
 Please check back soon.</string>
                                         <fontDescription key="fontDescription" name="OpenSansLight-Italic" family="Open Sans" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2370,7 +2371,7 @@ Please check back soon.</string>
                                             <constraint firstAttribute="height" constant="68" id="nAD-Od-T2l"/>
                                         </constraints>
                                         <state key="normal" image="refresh">
-                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="refreshDonations:" destination="1T3-lk-6a9" eventType="touchUpInside" id="MRC-jr-xEy"/>
@@ -2383,7 +2384,7 @@ Thank you for checking!
 
 Please check back soon.</string>
                                         <fontDescription key="fontDescription" name="OpenSansLight-Italic" family="Open Sans" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2503,7 +2504,7 @@ Please check back soon.</string>
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="vPy-GV-rCK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Settings" id="nzD-E8-iMH">
                                 <cells>
@@ -2520,7 +2521,7 @@ Please check back soon.</string>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj4-Mq-0eZ">
                                                             <rect key="frame" x="0.0" y="11" width="535" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLu-Xq-qgw">
@@ -2574,7 +2575,7 @@ Please check back soon.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNL-3C-ahm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2727" y="9638"/>
+            <point key="canvasLocation" x="-3479" y="8905"/>
         </scene>
     </scenes>
     <resources>
