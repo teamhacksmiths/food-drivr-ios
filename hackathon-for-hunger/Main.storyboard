@@ -15,6 +15,7 @@
             <string>BebasNeue</string>
             <string>BebasNeue</string>
             <string>BebasNeue</string>
+            <string>BebasNeue</string>
         </mutableArray>
         <mutableArray key="ColabThi.otf">
             <string>Colaborate-Thin</string>
@@ -25,8 +26,10 @@
             <string>OpenSans-Italic</string>
             <string>OpenSans-Italic</string>
             <string>OpenSans-Italic</string>
+            <string>OpenSans-Italic</string>
         </mutableArray>
         <mutableArray key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
@@ -36,8 +39,11 @@
             <string>OpenSansLight-Italic</string>
             <string>OpenSansLight-Italic</string>
             <string>OpenSansLight-Italic</string>
+            <string>OpenSansLight-Italic</string>
+            <string>OpenSansLight-Italic</string>
         </mutableArray>
         <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
             <string>OpenSans-Semibold</string>
             <string>OpenSans-Semibold</string>
             <string>OpenSans-Semibold</string>
@@ -257,8 +263,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="exg-ke-MNO" kind="relationship" relationship="viewControllers" id="AUi-5C-uom"/>
                         <segue destination="rSR-Kk-akt" kind="relationship" relationship="viewControllers" id="fwZ-Ky-Ttg"/>
+                        <segue destination="roC-fo-5Ga" kind="relationship" relationship="viewControllers" id="LOV-n0-lD2"/>
                         <segue destination="MXl-Ak-uC9" kind="relationship" relationship="viewControllers" id="URs-wV-kja"/>
                         <segue destination="NjO-CE-dpU" kind="relationship" relationship="viewControllers" id="58e-s7-NmO"/>
                     </connections>
@@ -2128,25 +2134,6 @@ Please check back soon.</string>
             </objects>
             <point key="canvasLocation" x="-2727" y="8896"/>
         </scene>
-        <!--My Donations-->
-        <scene sceneID="XQZ-1o-jhV">
-            <objects>
-                <viewController id="exg-ke-MNO" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KUl-sd-Hk0"/>
-                        <viewControllerLayoutGuide type="bottom" id="tEm-cK-T9x"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="taX-0E-hFU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="My Donations" image="Current" id="SX5-so-xcn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MF4-8L-AyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2727" y="8130"/>
-        </scene>
         <!--More-->
         <scene sceneID="MAP-Ol-wCl">
             <objects>
@@ -2576,6 +2563,158 @@ Please check back soon.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNL-3C-ahm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3479" y="8905"/>
+        </scene>
+        <!--My Donations-->
+        <scene sceneID="sx3-8a-jjc">
+            <objects>
+                <viewController storyboardIdentifier="DonationDashboardViewController" id="roC-fo-5Ga" customClass="DonationDashboardViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iue-Kw-qzj"/>
+                        <viewControllerLayoutGuide type="bottom" id="mV8-8l-7Kz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="Kdg-GV-NNg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPq-Th-Abq">
+                                <rect key="frame" x="40" y="232" width="519" height="319"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDT-IV-12a">
+                                        <rect key="frame" x="225" y="243" width="68" height="68"/>
+                                        <color key="backgroundColor" red="0.054375141449999997" green="0.60229468470000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="TXF-Hx-9yL"/>
+                                            <constraint firstAttribute="height" constant="68" id="XMj-TP-PC1"/>
+                                        </constraints>
+                                        <state key="normal" image="refresh">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6c-9a-eEC">
+                                        <rect key="frame" x="138" y="8" width="242" height="93"/>
+                                        <string key="text">No current donations at this time.
+Thank you for checking!
+
+Please check back soon.</string>
+                                        <fontDescription key="fontDescription" name="OpenSansLight-Italic" family="Open Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GDT-IV-12a" secondAttribute="bottom" constant="8" id="Dcy-Vg-Ntl"/>
+                                    <constraint firstItem="U6c-9a-eEC" firstAttribute="top" secondItem="gPq-Th-Abq" secondAttribute="top" constant="8" id="EwO-Zq-0j6"/>
+                                    <constraint firstItem="GDT-IV-12a" firstAttribute="centerX" secondItem="gPq-Th-Abq" secondAttribute="centerX" id="Mg6-Ln-2c8"/>
+                                    <constraint firstItem="U6c-9a-eEC" firstAttribute="centerX" secondItem="gPq-Th-Abq" secondAttribute="centerX" id="uZJ-Hi-PMR"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Le-bo-gDq">
+                                <rect key="frame" x="40" y="204" width="519" height="339"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="pendingDonation" selectionStyle="default" indentationWidth="10" reuseIdentifier="pendingDonation" rowHeight="70" id="pO9-yD-fti" customClass="PendingDonationsDashboardTableViewCell" customModule="hackathon_for_hunger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="519" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pO9-yD-fti" id="Yve-wt-9bd">
+                                            <rect key="frame" x="0.0" y="0.0" width="519" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c47-pP-Pzi">
+                                                    <rect key="frame" x="18" y="10" width="483" height="50"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tv0-3Z-xLa">
+                                                            <rect key="frame" x="0.0" y="5" width="242" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="X94-UV-S6h">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="242" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
+                                                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No date supplied" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3J-pQ-CNu">
+                                                                    <rect key="frame" x="0.0" y="20" width="242" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSansLight-Italic" family="Open Sans" pointSize="14"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzl-B8-FVt">
+                                                            <rect key="frame" x="242" y="17" width="241" height="17"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
+                                                            <color key="textColor" red="0.55961538460000004" green="0.55961538460000004" blue="0.55961538460000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="c47-pP-Pzi" firstAttribute="leading" secondItem="Yve-wt-9bd" secondAttribute="leadingMargin" constant="10" id="Git-Sr-OhT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="c47-pP-Pzi" secondAttribute="trailing" constant="10" id="ZC0-KC-MQu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="c47-pP-Pzi" secondAttribute="bottom" constant="1" id="leI-hd-qo7"/>
+                                                <constraint firstItem="c47-pP-Pzi" firstAttribute="top" secondItem="Yve-wt-9bd" secondAttribute="topMargin" constant="2" id="uAf-79-oX0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="B0I-Eb-2Vb">
+                                <rect key="frame" x="255" y="40" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="PSF-81-zwL"/>
+                                    <constraint firstAttribute="height" constant="90" id="cxh-ky-B6G"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY DONATIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C85-cG-GQb">
+                                <rect key="frame" x="240" y="146" width="123" height="24"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" red="0.57373798080000005" green="0.57373798080000005" blue="0.57373798080000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrc-nL-uQK">
+                                <rect key="frame" x="-1" y="544" width="600" height="56"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="8jd-vf-JM2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BebasNeue" family="Bebas Neue" pointSize="36"/>
+                                <state key="normal" title="Add Donation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapDonate:" destination="rSR-Kk-akt" eventType="touchUpInside" id="Qvh-US-fxG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qrc-nL-uQK" firstAttribute="bottom" secondItem="Kdg-GV-NNg" secondAttribute="bottomMargin" id="8ld-LG-AaE"/>
+                            <constraint firstItem="B0I-Eb-2Vb" firstAttribute="top" secondItem="Iue-Kw-qzj" secondAttribute="bottom" constant="20" id="BhW-ez-6Xn"/>
+                            <constraint firstItem="1Le-bo-gDq" firstAttribute="top" secondItem="C85-cG-GQb" secondAttribute="bottom" constant="34" id="DzU-lX-NFI"/>
+                            <constraint firstItem="1Le-bo-gDq" firstAttribute="centerX" secondItem="B0I-Eb-2Vb" secondAttribute="centerX" id="JQe-Uy-N3R"/>
+                            <constraint firstItem="B0I-Eb-2Vb" firstAttribute="centerX" secondItem="Kdg-GV-NNg" secondAttribute="centerX" id="PdX-b1-SCZ"/>
+                            <constraint firstItem="1Le-bo-gDq" firstAttribute="bottom" secondItem="mV8-8l-7Kz" secondAttribute="top" constant="-8" id="TcU-ek-iLD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gPq-Th-Abq" secondAttribute="trailing" constant="21" id="W3l-T3-jPr"/>
+                            <constraint firstItem="C85-cG-GQb" firstAttribute="top" secondItem="B0I-Eb-2Vb" secondAttribute="bottom" constant="16" id="fBc-Jm-f5h"/>
+                            <constraint firstItem="1Le-bo-gDq" firstAttribute="leading" secondItem="Kdg-GV-NNg" secondAttribute="leadingMargin" constant="20" id="fT3-rC-IC0"/>
+                            <constraint firstItem="mV8-8l-7Kz" firstAttribute="top" secondItem="gPq-Th-Abq" secondAttribute="bottom" id="glO-dF-d2H"/>
+                            <constraint firstItem="C85-cG-GQb" firstAttribute="centerX" secondItem="Kdg-GV-NNg" secondAttribute="centerX" constant="1" id="nJb-ch-x00"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qrc-nL-uQK" secondAttribute="trailing" constant="-19" id="nWy-Es-yA8"/>
+                            <constraint firstItem="Qrc-nL-uQK" firstAttribute="leading" secondItem="Kdg-GV-NNg" secondAttribute="leadingMargin" constant="-21" id="rhe-M0-I9W"/>
+                            <constraint firstItem="gPq-Th-Abq" firstAttribute="leading" secondItem="Kdg-GV-NNg" secondAttribute="leadingMargin" constant="20" id="t8u-ee-0WA"/>
+                            <constraint firstItem="gPq-Th-Abq" firstAttribute="top" secondItem="C85-cG-GQb" secondAttribute="bottom" constant="62" id="wpt-R0-cSN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Donations" image="Current" id="1Rp-Cu-8vo"/>
+                    <connections>
+                        <outlet property="imageView" destination="B0I-Eb-2Vb" id="ooW-ox-Thy"/>
+                        <outlet property="noDonationsView" destination="gPq-Th-Abq" id="eE9-1a-xJa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hdw-HN-JAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2727" y="8130"/>
         </scene>
     </scenes>
     <resources>

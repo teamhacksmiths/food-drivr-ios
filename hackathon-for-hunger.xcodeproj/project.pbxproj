@@ -10,6 +10,7 @@
 		00132873720C5F13F1ED7952 /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8208818EEBD1B493449DBF9 /* Pods_hackathon_for_hunger.framework */; };
 		3C2C9B4E1CFD87E8009B34C9 /* DonationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */; };
 		3C2C9B501CFD94C6009B34C9 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */; };
+		3C2C9B551CFD9CB4009B34C9 /* DonationDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B541CFD9CB4009B34C9 /* DonationDashboardViewController.swift */; };
 		3C74C3D81CEF948E004FDD27 /* DonationHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74C3D71CEF948E004FDD27 /* DonationHistoryViewController.swift */; };
 		3CA010801CE7877D0050FE2F /* ListTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */; };
 		3CCD09EF1CE8C9F900B8E32C /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */; };
@@ -128,6 +129,7 @@
 		3B7C428FADF6091F43FC62A6 /* Pods_hackathon_for_hungerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hungerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationPresenter.swift; sourceTree = "<group>"; };
 		3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		3C2C9B541CFD9CB4009B34C9 /* DonationDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationDashboardViewController.swift; sourceTree = "<group>"; };
 		3C74C3D71CEF948E004FDD27 /* DonationHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationHistoryViewController.swift; sourceTree = "<group>"; };
 		3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTransformer.swift; sourceTree = "<group>"; };
 		3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
@@ -275,6 +277,30 @@
 			isa = PBXGroup;
 			children = (
 				3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		3C2C9B511CFD9C7E009B34C9 /* DonationDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				3C2C9B531CFD9C95009B34C9 /* Presenter */,
+				3C2C9B521CFD9C8E009B34C9 /* Views */,
+			);
+			name = DonationDashboard;
+			sourceTree = "<group>";
+		};
+		3C2C9B521CFD9C8E009B34C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C2C9B541CFD9CB4009B34C9 /* DonationDashboardViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3C2C9B531CFD9C95009B34C9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -511,6 +537,7 @@
 		446A76C71CDD0FE000951319 /* Donor */ = {
 			isa = PBXGroup;
 			children = (
+				3C2C9B511CFD9C7E009B34C9 /* DonationDashboard */,
 				44424DA31CDDF3BB00B2409F /* AddDonation */,
 				44424D9D1CDDF33700B2409F /* Address */,
 			);
@@ -1073,6 +1100,7 @@
 				EA6C4C201CD1E80300165F02 /* Global.swift in Sources */,
 				44424D8B1CDDE6F400B2409F /* MapOverviewPresenter.swift in Sources */,
 				44424D7D1CDDC07C00B2409F /* CurrentDonationsDashboard.swift in Sources */,
+				3C2C9B551CFD9CB4009B34C9 /* DonationDashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
