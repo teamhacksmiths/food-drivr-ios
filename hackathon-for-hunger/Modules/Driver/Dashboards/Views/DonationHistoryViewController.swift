@@ -53,9 +53,6 @@ class DonationHistoryViewController: UIViewController {
         refreshControl?.endRefreshing()
     }
     
-    @IBAction func toggleMenu(sender: AnyObject) {
-        self.slideMenuController()?.openLeft()
-    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toDriverMapDetailPendingFromDashboard") {
             
