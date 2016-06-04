@@ -19,6 +19,8 @@ class DonationDashboardViewController: UIViewController {
         self.refresh(sender)
     }
     
+    @IBOutlet weak var refreshButton: UIButton!
+    
     var activityIndicator : ActivityIndicatorView!
     private let dashboardPresenter = DonationDashboardPresenter(donationService: DonationService())
     var pendingDonations: Results<Donation>?
@@ -29,14 +31,18 @@ class DonationDashboardViewController: UIViewController {
         noDonationView.hidden = true
         dashboardPresenter.attachView(self)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Syncing")
-
+        self.refreshButton.layer.cornerRadius = 0.5 * self.refreshButton.bounds.width
+        self.refreshButton.layer.shadowColor = UIColor.blackColor().CGColor
+        self.refreshButton.layer.shadowOffset = CGSizeMake(2, 2)
+        self.refreshButton.layer.shadowRadius = 2
+        self.refreshButton.layer.shadowOpacity = 0.5
 
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        dashboardPresenter.fetchRemotely([])
+        dashboardPresenter.fetch([])
     }
     
     func refresh(sender: AnyObject) {
@@ -82,12 +88,11 @@ extension DonationDashboardViewController: DonationDashboardView {
     
     func finishLoading() {
         self.activityIndicator.stopAnimating()
-        self.activityIndicator.title = "Syncing"
     }
     
     func donations(sender: DonationDashboardPresenter, didSucceed donations: Results<Donation>) {
         self.finishLoading()
-        self.pendingDonations = donations
+        self.pendingDonations = donations.sorted("rawStatus")
         if(donations.isEmpty) {
             self.tableView.hidden = true
             self.noDonationView.hidden = false

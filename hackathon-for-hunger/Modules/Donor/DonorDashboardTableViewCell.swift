@@ -29,10 +29,8 @@ class DonorDashboardTableViewCell: UITableViewCell {
                 let dateString = formatter.stringFromDate(delivery)
                 deliveryDate?.text = dateString
             }
-            if let description = information?.donationItems.first?.type_description,
-                quantity = information?.donationItems.first?.quantity,
-                unit = information?.donationItems.first?.unit {
-                amountLabel?.text = "\(quantity) \(unit) \(description)"
+            if let description = information?.donationItems.first?.type_description{
+                amountLabel?.text = description
             } else {
                 amountLabel?.text = "no donation items found"
             }
@@ -44,6 +42,7 @@ class DonorDashboardTableViewCell: UITableViewCell {
                     break
                 case .Accepted:
                     statusLabel?.text = "Accepted"
+                    statusLabel?.textColor = UIColor(red: 31/255, green: 147/255, blue: 7/255, alpha: 1)
                     break
                 case .Suspended:
                     statusLabel?.text = "Suspended"
