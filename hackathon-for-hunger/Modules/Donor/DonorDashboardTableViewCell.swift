@@ -36,7 +36,34 @@ class DonorDashboardTableViewCell: UITableViewCell {
             } else {
                 amountLabel?.text = "no donation items found"
             }
-            statusLabel?.text = "\(information?.status.rawValue)"
+            if let status = information?.status {
+                switch(status) {
+                    
+                case .Pending:
+                    statusLabel?.text = "Pending"
+                    break
+                case .Accepted:
+                    statusLabel?.text = "Accepted"
+                    break
+                case .Suspended:
+                    statusLabel?.text = "Suspended"
+                    break
+                case .Cancelled:
+                    statusLabel?.text = "Cancelled"
+                    break
+                case .PickedUp:
+                    statusLabel?.text = "Picked Up"
+                    break
+                case .DroppedOff:
+                    statusLabel?.text = "Dropped Off"
+                    break
+                case .Any:
+                    statusLabel?.text = "Any"
+                    break
+                }
+
+            }
+            
         }
     }
 }
