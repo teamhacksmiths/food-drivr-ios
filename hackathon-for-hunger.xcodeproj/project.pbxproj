@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00132873720C5F13F1ED7952 /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8208818EEBD1B493449DBF9 /* Pods_hackathon_for_hunger.framework */; };
+		18807763BADCBE8AD8EF2E98 /* Pods_hackathon_for_hungerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC12BCFA54D788D6A891E0DB /* Pods_hackathon_for_hungerTests.framework */; };
+		3C0DB77F1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DB77E1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift */; };
 		3C2C9B4E1CFD87E8009B34C9 /* DonationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */; };
 		3C2C9B501CFD94C6009B34C9 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */; };
 		3C2C9B551CFD9CB4009B34C9 /* DonationDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B541CFD9CB4009B34C9 /* DonationDashboardViewController.swift */; };
+		3C30A7D41D00A4E00021DBDE /* DonationDashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C30A7D31D00A4E00021DBDE /* DonationDashboardPresenter.swift */; };
 		3C74C3D81CEF948E004FDD27 /* DonationHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74C3D71CEF948E004FDD27 /* DonationHistoryViewController.swift */; };
 		3CA010801CE7877D0050FE2F /* ListTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */; };
 		3CCD09EF1CE8C9F900B8E32C /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */; };
@@ -87,7 +89,6 @@
 		44C7C8631CD8DB76002ED3B6 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8591CD8DB76002ED3B6 /* OpenSans-Regular.ttf */; };
 		44C7C8641CD8DB76002ED3B6 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C85A1CD8DB76002ED3B6 /* OpenSans-Semibold.ttf */; };
 		44C7C8651CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C85B1CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf */; };
-		5DB0C8B3772B5A89F6935D89 /* Pods_hackathon_for_hungerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7C428FADF6091F43FC62A6 /* Pods_hackathon_for_hungerTests.framework */; };
 		634E34291CC84E7100DD48BF /* multiple-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34261CC84E7100DD48BF /* multiple-circle.png */; };
 		634E342A1CC84E7100DD48BF /* multiple-circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34271CC84E7100DD48BF /* multiple-circle@2x.png */; };
 		634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34281CC84E7100DD48BF /* multiple-circle@3x.png */; };
@@ -103,6 +104,7 @@
 		63FE866C1CDBB9D8000764B2 /* pickup_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */; };
 		63FE866E1CDBBFC5000764B2 /* dropoff_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */; };
 		63FE86721CDC4243000764B2 /* directions_icon_small.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE86711CDC4243000764B2 /* directions_icon_small.pdf */; };
+		CD5ECAD8EAD748D4B7CF3762 /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D20ABDC30B2132D9F0FA569 /* Pods_hackathon_for_hunger.framework */; };
 		EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */; };
 		EA6C4C201CD1E80300165F02 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1F1CD1E80300165F02 /* Global.swift */; };
 		EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */; };
@@ -126,10 +128,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B7C428FADF6091F43FC62A6 /* Pods_hackathon_for_hungerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hungerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CA48B9359BBE1650CD18628 /* Pods-hackathon-for-hungerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C0DB77E1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationPresenter.swift; sourceTree = "<group>"; };
 		3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		3C2C9B541CFD9CB4009B34C9 /* DonationDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationDashboardViewController.swift; sourceTree = "<group>"; };
+		3C30A7D31D00A4E00021DBDE /* DonationDashboardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationDashboardPresenter.swift; sourceTree = "<group>"; };
 		3C74C3D71CEF948E004FDD27 /* DonationHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationHistoryViewController.swift; sourceTree = "<group>"; };
 		3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTransformer.swift; sourceTree = "<group>"; };
 		3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 		44C7C8591CD8DB76002ED3B6 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		44C7C85A1CD8DB76002ED3B6 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../../OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		44C7C85B1CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "../../OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		4D20ABDC30B2132D9F0FA569 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C9C63247C83AC98D547BC8 /* Pods-hackathon-for-hungerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		634E34261CC84E7100DD48BF /* multiple-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle.png"; sourceTree = "<group>"; };
 		634E34271CC84E7100DD48BF /* multiple-circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@2x.png"; sourceTree = "<group>"; };
 		634E34281CC84E7100DD48BF /* multiple-circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@3x.png"; sourceTree = "<group>"; };
@@ -226,10 +232,9 @@
 		63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pickup_label.pdf; sourceTree = "<group>"; };
 		63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dropoff_label.pdf; sourceTree = "<group>"; };
 		63FE86711CDC4243000764B2 /* directions_icon_small.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon_small.pdf; sourceTree = "<group>"; };
-		96061312765A125F882066CE /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
-		AA5C91FBBFA1701030C76D8F /* Pods-hackathon-for-hungerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.release.xcconfig"; sourceTree = "<group>"; };
-		D29016BABC44973DF34B30A6 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
-		E8208818EEBD1B493449DBF9 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2EFBE2CE7CF9D9DCBE958C3 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
+		CE24290E4997F1C14D9D6C23 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
+		DC12BCFA54D788D6A891E0DB /* Pods_hackathon_for_hungerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hungerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		EA6C4C1F1CD1E80300165F02 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -240,7 +245,6 @@
 		EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalDriverViewController.swift; sourceTree = "<group>"; };
 		EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationTableViewCell.swift; path = ../../../../DonationTableViewCell.swift; sourceTree = "<group>"; };
 		EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorSignupInfo.swift; sourceTree = "<group>"; };
-		F9D3215835BB052E3A44CDD4 /* Pods-hackathon-for-hungerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,7 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00132873720C5F13F1ED7952 /* Pods_hackathon_for_hunger.framework in Frameworks */,
+				CD5ECAD8EAD748D4B7CF3762 /* Pods_hackathon_for_hunger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB0C8B3772B5A89F6935D89 /* Pods_hackathon_for_hungerTests.framework in Frameworks */,
+				18807763BADCBE8AD8EF2E98 /* Pods_hackathon_for_hungerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				639C2E601CB8463900275C3E /* CoreLocation.framework */,
-				E8208818EEBD1B493449DBF9 /* Pods_hackathon_for_hunger.framework */,
-				3B7C428FADF6091F43FC62A6 /* Pods_hackathon_for_hungerTests.framework */,
+				4D20ABDC30B2132D9F0FA569 /* Pods_hackathon_for_hunger.framework */,
+				DC12BCFA54D788D6A891E0DB /* Pods_hackathon_for_hungerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -294,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				3C2C9B541CFD9CB4009B34C9 /* DonationDashboardViewController.swift */,
+				3C0DB77E1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 		3C2C9B531CFD9C95009B34C9 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3C30A7D31D00A4E00021DBDE /* DonationDashboardPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -337,6 +343,17 @@
 				3CCD09F01CE8EC6200B8E32C /* SlideMenuVC.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		40DA8E1EB429DD28B74E9689 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2EFBE2CE7CF9D9DCBE958C3 /* Pods-hackathon-for-hunger.debug.xcconfig */,
+				CE24290E4997F1C14D9D6C23 /* Pods-hackathon-for-hunger.release.xcconfig */,
+				53C9C63247C83AC98D547BC8 /* Pods-hackathon-for-hungerTests.debug.xcconfig */,
+				1CA48B9359BBE1650CD18628 /* Pods-hackathon-for-hungerTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		4404F6BE1CBD1B11001B9293 /* MockData */ = {
@@ -665,7 +682,7 @@
 				44AEA8871CA9CBC100A52731 /* hackathon-for-hungerTests */,
 				44AEA8711CA9CBC100A52731 /* Products */,
 				205C055A7B919DE8749D43CD /* Frameworks */,
-				FE0FA29F241EE4C72096372C /* Pods */,
+				40DA8E1EB429DD28B74E9689 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -790,17 +807,6 @@
 			name = Signup;
 			sourceTree = "<group>";
 		};
-		FE0FA29F241EE4C72096372C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D29016BABC44973DF34B30A6 /* Pods-hackathon-for-hunger.debug.xcconfig */,
-				96061312765A125F882066CE /* Pods-hackathon-for-hunger.release.xcconfig */,
-				F9D3215835BB052E3A44CDD4 /* Pods-hackathon-for-hungerTests.debug.xcconfig */,
-				AA5C91FBBFA1701030C76D8F /* Pods-hackathon-for-hungerTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -808,12 +814,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44AEA88D1CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hunger" */;
 			buildPhases = (
-				CADD6641B788EB741AABFD4B /* 📦 Check Pods Manifest.lock */,
+				6C61F6C3D50DA617731BDB12 /* 📦 Check Pods Manifest.lock */,
 				44AEA86C1CA9CBC100A52731 /* Sources */,
 				44AEA86D1CA9CBC100A52731 /* Frameworks */,
 				44AEA86E1CA9CBC100A52731 /* Resources */,
-				028AE7008A919D5C4171AD6D /* 📦 Embed Pods Frameworks */,
-				0B19CFD31E63BDDAC2F5D416 /* 📦 Copy Pods Resources */,
+				590DEA2D8B1284F782A68931 /* 📦 Embed Pods Frameworks */,
+				0901ED91FB08A38AD52D6155 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -828,12 +834,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44AEA8901CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hungerTests" */;
 			buildPhases = (
-				DFBC5C47D3BA66802AECA143 /* 📦 Check Pods Manifest.lock */,
+				D0FD2CA7B40C550E286A9A29 /* 📦 Check Pods Manifest.lock */,
 				44AEA8801CA9CBC100A52731 /* Sources */,
 				44AEA8811CA9CBC100A52731 /* Frameworks */,
 				44AEA8821CA9CBC100A52731 /* Resources */,
-				E0B922302DBCB87C9CC121B1 /* 📦 Embed Pods Frameworks */,
-				0E84B0E21C8AB516C7383353 /* 📦 Copy Pods Resources */,
+				FA782FCE4368338BF9522114 /* 📦 Embed Pods Frameworks */,
+				21D4F01AA1A06BF225DAA8AB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -936,22 +942,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		028AE7008A919D5C4171AD6D /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0B19CFD31E63BDDAC2F5D416 /* 📦 Copy Pods Resources */ = {
+		0901ED91FB08A38AD52D6155 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -966,7 +957,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0E84B0E21C8AB516C7383353 /* 📦 Copy Pods Resources */ = {
+		21D4F01AA1A06BF225DAA8AB /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -981,7 +972,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CADD6641B788EB741AABFD4B /* 📦 Check Pods Manifest.lock */ = {
+		590DEA2D8B1284F782A68931 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C61F6C3D50DA617731BDB12 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -996,7 +1002,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DFBC5C47D3BA66802AECA143 /* 📦 Check Pods Manifest.lock */ = {
+		D0FD2CA7B40C550E286A9A29 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1011,7 +1017,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E0B922302DBCB87C9CC121B1 /* 📦 Embed Pods Frameworks */ = {
+		FA782FCE4368338BF9522114 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1056,6 +1062,7 @@
 				446A76D91CDD17A700951319 /* LegacyCode.swift in Sources */,
 				44424DA21CDDF39E00B2409F /* DonorAddressViewController.swift in Sources */,
 				44424DAA1CDDF47300B2409F /* ProfileViewController.swift in Sources */,
+				3C0DB77F1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift in Sources */,
 				3CCE63951CF044170089F5C9 /* SettingsViewController.swift in Sources */,
 				44424D891CDDE5D200B2409F /* DonationMapOverviewVC.swift in Sources */,
 				442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */,
@@ -1089,6 +1096,7 @@
 				44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */,
 				44484DE31CAFDA45002D7233 /* Token.swift in Sources */,
 				446A77311CDD265200951319 /* DonationsContainerViewController.swift in Sources */,
+				3C30A7D41D00A4E00021DBDE /* DonationDashboardPresenter.swift in Sources */,
 				44424D8E1CDDEBBD00B2409F /* LocationManager.swift in Sources */,
 				446A76D61CDD129400951319 /* LoginPresenter.swift in Sources */,
 				44484DDE1CAFD857002D7233 /* User.swift in Sources */,
@@ -1221,7 +1229,7 @@
 		};
 		44AEA88E1CA9CBC100A52731 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D29016BABC44973DF34B30A6 /* Pods-hackathon-for-hunger.debug.xcconfig */;
+			baseConfigurationReference = A2EFBE2CE7CF9D9DCBE958C3 /* Pods-hackathon-for-hunger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1238,7 +1246,7 @@
 		};
 		44AEA88F1CA9CBC100A52731 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96061312765A125F882066CE /* Pods-hackathon-for-hunger.release.xcconfig */;
+			baseConfigurationReference = CE24290E4997F1C14D9D6C23 /* Pods-hackathon-for-hunger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1255,7 +1263,7 @@
 		};
 		44AEA8911CA9CBC100A52731 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9D3215835BB052E3A44CDD4 /* Pods-hackathon-for-hungerTests.debug.xcconfig */;
+			baseConfigurationReference = 53C9C63247C83AC98D547BC8 /* Pods-hackathon-for-hungerTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "hackathon-for-hungerTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -1267,7 +1275,7 @@
 		};
 		44AEA8921CA9CBC100A52731 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA5C91FBBFA1701030C76D8F /* Pods-hackathon-for-hungerTests.release.xcconfig */;
+			baseConfigurationReference = 1CA48B9359BBE1650CD18628 /* Pods-hackathon-for-hungerTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "hackathon-for-hungerTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;

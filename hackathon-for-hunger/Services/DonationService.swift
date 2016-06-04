@@ -22,10 +22,19 @@ class DonationService {
     
     typealias JsonDict = [String: AnyObject]
     
-    func getDonations(completed: Bool = false, status: Int = 0) -> Promise<[Donation]?> {
+    func getDonations(userRole: UserRole = .Driver, completed: Bool = false, status: Int = 0) -> Promise<[Donation]?> {
         return Promise { fulfill, reject in
-            let router = DonationRouter(endpoint: .GetDonations(completed: completed, status: status) )
             
+            var router: DonationRouter
+            
+            switch(userRole) {
+            case .Donor:
+                router = DonationRouter(endpoint: .GetDonations(role: "donor", completed: completed, status: status) )
+                break
+            case .Driver:
+                router = DonationRouter(endpoint: .GetDonations(role: "driver", completed: completed, status: status) )
+            }
+                    print(router.URLRequest)
             manager.request(router)
                 .validate()
                 .responseJSON {
@@ -75,6 +84,24 @@ class DonationService {
     func getDriverDonations() -> Promise<Results<Donation>> {
         return Promise { fulfill, reject in
             self.getDonations().then() {
+                donationsJson in
+                self.updateRealmLayer(donationsJson).then() {
+                    realmObjects -> Void in
+                    print(realmObjects)
+                    fulfill(realmObjects)
+                }
+                }.error {
+                    error in
+                    reject(error)
+            }
+            
+        }
+        
+    }
+    
+    func getDonorDonations() -> Promise<Results<Donation>> {
+        return Promise { fulfill, reject in
+            self.getDonations(.Donor).then() {
                 donationsJson in
                 self.updateRealmLayer(donationsJson).then() {
                     realmObjects -> Void in

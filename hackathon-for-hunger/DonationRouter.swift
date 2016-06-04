@@ -11,7 +11,7 @@ import Foundation
 import Alamofire
 
 enum DonationEndpoint {
-    case GetDonations(completed: Bool , status: Int)
+    case GetDonations(role: String, completed: Bool , status: Int)
     case GetDonation(id: String)
     case CreateDonation(items: [String])
     case UpdateDonation(donation: Donation)
@@ -39,7 +39,7 @@ class DonationRouter : BaseRouter {
     
     override var path: String {
         switch endpoint {
-        case .GetDonations: return "driver/donations/all"
+        case .GetDonations(let role, _, _): return "\(role)/donations/all"
         case .GetDonation(let id): return "driver/donations/\(id)"
         case .CreateDonation: return "donor/donations"
         case .UpdateDonation(let donation): return "driver/donations/\(donation.id)"
@@ -50,7 +50,7 @@ class DonationRouter : BaseRouter {
     
     override var parameters: APIParams {
         switch endpoint {
-        case .GetDonations(let completed, let status):
+        case .GetDonations( _,let completed, let status):
             var response = [String: AnyObject]()
             response["completed"] = completed
             response["status"] = status
