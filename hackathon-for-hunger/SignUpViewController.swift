@@ -43,9 +43,14 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    func didTapImageView(sender: AnyObject) {
-        print("Tapped \(sender.tag)")
-        let button = SignupButtons(rawValue: sender.tag)
+    /** Fired when the image view is tapped.
+     *
+     *  @param sender - The Tap Gesture Recognizer that sent the message.
+     *  @return None
+     */
+    func didTapImageView(sender: UITapGestureRecognizer) {
+        let imageView = sender.view!
+        let button = SignupButtons(rawValue: imageView.tag)
         switch button! {
         case .Donor:
             performSegueWithIdentifier("ShowDonorSignup", sender: self)
