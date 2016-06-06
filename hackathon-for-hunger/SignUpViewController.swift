@@ -36,7 +36,7 @@ class SignUpViewController: UIViewController {
      */
     func addImageViewGestureRecognizer(imageViews: [UIImageView]) {
         for imageView in imageViews {
-            let gestureRecognizer = UITapGestureRecognizer(target: imageView, action: #selector(SignUpViewController.didTapImageView(_:)))
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.didTapImageView(_:)))
             gestureRecognizer.numberOfTapsRequired = 1
             imageView.userInteractionEnabled = true
             imageView.addGestureRecognizer(gestureRecognizer)
