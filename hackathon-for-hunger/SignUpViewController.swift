@@ -36,12 +36,15 @@ class SignUpViewController: UIViewController {
      */
     func addImageViewGestureRecognizer(imageViews: [UIImageView]) {
         for imageView in imageViews {
-            let gestureRecognizer = UIGestureRecognizer(target: imageView, action: "didTapImageView:")
+            let gestureRecognizer = UITapGestureRecognizer(target: imageView, action: #selector(SignUpViewController.didTapImageView(_:)))
+            gestureRecognizer.numberOfTapsRequired = 1
+            imageView.userInteractionEnabled = true
             imageView.addGestureRecognizer(gestureRecognizer)
         }
     }
     
     func didTapImageView(sender: AnyObject) {
+        print("Tapped \(sender.tag)")
         let button = SignupButtons(rawValue: sender.tag)
         switch button! {
         case .Donor:
