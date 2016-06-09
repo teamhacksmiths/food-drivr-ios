@@ -12,6 +12,15 @@ protocol DonorAddressViewControllerDelegate {
     func addAddress(address:String)
 }
 
+extension UINavigationController {
+    public override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        if let rootViewController = self.viewControllers.first {
+            return rootViewController.preferredStatusBarStyle()
+        }
+        return self.preferredStatusBarStyle()
+    }
+}
+
 class DonorAddressViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -25,6 +34,15 @@ class DonorAddressViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        navigationController?.navigationBar.barTintColor = UIColor(red: 247/255.0, green: 179/255.0, blue: 43/255.0, alpha: 1)
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        self.parentViewController?.preferredStatusBarStyle()
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     // MARK: Actions 

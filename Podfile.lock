@@ -40,7 +40,7 @@ PODS:
   - Realm/Headers (1.0.0)
   - RealmSwift (1.0.0):
     - Realm (= 1.0.0)
-  - SlideMenuControllerSwift (2.2.0)
+  - SlideMenuControllerSwift (2.1.1)
   - SwiftyJSON (2.3.2)
   - TwitterCore (2.1.1):
     - Fabric
@@ -77,7 +77,7 @@ SPEC CHECKSUMS:
   PromiseKit: 1db024241265f428137a9f3c00ff9590740c4be6
   Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
   RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
-  SlideMenuControllerSwift: 16dac00b1aaad153e64fffb5d6969ab31ad88372
+  SlideMenuControllerSwift: 82ada9b04e03538c84d034cf1c09e5849c0113f7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TwitterCore: abc46da2bc4b76e2c68a74cd8671a071a8e3abbf
   TwitterKit: 38232c31f622db1f26a5952436eaa88d10763fd0
