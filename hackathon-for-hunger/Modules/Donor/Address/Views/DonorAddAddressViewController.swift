@@ -43,10 +43,6 @@ class DonorAddAddressViewController: UIViewController {
         tabBarController?.tabBar.hidden = false
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
-    
     // MARK: Helper methods 
     
     func setupTextFields() {

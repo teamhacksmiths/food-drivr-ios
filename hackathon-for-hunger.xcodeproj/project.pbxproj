@@ -104,6 +104,7 @@
 		63FE866C1CDBB9D8000764B2 /* pickup_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */; };
 		63FE866E1CDBBFC5000764B2 /* dropoff_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */; };
 		63FE86721CDC4243000764B2 /* directions_icon_small.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE86711CDC4243000764B2 /* directions_icon_small.pdf */; };
+		701BE9D41D09C3E7004A1648 /* DonorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701BE9D31D09C3E7004A1648 /* DonorAddressCell.swift */; };
 		7091352E1D073B0600583D00 /* DonorAddAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7091352D1D073B0600583D00 /* DonorAddAddressPresenter.swift */; };
 		CD5ECAD8EAD748D4B7CF3762 /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D20ABDC30B2132D9F0FA569 /* Pods_hackathon_for_hunger.framework */; };
 		EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */; };
@@ -233,6 +234,7 @@
 		63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pickup_label.pdf; sourceTree = "<group>"; };
 		63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dropoff_label.pdf; sourceTree = "<group>"; };
 		63FE86711CDC4243000764B2 /* directions_icon_small.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon_small.pdf; sourceTree = "<group>"; };
+		701BE9D31D09C3E7004A1648 /* DonorAddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddressCell.swift; sourceTree = "<group>"; };
 		7091352D1D073B0600583D00 /* DonorAddAddressPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddAddressPresenter.swift; sourceTree = "<group>"; };
 		A2EFBE2CE7CF9D9DCBE958C3 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
 		CE24290E4997F1C14D9D6C23 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 			children = (
 				44424D9F1CDDF39E00B2409F /* DonorAddAddressViewController.swift */,
 				44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */,
+				701BE9D31D09C3E7004A1648 /* DonorAddressCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1059,6 +1062,7 @@
 				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
 				44424DA61CDDF3EB00B2409F /* DonorDonationViewController.swift in Sources */,
 				44424D921CDDEBF400B2409F /* DonorInfo.swift in Sources */,
+				701BE9D41D09C3E7004A1648 /* DonorAddressCell.swift in Sources */,
 				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
 				3CA010801CE7877D0050FE2F /* ListTransformer.swift in Sources */,
 				44424D851CDDDB7300B2409F /* DriverMapDetailPendingVC.swift in Sources */,

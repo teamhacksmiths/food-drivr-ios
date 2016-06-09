@@ -839,39 +839,56 @@ Please check back soon.</string>
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DonorAddressCell" rowHeight="75" id="QM9-eA-dKW">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="75"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DonorAddressCell" rowHeight="70" id="QM9-eA-dKW" customClass="DonorAddressCell" customModule="hackathon_for_hunger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="560" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QM9-eA-dKW" id="8tt-Ma-SJG">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DJa-JD-CHh">
-                                                    <rect key="frame" x="8" y="8" width="544" height="59"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZbO-Z7-IKD">
+                                                    <rect key="frame" x="515" y="17.5" width="35" height="35"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbF-2o-apz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="436.5" height="59"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                                            <color key="textColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_mark" translatesAutoresizingMaskIntoConstraints="NO" id="6lS-vv-VLM">
-                                                            <rect key="frame" x="456.5" y="0.0" width="87.5" height="59"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                         </imageView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="qbF-2o-apz" firstAttribute="width" secondItem="6lS-vv-VLM" secondAttribute="width" multiplier="5" id="vAQ-Es-7L7"/>
+                                                        <constraint firstAttribute="height" constant="35" id="2Ba-kW-bNo"/>
+                                                        <constraint firstAttribute="width" constant="35" id="uXX-7K-zdL"/>
                                                     </constraints>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qbF-2o-apz">
+                                                    <rect key="frame" x="16" y="16" width="491" height="37.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                    <color key="textColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="DJa-JD-CHh" secondAttribute="trailing" constant="8" id="9fJ-RH-7GH"/>
-                                                <constraint firstAttribute="bottom" secondItem="DJa-JD-CHh" secondAttribute="bottom" constant="8" id="Fx5-Ta-o3s"/>
-                                                <constraint firstItem="DJa-JD-CHh" firstAttribute="top" secondItem="8tt-Ma-SJG" secondAttribute="top" constant="8" id="f7b-em-jbc"/>
-                                                <constraint firstItem="DJa-JD-CHh" firstAttribute="leading" secondItem="8tt-Ma-SJG" secondAttribute="leading" constant="8" id="iQg-00-pXf"/>
+                                                <constraint firstItem="qbF-2o-apz" firstAttribute="leading" secondItem="8tt-Ma-SJG" secondAttribute="leadingMargin" constant="8" id="0rg-fm-9zk"/>
+                                                <constraint firstItem="ZbO-Z7-IKD" firstAttribute="leading" secondItem="qbF-2o-apz" secondAttribute="trailing" constant="8" id="KY9-ap-Tco"/>
+                                                <constraint firstItem="ZbO-Z7-IKD" firstAttribute="centerY" secondItem="8tt-Ma-SJG" secondAttribute="centerY" id="Prc-Ta-3eW"/>
+                                                <constraint firstItem="ZbO-Z7-IKD" firstAttribute="width" secondItem="8tt-Ma-SJG" secondAttribute="width" multiplier="0.15" id="UUV-KH-yrO"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZbO-Z7-IKD" secondAttribute="bottom" constant="8" id="fAy-SU-9ya"/>
+                                                <constraint firstItem="ZbO-Z7-IKD" firstAttribute="top" secondItem="8tt-Ma-SJG" secondAttribute="top" constant="8" id="nzF-eW-iie"/>
+                                                <constraint firstItem="qbF-2o-apz" firstAttribute="top" secondItem="8tt-Ma-SJG" secondAttribute="topMargin" constant="8" id="q3s-sN-KZN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qbF-2o-apz" secondAttribute="bottom" constant="8" id="ycL-wh-1D7"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZbO-Z7-IKD" secondAttribute="trailing" constant="10" id="zXQ-NU-gll"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="UUV-KH-yrO"/>
+                                                    <exclude reference="fAy-SU-9ya"/>
+                                                    <exclude reference="nzF-eW-iie"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="qbF-2o-apz" id="7F8-ya-PUt"/>
+                                            <outlet property="checkmarkImage" destination="6lS-vv-VLM" id="aOp-tI-GTo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
