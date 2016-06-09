@@ -847,7 +847,7 @@ Please check back soon.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZbO-Z7-IKD">
-                                                    <rect key="frame" x="515" y="17.5" width="35" height="35"/>
+                                                    <rect key="frame" x="515" y="18" width="35" height="35"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_mark" translatesAutoresizingMaskIntoConstraints="NO" id="6lS-vv-VLM">
                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
@@ -859,7 +859,7 @@ Please check back soon.</string>
                                                     </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qbF-2o-apz">
-                                                    <rect key="frame" x="16" y="16" width="491" height="37.5"/>
+                                                    <rect key="frame" x="16" y="16" width="491" height="38"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                                     <color key="textColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>

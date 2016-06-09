@@ -85,20 +85,6 @@ extension DonorAddressViewController: UITableViewDataSource{
         return cell
     }
     
-    // MARK: Data Source Helper 
-    
-    func configureCell(cell: UITableViewCell, indexPath: NSIndexPath){
-        cell.textLabel?.text = addresses[indexPath.row]
-        cell.accessoryType = .None
-        if defaultAddressIndex == indexPath{
-            cell.accessoryType = .Checkmark
-        }
-        if addresses.count == 1 {
-            cell.accessoryType = .Checkmark
-            defaultAddressIndex = indexPath
-        }
-    }
-    
 }
 
 extension DonorAddressViewController: UITableViewDelegate{
