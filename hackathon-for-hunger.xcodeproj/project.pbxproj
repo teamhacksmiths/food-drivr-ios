@@ -1,3904 +1,1321 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0901ED91FB08A38AD52D6155</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>18807763BADCBE8AD8EF2E98</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DC12BCFA54D788D6A891E0DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1CA48B9359BBE1650CD18628</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-hackathon-for-hungerTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20270153E4129332469B12B5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>205C055A7B919DE8749D43CD</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>639C2E601CB8463900275C3E</string>
-				<string>4D20ABDC30B2132D9F0FA569</string>
-				<string>DC12BCFA54D788D6A891E0DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>21D4F01AA1A06BF225DAA8AB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3C0DB77E1D00AAC8008EB195</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonorDashboardTableViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C0DB77F1D00AAC8008EB195</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C0DB77E1D00AAC8008EB195</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3C2C9B4C1CFD87CD009B34C9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3C2C9B4D1CFD87E8009B34C9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Presenter</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C2C9B4D1CFD87E8009B34C9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationPresenter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C2C9B4E1CFD87E8009B34C9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C2C9B4D1CFD87E8009B34C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3C2C9B4F1CFD94C6009B34C9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SweetAlert.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C2C9B501CFD94C6009B34C9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C2C9B4F1CFD94C6009B34C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3C2C9B511CFD9C7E009B34C9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3C2C9B531CFD9C95009B34C9</string>
-				<string>3C2C9B521CFD9C8E009B34C9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>DonationDashboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C2C9B521CFD9C8E009B34C9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3C2C9B541CFD9CB4009B34C9</string>
-				<string>3C0DB77E1D00AAC8008EB195</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C2C9B531CFD9C95009B34C9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3C30A7D31D00A4E00021DBDE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Presenter</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C2C9B541CFD9CB4009B34C9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationDashboardViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C2C9B551CFD9CB4009B34C9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C2C9B541CFD9CB4009B34C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3C30A7D31D00A4E00021DBDE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationDashboardPresenter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C30A7D41D00A4E00021DBDE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C30A7D31D00A4E00021DBDE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3C74C3D71CEF948E004FDD27</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationHistoryViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C74C3D81CEF948E004FDD27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C74C3D71CEF948E004FDD27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3CA0107E1CE787630050FE2F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3CA0107F1CE7877D0050FE2F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Transformer</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CA0107F1CE7877D0050FE2F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ListTransformer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CA010801CE7877D0050FE2F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3CA0107F1CE7877D0050FE2F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3CCD09EB1CE8C9BE00B8E32C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3CCD09ED1CE8C9E000B8E32C</string>
-				<string>3CCD09EC1CE8C9D800B8E32C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Menu</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CCD09EC1CE8C9D800B8E32C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3CCD09EE1CE8C9F900B8E32C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Presenter</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CCD09ED1CE8C9E000B8E32C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44AA631E1CB3F7AD005E02CC</string>
-				<string>3CCD09F01CE8EC6200B8E32C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CCD09EE1CE8C9F900B8E32C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MenuPresenter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CCD09EF1CE8C9F900B8E32C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3CCD09EE1CE8C9F900B8E32C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3CCD09F01CE8EC6200B8E32C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SlideMenuVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CCD09F11CE8EC6200B8E32C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3CCD09F01CE8EC6200B8E32C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3CCE63941CF044170089F5C9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SettingsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CCE63951CF044170089F5C9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3CCE63941CF044170089F5C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3CD790531CE7250E00569587</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>ApiKeys.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CD790541CE7250E00569587</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3CD790531CE7250E00569587</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3CFDE8151CAD4D8A00D6172B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>path</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CFDE8171CAD4D8A00D6172B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3CFDE8151CAD4D8A00D6172B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>40DA8E1EB429DD28B74E9689</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A2EFBE2CE7CF9D9DCBE958C3</string>
-				<string>CE24290E4997F1C14D9D6C23</string>
-				<string>53C9C63247C83AC98D547BC8</string>
-				<string>1CA48B9359BBE1650CD18628</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4404F6BE1CBD1B11001B9293</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4404F6BF1CBD1B2C001B9293</string>
-				<string>44C0CF551CBD6B9100EA3390</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>MockData</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4404F6BF1CBD1B2C001B9293</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>UserDriverMock.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4404F6C01CBD1B2C001B9293</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4404F6BF1CBD1B2C001B9293</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>442FE9721CC15C3B0002187D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>442FE9751CC15CAD0002187D</string>
-				<string>442FE9771CC284230002187D</string>
-				<string>63D351D21CE78ABE005EAD72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>DTO</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>442FE9751CC15CAD0002187D</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UserRegistration.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>442FE9761CC15CAD0002187D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>442FE9751CC15CAD0002187D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>442FE9771CC284230002187D</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UserLogin.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>442FE9781CC284230002187D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>442FE9771CC284230002187D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>443D1DA81CB6D56100E2E7B9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>63CAF7F61CC29BD4000D89A1</string>
-				<string>443D1DA91CB6D57400E2E7B9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Assets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>443D1DA91CB6D57400E2E7B9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44C7C8521CD8DB76002ED3B6</string>
-				<string>44C7C8531CD8DB76002ED3B6</string>
-				<string>44C7C8541CD8DB76002ED3B6</string>
-				<string>44C7C8551CD8DB76002ED3B6</string>
-				<string>44C7C8561CD8DB76002ED3B6</string>
-				<string>44C7C8571CD8DB76002ED3B6</string>
-				<string>44C7C8581CD8DB76002ED3B6</string>
-				<string>44C7C8591CD8DB76002ED3B6</string>
-				<string>44C7C85A1CD8DB76002ED3B6</string>
-				<string>44C7C85B1CD8DB76002ED3B6</string>
-				<string>443D1DAA1CB6D57400E2E7B9</string>
-				<string>443D1DAB1CB6D57500E2E7B9</string>
-				<string>443D1DAC1CB6D57500E2E7B9</string>
-				<string>443D1DAD1CB6D57500E2E7B9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Fonts</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>443D1DAA1CB6D57400E2E7B9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>path</key>
-			<string>BEBAS___.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>443D1DAB1CB6D57500E2E7B9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>path</key>
-			<string>BebasNeue.otf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>443D1DAC1CB6D57500E2E7B9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>path</key>
-			<string>ColabThi.otf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>443D1DAD1CB6D57500E2E7B9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>path</key>
-			<string>Deming EP.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>443D1DAE1CB6D57500E2E7B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>443D1DAA1CB6D57400E2E7B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>443D1DAF1CB6D57500E2E7B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>443D1DAB1CB6D57500E2E7B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>443D1DB01CB6D57500E2E7B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>443D1DAC1CB6D57500E2E7B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>443D1DB11CB6D57500E2E7B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>443D1DAD1CB6D57500E2E7B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D7C1CDDC07C00B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CurrentDonationsDashboard.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D7D1CDDC07C00B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D7C1CDDC07C00B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D7E1CDDDA4B00B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424D8C1CDDEBA300B2409F</string>
-				<string>44424D801CDDDA9500B2409F</string>
-				<string>44424D7F1CDDDA7B00B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Maps</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D7F1CDDDA7B00B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424D861CDDDFBB00B2409F</string>
-				<string>44424D8A1CDDE6F400B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Presenter</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D801CDDDA9500B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424D971CDDEC6A00B2409F</string>
-				<string>44424D881CDDE5D200B2409F</string>
-				<string>44424D841CDDDB7300B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D821CDDDB4A00B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xml</string>
-			<key>name</key>
-			<string>Portland-BridgePortBrewPub.gpx</string>
-			<key>path</key>
-			<string>Modules/Driver/Maps/Models/Portland-BridgePortBrewPub.gpx</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D831CDDDB4A00B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D821CDDDB4A00B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D841CDDDB7300B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DriverMapDetailPendingVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D851CDDDB7300B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D841CDDDB7300B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D861CDDDFBB00B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MapViewPresenter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D871CDDDFBB00B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D861CDDDFBB00B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D881CDDE5D200B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationMapOverviewVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D891CDDE5D200B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D881CDDE5D200B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D8A1CDDE6F400B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MapOverviewPresenter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D8B1CDDE6F400B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D8A1CDDE6F400B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D8C1CDDEBA300B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424D8D1CDDEBBD00B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Service</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D8D1CDDEBBD00B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LocationManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D8E1CDDEBBD00B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D8D1CDDEBBD00B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D8F1CDDEBF400B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>DonationPin.swift</string>
-			<key>path</key>
-			<string>Modules/Driver/Maps/Models/DonationPin.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D901CDDEBF400B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>DonorInfo.swift</string>
-			<key>path</key>
-			<string>Modules/Driver/Maps/Models/DonorInfo.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D911CDDEBF400B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D8F1CDDEBF400B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D921CDDEBF400B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D901CDDEBF400B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D931CDDEC2400B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>MapsDummyData.swift</string>
-			<key>path</key>
-			<string>Modules/Driver/Maps/Models/MapsDummyData.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D941CDDEC2400B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>MapsModel.swift</string>
-			<key>path</key>
-			<string>Modules/Driver/Maps/Models/MapsModel.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D951CDDEC2400B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D931CDDEC2400B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D961CDDEC2400B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D941CDDEC2400B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D971CDDEC6A00B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DriverMapPickupVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D991CDDEC6A00B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D971CDDEC6A00B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D9B1CDDF00100B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AuthService.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D9C1CDDF00100B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D9B1CDDF00100B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424D9D1CDDF33700B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424D9E1CDDF38600B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Address</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D9E1CDDF38600B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424D9F1CDDF39E00B2409F</string>
-				<string>44424DA01CDDF39E00B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424D9F1CDDF39E00B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonorAddAddressViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DA01CDDF39E00B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonorAddressViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DA11CDDF39E00B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424D9F1CDDF39E00B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424DA21CDDF39E00B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424DA01CDDF39E00B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424DA31CDDF3BB00B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3C2C9B4C1CFD87CD009B34C9</string>
-				<string>44424DA41CDDF3C500B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>AddDonation</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DA41CDDF3C500B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424DA51CDDF3EB00B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DA51CDDF3EB00B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonorDonationViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DA61CDDF3EB00B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424DA51CDDF3EB00B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424DA71CDDF44600B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424DA81CDDF44F00B2409F</string>
-				<string>63D351D61CE7949F005EAD72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>User</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DA81CDDF44F00B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424DA91CDDF47300B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DA91CDDF47300B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ProfileViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DAA1CDDF47300B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424DA91CDDF47300B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424DAC1CDE34E700B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424DAD1CDE34E700B2409F</string>
-				<string>44424DAE1CDE34E700B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>SignUp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DAD1CDE34E700B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424DB11CDE370600B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Presenter</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DAE1CDE34E700B2409F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424DAF1CDE359C00B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DAF1CDE359C00B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DriverSignupViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DB01CDE359C00B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424DAF1CDE359C00B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44424DB11CDE370600B2409F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DriverSignupPresenter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44424DB21CDE370600B2409F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44424DB11CDE370600B2409F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44484DDD1CAFD857002D7233</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>User.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44484DDE1CAFD857002D7233</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44484DDD1CAFD857002D7233</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44484DE21CAFDA45002D7233</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Token.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44484DE31CAFDA45002D7233</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44484DE21CAFDA45002D7233</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44484DE41CAFDED3002D7233</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>HTTPStatusCodes.swift</string>
-			<key>path</key>
-			<string>../HTTPStatusCodes.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44484DE51CAFDED3002D7233</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44484DE41CAFDED3002D7233</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44484DE61CAFFECA002D7233</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UserRouter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44484DE71CAFFECA002D7233</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44484DE61CAFFECA002D7233</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44573E5A1CAE740C00A5F1C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>ApiKeysDist.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44573E5B1CAE740C00A5F1C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44573E5A1CAE740C00A5F1C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44573E5E1CAEF20D00A5F1C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Location.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44573E5F1CAEF20D00A5F1C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44573E5E1CAEF20D00A5F1C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44573E601CAEF35F00A5F1C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationType.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44573E611CAEF35F00A5F1C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44573E601CAEF35F00A5F1C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44573E621CAEF37400A5F1C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MetaData.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44573E631CAEF37400A5F1C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44573E621CAEF37400A5F1C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44573E641CAEF68500A5F1C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Participant.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44573E651CAEF68500A5F1C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44573E641CAEF68500A5F1C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44638F041CC3EDBA005379FE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44C702681CDA86E000E4A2EA</string>
-				<string>44638F051CC3EDD0005379FE</string>
-				<string>EA6C4C1C1CD1E66600165F02</string>
-				<string>3C2C9B4F1CFD94C6009B34C9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Extensions</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44638F051CC3EDD0005379FE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UIViewExtensions.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44638F061CC3EDD0005379FE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44638F051CC3EDD0005379FE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4464177E1CB182AC00F37F17</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Recipient.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4464177F1CB182AC00F37F17</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4464177E1CB182AC00F37F17</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446417801CB1872500F37F17</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Image.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446417811CB1872500F37F17</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446417801CB1872500F37F17</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A76C51CDD0FA800951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3CCD09EB1CE8C9BE00B8E32C</string>
-				<string>44424DA71CDDF44600B2409F</string>
-				<string>446A76C81CDD0FF800951319</string>
-				<string>446A76C71CDD0FE000951319</string>
-				<string>446A76C61CDD0FCC00951319</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Modules</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76C61CDD0FCC00951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44424DAC1CDE34E700B2409F</string>
-				<string>44424D7E1CDDDA4B00B2409F</string>
-				<string>446A76DC1CDD209100951319</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Driver</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76C71CDD0FE000951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3C2C9B511CFD9C7E009B34C9</string>
-				<string>44424DA31CDDF3BB00B2409F</string>
-				<string>44424D9D1CDDF33700B2409F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Donor</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76C81CDD0FF800951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>446A76D21CDD124D00951319</string>
-				<string>446A76D01CDD123800951319</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Login</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76CD1CDD114400951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44A725091CAC442E00D676C3</string>
-				<string>44484DE41CAFDED3002D7233</string>
-				<string>44424D9B1CDDF00100B2409F</string>
-				<string>446A76CE1CDD116000951319</string>
-				<string>446A77381CDD29C400951319</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Services</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76CE1CDD116000951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UserService.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76CF1CDD116000951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A76CE1CDD116000951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A76D01CDD123800951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>446A76D51CDD129400951319</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Presenter</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76D21CDD124D00951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>446A76D31CDD126A00951319</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>View</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76D31CDD126A00951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LoginViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76D41CDD126A00951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A76D31CDD126A00951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A76D51CDD129400951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LoginPresenter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76D61CDD129400951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A76D51CDD129400951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A76D71CDD179A00951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>446A76DA1CDD1B9800951319</string>
-				<string>446A76D81CDD17A700951319</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Legacy</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76D81CDD17A700951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LegacyCode.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76D91CDD17A700951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A76D81CDD17A700951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A76DA1CDD1B9800951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LoginProvider.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76DB1CDD1B9800951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A76DA1CDD1B9800951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A76DC1CDD209100951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>446A772F1CDD255700951319</string>
-				<string>446A76DD1CDD20B200951319</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Dashboards</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A76DD1CDD20B200951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EAD2DDEF1CD330EF007454FB</string>
-				<string>44424D7C1CDDC07C00B2409F</string>
-				<string>446A77341CDD28B100951319</string>
-				<string>446A77321CDD289600951319</string>
-				<string>446A77301CDD265200951319</string>
-				<string>3C74C3D71CEF948E004FDD27</string>
-				<string>3CCE63941CF044170089F5C9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A772F1CDD255700951319</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>446A77361CDD291C00951319</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Presenter</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A77301CDD265200951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationsContainerViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A77311CDD265200951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A77301CDD265200951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A77321CDD289600951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PendingDonationsDashboard.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A77331CDD289600951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A77321CDD289600951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A77341CDD28B100951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PendingDonationsDashboardTableViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A77351CDD28B100951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A77341CDD28B100951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A77361CDD291C00951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DashboardPresenter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A77371CDD291C00951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A77361CDD291C00951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>446A77381CDD29C400951319</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationService.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446A77391CDD29C400951319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>446A77381CDD29C400951319</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44A725091CAC442E00D676C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44A7250A1CAC444100D676C3</string>
-				<string>44A7250C1CAC4E3C00D676C3</string>
-				<string>44484DE61CAFFECA002D7233</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Routing</string>
-			<key>path</key>
-			<string>..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44A7250A1CAC444100D676C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>BaseRouter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44A7250B1CAC444100D676C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44A7250A1CAC444100D676C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44A7250C1CAC4E3C00D676C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationRouter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44A7250D1CAC4E3C00D676C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44A7250C1CAC4E3C00D676C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44A7250E1CAC4F2600D676C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3CA0107E1CE787630050FE2F</string>
-				<string>44424D931CDDEC2400B2409F</string>
-				<string>44424D941CDDEC2400B2409F</string>
-				<string>44424D8F1CDDEBF400B2409F</string>
-				<string>44424D901CDDEBF400B2409F</string>
-				<string>44424D821CDDDB4A00B2409F</string>
-				<string>EAFEDF981CC2E24700C30693</string>
-				<string>442FE9721CC15C3B0002187D</string>
-				<string>4404F6BE1CBD1B11001B9293</string>
-				<string>44A7250F1CAC559500D676C3</string>
-				<string>44573E601CAEF35F00A5F1C3</string>
-				<string>44573E5E1CAEF20D00A5F1C3</string>
-				<string>44573E621CAEF37400A5F1C3</string>
-				<string>44573E641CAEF68500A5F1C3</string>
-				<string>44484DDD1CAFD857002D7233</string>
-				<string>44484DE21CAFDA45002D7233</string>
-				<string>4464177E1CB182AC00F37F17</string>
-				<string>446417801CB1872500F37F17</string>
-				<string>44C0CF511CBD670600EA3390</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Models</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44A7250F1CAC559500D676C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Donation.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44A725101CAC559500D676C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44A7250F1CAC559500D676C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44AA631E1CB3F7AD005E02CC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>MenuTableViewController.swift</string>
-			<key>path</key>
-			<string>../MenuTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AA631F1CB3F7AD005E02CC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44AA631E1CB3F7AD005E02CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44AEA8671CA9CBC100A52731</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44AEA8721CA9CBC100A52731</string>
-				<string>44AEA8871CA9CBC100A52731</string>
-				<string>44AEA8711CA9CBC100A52731</string>
-				<string>205C055A7B919DE8749D43CD</string>
-				<string>40DA8E1EB429DD28B74E9689</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA8681CA9CBC100A52731</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Hacksmiths</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>44AEA86F1CA9CBC100A52731</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>DevelopmentTeam</key>
-						<string>J9WHKA9AQZ</string>
-					</dict>
-					<key>44AEA8831CA9CBC100A52731</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>44AEA86B1CA9CBC100A52731</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>44AEA8671CA9CBC100A52731</string>
-			<key>productRefGroup</key>
-			<string>44AEA8711CA9CBC100A52731</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>44AEA86F1CA9CBC100A52731</string>
-				<string>44AEA8831CA9CBC100A52731</string>
-			</array>
-		</dict>
-		<key>44AEA86B1CA9CBC100A52731</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>44AEA88B1CA9CBC100A52731</string>
-				<string>44AEA88C1CA9CBC100A52731</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>44AEA86C1CA9CBC100A52731</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4464177F1CB182AC00F37F17</string>
-				<string>44A7250D1CAC4E3C00D676C3</string>
-				<string>446A77351CDD28B100951319</string>
-				<string>3C74C3D81CEF948E004FDD27</string>
-				<string>63D351D51CE7926D005EAD72</string>
-				<string>44573E611CAEF35F00A5F1C3</string>
-				<string>44484DE71CAFFECA002D7233</string>
-				<string>44424DA61CDDF3EB00B2409F</string>
-				<string>44424D921CDDEBF400B2409F</string>
-				<string>44A7250B1CAC444100D676C3</string>
-				<string>3CA010801CE7877D0050FE2F</string>
-				<string>44424D851CDDDB7300B2409F</string>
-				<string>3CCD09F11CE8EC6200B8E32C</string>
-				<string>446A77371CDD291C00951319</string>
-				<string>EAD2DDF01CD330EF007454FB</string>
-				<string>44424D951CDDEC2400B2409F</string>
-				<string>446417811CB1872500F37F17</string>
-				<string>44424D961CDDEC2400B2409F</string>
-				<string>44484DE51CAFDED3002D7233</string>
-				<string>44424DA11CDDF39E00B2409F</string>
-				<string>446A76D91CDD17A700951319</string>
-				<string>44424DA21CDDF39E00B2409F</string>
-				<string>44424DAA1CDDF47300B2409F</string>
-				<string>3C0DB77F1D00AAC8008EB195</string>
-				<string>3CCE63951CF044170089F5C9</string>
-				<string>44424D891CDDE5D200B2409F</string>
-				<string>442FE9761CC15CAD0002187D</string>
-				<string>EA6C4C1D1CD1E66600165F02</string>
-				<string>44573E631CAEF37400A5F1C3</string>
-				<string>446A77391CDD29C400951319</string>
-				<string>44C702691CDA86E000E4A2EA</string>
-				<string>3C2C9B501CFD94C6009B34C9</string>
-				<string>EAAD23C21CB3803A005FD787</string>
-				<string>44424DB21CDE370600B2409F</string>
-				<string>3C2C9B4E1CFD87E8009B34C9</string>
-				<string>EAAD23C41CB389AC005FD787</string>
-				<string>63D351D31CE78ABE005EAD72</string>
-				<string>EAAD23C61CB72E3F005FD787</string>
-				<string>44424D911CDDEBF400B2409F</string>
-				<string>44424D9C1CDDF00100B2409F</string>
-				<string>EAFEDF9A1CC2E26800C30693</string>
-				<string>446A76DB1CDD1B9800951319</string>
-				<string>446A76CF1CDD116000951319</string>
-				<string>44424D991CDDEC6A00B2409F</string>
-				<string>44A725101CAC559500D676C3</string>
-				<string>446A76D41CDD126A00951319</string>
-				<string>442FE9781CC284230002187D</string>
-				<string>44424DB01CDE359C00B2409F</string>
-				<string>44AA631F1CB3F7AD005E02CC</string>
-				<string>446A77331CDD289600951319</string>
-				<string>44573E651CAEF68500A5F1C3</string>
-				<string>EAAD23C01CB38028005FD787</string>
-				<string>44C0CF521CBD670600EA3390</string>
-				<string>44AEA8741CA9CBC100A52731</string>
-				<string>44573E5F1CAEF20D00A5F1C3</string>
-				<string>44484DE31CAFDA45002D7233</string>
-				<string>446A77311CDD265200951319</string>
-				<string>3C30A7D41D00A4E00021DBDE</string>
-				<string>44424D8E1CDDEBBD00B2409F</string>
-				<string>446A76D61CDD129400951319</string>
-				<string>44484DDE1CAFD857002D7233</string>
-				<string>EAAD23BA1CB37FDB005FD787</string>
-				<string>44638F061CC3EDD0005379FE</string>
-				<string>44424D871CDDDFBB00B2409F</string>
-				<string>3CCD09EF1CE8C9F900B8E32C</string>
-				<string>EAAD23BE1CB38014005FD787</string>
-				<string>EA6C4C201CD1E80300165F02</string>
-				<string>44424D8B1CDDE6F400B2409F</string>
-				<string>44424D7D1CDDC07C00B2409F</string>
-				<string>3C2C9B551CFD9CB4009B34C9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>44AEA86D1CA9CBC100A52731</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CD5ECAD8EAD748D4B7CF3762</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>44AEA86E1CA9CBC100A52731</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>44AEA87E1CA9CBC100A52731</string>
-				<string>63FE86721CDC4243000764B2</string>
-				<string>634E342B1CC84E7100DD48BF</string>
-				<string>63823CFB1CD42DBF00B258B4</string>
-				<string>63FE866C1CDBB9D8000764B2</string>
-				<string>634E34291CC84E7100DD48BF</string>
-				<string>63823CF51CD4133200B258B4</string>
-				<string>443D1DB01CB6D57500E2E7B9</string>
-				<string>44424D831CDDDB4A00B2409F</string>
-				<string>634E342A1CC84E7100DD48BF</string>
-				<string>44C7C85C1CD8DB76002ED3B6</string>
-				<string>63FE866E1CDBBFC5000764B2</string>
-				<string>44C7C85D1CD8DB76002ED3B6</string>
-				<string>63D351D81CE83FA2005EAD72</string>
-				<string>44C7C85E1CD8DB76002ED3B6</string>
-				<string>44C7C85F1CD8DB76002ED3B6</string>
-				<string>44C7C8601CD8DB76002ED3B6</string>
-				<string>44C7C8611CD8DB76002ED3B6</string>
-				<string>44C7C8621CD8DB76002ED3B6</string>
-				<string>44C7C8631CD8DB76002ED3B6</string>
-				<string>3CD790541CE7250E00569587</string>
-				<string>44C7C8641CD8DB76002ED3B6</string>
-				<string>44C7C8651CD8DB76002ED3B6</string>
-				<string>443D1DB11CB6D57500E2E7B9</string>
-				<string>63823CF91CD425EE00B258B4</string>
-				<string>44573E5B1CAE740C00A5F1C3</string>
-				<string>6352F18E1CC6114B0096FE59</string>
-				<string>63CAF7F41CC29BC4000D89A1</string>
-				<string>44AEA87B1CA9CBC100A52731</string>
-				<string>3CFDE8171CAD4D8A00D6172B</string>
-				<string>443D1DAF1CB6D57500E2E7B9</string>
-				<string>44C0CF561CBD6B9100EA3390</string>
-				<string>443D1DAE1CB6D57500E2E7B9</string>
-				<string>4404F6C01CBD1B2C001B9293</string>
-				<string>63CAF7F51CC29BC4000D89A1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>44AEA86F1CA9CBC100A52731</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>44AEA88D1CA9CBC100A52731</string>
-			<key>buildPhases</key>
-			<array>
-				<string>6C61F6C3D50DA617731BDB12</string>
-				<string>44AEA86C1CA9CBC100A52731</string>
-				<string>44AEA86D1CA9CBC100A52731</string>
-				<string>44AEA86E1CA9CBC100A52731</string>
-				<string>590DEA2D8B1284F782A68931</string>
-				<string>0901ED91FB08A38AD52D6155</string>
-				<string>20270153E4129332469B12B5</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>hackathon-for-hunger</string>
-			<key>productName</key>
-			<string>hackathon-for-hunger</string>
-			<key>productReference</key>
-			<string>44AEA8701CA9CBC100A52731</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>44AEA8701CA9CBC100A52731</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>hackathon-for-hunger.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>44AEA8711CA9CBC100A52731</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44AEA8701CA9CBC100A52731</string>
-				<string>44AEA8841CA9CBC100A52731</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA8721CA9CBC100A52731</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>446A76D71CDD179A00951319</string>
-				<string>446A76CD1CDD114400951319</string>
-				<string>446A76C51CDD0FA800951319</string>
-				<string>EA6C4C1E1CD1E7B800165F02</string>
-				<string>44638F041CC3EDBA005379FE</string>
-				<string>443D1DA81CB6D56100E2E7B9</string>
-				<string>44A7250E1CAC4F2600D676C3</string>
-				<string>EAAD23B71CB37B5A005FD787</string>
-				<string>44AEA8731CA9CBC100A52731</string>
-				<string>44AEA87A1CA9CBC100A52731</string>
-				<string>44AEA87C1CA9CBC100A52731</string>
-				<string>3CFDE8151CAD4D8A00D6172B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>hackathon-for-hunger</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA8731CA9CBC100A52731</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA8741CA9CBC100A52731</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44AEA8731CA9CBC100A52731</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44AEA87A1CA9CBC100A52731</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA87B1CA9CBC100A52731</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44AEA87A1CA9CBC100A52731</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44AEA87C1CA9CBC100A52731</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44AEA87D1CA9CBC100A52731</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA87D1CA9CBC100A52731</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA87E1CA9CBC100A52731</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44AEA87C1CA9CBC100A52731</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44AEA87F1CA9CBC100A52731</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA8801CA9CBC100A52731</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>44B7F0001CADAD5B00E7C609</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>44AEA8811CA9CBC100A52731</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>18807763BADCBE8AD8EF2E98</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>44AEA8821CA9CBC100A52731</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>44AEA8831CA9CBC100A52731</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>44AEA8901CA9CBC100A52731</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D0FD2CA7B40C550E286A9A29</string>
-				<string>44AEA8801CA9CBC100A52731</string>
-				<string>44AEA8811CA9CBC100A52731</string>
-				<string>44AEA8821CA9CBC100A52731</string>
-				<string>FA782FCE4368338BF9522114</string>
-				<string>21D4F01AA1A06BF225DAA8AB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>44AEA8861CA9CBC100A52731</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>hackathon-for-hungerTests</string>
-			<key>productName</key>
-			<string>hackathon-for-hungerTests</string>
-			<key>productReference</key>
-			<string>44AEA8841CA9CBC100A52731</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>44AEA8841CA9CBC100A52731</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>hackathon-for-hungerTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>44AEA8851CA9CBC100A52731</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>44AEA8681CA9CBC100A52731</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>44AEA86F1CA9CBC100A52731</string>
-			<key>remoteInfo</key>
-			<string>hackathon-for-hunger</string>
-		</dict>
-		<key>44AEA8861CA9CBC100A52731</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>44AEA86F1CA9CBC100A52731</string>
-			<key>targetProxy</key>
-			<string>44AEA8851CA9CBC100A52731</string>
-		</dict>
-		<key>44AEA8871CA9CBC100A52731</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44B7EFFD1CADAD2300E7C609</string>
-				<string>44AEA88A1CA9CBC100A52731</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>hackathon-for-hungerTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA88A1CA9CBC100A52731</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44AEA88B1CA9CBC100A52731</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>44AEA88C1CA9CBC100A52731</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>44AEA88D1CA9CBC100A52731</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>44AEA88E1CA9CBC100A52731</string>
-				<string>44AEA88F1CA9CBC100A52731</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>44AEA88E1CA9CBC100A52731</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A2EFBE2CE7CF9D9DCBE958C3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>INFOPLIST_FILE</key>
-				<string>hackathon-for-hunger/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hacksmiths.hackathon-for-hunger</string>
-				<key>PRODUCT_NAME</key>
-				<string>hackathon-for-hunger</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>44AEA88F1CA9CBC100A52731</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CE24290E4997F1C14D9D6C23</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>INFOPLIST_FILE</key>
-				<string>hackathon-for-hunger/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hacksmiths.hackathon-for-hunger</string>
-				<key>PRODUCT_NAME</key>
-				<string>hackathon-for-hunger</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>44AEA8901CA9CBC100A52731</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>44AEA8911CA9CBC100A52731</string>
-				<string>44AEA8921CA9CBC100A52731</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>44AEA8911CA9CBC100A52731</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>53C9C63247C83AC98D547BC8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>hackathon-for-hungerTests/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.2</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hacksmiths.hackathon-for-hungerTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>44AEA8921CA9CBC100A52731</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1CA48B9359BBE1650CD18628</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>hackathon-for-hungerTests/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.2</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hacksmiths.hackathon-for-hungerTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>44B7EFFD1CADAD2300E7C609</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44B7EFFE1CADAD3D00E7C609</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Network</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44B7EFFE1CADAD3D00E7C609</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44B7EFFF1CADAD5B00E7C609</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Routing</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44B7EFFF1CADAD5B00E7C609</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonationRouterTest.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44B7F0001CADAD5B00E7C609</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44B7EFFF1CADAD5B00E7C609</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C0CF511CBD670600EA3390</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Setting.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C0CF521CBD670600EA3390</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C0CF511CBD670600EA3390</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C0CF551CBD6B9100EA3390</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>UserDonorMock.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C0CF561CBD6B9100EA3390</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C0CF551CBD6B9100EA3390</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C702681CDA86E000E4A2EA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ActivityIndicatorView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C702691CDA86E000E4A2EA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C702681CDA86E000E4A2EA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C8521CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-Bold.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-Bold.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C8531CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-BoldItalic.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-BoldItalic.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C8541CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-ExtraBold.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-ExtraBold.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C8551CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-ExtraBoldItalic.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-ExtraBoldItalic.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C8561CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-Italic.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-Italic.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C8571CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-Light.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-Light.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C8581CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-LightItalic.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-LightItalic.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C8591CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-Regular.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-Regular.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C85A1CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-Semibold.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-Semibold.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C85B1CD8DB76002ED3B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>OpenSans-SemiboldItalic.ttf</string>
-			<key>path</key>
-			<string>../../OpenSans-SemiboldItalic.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44C7C85C1CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C8521CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C85D1CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C8531CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C85E1CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C8541CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C85F1CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C8551CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C8601CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C8561CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C8611CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C8571CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C8621CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C8581CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C8631CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C8591CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C8641CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C85A1CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>44C7C8651CD8DB76002ED3B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44C7C85B1CD8DB76002ED3B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4D20ABDC30B2132D9F0FA569</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_hackathon_for_hunger.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>53C9C63247C83AC98D547BC8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-hackathon-for-hungerTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>590DEA2D8B1284F782A68931</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>634E34261CC84E7100DD48BF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>multiple-circle.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>634E34271CC84E7100DD48BF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>multiple-circle@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>634E34281CC84E7100DD48BF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>multiple-circle@3x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>634E34291CC84E7100DD48BF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>634E34261CC84E7100DD48BF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>634E342A1CC84E7100DD48BF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>634E34271CC84E7100DD48BF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>634E342B1CC84E7100DD48BF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>634E34281CC84E7100DD48BF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6352F18D1CC6114B0096FE59</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>directions_icon.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6352F18E1CC6114B0096FE59</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6352F18D1CC6114B0096FE59</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63823CF41CD4133200B258B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>drivr_pin.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63823CF51CD4133200B258B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63823CF41CD4133200B258B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63823CF81CD425EE00B258B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>drivr_pin_green.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63823CF91CD425EE00B258B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63823CF81CD425EE00B258B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63823CFA1CD42DBF00B258B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>drivr_pin_orange.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63823CFB1CD42DBF00B258B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63823CFA1CD42DBF00B258B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639C2E601CB8463900275C3E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreLocation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreLocation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>63CAF7F21CC29BC4000D89A1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>dropoff_icon.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63CAF7F31CC29BC4000D89A1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>pickup_icon.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63CAF7F41CC29BC4000D89A1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63CAF7F21CC29BC4000D89A1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63CAF7F51CC29BC4000D89A1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63CAF7F31CC29BC4000D89A1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63CAF7F61CC29BD4000D89A1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>63D351D71CE83FA2005EAD72</string>
-				<string>63FE86711CDC4243000764B2</string>
-				<string>63FE866D1CDBBFC5000764B2</string>
-				<string>63823CFA1CD42DBF00B258B4</string>
-				<string>63FE866B1CDBB9D8000764B2</string>
-				<string>63823CF81CD425EE00B258B4</string>
-				<string>63823CF41CD4133200B258B4</string>
-				<string>634E34261CC84E7100DD48BF</string>
-				<string>634E34271CC84E7100DD48BF</string>
-				<string>634E34281CC84E7100DD48BF</string>
-				<string>6352F18D1CC6114B0096FE59</string>
-				<string>63CAF7F21CC29BC4000D89A1</string>
-				<string>63CAF7F31CC29BC4000D89A1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>images</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63D351D21CE78ABE005EAD72</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UserUpdate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63D351D31CE78ABE005EAD72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63D351D21CE78ABE005EAD72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63D351D41CE7926D005EAD72</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ProfilePresenter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63D351D51CE7926D005EAD72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63D351D41CE7926D005EAD72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63D351D61CE7949F005EAD72</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>63D351D41CE7926D005EAD72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Presenter</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63D351D71CE83FA2005EAD72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>profile_pic_mask.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63D351D81CE83FA2005EAD72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63D351D71CE83FA2005EAD72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63FE866B1CDBB9D8000764B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>pickup_label.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63FE866C1CDBB9D8000764B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63FE866B1CDBB9D8000764B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63FE866D1CDBBFC5000764B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>dropoff_label.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63FE866E1CDBBFC5000764B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63FE866D1CDBBFC5000764B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63FE86711CDC4243000764B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.pdf</string>
-			<key>path</key>
-			<string>directions_icon_small.pdf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63FE86721CDC4243000764B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63FE86711CDC4243000764B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6C61F6C3D50DA617731BDB12</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A2EFBE2CE7CF9D9DCBE958C3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-hackathon-for-hunger.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CD5ECAD8EAD748D4B7CF3762</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4D20ABDC30B2132D9F0FA569</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CE24290E4997F1C14D9D6C23</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-hackathon-for-hunger.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D0FD2CA7B40C550E286A9A29</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>DC12BCFA54D788D6A891E0DB</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_hackathon_for_hungerTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EA6C4C1C1CD1E66600165F02</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>StringExtensions.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA6C4C1D1CD1E66600165F02</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA6C4C1C1CD1E66600165F02</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA6C4C1E1CD1E7B800165F02</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>44AEA87F1CA9CBC100A52731</string>
-				<string>44573E5A1CAE740C00A5F1C3</string>
-				<string>EA6C4C1F1CD1E80300165F02</string>
-				<string>3CD790531CE7250E00569587</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA6C4C1F1CD1E80300165F02</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Global.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA6C4C201CD1E80300165F02</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA6C4C1F1CD1E80300165F02</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EAAD23B71CB37B5A005FD787</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EAAD23B81CB37B78005FD787</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Controller</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAAD23B81CB37B78005FD787</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EAAD23B91CB37FDB005FD787</string>
-				<string>EAAD23BD1CB38014005FD787</string>
-				<string>EAAD23BF1CB38028005FD787</string>
-				<string>EAAD23C11CB3803A005FD787</string>
-				<string>EAAD23C31CB389AC005FD787</string>
-				<string>EAAD23C51CB72E3F005FD787</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SignUp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAAD23B91CB37FDB005FD787</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SignUpViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAAD23BA1CB37FDB005FD787</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAAD23B91CB37FDB005FD787</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EAAD23BD1CB38014005FD787</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>VSAccountInfoViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAAD23BE1CB38014005FD787</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAAD23BD1CB38014005FD787</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EAAD23BF1CB38028005FD787</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DSUserInfoViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAAD23C01CB38028005FD787</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAAD23BF1CB38028005FD787</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EAAD23C11CB3803A005FD787</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DSAccountInfoViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAAD23C21CB3803A005FD787</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAAD23C11CB3803A005FD787</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EAAD23C31CB389AC005FD787</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SignUpNavigationViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAAD23C41CB389AC005FD787</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAAD23C31CB389AC005FD787</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EAAD23C51CB72E3F005FD787</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AwaitingApprovalDriverViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAAD23C61CB72E3F005FD787</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAAD23C51CB72E3F005FD787</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EAD2DDEF1CD330EF007454FB</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>DonationTableViewCell.swift</string>
-			<key>path</key>
-			<string>../../../../DonationTableViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAD2DDF01CD330EF007454FB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAD2DDEF1CD330EF007454FB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EAFEDF981CC2E24700C30693</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EAFEDF991CC2E26800C30693</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Signup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAFEDF991CC2E26800C30693</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DonorSignupInfo.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAFEDF9A1CC2E26800C30693</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAFEDF991CC2E26800C30693</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FA782FCE4368338BF9522114</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>44AEA8681CA9CBC100A52731</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C0DB77F1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DB77E1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift */; };
+		3C2C9B4E1CFD87E8009B34C9 /* DonationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */; };
+		3C2C9B501CFD94C6009B34C9 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */; };
+		3C2C9B551CFD9CB4009B34C9 /* DonationDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9B541CFD9CB4009B34C9 /* DonationDashboardViewController.swift */; };
+		3C30A7D41D00A4E00021DBDE /* DonationDashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C30A7D31D00A4E00021DBDE /* DonationDashboardPresenter.swift */; };
+		3C74C3D81CEF948E004FDD27 /* DonationHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74C3D71CEF948E004FDD27 /* DonationHistoryViewController.swift */; };
+		3CA010801CE7877D0050FE2F /* ListTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */; };
+		3CCD09EF1CE8C9F900B8E32C /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */; };
+		3CCD09F11CE8EC6200B8E32C /* SlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09F01CE8EC6200B8E32C /* SlideMenuVC.swift */; };
+		3CCE63951CF044170089F5C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE63941CF044170089F5C9 /* SettingsViewController.swift */; };
+		3CD790541CE7250E00569587 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CD790531CE7250E00569587 /* ApiKeys.plist */; };
+		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
+		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
+		442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9751CC15CAD0002187D /* UserRegistration.swift */; };
+		442FE9781CC284230002187D /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9771CC284230002187D /* UserLogin.swift */; };
+		443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */; };
+		443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */; };
+		443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */; };
+		443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443D1DAD1CB6D57500E2E7B9 /* Deming EP.ttf */; };
+		44424D7D1CDDC07C00B2409F /* CurrentDonationsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D7C1CDDC07C00B2409F /* CurrentDonationsDashboard.swift */; };
+		44424D831CDDDB4A00B2409F /* Portland-BridgePortBrewPub.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 44424D821CDDDB4A00B2409F /* Portland-BridgePortBrewPub.gpx */; };
+		44424D851CDDDB7300B2409F /* DriverMapDetailPendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D841CDDDB7300B2409F /* DriverMapDetailPendingVC.swift */; };
+		44424D871CDDDFBB00B2409F /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D861CDDDFBB00B2409F /* MapViewPresenter.swift */; };
+		44424D891CDDE5D200B2409F /* DonationMapOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D881CDDE5D200B2409F /* DonationMapOverviewVC.swift */; };
+		44424D8B1CDDE6F400B2409F /* MapOverviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D8A1CDDE6F400B2409F /* MapOverviewPresenter.swift */; };
+		44424D8E1CDDEBBD00B2409F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D8D1CDDEBBD00B2409F /* LocationManager.swift */; };
+		44424D911CDDEBF400B2409F /* DonationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D8F1CDDEBF400B2409F /* DonationPin.swift */; };
+		44424D921CDDEBF400B2409F /* DonorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D901CDDEBF400B2409F /* DonorInfo.swift */; };
+		44424D951CDDEC2400B2409F /* MapsDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D931CDDEC2400B2409F /* MapsDummyData.swift */; };
+		44424D961CDDEC2400B2409F /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D941CDDEC2400B2409F /* MapsModel.swift */; };
+		44424D991CDDEC6A00B2409F /* DriverMapPickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D971CDDEC6A00B2409F /* DriverMapPickupVC.swift */; };
+		44424D9C1CDDF00100B2409F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D9B1CDDF00100B2409F /* AuthService.swift */; };
+		44424DA11CDDF39E00B2409F /* DonorAddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424D9F1CDDF39E00B2409F /* DonorAddAddressViewController.swift */; };
+		44424DA21CDDF39E00B2409F /* DonorAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */; };
+		44424DA61CDDF3EB00B2409F /* DonorDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA51CDDF3EB00B2409F /* DonorDonationViewController.swift */; };
+		44424DAA1CDDF47300B2409F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DA91CDDF47300B2409F /* ProfileViewController.swift */; };
+		44424DB01CDE359C00B2409F /* DriverSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DAF1CDE359C00B2409F /* DriverSignupViewController.swift */; };
+		44424DB21CDE370600B2409F /* DriverSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44424DB11CDE370600B2409F /* DriverSignupPresenter.swift */; };
+		44484DDE1CAFD857002D7233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DDD1CAFD857002D7233 /* User.swift */; };
+		44484DE31CAFDA45002D7233 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE21CAFDA45002D7233 /* Token.swift */; };
+		44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */; };
+		44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44484DE61CAFFECA002D7233 /* UserRouter.swift */; };
+		44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */; };
+		44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E5E1CAEF20D00A5F1C3 /* Location.swift */; };
+		44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E601CAEF35F00A5F1C3 /* DonationType.swift */; };
+		44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E621CAEF37400A5F1C3 /* MetaData.swift */; };
+		44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44573E641CAEF68500A5F1C3 /* Participant.swift */; };
+		44638F061CC3EDD0005379FE /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44638F051CC3EDD0005379FE /* UIViewExtensions.swift */; };
+		4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464177E1CB182AC00F37F17 /* Recipient.swift */; };
+		446417811CB1872500F37F17 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446417801CB1872500F37F17 /* Image.swift */; };
+		446A76CF1CDD116000951319 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A76CE1CDD116000951319 /* UserService.swift */; };
+		446A76D41CDD126A00951319 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A76D31CDD126A00951319 /* LoginViewController.swift */; };
+		446A76D61CDD129400951319 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A76D51CDD129400951319 /* LoginPresenter.swift */; };
+		446A76D91CDD17A700951319 /* LegacyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A76D81CDD17A700951319 /* LegacyCode.swift */; };
+		446A76DB1CDD1B9800951319 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A76DA1CDD1B9800951319 /* LoginProvider.swift */; };
+		446A77311CDD265200951319 /* DonationsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77301CDD265200951319 /* DonationsContainerViewController.swift */; };
+		446A77331CDD289600951319 /* PendingDonationsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77321CDD289600951319 /* PendingDonationsDashboard.swift */; };
+		446A77351CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77341CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift */; };
+		446A77371CDD291C00951319 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77361CDD291C00951319 /* DashboardPresenter.swift */; };
+		446A77391CDD29C400951319 /* DonationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A77381CDD29C400951319 /* DonationService.swift */; };
+		44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250A1CAC444100D676C3 /* BaseRouter.swift */; };
+		44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */; };
+		44A725101CAC559500D676C3 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7250F1CAC559500D676C3 /* Donation.swift */; };
+		44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */; };
+		44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEA8731CA9CBC100A52731 /* AppDelegate.swift */; };
+		44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87A1CA9CBC100A52731 /* Assets.xcassets */; };
+		44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */; };
+		44B7F0001CADAD5B00E7C609 /* DonationRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */; };
+		44C0CF521CBD670600EA3390 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C0CF511CBD670600EA3390 /* Setting.swift */; };
+		44C0CF561CBD6B9100EA3390 /* UserDonorMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */; };
+		44C702691CDA86E000E4A2EA /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C702681CDA86E000E4A2EA /* ActivityIndicatorView.swift */; };
+		44C7C85C1CD8DB76002ED3B6 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8521CD8DB76002ED3B6 /* OpenSans-Bold.ttf */; };
+		44C7C85D1CD8DB76002ED3B6 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8531CD8DB76002ED3B6 /* OpenSans-BoldItalic.ttf */; };
+		44C7C85E1CD8DB76002ED3B6 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8541CD8DB76002ED3B6 /* OpenSans-ExtraBold.ttf */; };
+		44C7C85F1CD8DB76002ED3B6 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8551CD8DB76002ED3B6 /* OpenSans-ExtraBoldItalic.ttf */; };
+		44C7C8601CD8DB76002ED3B6 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8561CD8DB76002ED3B6 /* OpenSans-Italic.ttf */; };
+		44C7C8611CD8DB76002ED3B6 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8571CD8DB76002ED3B6 /* OpenSans-Light.ttf */; };
+		44C7C8621CD8DB76002ED3B6 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8581CD8DB76002ED3B6 /* OpenSans-LightItalic.ttf */; };
+		44C7C8631CD8DB76002ED3B6 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8591CD8DB76002ED3B6 /* OpenSans-Regular.ttf */; };
+		44C7C8641CD8DB76002ED3B6 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C85A1CD8DB76002ED3B6 /* OpenSans-Semibold.ttf */; };
+		44C7C8651CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C85B1CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf */; };
+		5BD6F0FEE975C6F8910021B5 /* Pods_hackathon_for_hungerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DCA5FA6264C888CB1030CA /* Pods_hackathon_for_hungerTests.framework */; };
+		634E34291CC84E7100DD48BF /* multiple-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34261CC84E7100DD48BF /* multiple-circle.png */; };
+		634E342A1CC84E7100DD48BF /* multiple-circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34271CC84E7100DD48BF /* multiple-circle@2x.png */; };
+		634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34281CC84E7100DD48BF /* multiple-circle@3x.png */; };
+		6352F18E1CC6114B0096FE59 /* directions_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6352F18D1CC6114B0096FE59 /* directions_icon.pdf */; };
+		63823CF51CD4133200B258B4 /* drivr_pin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63823CF41CD4133200B258B4 /* drivr_pin.pdf */; };
+		63823CF91CD425EE00B258B4 /* drivr_pin_green.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63823CF81CD425EE00B258B4 /* drivr_pin_green.pdf */; };
+		63823CFB1CD42DBF00B258B4 /* drivr_pin_orange.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63823CFA1CD42DBF00B258B4 /* drivr_pin_orange.pdf */; };
+		63CAF7F41CC29BC4000D89A1 /* dropoff_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63CAF7F21CC29BC4000D89A1 /* dropoff_icon.pdf */; };
+		63CAF7F51CC29BC4000D89A1 /* pickup_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */; };
+		63D351D31CE78ABE005EAD72 /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D351D21CE78ABE005EAD72 /* UserUpdate.swift */; };
+		63D351D51CE7926D005EAD72 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D351D41CE7926D005EAD72 /* ProfilePresenter.swift */; };
+		63D351D81CE83FA2005EAD72 /* profile_pic_mask.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63D351D71CE83FA2005EAD72 /* profile_pic_mask.pdf */; };
+		63FE866C1CDBB9D8000764B2 /* pickup_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */; };
+		63FE866E1CDBBFC5000764B2 /* dropoff_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */; };
+		63FE86721CDC4243000764B2 /* directions_icon_small.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE86711CDC4243000764B2 /* directions_icon_small.pdf */; };
+		9A380AAFB5FA3DC9089D9525 /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90311A1A749B449967005E40 /* Pods_hackathon_for_hunger.framework */; };
+		EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */; };
+		EA6C4C201CD1E80300165F02 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1F1CD1E80300165F02 /* Global.swift */; };
+		EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */; };
+		EAAD23BE1CB38014005FD787 /* VSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BD1CB38014005FD787 /* VSAccountInfoViewController.swift */; };
+		EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */; };
+		EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */; };
+		EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */; };
+		EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */; };
+		EAD2DDF01CD330EF007454FB /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */; };
+		EAFEDF9A1CC2E26800C30693 /* DonorSignupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44AEA8851CA9CBC100A52731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44AEA8681CA9CBC100A52731 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44AEA86F1CA9CBC100A52731;
+			remoteInfo = "hackathon-for-hunger";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32DCA5FA6264C888CB1030CA /* Pods_hackathon_for_hungerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hungerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C0DB77E1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationPresenter.swift; sourceTree = "<group>"; };
+		3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		3C2C9B541CFD9CB4009B34C9 /* DonationDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationDashboardViewController.swift; sourceTree = "<group>"; };
+		3C30A7D31D00A4E00021DBDE /* DonationDashboardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationDashboardPresenter.swift; sourceTree = "<group>"; };
+		3C74C3D71CEF948E004FDD27 /* DonationHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationHistoryViewController.swift; sourceTree = "<group>"; };
+		3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTransformer.swift; sourceTree = "<group>"; };
+		3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		3CCD09F01CE8EC6200B8E32C /* SlideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuVC.swift; sourceTree = "<group>"; };
+		3CCE63941CF044170089F5C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3CD790531CE7250E00569587 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
+		442FE9751CC15CAD0002187D /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
+		442FE9771CC284230002187D /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
+		443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.ttf"; sourceTree = "<group>"; };
+		443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
+		443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ColabThi.otf; sourceTree = "<group>"; };
+		443D1DAD1CB6D57500E2E7B9 /* Deming EP.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Deming EP.ttf"; sourceTree = "<group>"; };
+		44424D7C1CDDC07C00B2409F /* CurrentDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDonationsDashboard.swift; sourceTree = "<group>"; };
+		44424D821CDDDB4A00B2409F /* Portland-BridgePortBrewPub.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Portland-BridgePortBrewPub.gpx"; path = "Modules/Driver/Maps/Models/Portland-BridgePortBrewPub.gpx"; sourceTree = "<group>"; };
+		44424D841CDDDB7300B2409F /* DriverMapDetailPendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapDetailPendingVC.swift; sourceTree = "<group>"; };
+		44424D861CDDDFBB00B2409F /* MapViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
+		44424D881CDDE5D200B2409F /* DonationMapOverviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationMapOverviewVC.swift; sourceTree = "<group>"; };
+		44424D8A1CDDE6F400B2409F /* MapOverviewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOverviewPresenter.swift; sourceTree = "<group>"; };
+		44424D8D1CDDEBBD00B2409F /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		44424D8F1CDDEBF400B2409F /* DonationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationPin.swift; path = Modules/Driver/Maps/Models/DonationPin.swift; sourceTree = "<group>"; };
+		44424D901CDDEBF400B2409F /* DonorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonorInfo.swift; path = Modules/Driver/Maps/Models/DonorInfo.swift; sourceTree = "<group>"; };
+		44424D931CDDEC2400B2409F /* MapsDummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsDummyData.swift; path = Modules/Driver/Maps/Models/MapsDummyData.swift; sourceTree = "<group>"; };
+		44424D941CDDEC2400B2409F /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsModel.swift; path = Modules/Driver/Maps/Models/MapsModel.swift; sourceTree = "<group>"; };
+		44424D971CDDEC6A00B2409F /* DriverMapPickupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapPickupVC.swift; sourceTree = "<group>"; };
+		44424D9B1CDDF00100B2409F /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		44424D9F1CDDF39E00B2409F /* DonorAddAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddAddressViewController.swift; sourceTree = "<group>"; };
+		44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddressViewController.swift; sourceTree = "<group>"; };
+		44424DA51CDDF3EB00B2409F /* DonorDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorDonationViewController.swift; sourceTree = "<group>"; };
+		44424DA91CDDF47300B2409F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		44424DAF1CDE359C00B2409F /* DriverSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverSignupViewController.swift; sourceTree = "<group>"; };
+		44424DB11CDE370600B2409F /* DriverSignupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverSignupPresenter.swift; sourceTree = "<group>"; };
+		44484DDD1CAFD857002D7233 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		44484DE21CAFDA45002D7233 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPStatusCodes.swift; path = ../HTTPStatusCodes.swift; sourceTree = "<group>"; };
+		44484DE61CAFFECA002D7233 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeysDist.plist; sourceTree = "<group>"; };
+		44573E5E1CAEF20D00A5F1C3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		44573E601CAEF35F00A5F1C3 /* DonationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationType.swift; sourceTree = "<group>"; };
+		44573E621CAEF37400A5F1C3 /* MetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
+		44573E641CAEF68500A5F1C3 /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		44638F051CC3EDD0005379FE /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		4464177E1CB182AC00F37F17 /* Recipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
+		446417801CB1872500F37F17 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		446A76CE1CDD116000951319 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		446A76D31CDD126A00951319 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		446A76D51CDD129400951319 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		446A76D81CDD17A700951319 /* LegacyCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyCode.swift; sourceTree = "<group>"; };
+		446A76DA1CDD1B9800951319 /* LoginProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		446A77301CDD265200951319 /* DonationsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationsContainerViewController.swift; sourceTree = "<group>"; };
+		446A77321CDD289600951319 /* PendingDonationsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboard.swift; sourceTree = "<group>"; };
+		446A77341CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingDonationsDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		446A77361CDD291C00951319 /* DashboardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		446A77381CDD29C400951319 /* DonationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationService.swift; sourceTree = "<group>"; };
+		44A7250A1CAC444100D676C3 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouter.swift; sourceTree = "<group>"; };
+		44A7250F1CAC559500D676C3 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
+		44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = ../MenuTableViewController.swift; sourceTree = "<group>"; };
+		44AEA8701CA9CBC100A52731 /* hackathon-for-hunger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hackathon-for-hunger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AEA8731CA9CBC100A52731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44AEA87A1CA9CBC100A52731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44AEA87D1CA9CBC100A52731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44AEA87F1CA9CBC100A52731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AEA8841CA9CBC100A52731 /* hackathon-for-hungerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hackathon-for-hungerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AEA88A1CA9CBC100A52731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationRouterTest.swift; sourceTree = "<group>"; };
+		44C0CF511CBD670600EA3390 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDonorMock.json; sourceTree = "<group>"; };
+		44C702681CDA86E000E4A2EA /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		44C7C8521CD8DB76002ED3B6 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		44C7C8531CD8DB76002ED3B6 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "../../OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		44C7C8541CD8DB76002ED3B6 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBold.ttf"; path = "../../OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		44C7C8551CD8DB76002ED3B6 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../../OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		44C7C8561CD8DB76002ED3B6 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "../../OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		44C7C8571CD8DB76002ED3B6 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../../OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		44C7C8581CD8DB76002ED3B6 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "../../OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		44C7C8591CD8DB76002ED3B6 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		44C7C85A1CD8DB76002ED3B6 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../../OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		44C7C85B1CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "../../OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		4ADAF9C54935D893257F4308 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
+		634E34261CC84E7100DD48BF /* multiple-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle.png"; sourceTree = "<group>"; };
+		634E34271CC84E7100DD48BF /* multiple-circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@2x.png"; sourceTree = "<group>"; };
+		634E34281CC84E7100DD48BF /* multiple-circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@3x.png"; sourceTree = "<group>"; };
+		6352F18D1CC6114B0096FE59 /* directions_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon.pdf; sourceTree = "<group>"; };
+		63823CF41CD4133200B258B4 /* drivr_pin.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = drivr_pin.pdf; sourceTree = "<group>"; };
+		63823CF81CD425EE00B258B4 /* drivr_pin_green.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = drivr_pin_green.pdf; sourceTree = "<group>"; };
+		63823CFA1CD42DBF00B258B4 /* drivr_pin_orange.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = drivr_pin_orange.pdf; sourceTree = "<group>"; };
+		639C2E601CB8463900275C3E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		63CAF7F21CC29BC4000D89A1 /* dropoff_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dropoff_icon.pdf; sourceTree = "<group>"; };
+		63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pickup_icon.pdf; sourceTree = "<group>"; };
+		63D351D21CE78ABE005EAD72 /* UserUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
+		63D351D41CE7926D005EAD72 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		63D351D71CE83FA2005EAD72 /* profile_pic_mask.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = profile_pic_mask.pdf; sourceTree = "<group>"; };
+		63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pickup_label.pdf; sourceTree = "<group>"; };
+		63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dropoff_label.pdf; sourceTree = "<group>"; };
+		63FE86711CDC4243000764B2 /* directions_icon_small.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon_small.pdf; sourceTree = "<group>"; };
+		86BA625C431AB9FBBE950948 /* Pods-hackathon-for-hungerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		90311A1A749B449967005E40 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B378CB29D345D02F6339D4A8 /* Pods-hackathon-for-hungerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.release.xcconfig"; sourceTree = "<group>"; };
+		E76494F30E9C7AE6A06635B8 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
+		EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		EA6C4C1F1CD1E80300165F02 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EAAD23BD1CB38014005FD787 /* VSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSAccountInfoViewController.swift; sourceTree = "<group>"; };
+		EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSUserInfoViewController.swift; sourceTree = "<group>"; };
+		EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAccountInfoViewController.swift; sourceTree = "<group>"; };
+		EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNavigationViewController.swift; sourceTree = "<group>"; };
+		EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalDriverViewController.swift; sourceTree = "<group>"; };
+		EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationTableViewCell.swift; path = ../../../../DonationTableViewCell.swift; sourceTree = "<group>"; };
+		EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorSignupInfo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44AEA86D1CA9CBC100A52731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A380AAFB5FA3DC9089D9525 /* Pods_hackathon_for_hunger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AEA8811CA9CBC100A52731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BD6F0FEE975C6F8910021B5 /* Pods_hackathon_for_hungerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		205C055A7B919DE8749D43CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				639C2E601CB8463900275C3E /* CoreLocation.framework */,
+				90311A1A749B449967005E40 /* Pods_hackathon_for_hunger.framework */,
+				32DCA5FA6264C888CB1030CA /* Pods_hackathon_for_hungerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C2C9B4C1CFD87CD009B34C9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		3C2C9B511CFD9C7E009B34C9 /* DonationDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				3C2C9B531CFD9C95009B34C9 /* Presenter */,
+				3C2C9B521CFD9C8E009B34C9 /* Views */,
+			);
+			name = DonationDashboard;
+			sourceTree = "<group>";
+		};
+		3C2C9B521CFD9C8E009B34C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C2C9B541CFD9CB4009B34C9 /* DonationDashboardViewController.swift */,
+				3C0DB77E1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3C2C9B531CFD9C95009B34C9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3C30A7D31D00A4E00021DBDE /* DonationDashboardPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		3CA0107E1CE787630050FE2F /* Transformer */ = {
+			isa = PBXGroup;
+			children = (
+				3CA0107F1CE7877D0050FE2F /* ListTransformer.swift */,
+			);
+			name = Transformer;
+			sourceTree = "<group>";
+		};
+		3CCD09EB1CE8C9BE00B8E32C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3CCD09ED1CE8C9E000B8E32C /* Views */,
+				3CCD09EC1CE8C9D800B8E32C /* Presenter */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		3CCD09EC1CE8C9D800B8E32C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		3CCD09ED1CE8C9E000B8E32C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44AA631E1CB3F7AD005E02CC /* MenuTableViewController.swift */,
+				3CCD09F01CE8EC6200B8E32C /* SlideMenuVC.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4404F6BE1CBD1B11001B9293 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */,
+				44C0CF551CBD6B9100EA3390 /* UserDonorMock.json */,
+			);
+			name = MockData;
+			sourceTree = "<group>";
+		};
+		442FE9721CC15C3B0002187D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				442FE9751CC15CAD0002187D /* UserRegistration.swift */,
+				442FE9771CC284230002187D /* UserLogin.swift */,
+				63D351D21CE78ABE005EAD72 /* UserUpdate.swift */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
+		443D1DA81CB6D56100E2E7B9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				63CAF7F61CC29BD4000D89A1 /* images */,
+				443D1DA91CB6D57400E2E7B9 /* Fonts */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		443D1DA91CB6D57400E2E7B9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				44C7C8521CD8DB76002ED3B6 /* OpenSans-Bold.ttf */,
+				44C7C8531CD8DB76002ED3B6 /* OpenSans-BoldItalic.ttf */,
+				44C7C8541CD8DB76002ED3B6 /* OpenSans-ExtraBold.ttf */,
+				44C7C8551CD8DB76002ED3B6 /* OpenSans-ExtraBoldItalic.ttf */,
+				44C7C8561CD8DB76002ED3B6 /* OpenSans-Italic.ttf */,
+				44C7C8571CD8DB76002ED3B6 /* OpenSans-Light.ttf */,
+				44C7C8581CD8DB76002ED3B6 /* OpenSans-LightItalic.ttf */,
+				44C7C8591CD8DB76002ED3B6 /* OpenSans-Regular.ttf */,
+				44C7C85A1CD8DB76002ED3B6 /* OpenSans-Semibold.ttf */,
+				44C7C85B1CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf */,
+				443D1DAA1CB6D57400E2E7B9 /* BEBAS___.ttf */,
+				443D1DAB1CB6D57500E2E7B9 /* BebasNeue.otf */,
+				443D1DAC1CB6D57500E2E7B9 /* ColabThi.otf */,
+				443D1DAD1CB6D57500E2E7B9 /* Deming EP.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		44424D7E1CDDDA4B00B2409F /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				44424D8C1CDDEBA300B2409F /* Service */,
+				44424D801CDDDA9500B2409F /* Views */,
+				44424D7F1CDDDA7B00B2409F /* Presenter */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		44424D7F1CDDDA7B00B2409F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				44424D861CDDDFBB00B2409F /* MapViewPresenter.swift */,
+				44424D8A1CDDE6F400B2409F /* MapOverviewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		44424D801CDDDA9500B2409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424D971CDDEC6A00B2409F /* DriverMapPickupVC.swift */,
+				44424D881CDDE5D200B2409F /* DonationMapOverviewVC.swift */,
+				44424D841CDDDB7300B2409F /* DriverMapDetailPendingVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44424D8C1CDDEBA300B2409F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				44424D8D1CDDEBBD00B2409F /* LocationManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		44424D9D1CDDF33700B2409F /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				44424D9E1CDDF38600B2409F /* Views */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		44424D9E1CDDF38600B2409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424D9F1CDDF39E00B2409F /* DonorAddAddressViewController.swift */,
+				44424DA01CDDF39E00B2409F /* DonorAddressViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44424DA31CDDF3BB00B2409F /* AddDonation */ = {
+			isa = PBXGroup;
+			children = (
+				3C2C9B4C1CFD87CD009B34C9 /* Presenter */,
+				44424DA41CDDF3C500B2409F /* Views */,
+			);
+			path = AddDonation;
+			sourceTree = "<group>";
+		};
+		44424DA41CDDF3C500B2409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424DA51CDDF3EB00B2409F /* DonorDonationViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44424DA71CDDF44600B2409F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				44424DA81CDDF44F00B2409F /* Views */,
+				63D351D61CE7949F005EAD72 /* Presenter */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		44424DA81CDDF44F00B2409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424DA91CDDF47300B2409F /* ProfileViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44424DAC1CDE34E700B2409F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				44424DAD1CDE34E700B2409F /* Presenter */,
+				44424DAE1CDE34E700B2409F /* Views */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		44424DAD1CDE34E700B2409F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				44424DB11CDE370600B2409F /* DriverSignupPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		44424DAE1CDE34E700B2409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44424DAF1CDE359C00B2409F /* DriverSignupViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44638F041CC3EDBA005379FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44C702681CDA86E000E4A2EA /* ActivityIndicatorView.swift */,
+				44638F051CC3EDD0005379FE /* UIViewExtensions.swift */,
+				EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */,
+				3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		446A76C51CDD0FA800951319 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3CCD09EB1CE8C9BE00B8E32C /* Menu */,
+				44424DA71CDDF44600B2409F /* User */,
+				446A76C81CDD0FF800951319 /* Login */,
+				446A76C71CDD0FE000951319 /* Donor */,
+				446A76C61CDD0FCC00951319 /* Driver */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		446A76C61CDD0FCC00951319 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				44424DAC1CDE34E700B2409F /* SignUp */,
+				44424D7E1CDDDA4B00B2409F /* Maps */,
+				446A76DC1CDD209100951319 /* Dashboards */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
+		446A76C71CDD0FE000951319 /* Donor */ = {
+			isa = PBXGroup;
+			children = (
+				3C2C9B511CFD9C7E009B34C9 /* DonationDashboard */,
+				44424DA31CDDF3BB00B2409F /* AddDonation */,
+				44424D9D1CDDF33700B2409F /* Address */,
+			);
+			path = Donor;
+			sourceTree = "<group>";
+		};
+		446A76C81CDD0FF800951319 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				446A76D21CDD124D00951319 /* View */,
+				446A76D01CDD123800951319 /* Presenter */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		446A76CD1CDD114400951319 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				44A725091CAC442E00D676C3 /* Routing */,
+				44484DE41CAFDED3002D7233 /* HTTPStatusCodes.swift */,
+				44424D9B1CDDF00100B2409F /* AuthService.swift */,
+				446A76CE1CDD116000951319 /* UserService.swift */,
+				446A77381CDD29C400951319 /* DonationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		446A76D01CDD123800951319 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				446A76D51CDD129400951319 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		446A76D21CDD124D00951319 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				446A76D31CDD126A00951319 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		446A76D71CDD179A00951319 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				446A76DA1CDD1B9800951319 /* LoginProvider.swift */,
+				446A76D81CDD17A700951319 /* LegacyCode.swift */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		446A76DC1CDD209100951319 /* Dashboards */ = {
+			isa = PBXGroup;
+			children = (
+				446A772F1CDD255700951319 /* Presenter */,
+				446A76DD1CDD20B200951319 /* Views */,
+			);
+			path = Dashboards;
+			sourceTree = "<group>";
+		};
+		446A76DD1CDD20B200951319 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */,
+				44424D7C1CDDC07C00B2409F /* CurrentDonationsDashboard.swift */,
+				446A77341CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift */,
+				446A77321CDD289600951319 /* PendingDonationsDashboard.swift */,
+				446A77301CDD265200951319 /* DonationsContainerViewController.swift */,
+				3C74C3D71CEF948E004FDD27 /* DonationHistoryViewController.swift */,
+				3CCE63941CF044170089F5C9 /* SettingsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		446A772F1CDD255700951319 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				446A77361CDD291C00951319 /* DashboardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		44A725091CAC442E00D676C3 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				44A7250A1CAC444100D676C3 /* BaseRouter.swift */,
+				44A7250C1CAC4E3C00D676C3 /* DonationRouter.swift */,
+				44484DE61CAFFECA002D7233 /* UserRouter.swift */,
+			);
+			name = Routing;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		44A7250E1CAC4F2600D676C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3CA0107E1CE787630050FE2F /* Transformer */,
+				44424D931CDDEC2400B2409F /* MapsDummyData.swift */,
+				44424D941CDDEC2400B2409F /* MapsModel.swift */,
+				44424D8F1CDDEBF400B2409F /* DonationPin.swift */,
+				44424D901CDDEBF400B2409F /* DonorInfo.swift */,
+				44424D821CDDDB4A00B2409F /* Portland-BridgePortBrewPub.gpx */,
+				EAFEDF981CC2E24700C30693 /* Signup */,
+				442FE9721CC15C3B0002187D /* DTO */,
+				4404F6BE1CBD1B11001B9293 /* MockData */,
+				44A7250F1CAC559500D676C3 /* Donation.swift */,
+				44573E601CAEF35F00A5F1C3 /* DonationType.swift */,
+				44573E5E1CAEF20D00A5F1C3 /* Location.swift */,
+				44573E621CAEF37400A5F1C3 /* MetaData.swift */,
+				44573E641CAEF68500A5F1C3 /* Participant.swift */,
+				44484DDD1CAFD857002D7233 /* User.swift */,
+				44484DE21CAFDA45002D7233 /* Token.swift */,
+				4464177E1CB182AC00F37F17 /* Recipient.swift */,
+				446417801CB1872500F37F17 /* Image.swift */,
+				44C0CF511CBD670600EA3390 /* Setting.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		44AEA8671CA9CBC100A52731 = {
+			isa = PBXGroup;
+			children = (
+				44AEA8721CA9CBC100A52731 /* hackathon-for-hunger */,
+				44AEA8871CA9CBC100A52731 /* hackathon-for-hungerTests */,
+				44AEA8711CA9CBC100A52731 /* Products */,
+				205C055A7B919DE8749D43CD /* Frameworks */,
+				840A1877D5B571DC9A75B6C6 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		44AEA8711CA9CBC100A52731 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44AEA8701CA9CBC100A52731 /* hackathon-for-hunger.app */,
+				44AEA8841CA9CBC100A52731 /* hackathon-for-hungerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44AEA8721CA9CBC100A52731 /* hackathon-for-hunger */ = {
+			isa = PBXGroup;
+			children = (
+				446A76D71CDD179A00951319 /* Legacy */,
+				446A76CD1CDD114400951319 /* Services */,
+				446A76C51CDD0FA800951319 /* Modules */,
+				EA6C4C1E1CD1E7B800165F02 /* Support */,
+				44638F041CC3EDBA005379FE /* Extensions */,
+				443D1DA81CB6D56100E2E7B9 /* Assets */,
+				44A7250E1CAC4F2600D676C3 /* Models */,
+				EAAD23B71CB37B5A005FD787 /* Controller */,
+				44AEA8731CA9CBC100A52731 /* AppDelegate.swift */,
+				44AEA87A1CA9CBC100A52731 /* Assets.xcassets */,
+				44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */,
+				3CFDE8151CAD4D8A00D6172B /* Main.storyboard */,
+			);
+			path = "hackathon-for-hunger";
+			sourceTree = "<group>";
+		};
+		44AEA8871CA9CBC100A52731 /* hackathon-for-hungerTests */ = {
+			isa = PBXGroup;
+			children = (
+				44B7EFFD1CADAD2300E7C609 /* Network */,
+				44AEA88A1CA9CBC100A52731 /* Info.plist */,
+			);
+			path = "hackathon-for-hungerTests";
+			sourceTree = "<group>";
+		};
+		44B7EFFD1CADAD2300E7C609 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				44B7EFFE1CADAD3D00E7C609 /* Routing */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		44B7EFFE1CADAD3D00E7C609 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				44B7EFFF1CADAD5B00E7C609 /* DonationRouterTest.swift */,
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
+		63CAF7F61CC29BD4000D89A1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				63D351D71CE83FA2005EAD72 /* profile_pic_mask.pdf */,
+				63FE86711CDC4243000764B2 /* directions_icon_small.pdf */,
+				63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */,
+				63823CFA1CD42DBF00B258B4 /* drivr_pin_orange.pdf */,
+				63FE866B1CDBB9D8000764B2 /* pickup_label.pdf */,
+				63823CF81CD425EE00B258B4 /* drivr_pin_green.pdf */,
+				63823CF41CD4133200B258B4 /* drivr_pin.pdf */,
+				634E34261CC84E7100DD48BF /* multiple-circle.png */,
+				634E34271CC84E7100DD48BF /* multiple-circle@2x.png */,
+				634E34281CC84E7100DD48BF /* multiple-circle@3x.png */,
+				6352F18D1CC6114B0096FE59 /* directions_icon.pdf */,
+				63CAF7F21CC29BC4000D89A1 /* dropoff_icon.pdf */,
+				63CAF7F31CC29BC4000D89A1 /* pickup_icon.pdf */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		63D351D61CE7949F005EAD72 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				63D351D41CE7926D005EAD72 /* ProfilePresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		840A1877D5B571DC9A75B6C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E76494F30E9C7AE6A06635B8 /* Pods-hackathon-for-hunger.debug.xcconfig */,
+				4ADAF9C54935D893257F4308 /* Pods-hackathon-for-hunger.release.xcconfig */,
+				86BA625C431AB9FBBE950948 /* Pods-hackathon-for-hungerTests.debug.xcconfig */,
+				B378CB29D345D02F6339D4A8 /* Pods-hackathon-for-hungerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA6C4C1E1CD1E7B800165F02 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				44AEA87F1CA9CBC100A52731 /* Info.plist */,
+				44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */,
+				EA6C4C1F1CD1E80300165F02 /* Global.swift */,
+				3CD790531CE7250E00569587 /* ApiKeys.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		EAAD23B71CB37B5A005FD787 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAAD23B81CB37B78005FD787 /* SignUp */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EAAD23B81CB37B78005FD787 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */,
+				EAAD23BD1CB38014005FD787 /* VSAccountInfoViewController.swift */,
+				EAAD23BF1CB38028005FD787 /* DSUserInfoViewController.swift */,
+				EAAD23C11CB3803A005FD787 /* DSAccountInfoViewController.swift */,
+				EAAD23C31CB389AC005FD787 /* SignUpNavigationViewController.swift */,
+				EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		EAFEDF981CC2E24700C30693 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44AEA86F1CA9CBC100A52731 /* hackathon-for-hunger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AEA88D1CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hunger" */;
+			buildPhases = (
+				D563228F37B7B946B9D1F4DD /* 📦 Check Pods Manifest.lock */,
+				44AEA86C1CA9CBC100A52731 /* Sources */,
+				44AEA86D1CA9CBC100A52731 /* Frameworks */,
+				44AEA86E1CA9CBC100A52731 /* Resources */,
+				E5CC9B406A87EC882BDAC468 /* 📦 Embed Pods Frameworks */,
+				9DC2E877B9539AAF3DFE44A9 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hackathon-for-hunger";
+			productName = "hackathon-for-hunger";
+			productReference = 44AEA8701CA9CBC100A52731 /* hackathon-for-hunger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44AEA8831CA9CBC100A52731 /* hackathon-for-hungerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AEA8901CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hungerTests" */;
+			buildPhases = (
+				A73CA18ABC1F651805B30BEF /* 📦 Check Pods Manifest.lock */,
+				44AEA8801CA9CBC100A52731 /* Sources */,
+				44AEA8811CA9CBC100A52731 /* Frameworks */,
+				44AEA8821CA9CBC100A52731 /* Resources */,
+				12ED4D9E8151D8750307E568 /* 📦 Embed Pods Frameworks */,
+				82C0734C3D7A899A42E8B579 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44AEA8861CA9CBC100A52731 /* PBXTargetDependency */,
+			);
+			name = "hackathon-for-hungerTests";
+			productName = "hackathon-for-hungerTests";
+			productReference = 44AEA8841CA9CBC100A52731 /* hackathon-for-hungerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44AEA8681CA9CBC100A52731 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Hacksmiths;
+				TargetAttributes = {
+					44AEA86F1CA9CBC100A52731 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = J9WHKA9AQZ;
+					};
+					44AEA8831CA9CBC100A52731 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 44AEA86B1CA9CBC100A52731 /* Build configuration list for PBXProject "hackathon-for-hunger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44AEA8671CA9CBC100A52731;
+			productRefGroup = 44AEA8711CA9CBC100A52731 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44AEA86F1CA9CBC100A52731 /* hackathon-for-hunger */,
+				44AEA8831CA9CBC100A52731 /* hackathon-for-hungerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44AEA86E1CA9CBC100A52731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AEA87E1CA9CBC100A52731 /* LaunchScreen.storyboard in Resources */,
+				63FE86721CDC4243000764B2 /* directions_icon_small.pdf in Resources */,
+				634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */,
+				63823CFB1CD42DBF00B258B4 /* drivr_pin_orange.pdf in Resources */,
+				63FE866C1CDBB9D8000764B2 /* pickup_label.pdf in Resources */,
+				634E34291CC84E7100DD48BF /* multiple-circle.png in Resources */,
+				63823CF51CD4133200B258B4 /* drivr_pin.pdf in Resources */,
+				443D1DB01CB6D57500E2E7B9 /* ColabThi.otf in Resources */,
+				44424D831CDDDB4A00B2409F /* Portland-BridgePortBrewPub.gpx in Resources */,
+				634E342A1CC84E7100DD48BF /* multiple-circle@2x.png in Resources */,
+				44C7C85C1CD8DB76002ED3B6 /* OpenSans-Bold.ttf in Resources */,
+				63FE866E1CDBBFC5000764B2 /* dropoff_label.pdf in Resources */,
+				44C7C85D1CD8DB76002ED3B6 /* OpenSans-BoldItalic.ttf in Resources */,
+				63D351D81CE83FA2005EAD72 /* profile_pic_mask.pdf in Resources */,
+				44C7C85E1CD8DB76002ED3B6 /* OpenSans-ExtraBold.ttf in Resources */,
+				44C7C85F1CD8DB76002ED3B6 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				44C7C8601CD8DB76002ED3B6 /* OpenSans-Italic.ttf in Resources */,
+				44C7C8611CD8DB76002ED3B6 /* OpenSans-Light.ttf in Resources */,
+				44C7C8621CD8DB76002ED3B6 /* OpenSans-LightItalic.ttf in Resources */,
+				44C7C8631CD8DB76002ED3B6 /* OpenSans-Regular.ttf in Resources */,
+				3CD790541CE7250E00569587 /* ApiKeys.plist in Resources */,
+				44C7C8641CD8DB76002ED3B6 /* OpenSans-Semibold.ttf in Resources */,
+				44C7C8651CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */,
+				63823CF91CD425EE00B258B4 /* drivr_pin_green.pdf in Resources */,
+				44573E5B1CAE740C00A5F1C3 /* ApiKeysDist.plist in Resources */,
+				6352F18E1CC6114B0096FE59 /* directions_icon.pdf in Resources */,
+				63CAF7F41CC29BC4000D89A1 /* dropoff_icon.pdf in Resources */,
+				44AEA87B1CA9CBC100A52731 /* Assets.xcassets in Resources */,
+				3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */,
+				443D1DAF1CB6D57500E2E7B9 /* BebasNeue.otf in Resources */,
+				44C0CF561CBD6B9100EA3390 /* UserDonorMock.json in Resources */,
+				443D1DAE1CB6D57500E2E7B9 /* BEBAS___.ttf in Resources */,
+				4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */,
+				63CAF7F51CC29BC4000D89A1 /* pickup_icon.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AEA8821CA9CBC100A52731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12ED4D9E8151D8750307E568 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82C0734C3D7A899A42E8B579 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC2E877B9539AAF3DFE44A9 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A73CA18ABC1F651805B30BEF /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D563228F37B7B946B9D1F4DD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5CC9B406A87EC882BDAC468 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44AEA86C1CA9CBC100A52731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4464177F1CB182AC00F37F17 /* Recipient.swift in Sources */,
+				44A7250D1CAC4E3C00D676C3 /* DonationRouter.swift in Sources */,
+				446A77351CDD28B100951319 /* PendingDonationsDashboardTableViewCell.swift in Sources */,
+				3C74C3D81CEF948E004FDD27 /* DonationHistoryViewController.swift in Sources */,
+				63D351D51CE7926D005EAD72 /* ProfilePresenter.swift in Sources */,
+				44573E611CAEF35F00A5F1C3 /* DonationType.swift in Sources */,
+				44484DE71CAFFECA002D7233 /* UserRouter.swift in Sources */,
+				44424DA61CDDF3EB00B2409F /* DonorDonationViewController.swift in Sources */,
+				44424D921CDDEBF400B2409F /* DonorInfo.swift in Sources */,
+				44A7250B1CAC444100D676C3 /* BaseRouter.swift in Sources */,
+				3CA010801CE7877D0050FE2F /* ListTransformer.swift in Sources */,
+				44424D851CDDDB7300B2409F /* DriverMapDetailPendingVC.swift in Sources */,
+				3CCD09F11CE8EC6200B8E32C /* SlideMenuVC.swift in Sources */,
+				446A77371CDD291C00951319 /* DashboardPresenter.swift in Sources */,
+				EAD2DDF01CD330EF007454FB /* DonationTableViewCell.swift in Sources */,
+				44424D951CDDEC2400B2409F /* MapsDummyData.swift in Sources */,
+				446417811CB1872500F37F17 /* Image.swift in Sources */,
+				44424D961CDDEC2400B2409F /* MapsModel.swift in Sources */,
+				44484DE51CAFDED3002D7233 /* HTTPStatusCodes.swift in Sources */,
+				44424DA11CDDF39E00B2409F /* DonorAddAddressViewController.swift in Sources */,
+				446A76D91CDD17A700951319 /* LegacyCode.swift in Sources */,
+				44424DA21CDDF39E00B2409F /* DonorAddressViewController.swift in Sources */,
+				44424DAA1CDDF47300B2409F /* ProfileViewController.swift in Sources */,
+				3C0DB77F1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift in Sources */,
+				3CCE63951CF044170089F5C9 /* SettingsViewController.swift in Sources */,
+				44424D891CDDE5D200B2409F /* DonationMapOverviewVC.swift in Sources */,
+				442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */,
+				EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */,
+				44573E631CAEF37400A5F1C3 /* MetaData.swift in Sources */,
+				446A77391CDD29C400951319 /* DonationService.swift in Sources */,
+				44C702691CDA86E000E4A2EA /* ActivityIndicatorView.swift in Sources */,
+				3C2C9B501CFD94C6009B34C9 /* SweetAlert.swift in Sources */,
+				EAAD23C21CB3803A005FD787 /* DSAccountInfoViewController.swift in Sources */,
+				44424DB21CDE370600B2409F /* DriverSignupPresenter.swift in Sources */,
+				3C2C9B4E1CFD87E8009B34C9 /* DonationPresenter.swift in Sources */,
+				EAAD23C41CB389AC005FD787 /* SignUpNavigationViewController.swift in Sources */,
+				63D351D31CE78ABE005EAD72 /* UserUpdate.swift in Sources */,
+				EAAD23C61CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift in Sources */,
+				44424D911CDDEBF400B2409F /* DonationPin.swift in Sources */,
+				44424D9C1CDDF00100B2409F /* AuthService.swift in Sources */,
+				EAFEDF9A1CC2E26800C30693 /* DonorSignupInfo.swift in Sources */,
+				446A76DB1CDD1B9800951319 /* LoginProvider.swift in Sources */,
+				446A76CF1CDD116000951319 /* UserService.swift in Sources */,
+				44424D991CDDEC6A00B2409F /* DriverMapPickupVC.swift in Sources */,
+				44A725101CAC559500D676C3 /* Donation.swift in Sources */,
+				446A76D41CDD126A00951319 /* LoginViewController.swift in Sources */,
+				442FE9781CC284230002187D /* UserLogin.swift in Sources */,
+				44424DB01CDE359C00B2409F /* DriverSignupViewController.swift in Sources */,
+				44AA631F1CB3F7AD005E02CC /* MenuTableViewController.swift in Sources */,
+				446A77331CDD289600951319 /* PendingDonationsDashboard.swift in Sources */,
+				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,
+				EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */,
+				44C0CF521CBD670600EA3390 /* Setting.swift in Sources */,
+				44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */,
+				44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */,
+				44484DE31CAFDA45002D7233 /* Token.swift in Sources */,
+				446A77311CDD265200951319 /* DonationsContainerViewController.swift in Sources */,
+				3C30A7D41D00A4E00021DBDE /* DonationDashboardPresenter.swift in Sources */,
+				44424D8E1CDDEBBD00B2409F /* LocationManager.swift in Sources */,
+				446A76D61CDD129400951319 /* LoginPresenter.swift in Sources */,
+				44484DDE1CAFD857002D7233 /* User.swift in Sources */,
+				EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */,
+				44638F061CC3EDD0005379FE /* UIViewExtensions.swift in Sources */,
+				44424D871CDDDFBB00B2409F /* MapViewPresenter.swift in Sources */,
+				3CCD09EF1CE8C9F900B8E32C /* MenuPresenter.swift in Sources */,
+				EAAD23BE1CB38014005FD787 /* VSAccountInfoViewController.swift in Sources */,
+				EA6C4C201CD1E80300165F02 /* Global.swift in Sources */,
+				44424D8B1CDDE6F400B2409F /* MapOverviewPresenter.swift in Sources */,
+				44424D7D1CDDC07C00B2409F /* CurrentDonationsDashboard.swift in Sources */,
+				3C2C9B551CFD9CB4009B34C9 /* DonationDashboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AEA8801CA9CBC100A52731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B7F0001CADAD5B00E7C609 /* DonationRouterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44AEA8861CA9CBC100A52731 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44AEA86F1CA9CBC100A52731 /* hackathon-for-hunger */;
+			targetProxy = 44AEA8851CA9CBC100A52731 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		44AEA87C1CA9CBC100A52731 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44AEA87D1CA9CBC100A52731 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44AEA88B1CA9CBC100A52731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44AEA88C1CA9CBC100A52731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44AEA88E1CA9CBC100A52731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E76494F30E9C7AE6A06635B8 /* Pods-hackathon-for-hunger.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "hackathon-for-hunger/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hacksmiths.hackathon-for-hunger";
+				PRODUCT_NAME = "hackathon-for-hunger";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		44AEA88F1CA9CBC100A52731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ADAF9C54935D893257F4308 /* Pods-hackathon-for-hunger.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "hackathon-for-hunger/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hacksmiths.hackathon-for-hunger";
+				PRODUCT_NAME = "hackathon-for-hunger";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		44AEA8911CA9CBC100A52731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86BA625C431AB9FBBE950948 /* Pods-hackathon-for-hungerTests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "hackathon-for-hungerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hacksmiths.hackathon-for-hungerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		44AEA8921CA9CBC100A52731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B378CB29D345D02F6339D4A8 /* Pods-hackathon-for-hungerTests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "hackathon-for-hungerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hacksmiths.hackathon-for-hungerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44AEA86B1CA9CBC100A52731 /* Build configuration list for PBXProject "hackathon-for-hunger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AEA88B1CA9CBC100A52731 /* Debug */,
+				44AEA88C1CA9CBC100A52731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44AEA88D1CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hunger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AEA88E1CA9CBC100A52731 /* Debug */,
+				44AEA88F1CA9CBC100A52731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44AEA8901CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hungerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AEA8911CA9CBC100A52731 /* Debug */,
+				44AEA8921CA9CBC100A52731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44AEA8681CA9CBC100A52731 /* Project object */;
+}
