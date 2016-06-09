@@ -15,8 +15,10 @@ protocol DonorAddressViewControllerDelegate {
 class DonorAddressViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
     let reusableIdentifier = "DonorAddressCell"
     let addAddressSegueIdentifier = "AddAddress"
+    let authService = AuthService()
     var addresses = [String]()
     var defaultAddressIndex:NSIndexPath? = nil
     
@@ -24,14 +26,27 @@ class DonorAddressViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-                
+        
+        showUserOrganisationTitle()
+        setupNavAppearance()
+    }
+    
+    // MARK: Helper methods
+
+    func setupNavAppearance() {
         navigationController?.navigationBar.barTintColor = UIColor(red: 247/255.0, green: 179/255.0, blue: 43/255.0, alpha: 1)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         navigationController?.navigationBar.barStyle = UIBarStyle.Black
-        
-        self.parentViewController?.preferredStatusBarStyle()
+    }
+    
+    func showUserOrganisationTitle() {
+        if let currentUser = authService.getCurrentUser() {
+            if let userOrg = currentUser["organisation"] as? String {
+                title = userOrg
+            }
+        }
     }
     
     // MARK: Actions 
