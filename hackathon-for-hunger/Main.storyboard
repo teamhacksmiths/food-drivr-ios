@@ -67,6 +67,7 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
         <mutableArray key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
@@ -860,14 +861,43 @@ Please check back soon.</string>
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DonorAddressCell" id="QM9-eA-dKW">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DonorAddressCell" rowHeight="75" id="QM9-eA-dKW" customClass="DonorAddressTableViewCell" customModule="hackathon_for_hunger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="560" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QM9-eA-dKW" id="8tt-Ma-SJG">
-                                            <rect key="frame" x="0.0" y="0.0" width="521" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSi-dp-nog">
+                                                    <rect key="frame" x="8" y="17.5" width="499" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="GUA-UR-SgR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                    <color key="textColor" red="0.396078431372549" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="check_mark" translatesAutoresizingMaskIntoConstraints="NO" id="g3l-Dd-ix3">
+                                                    <rect key="frame" x="517" y="12.5" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="fdu-t2-0xT"/>
+                                                        <constraint firstAttribute="width" constant="35" id="pfX-3X-4B3"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RSi-dp-nog" firstAttribute="centerY" secondItem="8tt-Ma-SJG" secondAttribute="centerY" id="4jY-RQ-FsY"/>
+                                                <constraint firstItem="g3l-Dd-ix3" firstAttribute="centerY" secondItem="8tt-Ma-SJG" secondAttribute="centerY" id="64x-R4-tXi"/>
+                                                <constraint firstAttribute="trailing" secondItem="g3l-Dd-ix3" secondAttribute="trailing" constant="8" id="Rvg-sq-fH6"/>
+                                                <constraint firstItem="g3l-Dd-ix3" firstAttribute="leading" secondItem="RSi-dp-nog" secondAttribute="trailing" constant="10" id="jwj-wP-HDp"/>
+                                                <constraint firstItem="RSi-dp-nog" firstAttribute="leading" secondItem="8tt-Ma-SJG" secondAttribute="leading" constant="8" id="vVb-pX-n5K"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="RSi-dp-nog" id="HfS-Of-2wI"/>
+                                            <outlet property="checkmarkImage" destination="g3l-Dd-ix3" id="Qz7-Ue-g4r"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -2850,6 +2880,7 @@ Please check back soon.</string>
         <image name="Profile" width="22" height="22"/>
         <image name="burger" width="72" height="72"/>
         <image name="cancel" width="32" height="32"/>
+        <image name="check_mark" width="18" height="18"/>
         <image name="directions" width="48" height="42"/>
         <image name="donor" width="48" height="50"/>
         <image name="driver" width="56" height="48"/>

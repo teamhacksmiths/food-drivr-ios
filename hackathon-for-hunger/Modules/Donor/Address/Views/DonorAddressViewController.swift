@@ -13,10 +13,12 @@ protocol DonorAddressViewControllerDelegate {
 }
 
 class DonorAddressViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
+    
     let reusableIdentifier = "DonorAddressCell"
     let addAddressSegueIdentifier = "AddAddress"
+    let authService = AuthService()
     var addresses = [String]()
     var defaultAddressIndex:NSIndexPath? = nil
     
@@ -25,9 +27,29 @@ class DonorAddressViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        showUserOrganisationTitle()
+        setupNavAppearance()
     }
     
-    // MARK: Actions 
+    // MARK: Helper methods
+    
+    func setupNavAppearance() {
+        navigationController?.navigationBar.barTintColor = UIColor(red: 247/255.0, green: 179/255.0, blue: 43/255.0, alpha: 1)
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        navigationController?.navigationBar.barStyle = UIBarStyle.Black
+    }
+    
+    func showUserOrganisationTitle() {
+        if let currentUser = authService.getCurrentUser() {
+            if let userOrg = currentUser["organisation"] as? String {
+                title = userOrg
+            }
+        }
+    }
+    
+    // MARK: Actions
     
     @IBAction func didTapAddAddress(sender: AnyObject) {
         shouldPerformSegueWithIdentifier(reusableIdentifier, sender: nil)
@@ -52,29 +74,24 @@ extension DonorAddressViewController: UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reusableIdentifier, forIndexPath: indexPath)
-        configureCell(cell, indexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(reusableIdentifier, forIndexPath: indexPath) as! DonorAddressTableViewCell
+        
+        var isDefault = false
+        if indexPath == defaultAddressIndex || addresses.count == 1 {
+            isDefault = true
+        }
+        cell.configureCell(addresses[indexPath.row], defaultAddress: isDefault)
         
         return cell
-    }
-    
-    // MARK: Data Source Helper 
-    
-    func configureCell(cell: UITableViewCell, indexPath: NSIndexPath){
-        cell.textLabel?.text = addresses[indexPath.row]
-        cell.accessoryType = .None
-        if defaultAddressIndex == indexPath{
-            cell.accessoryType = .Checkmark
-        }
-        if addresses.count == 1 {
-            cell.accessoryType = .Checkmark
-            defaultAddressIndex = indexPath
-        }
     }
     
 }
 
 extension DonorAddressViewController: UITableViewDelegate{
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 75 
+    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         defaultAddressIndex = indexPath
