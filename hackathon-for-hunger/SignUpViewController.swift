@@ -9,11 +9,13 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
+    @IBOutlet weak var driverImageView: UIImageView!
+    @IBOutlet weak var donorImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let imageViews = [driverImageView!, donorImageView!]
+        addImageViewGestureRecognizer(imageViews)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,14 +27,44 @@ class SignUpViewController: UIViewController {
     @IBAction func cancelButtonClicked(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    /** Adds gesture recognizers to each image view in an array of passed in image
+     *  views
+     *
+     *  @param imageViews - an array of imageviews
+     *  @return None
+     */
+    func addImageViewGestureRecognizer(imageViews: [UIImageView]) {
+        for imageView in imageViews {
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.didTapImageView(_:)))
+            gestureRecognizer.numberOfTapsRequired = 1
+            imageView.userInteractionEnabled = true
+            imageView.addGestureRecognizer(gestureRecognizer)
+        }
     }
-    */
-
+    
+    /** Fired when the image view is tapped.
+     *
+     *  @param sender - The Tap Gesture Recognizer that sent the message.
+     *  @return None
+     */
+    func didTapImageView(sender: UITapGestureRecognizer) {
+        let imageView = sender.view!
+        let button = SignupButtons(rawValue: imageView.tag)
+        switch button! {
+        case .Donor:
+            performSegueWithIdentifier("ShowDonorSignup", sender: self)
+        case .Driver:
+            performSegueWithIdentifier("ShowDriverSignup", sender: self)
+        }
+    }
+    
+    /** Maps to the tap set in storyboard for these image view buttons.
+     *
+     */
+    enum SignupButtons: Int {
+        case Driver = 101,
+             Donor
+    }
+    
 }
