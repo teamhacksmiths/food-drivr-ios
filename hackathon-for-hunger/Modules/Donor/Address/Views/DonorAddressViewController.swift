@@ -34,11 +34,15 @@ class DonorAddressViewController: UIViewController {
     // MARK: Helper methods
     
     func setupNavAppearance() {
-        navigationController?.navigationBar.barTintColor = UIColor(red: 247/255.0, green: 179/255.0, blue: 43/255.0, alpha: 1)
+        navigationController?.navigationBar.translucent = false 
+        navigationController?.navigationBar.barTintColor = UIColor(red: 246/255.0, green: 165/255.0, blue: 4/255.0, alpha: 1)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
     }
     
     func showUserOrganisationTitle() {
