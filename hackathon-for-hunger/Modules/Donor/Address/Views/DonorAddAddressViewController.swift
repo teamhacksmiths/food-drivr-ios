@@ -83,8 +83,15 @@ class DonorAddAddressViewController: UIViewController {
     
     
     @IBAction func didTapAddAddress(sender: AnyObject) {
-        let address = getAddressFromFields()
-        delegate?.addAddress(address)
+        let addressText = getAddressFromFields()
+        delegate?.addAddress(addressText)
+        
+        let address = Address()
+        address.city = cityTextField.text!
+        address.street_address = addressTextField.text!
+        address.state = addressTextField.text!
+        address.zip = zipTextField.text!
+        
         navigationController?.popViewControllerAnimated(true)
     }
     

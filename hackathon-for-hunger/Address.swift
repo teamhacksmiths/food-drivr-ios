@@ -9,6 +9,7 @@
 import Foundation
 import ObjectMapper
 import RealmSwift
+import JSONCodable
 
 class Address: Object, Mappable {
         
@@ -34,4 +35,17 @@ class Address: Object, Mappable {
         
     }
 
+}
+
+extension Address: JSONEncodable {
+    func toJSON() throws -> [String:AnyObject] {
+        return try JSONEncoder.create({ (encoder) -> Void in
+            try encoder.encode(street_address, key: "street_address")
+            try encoder.encode(street_address_two, key: "street_address_two")
+            try encoder.encode(city, key: "city")
+            try encoder.encode(zip, key: "zip")
+            try encoder.encode(state, key: "state")
+            try encoder.encode(isDefault, key: "deafult")
+        })
+    }
 }
