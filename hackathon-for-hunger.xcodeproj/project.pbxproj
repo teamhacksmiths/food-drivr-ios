@@ -105,6 +105,7 @@
 		63FE866E1CDBBFC5000764B2 /* dropoff_label.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */; };
 		63FE86721CDC4243000764B2 /* directions_icon_small.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE86711CDC4243000764B2 /* directions_icon_small.pdf */; };
 		701BE9D61D09F3EB004A1648 /* DonorAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701BE9D51D09F3EB004A1648 /* DonorAddressTableViewCell.swift */; };
+		70D57CFA1D0CEE1A00A91511 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D57CF91D0CEE1A00A91511 /* Address.swift */; };
 		9A380AAFB5FA3DC9089D9525 /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90311A1A749B449967005E40 /* Pods_hackathon_for_hunger.framework */; };
 		EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */; };
 		EA6C4C201CD1E80300165F02 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1F1CD1E80300165F02 /* Global.swift */; };
@@ -233,6 +234,7 @@
 		63FE866D1CDBBFC5000764B2 /* dropoff_label.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dropoff_label.pdf; sourceTree = "<group>"; };
 		63FE86711CDC4243000764B2 /* directions_icon_small.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon_small.pdf; sourceTree = "<group>"; };
 		701BE9D51D09F3EB004A1648 /* DonorAddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddressTableViewCell.swift; sourceTree = "<group>"; };
+		70D57CF91D0CEE1A00A91511 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		86BA625C431AB9FBBE950948 /* Pods-hackathon-for-hungerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		90311A1A749B449967005E40 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B378CB29D345D02F6339D4A8 /* Pods-hackathon-for-hungerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -663,6 +665,7 @@
 				4464177E1CB182AC00F37F17 /* Recipient.swift */,
 				446417801CB1872500F37F17 /* Image.swift */,
 				44C0CF511CBD670600EA3390 /* Setting.swift */,
+				70D57CF91D0CEE1A00A91511 /* Address.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1096,6 +1099,7 @@
 				44573E651CAEF68500A5F1C3 /* Participant.swift in Sources */,
 				EAAD23C01CB38028005FD787 /* DSUserInfoViewController.swift in Sources */,
 				44C0CF521CBD670600EA3390 /* Setting.swift in Sources */,
+				70D57CFA1D0CEE1A00A91511 /* Address.swift in Sources */,
 				44AEA8741CA9CBC100A52731 /* AppDelegate.swift in Sources */,
 				44573E5F1CAEF20D00A5F1C3 /* Location.swift in Sources */,
 				44484DE31CAFDA45002D7233 /* Token.swift in Sources */,
