@@ -8,7 +8,7 @@ This app uses cocoapods, so cd into the root directory and run
 ```
 pod install
 ```
-You will also need to cope the ApiKeysDist.plist over to ApiKeys.plist and add the api keys supplied by ian or Ryan
+You will also need to copy the ApiKeysDist.plist over to ApiKeys.plist and add the api keys supplied by Ian or Ryan
 Then open the .xcworkspace file in Xcode.
 
 ## Deployment
