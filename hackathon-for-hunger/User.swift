@@ -28,6 +28,7 @@ class User: Object, Mappable {
     dynamic var phone: String?
     dynamic var role = 0
     dynamic var settings: Setting?
+    var addresses = List<Address>()
     
     var userRole: UserRole {
         get{
@@ -55,6 +56,7 @@ class User: Object, Mappable {
         phone           <- map["phone"]
         role            <- map["role_id"]
         settings        <- map["setting"]
+        addresses       <- (map["addresses_attributes"], ListTransform<Address>())
     }
     
     convenience init(dict: JsonDict) {
@@ -72,5 +74,9 @@ class User: Object, Mappable {
         if let settingDict = dict["setting"] as? JsonDict {
             self.settings = Setting(value: settingDict)
         }
+//        if let addressDict = dict["addresses_attributes"] as? JsonDict {
+//            let new = Address(JSON: addressDict)
+//            self.addresses.append(new!)
+//        }
     }
 }

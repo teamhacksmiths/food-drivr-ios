@@ -79,19 +79,29 @@ class DonorAddAddressViewController: UIViewController {
         return "\(addressTextField.text!), \(cityTextField.text!)"
     }
     
+    func saveAddress(address: Address) {
+        let userService = UserService()
+        let updateData = UserUpdate(name: nil, phone: nil, email: nil, password: nil, password_confirmation: nil, avatar: nil, address: [address])
+        userService.updateUser(updateData).then { addressDict -> Void in
+            print("Address uploaded: \(addressDict)")
+            }.error { error in
+                print("Error uploading: \(error)")
+        }
+    }
+    
     // MARK: Actions
     
     
     @IBAction func didTapAddAddress(sender: AnyObject) {
-        let addressText = getAddressFromFields()
-        delegate?.addAddress(addressText)
-        
         let address = Address()
         address.city = cityTextField.text!
         address.street_address = addressTextField.text!
         address.state = addressTextField.text!
         address.zip = zipTextField.text!
+        address.isDefault = false
+        saveAddress(address)
         
+        delegate?.addAddress(address)
         navigationController?.popViewControllerAnimated(true)
     }
     

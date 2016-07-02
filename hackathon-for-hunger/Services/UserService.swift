@@ -116,8 +116,14 @@ class UserService {
                 .validate()
                 .responseJSON {
                     response in
+
+                    print(response.result.value)
                     switch response.result {
+                        
+                        
                     case .Success(_):
+                        
+                        print(response.result.value)
 
                         if let newUser = response.result.value!["user"] as? [String: AnyObject] {
 

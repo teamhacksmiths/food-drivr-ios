@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DonorAddressViewControllerDelegate {
-    func addAddress(address:String)
+    func addAddress(address:Address)
 }
 
 class DonorAddressViewController: UIViewController {
@@ -19,7 +19,7 @@ class DonorAddressViewController: UIViewController {
     let reusableIdentifier = "DonorAddressCell"
     let addAddressSegueIdentifier = "AddAddress"
     let authService = AuthService()
-    var addresses = [String]()
+    var addresses = [Address]()
     var defaultAddressIndex:NSIndexPath? = nil
     
     override func viewDidLoad() {
@@ -29,6 +29,11 @@ class DonorAddressViewController: UIViewController {
         
         showUserOrganisationTitle()
         setupNavAppearance()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        showUserOrganisationTitle()
     }
     
     // MARK: Helper methods
@@ -46,8 +51,20 @@ class DonorAddressViewController: UIViewController {
             if let userOrg = currentUser["organisation"] as? String {
                 title = userOrg
             }
+            print("User: \(currentUser.addresses.count)")
         }
+        
     }
+    
+//    func saveAddress(address: Address) {
+//        let userService = UserService()
+//        let updateData = UserUpdate(name: nil, phone: nil, email: nil, password: nil, password_confirmation: nil, avatar: nil, address: [address])
+//        userService.updateUser(updateData).then { addressDict -> Void in
+//            print("Address uploaded: \(addressDict)")
+//            }.error { error in
+//                print("Error uploading: \(error)")
+//        }
+//    }
     
     // MARK: Actions
     
@@ -119,7 +136,7 @@ extension DonorAddressViewController: UITableViewDelegate{
 }
 
 extension DonorAddressViewController: DonorAddressViewControllerDelegate{
-    func addAddress(address: String) {
+    func addAddress(address: Address) {
         self.addresses.append(address)
         tableView.reloadData()
     }
