@@ -17,6 +17,7 @@ class DonorAddAddressViewController: UIViewController {
     @IBOutlet weak var addAddressButton: UIButton!
     
     var delegate: DonorAddressViewControllerDelegate?
+    let userService = UserService()
     
     // MARK: Life cycle
     
@@ -30,7 +31,6 @@ class DonorAddAddressViewController: UIViewController {
         super.viewWillAppear(animated)
         
         title = "ADD NEW ADDRESS"
-        
         tabBarController?.tabBar.hidden = true
         
         addAddressButton.enabled = false
@@ -55,7 +55,6 @@ class DonorAddAddressViewController: UIViewController {
         cityTextField.addTarget(self, action: #selector(DonorAddAddressViewController.toggleButtonControl(_:)), forControlEvents: .AllEditingEvents)
         stateTextField.addTarget(self, action: #selector(DonorAddAddressViewController.toggleButtonControl(_:)), forControlEvents: .AllEditingEvents)
         zipTextField.addTarget(self, action: #selector(DonorAddAddressViewController.toggleButtonControl(_:)), forControlEvents: .AllEditingEvents)
-        
     }
     
     func toggleButtonControl(sender: UITextField) {
@@ -80,7 +79,6 @@ class DonorAddAddressViewController: UIViewController {
     }
     
     func saveAddress(address: Address) {
-        let userService = UserService()
         let updateData = UserUpdate(name: nil, phone: nil, email: nil, password: nil, password_confirmation: nil, avatar: nil, address: [address])
         userService.updateUser(updateData).then { addressDict -> Void in
             print("Address uploaded: \(addressDict)")

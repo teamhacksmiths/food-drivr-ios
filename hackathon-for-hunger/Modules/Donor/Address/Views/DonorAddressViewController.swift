@@ -21,18 +21,21 @@ class DonorAddressViewController: UIViewController {
     let authService = AuthService()
     var addresses = [Address]()
     var defaultAddressIndex:NSIndexPath? = nil
+    let userService = UserService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         
-        showUserOrganisationTitle()
+        //showUserOrganisationTitle()
         setupNavAppearance()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // TODO: Remove from here
         showUserOrganisationTitle()
     }
     

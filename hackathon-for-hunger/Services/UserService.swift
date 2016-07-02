@@ -117,10 +117,7 @@ class UserService {
                 .responseJSON {
                     response in
 
-                    print(response.result.value)
                     switch response.result {
-                        
-                        
                     case .Success(_):
                         
                         print(response.result.value)
@@ -132,6 +129,7 @@ class UserService {
                         }
                         
                     case .Failure(let error):
+                        print("updateUser: \(error)")
                         reject(error)
                     }
             }
