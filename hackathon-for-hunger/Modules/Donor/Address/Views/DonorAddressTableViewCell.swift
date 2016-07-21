@@ -18,7 +18,7 @@ class DonorAddressTableViewCell: UITableViewCell {
     }
     
     func configureCell(address: Address, defaultAddress: Bool) {
-        if defaultAddress {
+        if address.isDefault {
             addressLabel.font = UIFont(name: "OpenSans-Bold", size: 20)
             checkmarkImage.image = UIImage(named: "check_mark")
         } else {

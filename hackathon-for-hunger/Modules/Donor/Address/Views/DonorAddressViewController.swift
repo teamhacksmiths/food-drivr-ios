@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol DonorAddressViewControllerDelegate {
     func addAddress(address:Address)
@@ -25,18 +26,18 @@ class DonorAddressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Realm path: \(Realm.Configuration.defaultConfiguration.fileURL)")
         tableView.dataSource = self
         tableView.delegate = self
         
-        //showUserOrganisationTitle()
+        showUserOrganisationTitle()
+        getDonorAddresses()
         setupNavAppearance()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        // TODO: Remove from here
-        showUserOrganisationTitle()
     }
     
     // MARK: Helper methods
@@ -49,25 +50,38 @@ class DonorAddressViewController: UIViewController {
         navigationController?.navigationBar.barStyle = UIBarStyle.Black
     }
     
+    func getDonorAddresses() {
+        if let currentUser = authService.getCurrentUser() {
+            if let userAddresses = currentUser["addresses"] as? List<Address> {
+                //print("Donor Addresses: \(userAddresses)")
+                for address in userAddresses {
+                    print("Address: \(address)")
+                    let temp = Address(value: address)
+                    addresses.append(address)
+                }
+            } else {
+                print("No donor addresses")
+            }
+            //print("User: \(currentUser)")
+        }
+    }
+    
     func showUserOrganisationTitle() {
         if let currentUser = authService.getCurrentUser() {
             if let userOrg = currentUser["organisation"] as? String {
                 title = userOrg
             }
-            print("User: \(currentUser.addresses.count)")
         }
-        
     }
     
-//    func saveAddress(address: Address) {
-//        let userService = UserService()
-//        let updateData = UserUpdate(name: nil, phone: nil, email: nil, password: nil, password_confirmation: nil, avatar: nil, address: [address])
-//        userService.updateUser(updateData).then { addressDict -> Void in
-//            print("Address uploaded: \(addressDict)")
-//            }.error { error in
-//                print("Error uploading: \(error)")
-//        }
-//    }
+    func saveAddress(address: Address) {
+        let updateData = UserUpdate(name: nil, phone: "(818)220", email: nil, password: nil, password_confirmation: nil, avatar: nil, address: [address])
+        userService.updateUser(updateData).then { userDict -> Void in
+            print("User info uploaded: \(userDict)")
+            }.error { error in
+                print("Error uploading: \(error)")
+        }
+    }
     
     // MARK: Actions
     
@@ -140,7 +154,8 @@ extension DonorAddressViewController: UITableViewDelegate{
 
 extension DonorAddressViewController: DonorAddressViewControllerDelegate{
     func addAddress(address: Address) {
-        self.addresses.append(address)
+        //self.addresses.append(address)
         tableView.reloadData()
+        saveAddress(address)
     }
 }

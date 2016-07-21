@@ -56,7 +56,7 @@ class User: Object, Mappable {
         phone           <- map["phone"]
         role            <- map["role_id"]
         settings        <- map["setting"]
-        addresses       <- (map["addresses_attributes"], ListTransform<Address>())
+        addresses       <- (map["addresses"], ListTransform<Address>())
     }
     
     convenience init(dict: JsonDict) {
@@ -74,9 +74,16 @@ class User: Object, Mappable {
         if let settingDict = dict["setting"] as? JsonDict {
             self.settings = Setting(value: settingDict)
         }
-//        if let addressDict = dict["addresses_attributes"] as? JsonDict {
+        if let addressDict = dict["addresses"] as? [JsonDict] {
+            for address in addressDict {
+                let new = Address(JSON: address)
+                self.addresses.append(new!)
+            }
 //            let new = Address(JSON: addressDict)
 //            self.addresses.append(new!)
-//        }
+//            for (k, v) in addressDict {
+//                print(k)
+//            }
+        }
     }
 }
