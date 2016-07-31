@@ -21,7 +21,7 @@ struct UserUpdate {
     var password: String?
     var password_confirmation: String?
     var avatar: String?
-    var address: [Address]? 
+    var address: [Address] = []
     
 }
 

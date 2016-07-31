@@ -53,16 +53,15 @@ class DonorAddressViewController: UIViewController {
     func getDonorAddresses() {
         if let currentUser = authService.getCurrentUser() {
             if let userAddresses = currentUser["addresses"] as? List<Address> {
-                //print("Donor Addresses: \(userAddresses)")
+                print("Donor Addresses Count: \(userAddresses.count)")
                 for address in userAddresses {
-                    print("Address: \(address)")
-                    let temp = Address(value: address)
+                    //print("Address: \(address)")
                     addresses.append(address)
                 }
             } else {
                 print("No donor addresses")
             }
-            //print("User: \(currentUser)")
+            print("User: \(currentUser)")
         }
     }
     
@@ -74,13 +73,15 @@ class DonorAddressViewController: UIViewController {
         }
     }
     
-    func saveAddress(address: Address) {
-        let updateData = UserUpdate(name: nil, phone: "(818)220", email: nil, password: nil, password_confirmation: nil, avatar: nil, address: [address])
+    func updateAddresses() {
+        //print(addresses.count)
+        let updateData = UserUpdate(name: nil, phone: nil, email: nil, password: nil, password_confirmation: nil, avatar: nil, address: addresses)
         userService.updateUser(updateData).then { userDict -> Void in
             print("User info uploaded: \(userDict)")
             }.error { error in
                 print("Error uploading: \(error)")
         }
+
     }
     
     // MARK: Actions
@@ -141,21 +142,22 @@ extension DonorAddressViewController: UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete{
+        if editingStyle == .Delete {
             addresses.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            updateAddresses()
         }
-        if indexPath == defaultAddressIndex{
-            defaultAddressIndex = nil
-        }
+//        if indexPath == defaultAddressIndex{
+//            defaultAddressIndex = nil
+//        }
     }
     
 }
 
 extension DonorAddressViewController: DonorAddressViewControllerDelegate{
     func addAddress(address: Address) {
-        //self.addresses.append(address)
+        self.addresses.append(address)
         tableView.reloadData()
-        saveAddress(address)
+        updateAddresses()
     }
 }

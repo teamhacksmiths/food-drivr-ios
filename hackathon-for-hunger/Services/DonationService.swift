@@ -156,6 +156,7 @@ class DonationService {
                     case .Success(let JSON):
                         print(JSON)
                         let donation = Mapper<Donation>().map(JSON["donation"] as! JsonDict?)
+                        //print("Donation: \(donation)")
                         do {
                             try self.realm.write {
                                 self.realm.add(donation!, update: true)

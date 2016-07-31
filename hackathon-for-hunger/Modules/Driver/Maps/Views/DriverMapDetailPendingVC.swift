@@ -38,6 +38,7 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var donorNameLabel: UILabel!
     @IBOutlet weak var donorStreetLabel: UILabel!
     @IBOutlet weak var donorCityLabel: UILabel!
+    @IBOutlet weak var donationDescription: UILabel!
     
     @IBAction func acceptDonation(sender: AnyObject) {
         activityIndicator.startAnimating()
@@ -53,12 +54,19 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         mapViewPresenter?.attachView(self)
         self.donation = mapViewPresenter?.getDonation()
+        print(donation?.donor?.name)
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Accepting")
         mapView.delegate = self
         //mapView.setRegion(startingRegion, animated: true)
         if donation != nil {
             donorNameLabel.text = donation?.donor?.name
             // TODO: need a street address for Donor Participant, to be passed to UI
+            
+            if let desc = donation?.donationItems.first?.type_description {
+                donationDescription.text = "\(desc)"
+            } else {
+                donationDescription.text = "No description provided"
+            }
             if donation?.recipient != nil {
                 recipientNameLabel.text = donation?.recipient?.name
                 recipientStreetLabel.text = donation?.recipient?.street_address
