@@ -116,8 +116,11 @@ class UserService {
                 .validate()
                 .responseJSON {
                     response in
+
                     switch response.result {
                     case .Success(_):
+                        
+                        print(response.result.value)
 
                         if let newUser = response.result.value!["user"] as? [String: AnyObject] {
 
@@ -126,6 +129,7 @@ class UserService {
                         }
                         
                     case .Failure(let error):
+                        print("updateUser: \(error)")
                         reject(error)
                     }
             }

@@ -42,7 +42,7 @@ class DashboardPresenter {
             self.dashboardView?.donations(self, didSucceed: donations)
             return
         }
-        let donations = realm.objects(Donation).filter("rawStatus IN %@", status)
+        let donations = realm.objects(Donation).filter("rawStatus IN %@", status).sorted("id", ascending: false)
         self.dashboardView?.donations(self, didSucceed: donations)
         
     }

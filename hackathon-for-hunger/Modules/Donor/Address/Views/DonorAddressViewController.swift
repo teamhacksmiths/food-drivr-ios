@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol DonorAddressViewControllerDelegate {
-    func addAddress(address:String)
+    func addAddress(address:Address)
 }
 
 class DonorAddressViewController: UIViewController {
@@ -19,16 +20,24 @@ class DonorAddressViewController: UIViewController {
     let reusableIdentifier = "DonorAddressCell"
     let addAddressSegueIdentifier = "AddAddress"
     let authService = AuthService()
-    var addresses = [String]()
+    var addresses = [Address]()
     var defaultAddressIndex:NSIndexPath? = nil
+    let userService = UserService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Realm path: \(Realm.Configuration.defaultConfiguration.fileURL)")
         tableView.dataSource = self
         tableView.delegate = self
         
         showUserOrganisationTitle()
+        getDonorAddresses()
         setupNavAppearance()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     // MARK: Helper methods
@@ -41,12 +50,38 @@ class DonorAddressViewController: UIViewController {
         navigationController?.navigationBar.barStyle = UIBarStyle.Black
     }
     
+    func getDonorAddresses() {
+        if let currentUser = authService.getCurrentUser() {
+            if let userAddresses = currentUser["addresses"] as? List<Address> {
+                print("Donor Addresses Count: \(userAddresses.count)")
+                for address in userAddresses {
+                    //print("Address: \(address)")
+                    addresses.append(address)
+                }
+            } else {
+                print("No donor addresses")
+            }
+            print("User: \(currentUser)")
+        }
+    }
+    
     func showUserOrganisationTitle() {
         if let currentUser = authService.getCurrentUser() {
             if let userOrg = currentUser["organisation"] as? String {
                 title = userOrg
             }
         }
+    }
+    
+    func updateAddresses() {
+        //print(addresses.count)
+        let updateData = UserUpdate(name: nil, phone: nil, email: nil, password: nil, password_confirmation: nil, avatar: nil, address: addresses)
+        userService.updateUser(updateData).then { userDict -> Void in
+            print("User info uploaded: \(userDict)")
+            }.error { error in
+                print("Error uploading: \(error)")
+        }
+
     }
     
     // MARK: Actions
@@ -107,20 +142,22 @@ extension DonorAddressViewController: UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete{
+        if editingStyle == .Delete {
             addresses.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            updateAddresses()
         }
-        if indexPath == defaultAddressIndex{
-            defaultAddressIndex = nil
-        }
+//        if indexPath == defaultAddressIndex{
+//            defaultAddressIndex = nil
+//        }
     }
     
 }
 
 extension DonorAddressViewController: DonorAddressViewControllerDelegate{
-    func addAddress(address: String) {
+    func addAddress(address: Address) {
         self.addresses.append(address)
         tableView.reloadData()
+        updateAddresses()
     }
 }

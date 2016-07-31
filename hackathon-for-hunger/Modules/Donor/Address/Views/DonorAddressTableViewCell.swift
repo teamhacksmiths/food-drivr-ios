@@ -17,15 +17,15 @@ class DonorAddressTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configureCell(address: String, defaultAddress: Bool) {
-        if defaultAddress {
+    func configureCell(address: Address, defaultAddress: Bool) {
+        if address.isDefault {
             addressLabel.font = UIFont(name: "OpenSans-Bold", size: 20)
             checkmarkImage.image = UIImage(named: "check_mark")
         } else {
             addressLabel.font = UIFont(name: "OpenSans", size: 20)
             checkmarkImage.image = nil
         }
-        addressLabel.text = address
+        addressLabel.text = address.street_address
     }
 
 }

@@ -21,7 +21,7 @@ struct UserUpdate {
     var password: String?
     var password_confirmation: String?
     var avatar: String?
-    var address: [Address]? 
+    var address: [Address] = []
     
 }
 
@@ -34,7 +34,7 @@ extension UserUpdate: JSONEncodable {
             try encoder.encode(password, key: "password")
             try encoder.encode(password_confirmation, key: "password_confirmation")
             try encoder.encode(avatar, key: "avatar")
-            try encoder.encode(address, key: "address")
+            try encoder.encode(address, key: "addresses_attributes")
         })
     }
 }

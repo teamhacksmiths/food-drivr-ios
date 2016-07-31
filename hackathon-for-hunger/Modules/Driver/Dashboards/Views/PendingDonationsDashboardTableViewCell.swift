@@ -31,6 +31,7 @@ class PendingDonationsDashboardTableViewCell: UITableViewCell {
     
     var information: Donation? = nil {
         didSet {
+            //print("Information: \(information?.donationItems)")
             if let delivery = information?.dropoff?.actual {
                 let formatter = NSDateFormatter()
                 formatter.dateStyle = NSDateFormatterStyle.LongStyle
@@ -41,13 +42,18 @@ class PendingDonationsDashboardTableViewCell: UITableViewCell {
             }
             
             fullNameLabel?.text = information?.recipient?.name
-            if let description = information?.donationItems.first?.type_description,
-                    quantity = information?.donationItems.first?.quantity,
-                    unit = information?.donationItems.first?.unit {
-                amountLabel?.text = "\(quantity) \(unit) \(description)"
+            if let desc = information?.donationItems.first?.type_description {
+                amountLabel?.text = "\(desc)"
             } else {
-                amountLabel?.text = "no donation items found"
+                amountLabel?.text = "No description provided"
             }
+//            if let description = information?.donationItems.first?.type_description,
+//                    quantity = information?.donationItems.first?.quantity,
+//                    unit = information?.donationItems.first?.unit {
+//                amountLabel?.text = "\(quantity) \(unit) \(description)"
+//            } else {
+//                amountLabel?.text = "no donation items found"
+//            }
             locationLabel?.text = information?.recipient?.street_address
         }
     }

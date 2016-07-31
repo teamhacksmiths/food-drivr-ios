@@ -41,6 +41,7 @@ class DonationPresenter {
         }
         self.donationService.createDonation(items).then() {
             donation -> Void in
+            print(donation)
             self.donationView?.donations(self, didSucceed: donation)
             }.error {
                 error in

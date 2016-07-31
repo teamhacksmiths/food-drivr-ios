@@ -32,6 +32,7 @@ class DonorDonationViewController: UIViewController {
     
     @IBAction func didTapDonate(sender: AnyObject) {
         self.startLoading()
+        print("Donation: \(foodToDonate)")
         donationPresenter.createDonation(self.foodToDonate)
     }
     
