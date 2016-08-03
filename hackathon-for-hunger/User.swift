@@ -74,13 +74,14 @@ class User: Object, Mappable {
         if let settingDict = dict["setting"] as? JsonDict {
             self.settings = Setting(value: settingDict)
         }
-        if let addressList = dict["addresses"] as? List<Address> {
-            self.addresses = addressList
-//            for address in addressDict {
-//                if let new = Address(JSON: address) {
-//                    self.addresses.append(new)
-//                }
-//            }
+        if let addressList = dict["addresses"] as? [JsonDict] { // List<Address>
+            //self.addresses = addressList
+            //self.addresses = List<Address>()
+            for address in addressList {
+                if let new = Address(JSON: address) {
+                    self.addresses.append(new)
+                }
+            }
         }
     }
 }

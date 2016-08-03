@@ -17,7 +17,7 @@ class DonorAddressTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configureCell(address: Address, defaultAddress: Bool) {
+    func configureCell(address: Address) {
         if address.isDefault {
             addressLabel.font = UIFont(name: "OpenSans-Bold", size: 20)
             checkmarkImage.image = UIImage(named: "check_mark")
@@ -25,7 +25,11 @@ class DonorAddressTableViewCell: UITableViewCell {
             addressLabel.font = UIFont(name: "OpenSans", size: 20)
             checkmarkImage.image = nil
         }
-        addressLabel.text = address.street_address
+        if let address = address.street_address {
+            addressLabel.text = address
+        } else {
+            addressLabel.text = "No street address provided"
+        }
     }
 
 }
