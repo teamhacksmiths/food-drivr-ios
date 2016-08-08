@@ -18,6 +18,10 @@ class Participant: Object, Mappable {
     dynamic var avatar: String? = ""
     dynamic var phone: String? = ""
     dynamic var role = 0
+    dynamic var street_address: String?
+    dynamic var city: String?
+    dynamic var zip_code: String?
+    dynamic var state: String?
     
     override static func primaryKey() -> String? {
         return "id"
@@ -28,11 +32,15 @@ class Participant: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        id      <- map["id"]
-        name    <- map["name"]
-        email   <- map["email"]
-        avatar  <- map["avatar"]
-        phone   <- map["phone"]
-        role    <- map["role"]
+        id              <- map["id"]
+        name            <- map["name"]
+        email           <- map["email"]
+        avatar          <- map["avatar"]
+        phone           <- map["phone"]
+        role            <- map["role"]
+        street_address  <- map["address"]
+        city            <- map["city"]
+        zip_code        <- map["zip_code"]
+        state           <- map["state"]
     }
 }

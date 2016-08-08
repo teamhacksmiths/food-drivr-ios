@@ -39,6 +39,10 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var donorStreetLabel: UILabel!
     @IBOutlet weak var donorCityLabel: UILabel!
     @IBOutlet weak var donationDescription: UILabel!
+    @IBOutlet weak var donorContactName: UILabel!
+    @IBOutlet weak var donorPhone: UILabel!
+    @IBOutlet weak var recepientContactName: UILabel!
+    @IBOutlet weak var recepientPhone: UILabel!
     
     @IBAction func acceptDonation(sender: AnyObject) {
         activityIndicator.startAnimating()
@@ -59,15 +63,36 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         //mapView.setRegion(startingRegion, animated: true)
         if donation != nil {
+            // DONOR INFO
             donorNameLabel.text = donation?.donor?.name
+            donorContactName.text = donation?.donor?.name
+            if let phoneNum = donation?.donor?.phone {
+                donorPhone.text = phoneNum
+            } else {
+                donorPhone.text = "Phone number not available"
+            }
             // TODO: need a street address for Donor Participant, to be passed to UI
+            print("Donor Participant: \(donation?.donor)")
+            if let dAddress = donation?.donor?.street_address {
+                donorStreetLabel.text = dAddress
+            } else {
+                donorStreetLabel.text = "Street not available"
+            }
             
+            if let city = donation?.donor?.city, let state = donation?.donor?.state {
+                donorCityLabel.text = "\(city), \(state)"
+            } else {
+                donorCityLabel.text = "City not available"
+            }
             if let desc = donation?.donationItems.first?.type_description {
                 donationDescription.text = "\(desc)"
             } else {
                 donationDescription.text = "No description provided"
             }
+            
+            // RECEPIENT INFO
             if donation?.recipient != nil {
+                print("Donation Recipient: \(donation?.recipient)")
                 recipientNameLabel.text = donation?.recipient?.name
                 recipientStreetLabel.text = donation?.recipient?.street_address
                 if let cityString = donation?.recipient?.city {
@@ -77,6 +102,16 @@ class DriverMapDetailPendingVC: UIViewController, MKMapViewDelegate {
                             recipientCityLabel.text = cityStateString + " " + zipString
                         }
                     }
+                }
+                if let recPhone = donation?.recipient?.phone {
+                    recepientPhone.text = recPhone
+                } else {
+                    recepientPhone.text = "Phone number not available"
+                }
+                if let recName = donation?.recipient?.name {
+                    recepientContactName.text = recName
+                } else {
+                    recepientContactName.text = "Recepient contact not available"
                 }
             }
         }
