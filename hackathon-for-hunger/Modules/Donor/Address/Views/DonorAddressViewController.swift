@@ -130,23 +130,27 @@ extension DonorAddressViewController: UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let address = addresses[indexPath.row]
+        if address.isDefault {
+            return 
+        }
 
         SweetAlert().showAlert("Update Default Address?", subTitle: "Are you sure you want to change your default address?", style: AlertStyle.Warning, buttonTitle: "Yes", buttonColor: UIColor.blueColor(), otherButtonTitle: "No") { (isOtherButton) in
             if isOtherButton {
                 // Yes tapped
-                for i in 0..<self.addresses.count {
-                    do {
-                        try self.realm.write({ 
+                do {
+                    try self.realm.write({ 
+                        for i in 0..<self.addresses.count {
                             if i == indexPath.row {
                                 self.addresses[i].isDefault = true
                             } else {
                                 self.addresses[i].isDefault = false
                             }
-                        })
-                    } catch let error as NSError {
-                        print("Error writing to Realm: \(error.localizedDescription)")
-                    }
-
+                        }
+                    })
+                } catch let error as NSError {
+                    print("Error writing do Realm: \(error.localizedDescription)")
                 }
                 self.updateAddresses()
                 tableView.reloadData()
