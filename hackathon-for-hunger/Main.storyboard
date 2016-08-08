@@ -2262,9 +2262,13 @@ Please check back soon.</string>
                     <connections>
                         <outlet property="donationDescription" destination="xoh-HL-23g" id="YRY-7Q-Jlg"/>
                         <outlet property="donorCityLabel" destination="dek-ig-kU7" id="riG-06-gWF"/>
+                        <outlet property="donorContactName" destination="PEZ-oy-UdU" id="5yz-ey-ozs"/>
                         <outlet property="donorNameLabel" destination="qYV-BL-XgD" id="RbV-Xe-EfI"/>
+                        <outlet property="donorPhone" destination="4im-rm-p5Y" id="Tq0-Ag-9uB"/>
                         <outlet property="donorStreetLabel" destination="CiW-ox-elq" id="7Ua-Ib-V96"/>
                         <outlet property="mapView" destination="YKm-DA-pDF" id="lJv-ql-3Ff"/>
+                        <outlet property="recepientContactName" destination="ZAr-YU-jmT" id="8Fl-rW-XGI"/>
+                        <outlet property="recepientPhone" destination="ADp-Yw-bzn" id="ABU-Or-deF"/>
                         <outlet property="recipientCityLabel" destination="2ME-MM-aJ7" id="VZG-Mj-QPh"/>
                         <outlet property="recipientNameLabel" destination="lbO-21-gK8" id="5U4-E2-zJN"/>
                         <outlet property="recipientStreetLabel" destination="7IC-Nf-lIY" id="Nd4-R3-6h4"/>
@@ -2347,7 +2351,7 @@ Please check back soon.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fte-Zj-rty">
-                                                    <rect key="frame" x="276" y="7" width="48" height="30"/>
+                                                    <rect key="frame" x="28" y="7" width="544" height="30"/>
                                                     <state key="normal" title="Logout"/>
                                                     <connections>
                                                         <action selector="userLogout:" destination="QXS-BM-hl5" eventType="touchUpInside" id="Ad0-in-aSh"/>
@@ -2356,7 +2360,9 @@ Please check back soon.</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Fte-Zj-rty" firstAttribute="centerY" secondItem="a28-ki-UYe" secondAttribute="centerY" id="dbh-i4-v3G"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fte-Zj-rty" secondAttribute="trailing" constant="20" id="pHR-w3-UVK"/>
                                                 <constraint firstItem="Fte-Zj-rty" firstAttribute="centerX" secondItem="a28-ki-UYe" secondAttribute="centerX" id="xBl-BE-Exw"/>
+                                                <constraint firstItem="Fte-Zj-rty" firstAttribute="leading" secondItem="a28-ki-UYe" secondAttribute="leadingMargin" constant="20" id="zYT-Mm-g23"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
