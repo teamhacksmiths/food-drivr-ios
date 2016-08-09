@@ -51,6 +51,7 @@ class PendingDonationsDashboard: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         dashboardPresenter.fetch([DonationStatus.Pending.rawValue])
+        tableView.reloadData()
     }
     
     func refresh(sender: AnyObject) {
@@ -121,7 +122,7 @@ extension PendingDonationsDashboard:  UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        
         self.performSegueWithIdentifier("toDriverMapDetailPendingFromDashboard", sender: pendingDonations![indexPath.row])
     }
     

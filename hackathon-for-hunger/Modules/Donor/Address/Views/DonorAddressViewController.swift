@@ -17,11 +17,11 @@ class DonorAddressViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let realm = try! Realm()
     let reusableIdentifier = "DonorAddressCell"
     let addAddressSegueIdentifier = "AddAddress"
     let authService = AuthService()
     var addresses = [Address]()
-    var defaultAddressIndex:NSIndexPath? = nil
     let userService = UserService()
     
     override func viewDidLoad() {
@@ -82,6 +82,7 @@ class DonorAddressViewController: UIViewController {
         let updateData = UserUpdate(name: nil, phone: nil, email: nil, password: nil, password_confirmation: nil, avatar: nil, address: addresses)
         userService.updateUser(updateData).then { userDict -> Void in
             print("User info uploaded: \(userDict)")
+            self.tableView.reloadData()
             }.error { error in
                 print("Error uploading: \(error)")
         }
@@ -115,11 +116,7 @@ extension DonorAddressViewController: UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reusableIdentifier, forIndexPath: indexPath) as! DonorAddressTableViewCell
         
-        var isDefault = false
-        if indexPath == defaultAddressIndex || addresses.count == 1 {
-            isDefault = true
-        }
-        cell.configureCell(addresses[indexPath.row], defaultAddress: isDefault)
+        cell.configureCell(addresses[indexPath.row])
         
         return cell
     }
@@ -133,8 +130,30 @@ extension DonorAddressViewController: UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        defaultAddressIndex = indexPath
-        tableView.reloadData()
+
+        SweetAlert().showAlert("Update Default Address?", subTitle: "Are you sure you want to change your default address?", style: AlertStyle.Warning, buttonTitle: "Yes", buttonColor: UIColor.blueColor(), otherButtonTitle: "No") { (isOtherButton) in
+            if isOtherButton {
+                // Yes tapped
+                for i in 0..<self.addresses.count {
+                    do {
+                        try self.realm.write({ 
+                            if i == indexPath.row {
+                                self.addresses[i].isDefault = true
+                            } else {
+                                self.addresses[i].isDefault = false
+                            }
+                        })
+                    } catch let error as NSError {
+                        print("Error writing to Realm: \(error.localizedDescription)")
+                    }
+
+                }
+                self.updateAddresses()
+                tableView.reloadData()
+            } else {
+                // No tapped 
+            }
+        }
     }
     
     func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
@@ -148,20 +167,20 @@ extension DonorAddressViewController: UITableViewDelegate{
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             addresses.removeAtIndex(indexPath.row)
+            print("Removed: \(addresses)")
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             updateAddresses()
         }
-//        if indexPath == defaultAddressIndex{
-//            defaultAddressIndex = nil
-//        }
     }
     
 }
 
 extension DonorAddressViewController: DonorAddressViewControllerDelegate{
     func addAddress(address: Address) {
-        self.addresses.append(address)
-        tableView.reloadData()
+        addresses.append(address)
+        if addresses.count == 1 {
+            addresses[0].isDefault = true
+        }
         updateAddresses()
     }
 }

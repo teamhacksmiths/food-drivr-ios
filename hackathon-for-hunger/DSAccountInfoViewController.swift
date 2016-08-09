@@ -15,6 +15,8 @@ class DSAccountInfoViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     
+    private var userService = UserService()
+    
     override func viewDidLoad() {
         
     }
@@ -47,6 +49,12 @@ class DSAccountInfoViewController: UIViewController {
         user.password = donor.password!
         user.password_confirmation = donor.password!
         user.role = .Donor
+        
+        userService.registerUser(user).then { (user) -> Void in
+            print("Succesfully registered user: \(user)")
+        }.error { (error) in
+            print("Error registering: \(error)")
+        }
         
 //        DrivrAPI.sharedInstance.registerUser(user, success: {
 //            (JsonDict) in
