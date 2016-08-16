@@ -23,6 +23,7 @@ class CurrentDonationsDashboard: UIViewController {
     var activityIndicator : ActivityIndicatorView!
     private let dashboardPresenter = DashboardPresenter(donationService: DonationService())
     var pendingDonations: Results<Donation>?
+    var selectedDonation: Donation?
     
     
     
@@ -53,9 +54,13 @@ class CurrentDonationsDashboard: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toDriverMapDetailCurrentFromDashboard") {
             
-            if let donation = sender as? Donation {
-                let donationVC = segue.destinationViewController as! DriverMapDetailPendingVC
-                
+//            if let donation = sender as? Donation {
+//                let donationVC = segue.destinationViewController as! DriverMapDetailPendingVC
+//                
+//                donationVC.donation = donation
+//            }
+            if let donation = selectedDonation {
+                let donationVC = segue.destinationViewController as! DriverMapPickupVC
                 donationVC.donation = donation
             }
         }
@@ -110,6 +115,7 @@ extension CurrentDonationsDashboard:  UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedDonation = pendingDonations![indexPath.row]
         self.performSegueWithIdentifier("toDriverMapDetailCurrentFromDashboard", sender: self)
     }
     

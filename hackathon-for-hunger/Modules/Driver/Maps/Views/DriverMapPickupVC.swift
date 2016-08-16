@@ -80,6 +80,7 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func askForDirections(sender: AnyObject) {
+        updateRoute()
     }
     
     func updateUI() {
@@ -128,6 +129,8 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 donorNameLabel.text = donation?.donor?.name
                 
                 // create Map Items
+                print(donation?.pickup?.coordinates)
+                print(donation?.dropoff?.coordinates)
                 let pickupPlacemark = MKPlacemark(coordinate: (donation!.pickup?.coordinates)!, addressDictionary: nil)
                 let pickupMapItem = MKMapItem(placemark: pickupPlacemark)
                 let dropoffPlacemark = MKPlacemark(coordinate: (donation!.dropoff?.coordinates)!, addressDictionary: nil)
@@ -143,7 +146,10 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
                 let directions = MKDirections(request: request)
                 
                 directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
-                    guard let unwrappedResponse = response else { return }
+                    guard let unwrappedResponse = response else {
+                        print("No response for directions: \(error?.localizedDescription)")
+                        return
+                    }
                     
                     for route in unwrappedResponse.routes {
                         self.mapView.addOverlay(route.polyline)
@@ -162,14 +168,14 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         mapViewPresenter?.attachView(self)
-        self.donation = mapViewPresenter?.getDonation()
+        //self.donation = mapViewPresenter?.getDonation()
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Confirming")
         mapView.delegate = self
         mapView.setRegion(startingRegion, animated: true) // set starting region to overview map's region?
         for annot in mapView.annotations {
             mapView.deselectAnnotation(annot, animated: true)
         }
-        print(donation)
+        print("Donation: \(donation)")
         updateUI()
         
         if donation != nil {
