@@ -826,6 +826,7 @@
 				44AEA86E1CA9CBC100A52731 /* Resources */,
 				E5CC9B406A87EC882BDAC468 /* 📦 Embed Pods Frameworks */,
 				9DC2E877B9539AAF3DFE44A9 /* 📦 Copy Pods Resources */,
+				783DC01A19D83159588DE664 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -869,7 +870,7 @@
 				TargetAttributes = {
 					44AEA86F1CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = DU7XEDNZGC;
+						DevelopmentTeam = J9WHKA9AQZ;
 					};
 					44AEA8831CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
@@ -961,6 +962,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		783DC01A19D83159588DE664 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		82C0734C3D7A899A42E8B579 /* 📦 Copy Pods Resources */ = {
