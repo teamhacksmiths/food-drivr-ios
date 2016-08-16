@@ -11,6 +11,7 @@ target 'hackathon-for-hunger' do
   pod 'FBSDKShareKit'
   pod 'SlideMenuControllerSwift'
   pod 'Fabric'
+  pod 'Crashlytics'
   pod 'TwitterKit'
   pod 'TwitterCore'
   pod 'SwiftyJSON'
