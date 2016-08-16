@@ -83,6 +83,10 @@ class DriverMapPickupVC: UIViewController, MKMapViewDelegate {
     }
     
     func updateUI() {
+        guard donation != nil else {
+            return
+        }
+        
         switch donation!.status {
         case .Accepted:
             pickupLabelImage.image = UIImage(named: "pickup_label")

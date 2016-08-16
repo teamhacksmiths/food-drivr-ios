@@ -88,7 +88,7 @@
 		44C7C8631CD8DB76002ED3B6 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C8591CD8DB76002ED3B6 /* OpenSans-Regular.ttf */; };
 		44C7C8641CD8DB76002ED3B6 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C85A1CD8DB76002ED3B6 /* OpenSans-Semibold.ttf */; };
 		44C7C8651CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C7C85B1CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf */; };
-		5BD6F0FEE975C6F8910021B5 /* Pods_hackathon_for_hungerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DCA5FA6264C888CB1030CA /* Pods_hackathon_for_hungerTests.framework */; };
+		54B2830744C8EFADB80D180B /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED4ACB6DAA4357F2F9B7333 /* Pods_hackathon_for_hunger.framework */; };
 		634E34291CC84E7100DD48BF /* multiple-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34261CC84E7100DD48BF /* multiple-circle.png */; };
 		634E342A1CC84E7100DD48BF /* multiple-circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34271CC84E7100DD48BF /* multiple-circle@2x.png */; };
 		634E342B1CC84E7100DD48BF /* multiple-circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E34281CC84E7100DD48BF /* multiple-circle@3x.png */; };
@@ -106,7 +106,7 @@
 		63FE86721CDC4243000764B2 /* directions_icon_small.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE86711CDC4243000764B2 /* directions_icon_small.pdf */; };
 		701BE9D61D09F3EB004A1648 /* DonorAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701BE9D51D09F3EB004A1648 /* DonorAddressTableViewCell.swift */; };
 		70D57CFA1D0CEE1A00A91511 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D57CF91D0CEE1A00A91511 /* Address.swift */; };
-		9A380AAFB5FA3DC9089D9525 /* Pods_hackathon_for_hunger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90311A1A749B449967005E40 /* Pods_hackathon_for_hunger.framework */; };
+		B65EC2A89D3B0A8B423BF9FE /* Pods_hackathon_for_hungerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EB4442F40A40D676BD385F /* Pods_hackathon_for_hungerTests.framework */; };
 		EA6C4C1D1CD1E66600165F02 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */; };
 		EA6C4C201CD1E80300165F02 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C4C1F1CD1E80300165F02 /* Global.swift */; };
 		EAAD23BA1CB37FDB005FD787 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */; };
@@ -130,7 +130,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32DCA5FA6264C888CB1030CA /* Pods_hackathon_for_hungerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hungerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0DB77E1D00AAC8008EB195 /* DonorDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		3C2C9B4D1CFD87E8009B34C9 /* DonationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationPresenter.swift; sourceTree = "<group>"; };
 		3C2C9B4F1CFD94C6009B34C9 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
@@ -216,7 +215,7 @@
 		44C7C8591CD8DB76002ED3B6 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		44C7C85A1CD8DB76002ED3B6 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../../OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		44C7C85B1CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "../../OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
-		4ADAF9C54935D893257F4308 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
+		54EB4442F40A40D676BD385F /* Pods_hackathon_for_hungerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hungerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E34261CC84E7100DD48BF /* multiple-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle.png"; sourceTree = "<group>"; };
 		634E34271CC84E7100DD48BF /* multiple-circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@2x.png"; sourceTree = "<group>"; };
 		634E34281CC84E7100DD48BF /* multiple-circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-circle@3x.png"; sourceTree = "<group>"; };
@@ -235,10 +234,10 @@
 		63FE86711CDC4243000764B2 /* directions_icon_small.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = directions_icon_small.pdf; sourceTree = "<group>"; };
 		701BE9D51D09F3EB004A1648 /* DonorAddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorAddressTableViewCell.swift; sourceTree = "<group>"; };
 		70D57CF91D0CEE1A00A91511 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		86BA625C431AB9FBBE950948 /* Pods-hackathon-for-hungerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		90311A1A749B449967005E40 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B378CB29D345D02F6339D4A8 /* Pods-hackathon-for-hungerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.release.xcconfig"; sourceTree = "<group>"; };
-		E76494F30E9C7AE6A06635B8 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
+		7EAD49D0E8062836793CB184 /* Pods-hackathon-for-hunger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.release.xcconfig"; sourceTree = "<group>"; };
+		8ED4ACB6DAA4357F2F9B7333 /* Pods_hackathon_for_hunger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_for_hunger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C032DEDD50036A2124E0BF /* Pods-hackathon-for-hungerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF9092DECF9AE067D9DE4B9E /* Pods-hackathon-for-hungerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hungerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA6C4C1C1CD1E66600165F02 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		EA6C4C1F1CD1E80300165F02 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		EAAD23B91CB37FDB005FD787 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +248,7 @@
 		EAAD23C51CB72E3F005FD787 /* AwaitingApprovalDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalDriverViewController.swift; sourceTree = "<group>"; };
 		EAD2DDEF1CD330EF007454FB /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationTableViewCell.swift; path = ../../../../DonationTableViewCell.swift; sourceTree = "<group>"; };
 		EAFEDF991CC2E26800C30693 /* DonorSignupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonorSignupInfo.swift; sourceTree = "<group>"; };
+		F02466CD37B80DCD98E8AE52 /* Pods-hackathon-for-hunger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-for-hunger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,7 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A380AAFB5FA3DC9089D9525 /* Pods_hackathon_for_hunger.framework in Frameworks */,
+				54B2830744C8EFADB80D180B /* Pods_hackathon_for_hunger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BD6F0FEE975C6F8910021B5 /* Pods_hackathon_for_hungerTests.framework in Frameworks */,
+				B65EC2A89D3B0A8B423BF9FE /* Pods_hackathon_for_hungerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				639C2E601CB8463900275C3E /* CoreLocation.framework */,
-				90311A1A749B449967005E40 /* Pods_hackathon_for_hunger.framework */,
-				32DCA5FA6264C888CB1030CA /* Pods_hackathon_for_hungerTests.framework */,
+				8ED4ACB6DAA4357F2F9B7333 /* Pods_hackathon_for_hunger.framework */,
+				54EB4442F40A40D676BD385F /* Pods_hackathon_for_hungerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -677,7 +677,7 @@
 				44AEA8871CA9CBC100A52731 /* hackathon-for-hungerTests */,
 				44AEA8711CA9CBC100A52731 /* Products */,
 				205C055A7B919DE8749D43CD /* Frameworks */,
-				840A1877D5B571DC9A75B6C6 /* Pods */,
+				5F266F2BA59FA8D80286F565 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -734,6 +734,17 @@
 			name = Routing;
 			sourceTree = "<group>";
 		};
+		5F266F2BA59FA8D80286F565 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F02466CD37B80DCD98E8AE52 /* Pods-hackathon-for-hunger.debug.xcconfig */,
+				7EAD49D0E8062836793CB184 /* Pods-hackathon-for-hunger.release.xcconfig */,
+				BF9092DECF9AE067D9DE4B9E /* Pods-hackathon-for-hungerTests.debug.xcconfig */,
+				B3C032DEDD50036A2124E0BF /* Pods-hackathon-for-hungerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		63CAF7F61CC29BD4000D89A1 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -760,17 +771,6 @@
 				63D351D41CE7926D005EAD72 /* ProfilePresenter.swift */,
 			);
 			name = Presenter;
-			sourceTree = "<group>";
-		};
-		840A1877D5B571DC9A75B6C6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E76494F30E9C7AE6A06635B8 /* Pods-hackathon-for-hunger.debug.xcconfig */,
-				4ADAF9C54935D893257F4308 /* Pods-hackathon-for-hunger.release.xcconfig */,
-				86BA625C431AB9FBBE950948 /* Pods-hackathon-for-hungerTests.debug.xcconfig */,
-				B378CB29D345D02F6339D4A8 /* Pods-hackathon-for-hungerTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		EA6C4C1E1CD1E7B800165F02 /* Support */ = {
@@ -820,12 +820,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44AEA88D1CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hunger" */;
 			buildPhases = (
-				D563228F37B7B946B9D1F4DD /* 📦 Check Pods Manifest.lock */,
+				F7A5B375D7CA40D8B97813AD /* [CP] Check Pods Manifest.lock */,
 				44AEA86C1CA9CBC100A52731 /* Sources */,
 				44AEA86D1CA9CBC100A52731 /* Frameworks */,
 				44AEA86E1CA9CBC100A52731 /* Resources */,
-				E5CC9B406A87EC882BDAC468 /* 📦 Embed Pods Frameworks */,
-				9DC2E877B9539AAF3DFE44A9 /* 📦 Copy Pods Resources */,
+				AF6E1AE8D4C8B02181EDF922 /* [CP] Embed Pods Frameworks */,
+				0A5245E3462812231C748090 /* [CP] Copy Pods Resources */,
+				1F50ABB91D634EF900D6845B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -840,12 +841,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44AEA8901CA9CBC100A52731 /* Build configuration list for PBXNativeTarget "hackathon-for-hungerTests" */;
 			buildPhases = (
-				A73CA18ABC1F651805B30BEF /* 📦 Check Pods Manifest.lock */,
+				BAE85E8414470E5D4D791C0F /* [CP] Check Pods Manifest.lock */,
 				44AEA8801CA9CBC100A52731 /* Sources */,
 				44AEA8811CA9CBC100A52731 /* Frameworks */,
 				44AEA8821CA9CBC100A52731 /* Resources */,
-				12ED4D9E8151D8750307E568 /* 📦 Embed Pods Frameworks */,
-				82C0734C3D7A899A42E8B579 /* 📦 Copy Pods Resources */,
+				80A74116A442FE1013FB26A4 /* [CP] Embed Pods Frameworks */,
+				AF64A9DC2C44AEEDBEB4B016 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -869,7 +870,7 @@
 				TargetAttributes = {
 					44AEA86F1CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = DU7XEDNZGC;
+						DevelopmentTeam = J9WHKA9AQZ;
 					};
 					44AEA8831CA9CBC100A52731 = {
 						CreatedOnToolsVersion = 7.3;
@@ -948,44 +949,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12ED4D9E8151D8750307E568 /* 📦 Embed Pods Frameworks */ = {
+		0A5245E3462812231C748090 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		82C0734C3D7A899A42E8B579 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9DC2E877B9539AAF3DFE44A9 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -993,49 +964,92 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A73CA18ABC1F651805B30BEF /* 📦 Check Pods Manifest.lock */ = {
+		1F50ABB91D634EF900D6845B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 18d2b9b35389912f2a9f30e2f947a70a64a84564 d7ef80ba6cec513fd2afcf4953749bdbc91ec7b3b162621360433b8b4093afc3";
 		};
-		D563228F37B7B946B9D1F4DD /* 📦 Check Pods Manifest.lock */ = {
+		80A74116A442FE1013FB26A4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5CC9B406A87EC882BDAC468 /* 📦 Embed Pods Frameworks */ = {
+		AF64A9DC2C44AEEDBEB4B016 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hungerTests/Pods-hackathon-for-hungerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF6E1AE8D4C8B02181EDF922 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackathon-for-hunger/Pods-hackathon-for-hunger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAE85E8414470E5D4D791C0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7A5B375D7CA40D8B97813AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1237,7 +1251,7 @@
 		};
 		44AEA88E1CA9CBC100A52731 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E76494F30E9C7AE6A06635B8 /* Pods-hackathon-for-hunger.debug.xcconfig */;
+			baseConfigurationReference = F02466CD37B80DCD98E8AE52 /* Pods-hackathon-for-hunger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1254,7 +1268,7 @@
 		};
 		44AEA88F1CA9CBC100A52731 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4ADAF9C54935D893257F4308 /* Pods-hackathon-for-hunger.release.xcconfig */;
+			baseConfigurationReference = 7EAD49D0E8062836793CB184 /* Pods-hackathon-for-hunger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1271,7 +1285,7 @@
 		};
 		44AEA8911CA9CBC100A52731 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86BA625C431AB9FBBE950948 /* Pods-hackathon-for-hungerTests.debug.xcconfig */;
+			baseConfigurationReference = BF9092DECF9AE067D9DE4B9E /* Pods-hackathon-for-hungerTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "hackathon-for-hungerTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -1283,7 +1297,7 @@
 		};
 		44AEA8921CA9CBC100A52731 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B378CB29D345D02F6339D4A8 /* Pods-hackathon-for-hungerTests.release.xcconfig */;
+			baseConfigurationReference = B3C032DEDD50036A2124E0BF /* Pods-hackathon-for-hungerTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "hackathon-for-hungerTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
