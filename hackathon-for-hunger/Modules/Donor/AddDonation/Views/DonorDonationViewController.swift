@@ -26,6 +26,16 @@ class DonorDonationViewController: UIViewController {
         tableView.delegate = self
         inputTextField.delegate = self
         activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Saving")
+        
+        navigationController?.navigationBar.translucent = false
+        navigationController?.navigationBar.barTintColor = UIColor(red: 246/255.0, green: 165/255.0, blue: 4/255.0, alpha: 1)
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
     }
     
     //MARK: Actions 

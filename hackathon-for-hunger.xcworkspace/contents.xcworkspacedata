@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:hackathon-for-hunger/ApiKeysDist.plist">
+   </FileRef>
+   <FileRef
       location = "group:hackathon-for-hunger.xcodeproj">
    </FileRef>
    <FileRef

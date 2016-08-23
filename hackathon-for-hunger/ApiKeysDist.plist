@@ -11,6 +11,6 @@
 	<key>DRIVR_API_CLIENT_SECRET</key>
 	<string>&lt;INSERT VALUE HERE&gt;</string>
 	<key>DRIVR_API_BASE_URL</key>
-	<string>&lt;INSERT VALUE HERE&gt;</string>
+	<string>http://wastenotfoodtaxi.herokuapp.com/api/v1</string>
 </dict>
 </plist>

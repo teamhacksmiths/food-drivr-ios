@@ -35,6 +35,7 @@ class CurrentDonationsDashboard: UIViewController {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PendingDonationsDashboard.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
+        refresh(refreshControl)
     }
     
     override func viewWillAppear(animated: Bool) {
