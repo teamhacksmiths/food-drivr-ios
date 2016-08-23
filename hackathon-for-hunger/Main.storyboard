@@ -68,6 +68,7 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
         <mutableArray key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
@@ -523,7 +524,7 @@ Please check back soon.</string>
             </objects>
             <point key="canvasLocation" x="-3319" y="4969"/>
         </scene>
-        <!--My Profile-->
+        <!--Profile-->
         <scene sceneID="Fcq-c4-cG8">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SiY-CT-JRa" customClass="ProfileViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
@@ -694,7 +695,7 @@ Please check back soon.</string>
                             <constraint firstItem="gFz-Y1-kVL" firstAttribute="top" secondItem="Xta-EW-qE1" secondAttribute="bottom" id="zKf-2J-HRe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Profile" image="Profile" id="k0p-JK-5qA"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="k0p-JK-5qA"/>
                     <navigationItem key="navigationItem" id="ZRm-m8-K9i">
                         <barButtonItem key="leftBarButtonItem" image="burger" id="XRT-Px-GEN">
                             <connections>
@@ -760,10 +761,10 @@ Please check back soon.</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NiZ-en-McF">
-                                <rect key="frame" x="20" y="129" width="560" height="371"/>
+                                <rect key="frame" x="20" y="129" width="560" height="132"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wmP-IY-3kd">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="371"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="132"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DonationCell" rowHeight="32" id="BLJ-wQ-3fd" customClass="DonationTableViewCell" customModule="hackathon_for_hunger" customModuleProvider="target">
@@ -818,26 +819,57 @@ Please check back soon.</string>
                                     </tableView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1bP-wn-Oby">
+                                <rect key="frame" x="20" y="269" width="560" height="31"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Notes" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="iCK-xr-H51">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DT2-UE-wlT">
+                                        <rect key="frame" x="0.0" y="30" width="560" height="1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="ui1-op-384"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NiZ-en-McF" firstAttribute="top" secondItem="Q2H-Qb-iPN" secondAttribute="bottom" constant="8" id="C1B-wg-Wlf"/>
                             <constraint firstItem="A0x-bz-UIv" firstAttribute="top" secondItem="ovU-w4-vnU" secondAttribute="bottom" id="CQl-iv-JmI"/>
+                            <constraint firstItem="1bP-wn-Oby" firstAttribute="top" secondItem="NiZ-en-McF" secondAttribute="bottom" constant="8" id="HJM-pV-fnj"/>
+                            <constraint firstItem="ovU-w4-vnU" firstAttribute="top" secondItem="1bP-wn-Oby" secondAttribute="bottom" constant="200" id="PxN-V3-shK"/>
                             <constraint firstItem="ovU-w4-vnU" firstAttribute="leading" secondItem="DYV-ho-SCV" secondAttribute="leading" id="RwE-nl-23n"/>
+                            <constraint firstItem="NiZ-en-McF" firstAttribute="top" secondItem="Q2H-Qb-iPN" secondAttribute="bottom" constant="8" id="SRw-y5-44W"/>
                             <constraint firstItem="NiZ-en-McF" firstAttribute="top" secondItem="Q2H-Qb-iPN" secondAttribute="bottom" constant="8" id="TBT-Gv-uj7"/>
                             <constraint firstItem="Q2H-Qb-iPN" firstAttribute="top" secondItem="iNp-7X-T5O" secondAttribute="bottom" constant="24" id="Wh3-IO-DJb"/>
                             <constraint firstItem="NiZ-en-McF" firstAttribute="leading" secondItem="DYV-ho-SCV" secondAttribute="leadingMargin" id="YUs-Zp-RdG"/>
                             <constraint firstItem="ovU-w4-vnU" firstAttribute="top" secondItem="NiZ-en-McF" secondAttribute="bottom" id="bb4-wO-WBy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1bP-wn-Oby" secondAttribute="trailing" id="c1O-4M-Pvl"/>
                             <constraint firstItem="NiZ-en-McF" firstAttribute="trailing" secondItem="DYV-ho-SCV" secondAttribute="trailingMargin" id="dOd-3X-bf4"/>
+                            <constraint firstItem="1bP-wn-Oby" firstAttribute="leading" secondItem="DYV-ho-SCV" secondAttribute="leadingMargin" id="fed-PE-gs3"/>
                             <constraint firstItem="Q2H-Qb-iPN" firstAttribute="trailing" secondItem="DYV-ho-SCV" secondAttribute="trailingMargin" id="jve-5L-xFZ"/>
                             <constraint firstItem="Q2H-Qb-iPN" firstAttribute="leading" secondItem="DYV-ho-SCV" secondAttribute="leadingMargin" id="tpt-qU-1Jz"/>
                             <constraint firstAttribute="trailing" secondItem="ovU-w4-vnU" secondAttribute="trailing" id="xCv-Fg-T6j"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SRw-y5-44W"/>
+                                <exclude reference="TBT-Gv-uj7"/>
+                                <exclude reference="bb4-wO-WBy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="hT3-D9-pwQ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="addDonationButton" destination="9aL-nh-jYe" id="QTk-Oz-8Sn"/>
                         <outlet property="inputTextField" destination="4Xd-d7-aMv" id="OD9-cj-dng"/>
+                        <outlet property="notesTextField" destination="iCK-xr-H51" id="5Hs-6h-ASr"/>
                         <outlet property="tableView" destination="wmP-IY-3kd" id="BTO-SW-76d"/>
                     </connections>
                 </viewController>
@@ -2730,7 +2762,7 @@ Please check back soon.</string>
             </objects>
             <point key="canvasLocation" x="-3479" y="8905"/>
         </scene>
-        <!--My Donations-->
+        <!--Donations-->
         <scene sceneID="sx3-8a-jjc">
             <objects>
                 <viewController storyboardIdentifier="DonorDonationDashboardViewController" id="roC-fo-5Ga" customClass="DonationDashboardViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
@@ -2867,7 +2899,7 @@ Please check back soon.</string>
                             <constraint firstItem="gPq-Th-Abq" firstAttribute="top" secondItem="C85-cG-GQb" secondAttribute="bottom" constant="62" id="wpt-R0-cSN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Donations" image="Current" id="1Rp-Cu-8vo"/>
+                    <tabBarItem key="tabBarItem" title="Donations" image="Current" id="1Rp-Cu-8vo"/>
                     <connections>
                         <outlet property="noDonationView" destination="gPq-Th-Abq" id="RgE-ic-h4Y"/>
                         <outlet property="refreshButton" destination="GDT-IV-12a" id="a2R-vD-Tfp"/>
@@ -2878,11 +2910,11 @@ Please check back soon.</string>
             </objects>
             <point key="canvasLocation" x="-2727" y="8130"/>
         </scene>
-        <!--Add Donation-->
+        <!--Donate-->
         <scene sceneID="MPw-12-d0Q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eua-ej-1jX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Add Donation" image="Pending" id="aXc-Cy-D2X"/>
+                    <tabBarItem key="tabBarItem" title="Donate" image="Pending" id="aXc-Cy-D2X"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ke8-iG-10h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

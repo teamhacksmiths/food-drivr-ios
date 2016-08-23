@@ -12,6 +12,8 @@ class DonorDonationViewController: UIViewController {
     
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var notesTextField: UITextField!
+    
     private let cellIdentifier = "DonationCell"
     var foodToDonate: [String]!
     private let donationPresenter = DonationPresenter(donationService: DonationService())
