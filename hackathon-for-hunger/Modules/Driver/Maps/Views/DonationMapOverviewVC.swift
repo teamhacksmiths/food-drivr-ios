@@ -88,7 +88,12 @@ class DonationMapOverviewVC: UIViewController, MKMapViewDelegate {
 //                annotations.append(annotation)
 //            }
 //        }
-        for donation in donations! { //TODO: - replace force unwrapping
+        
+        guard let donations = donations else {
+            print("No donations to display")
+            return
+        }
+        for donation in donations { //TODO: - replace force unwrapping
             // create the annotation and set its properties
             let annotation = DonationPin()  // subclass of MKAnnotation()
             annotation.donation = donation
