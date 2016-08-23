@@ -17,7 +17,6 @@
 		3CCD09EF1CE8C9F900B8E32C /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */; };
 		3CCD09F11CE8EC6200B8E32C /* SlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD09F01CE8EC6200B8E32C /* SlideMenuVC.swift */; };
 		3CCE63951CF044170089F5C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE63941CF044170089F5C9 /* SettingsViewController.swift */; };
-		3CD790541CE7250E00569587 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CD790531CE7250E00569587 /* ApiKeys.plist */; };
 		3CFDE8171CAD4D8A00D6172B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFDE8151CAD4D8A00D6172B /* Main.storyboard */; };
 		4404F6C01CBD1B2C001B9293 /* UserDriverMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */; };
 		442FE9761CC15CAD0002187D /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FE9751CC15CAD0002187D /* UserRegistration.swift */; };
@@ -140,7 +139,6 @@
 		3CCD09EE1CE8C9F900B8E32C /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		3CCD09F01CE8EC6200B8E32C /* SlideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuVC.swift; sourceTree = "<group>"; };
 		3CCE63941CF044170089F5C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		3CD790531CE7250E00569587 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		3CFDE8151CAD4D8A00D6172B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4404F6BF1CBD1B2C001B9293 /* UserDriverMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDriverMock.json; sourceTree = "<group>"; };
 		442FE9751CC15CAD0002187D /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
@@ -779,7 +777,6 @@
 				44AEA87F1CA9CBC100A52731 /* Info.plist */,
 				44573E5A1CAE740C00A5F1C3 /* ApiKeysDist.plist */,
 				EA6C4C1F1CD1E80300165F02 /* Global.swift */,
-				3CD790531CE7250E00569587 /* ApiKeys.plist */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -921,7 +918,6 @@
 				44C7C8611CD8DB76002ED3B6 /* OpenSans-Light.ttf in Resources */,
 				44C7C8621CD8DB76002ED3B6 /* OpenSans-LightItalic.ttf in Resources */,
 				44C7C8631CD8DB76002ED3B6 /* OpenSans-Regular.ttf in Resources */,
-				3CD790541CE7250E00569587 /* ApiKeys.plist in Resources */,
 				44C7C8641CD8DB76002ED3B6 /* OpenSans-Semibold.ttf in Resources */,
 				44C7C8651CD8DB76002ED3B6 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				443D1DB11CB6D57500E2E7B9 /* Deming EP.ttf in Resources */,
